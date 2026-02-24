@@ -580,120 +580,103 @@
     </style>
 
     <!-- Dự án Tiêu biểu Section -->
-    <section class="py-20 bg-white">
+    <section class="py-16 md:py-24 bg-[var(--color-bg1)]">
         <div class="main-container">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
-                <div class="max-w-xl">
-                    <span class="text-secondary text-small-text-bold uppercase tracking-wider mb-2 block">Dự án mũi
-                        nhọn</span>
-                    <h2 class="section-title">Dự án Tiêu biểu</h2>
-                </div>
-                <a href="projects.html"
-                    class="inline-flex items-center gap-2 text-primary font-bold hover:text-primaryDark transition-colors">
-                    Xem tất cả dự án
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </a>
+            <div class="text-center mb-10 md:mb-14">
+                <h2 class="text-primary font-bold text-[24px] md:text-[32px] mb-3">Các dự án tiêu biểu</h2>
+                <p class="text-textHide text-[14px] md:text-[15px] max-w-2xl mx-auto">Ghi dấu những dự án nổi bật của
+                    Danh Khôi Miền Bắc tham gia triển khai</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Project 1 -->
-                <div
-                    class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col">
-                    <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop"
-                            alt="Aria Vũng Tàu"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-4 left-4"><span
-                                class="bg-primary text-white text-tiny px-2 py-1 rounded shadow-sm">Nghỉ dưỡng</span>
+            <!-- Swiper Slider -->
+            <div class="swiper project-swiper overflow-visible pb-12">
+                <div class="swiper-wrapper">
+                    <!-- Project 1: Ky Co -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop"
+                                    alt="Kỳ Co"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
+                                    khách sạn</span>
+                                <h3
+                                    class="text-[18px] md:text-[20px] font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    KỲ CO</h3>
+                                <span class="text-[14px] text-textHide mt-1">Huyện Nhơn Lý, TP. Quy Nhơn, Tỉnh Bình
+                                    Định</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-h6 text-darkText mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                            <a href="project-detail.html">Aria Vũng Tàu Hotel &amp; Resort</a>
-                        </h3>
-                        <p class="text-small-text text-textHide mb-4 line-clamp-2">Tổ hợp nghỉ dưỡng 5 sao bậc nhất Vũng
-                            Tàu với tầm nhìn hướng biển tuyệt đẹp.</p>
-                        <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-tiny text-textHide font-medium">Vũng Tàu</span>
-                            <a href="project-detail.html" class="text-primary text-tiny font-bold hover:underline">Xem
-                                chi tiết →</a>
+                    <!-- Project 2: Astral City -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop"
+                                    alt="ASTRAL CITY"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <!-- Play icon overlay -->
+                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <div
+                                        class="w-16 h-16 rounded-full border-[3px] border-white flex items-center justify-center bg-transparent group-hover:bg-primary/80 transition-colors backdrop-blur-sm pointer-events-auto cursor-pointer">
+                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
+                                    khách sạn</span>
+                                <h3
+                                    class="text-[18px] md:text-[20px] font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    ASTRAL CITY</h3>
+                                <span class="text-[14px] text-textHide mt-1">Đại lộ Bình Dương, P. Bình Hoà, TP. Thuận
+                                    An, Tỉnh Bình Dương</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Project 2 -->
-                <div
-                    class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col">
-                    <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop"
-                            alt="Barya Citi Tây Bà Rịa"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-4 left-4"><span
-                                class="bg-primary text-white text-tiny px-2 py-1 rounded shadow-sm">Khu đô thị</span>
+                    <!-- Project 3: Aria Vung Tau -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
+                                    alt="ARIA VŨNG TÀU HOTEL & RESORT"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Khách sạn & Khu nghỉ
+                                    dưỡng</span>
+                                <h3
+                                    class="text-[18px] md:text-[20px] font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    ARIA VŨNG TÀU HOTEL &amp; RESORT</h3>
+                                <span class="text-[14px] text-textHide mt-1">Đường 3/2, Phường 10, TP. Vũng Tàu, Tỉnh Bà
+                                    Rịa - Vũng Tàu</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-h6 text-darkText mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                            <a href="project-detail.html">Barya Citi Tây Bà Rịa</a>
-                        </h3>
-                        <p class="text-small-text text-textHide mb-4 line-clamp-2">Khu đô thị kiểu mẫu đầu tiên tại Bà
-                            Rịa, tiện ích nội khu đẳng cấp.</p>
-                        <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-tiny text-textHide font-medium">Bà Rịa - Vũng Tàu</span>
-                            <a href="project-detail.html" class="text-primary text-tiny font-bold hover:underline">Xem
-                                chi tiết →</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 3 -->
-                <div
-                    class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col">
-                    <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop"
-                            alt="The Aston Luxury Residence"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-4 left-4"><span
-                                class="bg-primary text-white text-tiny px-2 py-1 rounded shadow-sm">Căn hộ</span></div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-h6 text-darkText mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                            <a href="project-detail.html">The Aston Luxury Residence</a>
-                        </h3>
-                        <p class="text-small-text text-textHide mb-4 line-clamp-2">Sở hữu quỹ đất vàng mặt tiền đường
-                            Phú, Nha Trang.</p>
-                        <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-tiny text-textHide font-medium">Nha Trang</span>
-                            <a href="project-detail.html" class="text-primary text-tiny font-bold hover:underline">Xem
-                                chi tiết →</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project 4 -->
-                <div
-                    class="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow border border-gray-100 flex flex-col">
-                    <div class="relative overflow-hidden aspect-[4/3]">
-                        <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop"
-                            alt="Nhơn Hội New City"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-                        <div class="absolute top-4 left-4"><span
-                                class="bg-primary text-white text-tiny px-2 py-1 rounded shadow-sm">Khu đô thị</span>
-                        </div>
-                    </div>
-                    <div class="p-6 flex-1 flex flex-col">
-                        <h3 class="text-h6 text-darkText mb-2 group-hover:text-primary transition-colors line-clamp-2">
-                            <a href="project-detail.html">Nhơn Hội New City</a>
-                        </h3>
-                        <p class="text-small-text text-textHide mb-4 line-clamp-2">Tâm điểm mới của thị trường BĐS duyên
-                            hải miền Trung.</p>
-                        <div class="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <span class="text-tiny text-textHide font-medium">Bình Định</span>
-                            <a href="project-detail.html" class="text-primary text-tiny font-bold hover:underline">Xem
-                                chi tiết →</a>
+                    <!-- Project 4: Nhon Hoi New City -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?q=80&w=800&auto=format&fit=crop"
+                                    alt="NHƠN HỘI NEW CITY"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Khu đô thị</span>
+                                <h3
+                                    class="text-[18px] md:text-[20px] font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    NHƠN HỘI NEW CITY</h3>
+                                <span class="text-[14px] text-textHide mt-1">Tâm điểm BĐS duyên hải miền Trung</span>
+                            </div>
                         </div>
                     </div>
                 </div>
+                <!-- Pagination -->
+                <div class="swiper-pagination project-pagination mt-10" style="bottom: 0px;"></div>
             </div>
         </div>
     </section>
@@ -988,6 +971,31 @@
             var $s2 = $('#lang-switcher').next('.select2-container');
             var lockedW = $s2.outerWidth();
             if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
+
+            // Dự án tiêu biểu Slider
+            const projectSwiper = new Swiper('.project-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                    },
+                }
+            });
         });
 
         // Scroll to top
