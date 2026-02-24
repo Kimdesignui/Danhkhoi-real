@@ -579,15 +579,123 @@
         }
     </style>
 
+    <!-- Custom Style for Project Swiper Pagination -->
+    <style>
+        /* Container Slider Dự Án - Căn lề trái theo .main-container, tràn lề phải */
+        /* Ghi chú: Sử dụng CSS padding-left để bù đắp phần không gian bị thiếu do mất .main-container */
+        .project-slider-container {
+            width: 100%;
+            /* 1rem là px-4 mặc định. Ở các màn hình lớn, cộng thêm margin mx-auto của container */
+            padding-left: 1rem;
+            padding-right: 0;
+            overflow: visible;
+        }
+
+        @media (min-width: 640px) {
+            .project-slider-container {
+                padding-left: calc((100vw - 640px) / 2 + 1rem);
+                /* px-4 sm */
+            }
+        }
+
+        @media (min-width: 768px) {
+            .project-slider-container {
+                padding-left: calc((100vw - 768px) / 2 + 1rem);
+                /* px-4 md */
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .project-slider-container {
+                padding-left: calc((100vw - 1024px) / 2 + 1rem);
+                /* px-4 lg */
+            }
+        }
+
+        @media (min-width: 1280px) {
+            .project-slider-container {
+                /* Từ lg trở lên padding container có thể là 0 nếu dùng max-w. Tailwind xl mặc định 1280px */
+                padding-left: max(1rem, calc((100vw - 1280px) / 2));
+            }
+        }
+
+        @media (min-width: 1440px) {
+            .project-slider-container {
+                /* Giả định: .main-container custom max-width 1320px */
+                padding-left: max(1rem, calc((100vw - 1320px) / 2));
+            }
+        }
+
+        /* Phân trang: Đưa thẻ div chứa Pagination ra Full-Width viewport => Tự động Centered */
+        .project-pagination-wrapper {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 30px;
+            /* Tuỳ chỉnh bottom offset */
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+            /* Khong chan click phia duoi */
+        }
+
+        .project-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            pointer-events: auto;
+            /* Enable click tren cham pagination */
+            /* Huy absolute cua Swiper JS mac dinh cap nhat qua Wrapper div */
+            position: relative !important;
+            bottom: auto !important;
+        }
+
+        .project-pagination .swiper-pagination-bullet {
+            width: 10px;
+            height: 10px;
+            background-color: #333;
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            margin: 0 !important;
+        }
+
+        .project-pagination .swiper-pagination-bullet-active {
+            opacity: 1;
+            background-color: transparent;
+            border: 2px solid #333;
+            width: 14px;
+            height: 14px;
+            position: relative;
+        }
+
+        .project-pagination .swiper-pagination-bullet-active::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 6px;
+            height: 6px;
+            background-color: #333;
+            border-radius: 50%;
+        }
+    </style>
+
     <!-- Dự án Tiêu biểu Section -->
-    <section class="py-16 md:py-24 bg-[var(--color-bg1)]">
+    <section class="relative py-16 md:py-24 bg-[var(--color-bg1)] overflow-hidden">
         <div class="main-container">
             <div class="text-center mb-10 md:mb-14">
-                <h2 class="text-primary font-bold text-[24px] md:text-[32px] mb-3">Các dự án tiêu biểu</h2>
-                <p class="text-textHide text-[14px] md:text-[15px] max-w-2xl mx-auto">Ghi dấu những dự án nổi bật của
+                <h2 class="section-title md:text-[32px]">Các dự án tiêu biểu</h2>
+                <p
+                    class="text-[14px] md:text-[15px] mt-4 max-w-2xl mx-auto text-center font-medium font-body text-body-color">
+                    Ghi dấu những dự án nổi bật của
                     Danh Khôi Miền Bắc tham gia triển khai</p>
             </div>
+        </div>
 
+        <div class="project-slider-container">
             <!-- Swiper Slider -->
             <div class="swiper project-swiper overflow-visible pb-12">
                 <div class="swiper-wrapper">
@@ -599,7 +707,7 @@
                                     alt="Kỳ Co"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                             </div>
-                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0">
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
                                 <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
                                     khách sạn</span>
                                 <h3
@@ -627,7 +735,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0">
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
                                 <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
                                     khách sạn</span>
                                 <h3
@@ -675,9 +783,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Pagination -->
-                <div class="swiper-pagination project-pagination mt-10" style="bottom: 0px;"></div>
             </div>
+        </div>
+        </div>
+
+        <!-- Pagination ra ngoài project-slider-container để dễ căn giữa -->
+        <div class="project-pagination-wrapper">
+            <div class="swiper-pagination project-pagination mt-10" style="bottom: 0px;"></div>
         </div>
     </section>
 
