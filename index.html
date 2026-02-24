@@ -623,6 +623,20 @@
             box-sizing: border-box;
             position: relative;
         }
+
+        /* Responsive Wrapper Tràn 84px ở Màn Hình Lớn */
+        .project-slider-bleed {
+            width: 100%;
+            position: relative;
+        }
+
+        @media (min-width: 1024px) {
+            .project-slider-bleed {
+                /* Container to hơn màn hình 168px và đẩy lùi trái 84px => cắt đi 84px 2 bên bức ảnh số 1 và số 4 */
+                width: calc(100% + 168px);
+                margin-left: -84px;
+            }
+        }
     </style>
 
     <!-- Dự án Tiêu biểu Section -->
@@ -637,7 +651,7 @@
             </div>
         </div>
 
-        <div class="main-container relative">
+        <div class="project-slider-bleed">
             <!-- Swiper Slider -->
             <div class="swiper project-swiper overflow-visible pb-12">
                 <div class="swiper-wrapper">
