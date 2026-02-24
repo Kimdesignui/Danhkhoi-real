@@ -218,8 +218,8 @@ body {
   width: 100%;
 }
 
-/* < 1440px: thu về content width để tránh ảnh sát cạnh */
-@media (max-width: 1440px) {
+/* < 1600px: thu về content width để tránh ảnh sát cạnh */
+@media (max-width: 1600px) {
   .domain-section-inner {
     max-width: 1200px;
     padding-left: 1rem;
@@ -352,7 +352,6 @@ body {
   text-decoration: none;
   margin-top: 6px;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
   transition: color 0.25s ease, gap 0.25s ease;
 }
 
