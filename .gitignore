@@ -1,0 +1,18 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Node
+node_modules/
+
+# Debug/Dev files
+*.py
+figma_response.json
+figma_styles.json
+analyze_shape.*
+test_shape.*
+fix_html.*

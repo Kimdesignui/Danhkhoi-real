@@ -1,0 +1,549 @@
+/* ============================================
+   Danh Khôi Đất Bắc - Stylesystem
+   ============================================ */
+/* Cấu hình các biến màu Design Tokens lấy từ Bảng màu (Color Palette) */
+:root {
+  /* Brand Core */
+  --color-primary: #EE2031;
+  /* Đỏ */
+  --color-primary-dark: #DA1626;
+  /* Đỏ đậm */
+  --color-secondary: #E78625;
+  /* Cam */
+
+  /* Backgrounds */
+  --color-white: #FFFFFF;
+  --color-bg1: #F2F6F9;
+  /* Light blue/gray */
+  --color-bg2: #E6EAEF;
+  /* Gray/blue medium */
+  --color-bg-darkblue: #030925;
+  /* Xanh đậm rất tối */
+  --color-darkblue-2: #151B3C;
+  /* Xanh tối */
+
+  /* Text & Accents */
+  --color-dark-text: #333333;
+  /* Chữ đen ngả ghi */
+  --color-text-hide: #4E4E4E;
+  /* Chữ ghi tối */
+  --color-icon: #707070;
+  /* Ghi xám Icon */
+
+  /* Lines & UI Elements */
+  --color-link: #338BEB;
+  /* Xanh link dương */
+  --color-line: rgba(112, 112, 112, 0.5);
+  /* Đường ngăn cách 50% * 707070 */
+  --color-table-line: #E8E8E8;
+  /* Đường viền LDP3 */
+
+  /* Brand Projects (Đặc tả) */
+  --color-aria-1: #215388;
+  /* Xanh dương Aria VT */
+  --color-aria-2: #FFB800;
+  /* Vàng Aria VT 2 */
+}
+
+/* Fallback base styles cho Web (trước khi tailwind base render) */
+body {
+  margin: 0;
+  padding: 0;
+  /* Font Lato (primary web font) là fallback của system-sans */
+}
+
+/* --- Scroll To Top Left Indicator --- */
+.scroll-top-left-indicator {
+  position: fixed;
+  left: 20px;
+  bottom: 0px;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+  transform: translateY(20px);
+}
+
+.scroll-top-left-indicator.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-left-indicator .stl-line {
+  width: 2px;
+  height: 200px;
+  background-color: var(--color-primary);
+  transition: background-color 0.3s ease;
+}
+
+.scroll-top-left-indicator .stl-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: var(--color-primary);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  margin-bottom: 24px;
+}
+
+.scroll-top-left-indicator:hover .stl-text {
+  color: var(--color-primary-dark);
+}
+
+.scroll-top-left-indicator:hover .stl-line {
+  background-color: var(--color-primary-dark);
+}
+
+/* ============================================
+   Section Title — Dùng chung toàn website
+   ============================================ */
+.section-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary);
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--color-primary);
+}
+
+/* ============================================
+   Thành tựu nổi bật — Stats Section
+   ============================================ */
+.stats-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1 1 auto;
+}
+
+/* Số lớn màu primary đỏ */
+.stat-number {
+  font-size: clamp(52px, 6vw, 80px);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  flex-shrink: 0;
+}
+
+/* Nhóm label bên phải số */
+.stat-label {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+/* Dòng 1: tên đơn vị */
+.stat-unit {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-darkText, #2B3B51);
+  line-height: 1.3;
+}
+
+/* Dòng 2: mô tả (nếu có) */
+.stat-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-textHide, #6B7280);
+  line-height: 1.3;
+}
+
+/* Responsive: 2 cột trên tablet, 1 cột mobile */
+@media (max-width: 767px) {
+  .stats-grid {
+    gap: 24px;
+  }
+
+  .stat-item {
+    flex: 1 1 calc(50% - 12px);
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-grid {
+    gap: 20px;
+  }
+
+  .stat-item {
+    flex: 1 1 100%;
+  }
+}
+
+/* ============================================
+   Domain Cards — Lĩnh Vực Hoạt Động
+   ============================================ */
+/* Wrapper căn giữa, không bị giới hạn bởi main-container */
+.domain-section-wrap {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Inner: max 1320px, căn giữa */
+.domain-section-inner {
+  display: flex;
+  margin: 0 auto;
+  /* 4 cards × 330px = 1320px */
+  max-width: 1320px;
+  width: 100%;
+}
+
+/* < 1440px: thu về content width để tránh ảnh sát cạnh */
+@media (max-width: 1440px) {
+  .domain-section-inner {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+
+/* Mỗi card: 330px × 700px (aspect-ratio 330/700) */
+.domain-card-v2 {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  flex: 0 0 25%;
+  /* 25% of 1320px = 330px */
+  /* Aspect ratio 330:700 ≈ 47.14% */
+  aspect-ratio: 330 / 700;
+  will-change: transform;
+}
+
+/* Image */
+.domain-card-v2 .card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity, transform;
+}
+
+/* Red overlay */
+.domain-card-v2 .card-hover-bg {
+  position: absolute;
+  inset: 0;
+  background: var(--color-primary);
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+}
+
+/* Figma overlay: gradient white-to-dark, ẩn khi hover */
+.domain-card-v2 .card-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.00) 0%,
+      rgba(255, 255, 255, 0.20) 67.76%,
+      rgba(0, 0, 0, 0.40) 82.43%);
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+  z-index: 1;
+}
+
+/* Default content (title + link ở dưới) */
+.domain-card-v2 .card-default-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 28px 24px 24px;
+  z-index: 2;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+}
+
+/* Hover content — description slide lên từ dưới */
+.domain-card-v2 .card-hover-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 32px 28px;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: opacity;
+}
+
+/* Description paragraph: bắt đầu từ dưới, trượt lên khi hover */
+.domain-card-v2 .card-hover-content .card-desc {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s,
+    transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.05s;
+  will-change: opacity, transform;
+}
+
+/* Hover state */
+.domain-card-v2:hover .card-hover-bg {
+  opacity: 1;
+}
+
+.domain-card-v2:hover .card-img {
+  transform: scale(1.05);
+  opacity: 0;
+}
+
+.domain-card-v2:hover .card-gradient {
+  opacity: 0;
+}
+
+/* ẩn overlay khi hover */
+.domain-card-v2:hover .card-default-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.domain-card-v2:hover .card-hover-content {
+  opacity: 1;
+}
+
+/* description trượt lên */
+.domain-card-v2:hover .card-hover-content .card-desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Chi tiết link — dùng img icon SVG */
+.domain-card-v2 .chi-tiet-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  margin-top: 6px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: color 0.25s ease, gap 0.25s ease;
+}
+
+.domain-card-v2 .chi-tiet-link img.icon-arrow {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+  flex-shrink: 0;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.domain-card-v2:hover .chi-tiet-link {
+  color: #fff;
+  gap: 12px;
+}
+
+.domain-card-v2:hover .chi-tiet-link img.icon-arrow {
+  opacity: 1;
+  transform: translateX(4px);
+}
+
+/* Pattern background — nằm dưới 4 thẻ, bên trái */
+.domain-pattern-area {
+  pointer-events: none;
+  user-select: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 120px;
+  /* hiện phần dưới cùng SVG, vừa đủ */
+  z-index: 0;
+}
+
+.domain-pattern-area img {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 196px;
+  height: 521px;
+  /* hiện full SVG nhưng clip bởi overflow:hidden */
+  object-fit: none;
+  object-position: left bottom;
+}
+
+/* ============================================
+   Scroll To Top — tròn ở màn hình < 1280px
+   ============================================ */
+@media (max-width: 1279px) {
+
+  /* Ẩn indicator dọc */
+  .scroll-top-left-indicator {
+    display: none;
+  }
+
+  /* Hiện nút tròn */
+  .scroll-top-circle {
+    display: flex !important;
+  }
+}
+
+/* Nút tròn — ẩn mặc định trên desktop */
+.scroll-top-circle {
+  display: none;
+  position: fixed;
+  right: 24px;
+  bottom: 32px;
+  z-index: 99;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.2s ease;
+  transform: translateY(10px);
+  box-shadow: 0 4px 16px rgba(238, 32, 49, 0.35);
+}
+
+.scroll-top-circle.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-top-circle:hover {
+  background: var(--color-primary-dark);
+}
+
+.scroll-top-circle svg {
+  width: 20px;
+  height: 20px;
+  stroke: #fff;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* ============================================
+   Domain Cards — Responsive < 1280px
+   ============================================ */
+
+/* 1080px: text-only mode (no image) — dùng content width + gap + bg primary đỏ */
+@media (max-width: 1080px) {
+
+  /* domain-section-inner dùng content width như main-container */
+  .domain-section-inner {
+    max-width: 1200px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 16px;
+    /* gap giữa các thẻ */
+    flex-wrap: wrap;
+  }
+
+  .domain-card-v2 {
+    flex: 1 1 calc(50% - 8px);
+    /* 2 cột trên tablet */
+    aspect-ratio: 4 / 3;
+    background: var(--color-primary);
+    /* primary đỏ */
+  }
+
+  /* Ẩn ảnh, gradient placeholder */
+  .domain-card-v2 .card-img,
+  .domain-card-v2 .card-gradient {
+    display: none;
+  }
+
+  /* Luôn hiện default content (title + link) */
+  .domain-card-v2 .card-default-content {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    padding: 24px 20px;
+  }
+
+  /* Ẩn red hover overlay */
+  .domain-card-v2 .card-hover-bg {
+    display: none;
+  }
+
+  /* Hiện description (max 5 dòng) ngay dưới title */
+  .domain-card-v2 .card-desc-mobile {
+    display: -webkit-box !important;
+    line-clamp: 5;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.80);
+    font-size: 13px;
+    line-height: 1.55;
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  /* Vô hiệu hover effect trên màn nhỏ */
+  .domain-card-v2:hover .card-hover-bg {
+    opacity: 0;
+  }
+
+  .domain-card-v2:hover .card-img {
+    opacity: 0;
+    transform: none;
+  }
+
+  .domain-card-v2:hover .card-hover-content {
+    opacity: 0;
+  }
+
+  .domain-card-v2:hover .card-default-content {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Ẩn pattern SVG khi màn nhỏ */
+  .domain-pattern-area {
+    display: none;
+  }
+}
+
+/* Mobile: 1 cột */
+@media (max-width: 600px) {
+  .domain-section-inner {
+    gap: 12px;
+  }
+
+  .domain-card-v2 {
+    flex: 1 1 100%;
+    /* 1 cột đầy */
+    aspect-ratio: 4 / 3;
+  }
+}
