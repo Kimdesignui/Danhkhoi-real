@@ -107,7 +107,6 @@ body {
    Section Title — Dùng chung toàn website
    ============================================ */
 .section-title {
-  font-size: 20px;
   font-weight: 700;
   color: var(--color-primary);
   position: relative;
@@ -121,8 +120,9 @@ body {
   content: '';
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% / 3);
   height: 2px;
   background: var(--color-primary);
 }
