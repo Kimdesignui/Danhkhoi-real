@@ -253,9 +253,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative w-full overflow-hidden pb-[30px] bg-[#E6EAEF]" style="aspect-ratio: 1920 / 700;">
+    <section id="hero" class="relative w-full overflow-visible" style="aspect-ratio: 1920 / 700;">
         <!-- Swiper Container -->
-        <div class="swiper hero-swiper w-full h-full">
+        <div class="swiper hero-swiper w-full h-full overflow-hidden">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide relative w-full h-full">
@@ -285,7 +285,7 @@
         </div>
 
         <!-- Custom Pagination Tabs -->
-        <div class="absolute bottom-[84px] left-0 w-full z-20 pointer-events-none lg:translate-y-0 translate-y-[30px]">
+        <div class="absolute bottom-[-84px] left-0 w-full z-20 pointer-events-none lg:translate-y-0 translate-y-[30px]">
             <div class="main-container relative h-auto lg:h-[200px] pointer-events-auto">
                 <!-- Wrapper for Desktop fixed widths -->
                 <div class="hero-tabs-wrap relative h-full flex flex-col lg:flex-row w-full lg:w-[1040px] bg-primary">
@@ -569,7 +569,7 @@
 
         .odometer-digit {
             display: inline-block;
-            width: 0.6em;
+            width: 0.58em;
             height: 1em;
             overflow: hidden;
             position: relative;
