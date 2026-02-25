@@ -625,6 +625,11 @@
             /* Mở lại tính năng click cho chính các nút bấm */
         }
 
+        /* Giới hạn chỉ hiển thị 4 chấm Pagination của dự án */
+        .project-pagination .swiper-pagination-bullet:nth-child(n+5) {
+            display: none !important;
+        }
+
         .project-pagination .swiper-pagination-bullet {
             width: 8px;
             height: 8px;
@@ -1056,6 +1061,17 @@
             var lockedW = $s2.outerWidth();
             if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
 
+            // Duplicate Slides for Infinite Loop on Desktop
+            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
+            if (swiperWrapper) {
+                const originalSlides = Array.from(swiperWrapper.children);
+                if (originalSlides.length > 0 && originalSlides.length <= 4) {
+                    originalSlides.forEach(slide => {
+                        swiperWrapper.appendChild(slide.cloneNode(true));
+                    });
+                }
+            }
+
             // Dự án tiêu biểu Slider
             const projectSwiper = new Swiper('.project-swiper', {
                 slidesPerView: 1,
@@ -1078,8 +1094,30 @@
                         slidesPerView: 4,
                         spaceBetween: 30,
                     },
+                },
+                on: {
+                    init: function () {
+                        updateCustomPagination(this);
+                    },
+                    slideChange: function () {
+                        updateCustomPagination(this);
+                    }
                 }
             });
+
+            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
+            function updateCustomPagination(swiper) {
+                setTimeout(() => {
+                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
+                    if (bullets.length === 0) return;
+
+                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
+                    const realIndex = swiper.realIndex % 4;
+                    if (bullets[realIndex]) {
+                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
+                    }
+                }, 10);
+            }
         });
 
         // Scroll to top
