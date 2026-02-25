@@ -63,11 +63,31 @@
         }
     </script>
 
-    <style type="text/tailwindcss">
-        @layer base {
-            body { @apply font-sans text-darkText bg-white antialiased; }
-            h1, h2, h3, h4, h5 { @apply font-sans text-darkText; }
-            .main-container { @apply max-w-container mx-auto px-4; }
+    <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
     </style>
 
