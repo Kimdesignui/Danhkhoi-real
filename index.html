@@ -958,7 +958,7 @@
     </section>
 
     <!-- Truyền thông Section -->
-    <section class="relative pt-16 md:pt-24 pb-0 bg-bg1 overflow-hidden">
+    <section class="relative pt-16 md:pt-24 pb-0 bg-bg2 overflow-hidden">
         <!-- Đáy đỏ -->
         <div class="absolute bottom-0 left-0 w-full h-[35%] md:h-[40%] bg-primary"></div>
 
@@ -974,111 +974,105 @@
             <!-- Media Carousel -->
             <div class="relative w-full pb-16 md:pb-24">
                 <div class="swiper media-swiper !pl-[5%] !pr-[5%] md:!px-0">
-                    <div class="swiper-wrapper items-center">
-                        <!-- Video 1 -->
+                    <!-- Video 1 -->
+                    <div class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300"
+                        style="background: url('images/video-1.jpg') lightgray 50% / cover no-repeat; box-shadow: 0 1.393px 20.9px 1.393px rgba(0, 0, 0, 0.50);">
+                        <!-- Overlay đen che mờ các video phụ -->
                         <div
-                            class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20">
-                            <img src="images/hero-1.jpg" alt="Video 1" class="w-full h-full object-cover">
-                            <!-- Overlay đen che mờ các video phụ -->
+                            class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
+                        </div>
+                        <!-- Play button -->
+                        <div class="absolute inset-0 flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
-                            </div>
-                            <!-- Play button -->
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                                class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Video 2 -->
+                    <!-- Video 2 -->
+                    <div class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300"
+                        style="background: url('images/video-2.jpg') lightgray 50% / cover no-repeat; box-shadow: 0 1.393px 20.9px 1.393px rgba(0, 0, 0, 0.50);">
                         <div
-                            class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20">
-                            <img src="images/hero-2.jpg" alt="Video 2" class="w-full h-full object-cover">
+                            class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                                class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Video 3 -->
+                    <!-- Video 3 -->
+                    <div class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300"
+                        style="background: url('images/video-3.jpg') lightgray 50% / cover no-repeat; box-shadow: 0 1.393px 20.9px 1.393px rgba(0, 0, 0, 0.50);">
                         <div
-                            class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20">
-                            <img src="images/hero-3.jpg" alt="Video 3" class="w-full h-full object-cover">
+                            class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                                class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Video 4 -->
+                    <!-- Video 4 -->
+                    <div class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300"
+                        style="background: url('images/video-4.jpg') lightgray 50% / cover no-repeat; box-shadow: 0 1.393px 20.9px 1.393px rgba(0, 0, 0, 0.50);">
                         <div
-                            class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20">
-                            <img src="images/project-1.jpg" alt="Video 4" class="w-full h-full object-cover">
+                            class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                                class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Video 5 -->
+                    <!-- Video 5 -->
+                    <div class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300"
+                        style="background: url('images/video-5.jpg') lightgray 50% / cover no-repeat; box-shadow: 0 1.393px 20.9px 1.393px rgba(0, 0, 0, 0.50);">
                         <div
-                            class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] aspect-[16/9] rounded-xl overflow-hidden shadow-2xl group cursor-pointer border border-white/20">
-                            <img src="images/project-2.jpg" alt="Video 5" class="w-full h-full object-cover">
+                            class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
+                        </div>
+                        <div class="absolute inset-0 flex items-center justify-center">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
-                            </div>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                                class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
+                                <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Navigation custom -->
-                <div
-                    class="media-button-prev absolute top-[41%] md:top-1/2 -translate-y-1/2 left-[5%] md:left-[50%] md:-ml-[310px] w-8 h-8 md:w-[46px] md:h-[46px] border border-white/50 flex items-center justify-center z-20 cursor-pointer hover:bg-white/30 transition-colors backdrop-blur-sm select-none">
-                    <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-3 h-3 md:w-4 md:h-4 filter invert">
-                </div>
-                <div
-                    class="media-button-next absolute top-[41%] md:top-1/2 -translate-y-1/2 right-[5%] md:right-[50%] md:-mr-[310px] w-8 h-8 md:w-[46px] md:h-[46px] border border-white/50 flex items-center justify-center z-20 cursor-pointer hover:bg-white/30 transition-colors backdrop-blur-sm select-none">
-                    <img src="images/Icon-arrow-right.svg" alt="Next" class="w-3 h-3 md:w-4 md:h-4 filter invert">
-                </div>
             </div>
+
+            <!-- Navigation custom -->
+            <div
+                class="media-button-prev absolute top-[41%] md:top-1/2 -translate-y-1/2 left-[5%] md:left-[50%] md:-ml-[310px] w-8 h-8 md:w-[46px] md:h-[46px] border border-white/50 flex items-center justify-center z-20 cursor-pointer hover:bg-white/30 transition-colors backdrop-blur-sm select-none">
+                <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-3 h-3 md:w-4 md:h-4 filter invert">
+            </div>
+            <div
+                class="media-button-next absolute top-[41%] md:top-1/2 -translate-y-1/2 right-[5%] md:right-[50%] md:-mr-[310px] w-8 h-8 md:w-[46px] md:h-[46px] border border-white/50 flex items-center justify-center z-20 cursor-pointer hover:bg-white/30 transition-colors backdrop-blur-sm select-none">
+                <img src="images/Icon-arrow-right.svg" alt="Next" class="w-3 h-3 md:w-4 md:h-4 filter invert">
+            </div>
+        </div>
         </div>
     </section>
 
@@ -1509,9 +1503,9 @@
             loop: true,
             coverflowEffect: {
                 rotate: 0,
-                stretch: 60, // Kéo dãn khoảng cách giữa các slide
-                depth: 150, // Độ sâu 3D đẩy slide nhỏ lại
-                modifier: 1,
+                stretch: 80, // Kéo dãn khoảng cách giữa các slide
+                depth: 200, // Độ sâu 3D đẩy slide nhỏ lại
+                modifier: 1.2,
                 slideShadows: true,
             },
             navigation: {
