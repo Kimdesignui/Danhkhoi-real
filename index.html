@@ -253,9 +253,9 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero" class="relative w-full overflow-visible" style="aspect-ratio: 1920 / 700;">
+    <section id="hero" class="relative w-full overflow-visible h-auto lg:h-[700px] lg:aspect-[192/70]">
         <!-- Swiper Container -->
-        <div class="swiper hero-swiper w-full h-full overflow-hidden">
+        <div class="swiper hero-swiper w-full h-[450px] md:h-[600px] lg:h-full overflow-hidden z-10">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide relative w-full h-full">
@@ -285,51 +285,52 @@
         </div>
 
         <!-- Custom Pagination Tabs -->
-        <div class="absolute bottom-[-84px] left-0 w-full z-20 pointer-events-none lg:translate-y-0 translate-y-[30px]">
+        <div class="relative lg:absolute lg:bottom-[-84px] left-0 w-full z-20 pointer-events-none">
             <div class="main-container relative h-auto lg:h-[200px] pointer-events-auto">
                 <!-- Wrapper for Desktop fixed widths -->
-                <div class="hero-tabs-wrap relative h-full flex flex-col lg:flex-row w-full lg:w-[1040px] bg-primary">
+                <div
+                    class="hero-tabs-wrap relative h-full grid grid-cols-2 lg:flex lg:flex-row w-full lg:w-[1040px] bg-primary">
                     <!-- Left Bleed Box -->
                     <div class="hidden lg:block absolute top-0 bottom-0 right-full w-[50vw] bg-primary"></div>
 
                     <!-- Tab 1 -->
                     <button
-                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-2 lg:gap-0"
+                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-1 lg:gap-0 border-b border-r lg:border-none border-white/10"
                         data-slide-index="0">
                         <span
-                            class="font-roboto text-[40px] md:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">01.</span>
+                            class="font-roboto text-[36px] md:text-[50px] lg:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">01.</span>
                         <span
-                            class="font-sans text-[13px] md:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-2 leading-[1.4] pointer-events-none">Dự
+                            class="font-sans text-[12px] md:text-[14px] lg:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-1 lg:pr-2 leading-[1.4] pointer-events-none mt-1 lg:mt-0">Dự
                             án<br>Aria Vũng Tàu<br>Hotel &amp; Resort</span>
                     </button>
                     <!-- Tab 2 -->
                     <button
-                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-2 lg:gap-0"
+                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-1 lg:gap-0 border-b lg:border-none border-white/10"
                         data-slide-index="1">
                         <span
-                            class="font-roboto text-[40px] md:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">02.</span>
+                            class="font-roboto text-[36px] md:text-[50px] lg:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">02.</span>
                         <span
-                            class="font-sans text-[13px] md:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-2 leading-[1.4] pointer-events-none">Dự
+                            class="font-sans text-[12px] md:text-[14px] lg:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-1 lg:pr-2 leading-[1.4] pointer-events-none mt-1 lg:mt-0">Dự
                             án The Matrix One -<br>Mỹ Đình</span>
                     </button>
                     <!-- Tab 3 -->
                     <button
-                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-2 lg:gap-0"
+                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-1 lg:gap-0 border-r lg:border-none border-white/10"
                         data-slide-index="2">
                         <span
-                            class="font-roboto text-[40px] md:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">03.</span>
+                            class="font-roboto text-[36px] md:text-[50px] lg:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">03.</span>
                         <span
-                            class="font-sans text-[13px] md:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-2 leading-[1.4] pointer-events-none">Dự
+                            class="font-sans text-[12px] md:text-[14px] lg:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-1 lg:pr-2 leading-[1.4] pointer-events-none mt-1 lg:mt-0">Dự
                             án Khai Sơn City<br>Long Biên - Hà Nội</span>
                     </button>
                     <!-- Tab 4 -->
                     <button
-                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-2 lg:gap-0"
+                        class="hero-tab relative flex-1 lg:w-[260px] flex flex-col items-start text-left py-4 lg:py-6 px-4 lg:px-6 hover:bg-[#DA1626] transition-all duration-300 group gap-1 lg:gap-0"
                         data-slide-index="3">
                         <span
-                            class="font-roboto text-[40px] md:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">04.</span>
+                            class="font-roboto text-[36px] md:text-[50px] lg:text-[80px] font-bold text-white/50 group-[.active]:text-white transition-colors block leading-none lg:mb-2 pointer-events-none">04.</span>
                         <span
-                            class="font-sans text-[13px] md:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-2 leading-[1.4] pointer-events-none">Dự
+                            class="font-sans text-[12px] md:text-[14px] lg:text-[15px] font-semibold text-white/80 group-[.active]:text-white transition-colors pr-1 lg:pr-2 leading-[1.4] pointer-events-none mt-1 lg:mt-0">Dự
                             án Vinhomes New<br>Center - Hà Tĩnh</span>
                     </button>
 
@@ -342,7 +343,7 @@
     </section>
 
     <!-- About Us / Thư ngỏ Section -->
-    <section class="py-20" style="background:#E6EAEF;">
+    <section class="pt-16 pb-20 lg:pt-[130px] lg:pb-20" style="background:#E6EAEF;">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-[30px]">
                 <!-- Col 1: Tiêu đề & Nút -->
