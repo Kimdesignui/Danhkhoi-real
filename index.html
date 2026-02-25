@@ -976,7 +976,7 @@
                 <div class="swiper media-swiper !pl-[5%] !pr-[5%] md:!px-0">
                     <!-- Video 1 -->
                     <div
-                        class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-1">
+                        class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-1">
                         <!-- Overlay đen che mờ các video phụ -->
                         <div
                             class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
@@ -995,7 +995,7 @@
 
                     <!-- Video 2 -->
                     <div
-                        class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-2">
+                        class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-2">
                         <div
                             class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
                         </div>
@@ -1012,7 +1012,7 @@
 
                     <!-- Video 3 -->
                     <div
-                        class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-3">
+                        class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-3">
                         <div
                             class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
                         </div>
@@ -1029,7 +1029,7 @@
 
                     <!-- Video 4 -->
                     <div
-                        class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-4">
+                        class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-4">
                         <div
                             class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
                         </div>
@@ -1046,7 +1046,7 @@
 
                     <!-- Video 5 -->
                     <div
-                        class="swiper-slide w-[280px] sm:w-[400px] md:w-[650px] xl:w-[750px] 2xl:w-[960px] aspect-[16/9] rounded-xl overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-5">
+                        class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-5">
                         <div
                             class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500">
                         </div>
@@ -1496,17 +1496,22 @@
 
         // Media Coverflow Carousel
         const mediaSwiper = new Swiper('.media-swiper', {
-            effect: 'coverflow',
+            effect: 'creative',
             grabCursor: true,
             centeredSlides: true,
             slidesPerView: 'auto',
             loop: true,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: 80, // Kéo dãn khoảng cách giữa các slide
-                depth: 200, // Độ sâu 3D đẩy slide nhỏ lại
-                modifier: 1.2,
-                slideShadows: true,
+            loopedSlides: 5,
+            creativeEffect: {
+                limitProgress: 2,
+                prev: {
+                    translate: ['83%', 0, 0],
+                    scale: 0.8,
+                },
+                next: {
+                    translate: ['-83%', 0, 0],
+                    scale: 0.8,
+                },
             },
             navigation: {
                 nextEl: '.media-button-next',
