@@ -265,7 +265,7 @@
         </div>
 
         <!-- Custom Pagination Tabs -->
-        <div class="absolute bottom-0 left-0 w-full z-20 pointer-events-none lg:translate-y-0 translate-y-[30px]">
+        <div class="absolute bottom-[84px] left-0 w-full z-20 pointer-events-none lg:translate-y-0 translate-y-[30px]">
             <div class="main-container relative h-auto lg:h-[200px] pointer-events-auto">
                 <!-- Wrapper for Desktop fixed widths -->
                 <div class="hero-tabs-wrap relative h-full flex flex-col lg:flex-row w-full lg:w-[1040px] bg-primary">
@@ -324,19 +324,19 @@
     <!-- About Us / Thư ngỏ Section -->
     <section class="py-20" style="background:#E6EAEF;">
         <div class="main-container">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-[30px]">
                 <!-- Col 1: Tiêu đề & Nút -->
-                <div class="lg:col-span-3">
+                <div class="lg:col-span-4">
                     <span class="text-primary text-small-text-bold uppercase tracking-wider mb-2 block">Thư ngỏ</span>
-                    <h2 class="text-h3 md:text-h2 font-display text-primary font-bold mb-6">Công ty Cổ phần<br>Danh Khôi
-                        Miền Bắc</h2>
+                    <h2 class="text-2xl md:text-[32px] font-display text-primary font-bold mb-6">Công ty Cổ phần<br>Danh
+                        Khôi Miền Bắc</h2>
                     <a href="#"
                         class="inline-block bg-secondary text-white px-8 py-2.5 rounded-full text-small-text-bold hover:bg-opacity-90 transition-opacity">Xem
                         chi tiết</a>
                 </div>
 
                 <!-- Col 2: Nội dung -->
-                <div class="lg:col-span-5">
+                <div class="lg:col-span-4">
                     <h3 class="text-[16px] font-bold text-primary mb-4">"Thành công thật sự khởi nguồn từ lòng chân
                         thành và sự chia sẻ."</h3>
                     <p class="text-[14px] leading-[1.6] text-textHide mb-4 text-justify">
@@ -352,35 +352,39 @@
                     </p>
                 </div>
 
-                <!-- Col 3: Tổng quan -->
-                <div class="lg:col-span-2">
-                    <h3 class="text-[16px] font-bold text-primary mb-4">Tổng quan</h3>
-                    <ul class="flex flex-col gap-3 text-[14px] text-textHide">
-                        <li><a href="#" class="hover:text-primary transition-colors">Giới thiệu chung</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Tầm nhìn</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Sứ mệnh</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Giá trị cốt lõi</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Quá trình phát triển</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Con số nổi bật</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Giải thưởng</a></li>
-                    </ul>
-                </div>
-
-                <!-- Col 4: Cơ hội & Văn hoá -->
-                <div class="lg:col-span-2">
-                    <div class="mb-8">
-                        <h3 class="text-[16px] font-bold text-primary mb-4">Cơ hội hợp tác</h3>
+                <!-- Col 3: Danh sách Chia 2 phần -->
+                <div class="lg:col-span-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <!-- Phần 1: Tổng quan -->
+                    <div>
+                        <h3 class="text-[16px] font-bold text-primary mb-4">Tổng quan</h3>
                         <ul class="flex flex-col gap-3 text-[14px] text-textHide">
-                            <li><a href="#" class="hover:text-primary transition-colors">Lý do hợp tác</a></li>
-                            <li><a href="#" class="hover:text-primary transition-colors">Đối tác Chiến lược</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Giới thiệu chung</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Tầm nhìn</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Sứ mệnh</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Giá trị cốt lõi</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Quá trình phát triển</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Con số nổi bật</a></li>
+                            <li><a href="#" class="hover:text-primary transition-colors">Giải thưởng</a></li>
                         </ul>
                     </div>
+
+                    <!-- Phần 2: Cơ hội & Văn hoá -->
                     <div>
-                        <h3 class="text-[16px] font-bold text-primary mb-4">Văn hoá</h3>
-                        <ul class="flex flex-col gap-3 text-[14px] text-textHide">
-                            <li><a href="#" class="hover:text-primary transition-colors">Giá trị Cốt lõi EPICS</a></li>
-                            <li><a href="#" class="hover:text-primary transition-colors">Ban lãnh đạo</a></li>
-                        </ul>
+                        <div class="mb-8">
+                            <h3 class="text-[16px] font-bold text-primary mb-4">Cơ hội hợp tác</h3>
+                            <ul class="flex flex-col gap-3 text-[14px] text-textHide">
+                                <li><a href="#" class="hover:text-primary transition-colors">Lý do hợp tác</a></li>
+                                <li><a href="#" class="hover:text-primary transition-colors">Đối tác Chiến lược</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h3 class="text-[16px] font-bold text-primary mb-4">Văn hoá</h3>
+                            <ul class="flex flex-col gap-3 text-[14px] text-textHide">
+                                <li><a href="#" class="hover:text-primary transition-colors">Giá trị Cốt lõi EPICS</a>
+                                </li>
+                                <li><a href="#" class="hover:text-primary transition-colors">Ban lãnh đạo</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -392,7 +396,7 @@
 
         <div class="main-container relative z-10">
             <div class="mb-10">
-                <h2 class="section-title">Lĩnh vực hoạt động</h2>
+                <h2 class="section-title text-2xl md:text-[32px]">Lĩnh vực hoạt động</h2>
             </div>
         </div>
 
@@ -500,7 +504,7 @@
     </section>
 
     <!-- Thành tựu nổi bật Section -->
-    <section id="achievements" class="py-16 bg-white">
+    <section id="achievements" class="py-12 md:pt-[96px] md:pb-[131px] bg-white">
         <div class="main-container">
             <div class="text-center mb-14">
                 <h2 class="text-primary font-bold text-[22px] md:text-[26px] inline-block relative pb-3">
@@ -550,7 +554,8 @@
             overflow: hidden;
             position: relative;
             font-family: 'Roboto', sans-serif;
-            font-weight: 700;
+            font-weight: 900;
+            letter-spacing: -0.03em;
             font-size: 52px;
             color: var(--color-primary);
             line-height: 1;
@@ -583,14 +588,9 @@
     <style>
         /* Phân trang: Đưa thẻ div chứa Pagination ra Full-Width viewport => Tự động Centered */
         .project-pagination-wrapper {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 30px;
             width: 100%;
             display: flex;
             justify-content: center;
-            pointer-events: none;
         }
 
         .project-pagination {
@@ -598,9 +598,6 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
-            pointer-events: auto;
-            position: relative !important;
-            bottom: auto !important;
         }
 
         .project-pagination .swiper-pagination-bullet {
@@ -653,7 +650,7 @@
 
         <div class="project-slider-bleed">
             <!-- Swiper Slider -->
-            <div class="swiper project-swiper overflow-visible pb-12">
+            <div class="swiper project-swiper overflow-visible">
                 <div class="swiper-wrapper">
                     <!-- Project 1: Ky Co -->
                     <div class="swiper-slide">
@@ -737,8 +734,8 @@
                 </div>
             </div>
             <!-- Pagination ra ngoài project-slider-container để dễ căn giữa -->
-            <div class="project-pagination-wrapper">
-                <div class="swiper-pagination project-pagination mt-10" style="bottom: 0px;"></div>
+            <div class="project-pagination-wrapper mt-[66px]">
+                <div class="swiper-pagination project-pagination mt-0" style="bottom: 0px;"></div>
             </div>
         </div>
     </section>
@@ -750,7 +747,7 @@
                 <div>
                     <span class="text-secondary text-small-text-bold uppercase tracking-wider mb-2 block">Cập nhật mới
                         nhất</span>
-                    <h2 class="section-title">Tin tức - Sự kiện</h2>
+                    <h2 class="section-title text-2xl md:text-[32px]">Tin tức - Sự kiện</h2>
                 </div>
                 <a href="news.html"
                     class="inline-flex items-center gap-2 text-primary font-bold hover:text-primaryDark transition-colors">
