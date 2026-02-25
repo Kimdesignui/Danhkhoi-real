@@ -835,63 +835,123 @@
         </div>
     </section>
 
-    <!-- Tin tức - Sự kiện Section -->
-    <section class="py-20 bg-white border-t border-gray-100">
+    <!-- Tin tức nổi bật Section -->
+    <section class="py-12 md:py-20 bg-bg1">
         <div class="main-container">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
-                <div>
-                    <span class="text-secondary text-small-text-bold uppercase tracking-wider mb-2 block">Cập nhật mới
-                        nhất</span>
-                    <h2 class="section-title text-2xl md:text-[32px]">Tin tức - Sự kiện</h2>
+            <!-- Header: Tiêu đề và Xem tất cả -->
+            <div class="flex justify-between items-end mb-8 pb-4 relative">
+                <div class="relative">
+                    <h2 class="text-[20px] md:text-[24px] font-bold text-primary">Tin tức nổi bật</h2>
+                    <!-- Đường viền đỏ gạch chân ngắn -->
+                    <div class="absolute -bottom-[8px] left-0 w-12 h-[2px] bg-primary"></div>
                 </div>
                 <a href="news.html"
-                    class="inline-flex items-center gap-2 text-primary font-bold hover:text-primaryDark transition-colors">
-                    Xem tất cả tin tức
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
-                    </svg>
-                </a>
+                    class="text-[13px] text-textHide hover:text-primary transition-colors relative z-10">Xem tất cả</a>
             </div>
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- News 1 -->
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-lg aspect-[16/9] mb-4">
-                        <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop"
-                            alt="Tin tức 1"
+                <div
+                    class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <!-- Badge Danh mục -->
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] px-3 py-1 rounded-full shadow-sm">
+                            Danh mục
+                        </div>
+                        <img src="images/project-1.jpg"
+                            alt="BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <span class="text-tiny text-textHide mb-2 block">24/02/2026</span>
-                    <h3 class="text-h6 text-darkText group-hover:text-primary transition-colors line-clamp-2 mb-2">Danh
-                        Khôi Đất Bắc ra mắt dự án nghỉ dưỡng cao cấp tại Vũng Tàu</h3>
-                    <p class="text-small-text text-textHide line-clamp-2">Tổ hợp nghỉ dưỡng 5 sao đầu tiên được phát
-                        triển bởi Danh Khôi Đất Bắc tại vùng đất Bà Rịa - Vũng Tàu.</p>
+                    <!-- Nội dung bài viết -->
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3
+                            class="text-[14px] md:text-[15px] font-bold text-[#333] hover:text-primary transition-colors line-clamp-3 mb-3 leading-snug uppercase">
+                            BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU
+                        </h3>
+                        <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
+                            động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
+
+                        <!-- Nút Chi tiết -->
+                        <div
+                            class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
+                            <span
+                                class="w-[20px] h-[20px] flex items-center justify-center border border-gray-300 rounded-[3px] group-hover:border-primary transition-colors">
+                                <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                    class="w-2 h-2 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
+                            </span>
+                            Chi tiết
+                        </div>
+                    </div>
                 </div>
+
                 <!-- News 2 -->
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-lg aspect-[16/9] mb-4">
-                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=800&auto=format&fit=crop"
-                            alt="Tin tức 2"
+                <div
+                    class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <!-- Badge Danh mục -->
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] px-3 py-1 rounded-full shadow-sm">
+                            Danh mục
+                        </div>
+                        <img src="images/project-2.jpg" alt="ARIA VŨNG TÀU HOTEL & RESORT"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <span class="text-tiny text-textHide mb-2 block">20/02/2026</span>
-                    <h3 class="text-h6 text-darkText group-hover:text-primary transition-colors line-clamp-2 mb-2">Thị
-                        trường bất động sản miền Bắc khởi sắc trong quý I/2026</h3>
-                    <p class="text-small-text text-textHide line-clamp-2">Với nhiều chính sách hỗ trợ từ Chính phủ, thị
-                        trường bất động sản miền Bắc đang dần phục hồi mạnh mẽ.</p>
+                    <!-- Nội dung bài viết -->
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3
+                            class="text-[14px] md:text-[15px] font-bold text-[#333] hover:text-primary transition-colors line-clamp-3 mb-3 leading-snug uppercase">
+                            ARIA VŨNG TÀU HOTEL & RESORT
+                        </h3>
+                        <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
+                            động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
+
+                        <!-- Nút Chi tiết -->
+                        <div
+                            class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
+                            <span
+                                class="w-[20px] h-[20px] flex items-center justify-center border border-gray-300 rounded-[3px] group-hover:border-primary transition-colors">
+                                <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                    class="w-2 h-2 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
+                            </span>
+                            Chi tiết
+                        </div>
+                    </div>
                 </div>
+
                 <!-- News 3 -->
-                <div class="group cursor-pointer">
-                    <div class="relative overflow-hidden rounded-lg aspect-[16/9] mb-4">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=800&auto=format&fit=crop"
-                            alt="Tin tức 3"
+                <div
+                    class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <!-- Badge Danh mục -->
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] px-3 py-1 rounded-full shadow-sm">
+                            Danh mục
+                        </div>
+                        <img src="images/project-3.jpg"
+                            alt="BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU"
                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <span class="text-tiny text-textHide mb-2 block">15/02/2026</span>
-                    <h3 class="text-h6 text-darkText group-hover:text-primary transition-colors line-clamp-2 mb-2">Danh
-                        Khôi ký kết hợp tác chiến lược với đối tác Nhật Bản</h3>
-                    <p class="text-small-text text-textHide line-clamp-2">Lễ ký kết hợp tác giữa Danh Khôi Đất Bắc và
-                        Tập đoàn đầu tư Nhật Bản mở ra cơ hội phát triển mới.</p>
+                    <!-- Nội dung bài viết -->
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3
+                            class="text-[14px] md:text-[15px] font-bold text-[#333] hover:text-primary transition-colors line-clamp-3 mb-3 leading-snug uppercase">
+                            BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU
+                        </h3>
+                        <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
+                            động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
+
+                        <!-- Nút Chi tiết -->
+                        <div
+                            class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
+                            <span
+                                class="w-[20px] h-[20px] flex items-center justify-center border border-gray-300 rounded-[3px] group-hover:border-primary transition-colors">
+                                <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                    class="w-2 h-2 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
+                            </span>
+                            Chi tiết
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
