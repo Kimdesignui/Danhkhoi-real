@@ -546,3 +546,34 @@ body {
     aspect-ratio: 4 / 3;
   }
 }
+
+/* ============================================
+   Truyền thông - Media Coverflow Section
+   ============================================ */
+.media-coverflow-slide {
+  background-color: lightgray;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 1.393px 20.9px 1.393px rgba(0, 0, 0, 0.50);
+}
+
+.media-coverflow-slide.video-1 {
+  background-image: url('../images/video-1.jpg');
+}
+
+.media-coverflow-slide.video-2 {
+  background-image: url('../images/video-2.jpg');
+}
+
+.media-coverflow-slide.video-3 {
+  background-image: url('../images/video-3.jpg');
+}
+
+.media-coverflow-slide.video-4 {
+  background-image: url('../images/video-4.jpg');
+}
+
+.media-coverflow-slide.video-5 {
+  background-image: url('../images/video-5.jpg');
+}
