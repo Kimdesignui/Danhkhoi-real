@@ -611,6 +611,8 @@
             width: 100%;
             display: flex;
             justify-content: center;
+            pointer-events: none;
+            /* Khóa khung wrapper để click gỡ màn hình */
         }
 
         .project-pagination {
@@ -618,6 +620,8 @@
             justify-content: center;
             align-items: center;
             gap: 8px;
+            pointer-events: auto;
+            /* Mở lại tính năng click cho chính các nút bấm */
         }
 
         .project-pagination .swiper-pagination-bullet {
