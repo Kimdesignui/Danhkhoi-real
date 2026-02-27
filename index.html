@@ -349,7 +349,8 @@
                 <!-- Col 1: Tiêu đề & Nút -->
                 <div class="lg:col-span-4">
                     <span class="text-primary text-small-text-bold uppercase tracking-wider mb-2 block">Thư ngỏ</span>
-                    <h2 class="text-2xl md:text-[32px] font-display text-primary font-bold mb-6">Công ty Cổ phần<br>Danh
+                    <h2 class="text-[24px] md:text-[32px] font-display text-primary font-bold mb-6">Công ty Cổ
+                        phần<br>Danh
                         Khôi Miền Bắc</h2>
                     <a href="#"
                         class="inline-block bg-secondary text-white px-8 py-2.5 rounded-full text-small-text-bold hover:bg-opacity-90 transition-opacity">Xem
@@ -417,7 +418,7 @@
 
         <div class="main-container relative z-10">
             <div class="mb-10">
-                <h2 class="section-title text-2xl md:text-[32px]">Lĩnh vực hoạt động</h2>
+                <h2 class="section-title text-[24px] md:text-[32px]">Lĩnh vực hoạt động</h2>
             </div>
         </div>
 
@@ -528,10 +529,9 @@
     <section id="achievements" class="py-12 md:pt-[96px] md:pb-[131px] bg-white">
         <div class="main-container">
             <div class="text-center mb-14">
-                <h2 class="text-primary font-bold text-[22px] md:text-[26px] inline-block relative pb-3">
+                <h2 class="text-primary font-bold text-[24px] md:text-[32px] inline-block relative pb-3">
                     Thành tựu nổi bật
-                    <span
-                        class="absolute bottom-0 left-1/2 -translate-x-1/2 w-12 h-[3px] bg-primary rounded-full"></span>
+                    <span class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60px] h-[2px] bg-primary"></span>
                 </h2>
             </div>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4 max-w-[1000px] mx-auto">
@@ -670,7 +670,7 @@
     <section class="relative py-16 md:py-24 bg-[var(--color-bg1)] overflow-hidden">
         <div class="main-container">
             <div class="text-center mb-10 md:mb-14">
-                <h2 class="section-title md:text-[32px]">Các dự án tiêu biểu</h2>
+                <h2 class="section-title text-[24px] md:text-[32px]">Các dự án tiêu biểu</h2>
                 <p
                     class="text-[14px] md:text-[15px] mt-4 max-w-2xl mx-auto text-center font-medium font-body text-body-color">
                     Ghi dấu những dự án nổi bật của
@@ -707,7 +707,8 @@
                                 <img src="images/project-2.jpg" alt="ASTRAL CITY"
                                     class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
                                 <!-- Play icon overlay -->
-                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
                                     <div
                                         class="w-16 h-16 rounded-full border-[3px] border-white flex items-center justify-center bg-transparent group-hover:bg-primary/80 transition-colors backdrop-blur-sm pointer-events-auto cursor-pointer">
                                         <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
@@ -776,16 +777,16 @@
             <!-- Header: Tiêu đề và Xem tất cả -->
             <div class="flex justify-between items-end mb-8 pb-4 relative">
                 <div class="relative">
-                    <h2 class="text-[20px] md:text-[24px] font-bold text-primary">Đối tác tiêu biểu</h2>
+                    <h2 class="text-[24px] md:text-[32px] font-bold text-primary mb-3">Đối tác tiêu biểu</h2>
                     <!-- Đường viền đỏ gạch chân ngắn -->
-                    <div class="absolute -bottom-[8px] left-0 w-12 h-[2px] bg-primary"></div>
+                    <div class="w-[60px] h-[2px] bg-primary"></div>
                 </div>
                 <a href="#" class="text-[13px] text-textHide hover:text-primary transition-colors relative z-10">Xem tất
                     cả</a>
             </div>
 
             <!-- Slider Wrapper with Arrows -->
-            <div class="relative mt-10">
+            <div class="relative mt-10 px-8 md:px-12">
                 <!-- Swiper -->
                 <div class="swiper partner-swiper">
                     <div class="swiper-wrapper items-center">
@@ -824,12 +825,14 @@
 
                 <!-- Navigation Arrows -->
                 <div
-                    class="partner-button-prev absolute top-1/2 -translate-y-1/2 -left-3 md:-left-4 w-[36px] h-[36px] flex items-center justify-center bg-white border border-gray-200 shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-colors">
-                    <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-3 h-3 opacity-60">
+                    class="partner-button-prev absolute top-1/2 -translate-y-1/2 left-0 z-10 cursor-pointer transition-transform hover:scale-110">
+                    <img src="images/Icon-arrow-left.svg" alt="Prev"
+                        class="w-5 h-5 opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div
-                    class="partner-button-next absolute top-1/2 -translate-y-1/2 -right-3 md:-right-4 w-[36px] h-[36px] flex items-center justify-center bg-white border border-gray-200 shadow-md z-10 cursor-pointer hover:bg-gray-50 transition-colors">
-                    <img src="images/Icon-arrow-right.svg" alt="Next" class="w-3 h-3 opacity-60">
+                    class="partner-button-next absolute top-1/2 -translate-y-1/2 right-0 z-10 cursor-pointer transition-transform hover:scale-110">
+                    <img src="images/Icon-arrow-right.svg" alt="Next"
+                        class="w-5 h-5 opacity-60 hover:opacity-100 transition-opacity">
                 </div>
             </div>
         </div>
@@ -841,9 +844,9 @@
             <!-- Header: Tiêu đề và Xem tất cả -->
             <div class="flex justify-between items-end mb-8 pb-4 relative">
                 <div class="relative">
-                    <h2 class="text-[20px] md:text-[24px] font-bold text-primary">Tin tức nổi bật</h2>
+                    <h2 class="text-[24px] md:text-[32px] font-bold text-primary mb-3">Tin tức nổi bật</h2>
                     <!-- Đường viền đỏ gạch chân ngắn -->
-                    <div class="absolute -bottom-[8px] left-0 w-12 h-[2px] bg-primary"></div>
+                    <div class="w-[60px] h-[2px] bg-primary"></div>
                 </div>
                 <a href="news.html"
                     class="text-[13px] text-textHide hover:text-primary transition-colors relative z-10">Xem tất cả</a>
@@ -861,7 +864,7 @@
                         </div>
                         <img src="images/project-1.jpg"
                             alt="BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                     </div>
                     <!-- Nội dung bài viết -->
                     <div class="p-6 flex flex-col flex-1">
@@ -875,11 +878,8 @@
                         <!-- Nút Chi tiết -->
                         <div
                             class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
-                            <span
-                                class="w-[20px] h-[20px] flex items-center justify-center border border-gray-300 rounded-[3px] group-hover:border-primary transition-colors">
-                                <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
-                                    class="w-2 h-2 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
-                            </span>
+                            <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                class="w-3 h-3 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
                             Chi tiết
                         </div>
                     </div>
@@ -895,7 +895,7 @@
                             Danh mục
                         </div>
                         <img src="images/project-2.jpg" alt="ARIA VŨNG TÀU HOTEL & RESORT"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                     </div>
                     <!-- Nội dung bài viết -->
                     <div class="p-6 flex flex-col flex-1">
@@ -909,11 +909,8 @@
                         <!-- Nút Chi tiết -->
                         <div
                             class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
-                            <span
-                                class="w-[20px] h-[20px] flex items-center justify-center border border-gray-300 rounded-[3px] group-hover:border-primary transition-colors">
-                                <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
-                                    class="w-2 h-2 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
-                            </span>
+                            <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                class="w-3 h-3 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
                             Chi tiết
                         </div>
                     </div>
@@ -930,7 +927,7 @@
                         </div>
                         <img src="images/project-3.jpg"
                             alt="BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU"
-                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                     </div>
                     <!-- Nội dung bài viết -->
                     <div class="p-6 flex flex-col flex-1">
@@ -944,11 +941,8 @@
                         <!-- Nút Chi tiết -->
                         <div
                             class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
-                            <span
-                                class="w-[20px] h-[20px] flex items-center justify-center border border-gray-300 rounded-[3px] group-hover:border-primary transition-colors">
-                                <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
-                                    class="w-2 h-2 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
-                            </span>
+                            <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                class="w-3 h-3 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
                             Chi tiết
                         </div>
                     </div>
@@ -958,236 +952,292 @@
     </section>
 
     <!-- Truyền thông Section -->
-    <section class="relative pt-16 md:pt-24 pb-0 overflow-hidden">
+    <section class="relative pt-16 md:pt-24 pb-0 overflow-hidden bg-[#E6EAEF]">
         <!-- Đáy đỏ -->
         <div class="absolute bottom-0 left-0 w-full h-[35%] md:h-[40%] bg-primary"></div>
 
         <div class="main-container relative z-10 w-full max-w-[1200px] mx-auto">
             <!-- Header -->
-            <div class="text-center mb-10 md:mb-16">
-                <h2 class="text-[20px] md:text-[28px] font-bold text-primary">
+            <div class="text-center mb-0 md:mb-0">
+                <h2 class="text-[24px] md:text-[32px] font-bold text-primary">
                     Truyền thông nói về<br>Danh Khôi Miền Bắc
                 </h2>
                 <div class="mx-auto w-[60px] h-[2px] bg-primary mt-4"></div>
             </div>
 
-            <!-- Media Carousel -->
-            <div class="relative w-full pb-16 md:pb-24">
-                <div class="swiper media-swiper !pl-[5%] !pr-[5%] md:!px-0">
-                    <div class="swiper-wrapper items-center min-h-[450px] md:min-h-[550px] py-10">
+            <!-- Media Carousel Custom 3D -->
+            <div class="relative w-full pb-[36px]">
+                <div class="custom-media-carousel relative w-full !pl-[5%] !pr-[5%] md:!px-0 max-w-[1040px] mx-auto"
+                    style="perspective: 1000px; transform-style: preserve-3d;">
+                    <!-- Navigation custom -->
+                    <div
+                        class="media-button-prev absolute top-[41%] md:top-1/2 -translate-y-1/2 left-[5%] md:left-[50%] md:-ml-[310px] z-20 cursor-pointer hover:scale-110 transition-transform select-none">
+                        <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-[48px] h-[48px]">
+                    </div>
+                    <div
+                        class="media-button-next absolute top-[41%] md:top-1/2 -translate-y-1/2 right-[5%] md:right-[50%] md:-mr-[310px] z-20 cursor-pointer hover:scale-110 transition-transform select-none">
+                        <img src="images/Icon-arrow-right.svg" alt="Next" class="w-[48px] h-[48px]">
+                    </div>
+
+                    <div
+                        class="custom-carousel-wrapper relative mx-auto flex justify-center items-center min-h-[450px] md:min-h-[550px] pb-10 pt-0">
                         <!-- Video 1 -->
-                        <div class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-1"
-                            onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+                        <div class="custom-media-slide absolute left-1/2 w-[280px] sm:w-[400px] md:w-[480px] lg:w-[640px] aspect-[3/2] rounded-none overflow-hidden group cursor-pointer transition-all duration-1000 media-coverflow-slide video-1"
+                            data-video="video/Takashi Ocean Suite Ky Co.mp4">
                             <!-- Overlay đen che mờ các video phụ -->
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500 pointer-events-none">
+                                class="absolute inset-0 bg-black/60 group-[.media-slide-active]:bg-black/10 transition-colors duration-1000 pointer-events-none">
                             </div>
                             <!-- Play button -->
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                <img src="images/icon-video.svg" alt="Play"
+                                    class="w-14 h-14 md:w-[72px] md:h-[72px] group-hover:scale-110 transition-transform duration-300">
                             </div>
                         </div>
 
                         <!-- Video 2 -->
-                        <div class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-2"
-                            onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+                        <div class="custom-media-slide absolute left-1/2 w-[280px] sm:w-[400px] md:w-[480px] lg:w-[640px] aspect-[3/2] rounded-none overflow-hidden group cursor-pointer transition-all duration-1000 media-coverflow-slide video-2"
+                            data-video="video/Takashi Ocean Suite Ky Co.mp4">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500 pointer-events-none">
+                                class="absolute inset-0 bg-black/60 group-[.media-slide-active]:bg-black/10 transition-colors duration-1000 pointer-events-none">
                             </div>
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                <img src="images/icon-video.svg" alt="Play"
+                                    class="w-14 h-14 md:w-[72px] md:h-[72px] group-hover:scale-110 transition-transform duration-300">
                             </div>
                         </div>
 
                         <!-- Video 3 -->
-                        <div class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-3"
-                            onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+                        <div class="custom-media-slide absolute left-1/2 w-[280px] sm:w-[400px] md:w-[480px] lg:w-[640px] aspect-[3/2] rounded-none overflow-hidden group cursor-pointer transition-all duration-1000 media-coverflow-slide video-3"
+                            data-video="video/Takashi Ocean Suite Ky Co.mp4">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500 pointer-events-none">
+                                class="absolute inset-0 bg-black/60 group-[.media-slide-active]:bg-black/10 transition-colors duration-1000 pointer-events-none">
                             </div>
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                <img src="images/icon-video.svg" alt="Play"
+                                    class="w-14 h-14 md:w-[72px] md:h-[72px] group-hover:scale-110 transition-transform duration-300">
                             </div>
                         </div>
 
                         <!-- Video 4 -->
-                        <div class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-4"
-                            onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+                        <div class="custom-media-slide absolute left-1/2 w-[280px] sm:w-[400px] md:w-[480px] lg:w-[640px] aspect-[3/2] rounded-none overflow-hidden group cursor-pointer transition-all duration-1000 media-coverflow-slide video-4"
+                            data-video="video/Takashi Ocean Suite Ky Co.mp4">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500 pointer-events-none">
+                                class="absolute inset-0 bg-black/60 group-[.media-slide-active]:bg-black/10 transition-colors duration-1000 pointer-events-none">
                             </div>
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                <img src="images/icon-video.svg" alt="Play"
+                                    class="w-14 h-14 md:w-[72px] md:h-[72px] group-hover:scale-110 transition-transform duration-300">
                             </div>
                         </div>
 
                         <!-- Video 5 -->
-                        <div class="swiper-slide w-[280px] sm:w-[500px] md:w-[650px] lg:w-[813px] aspect-[3/2] rounded-[14px] overflow-hidden group cursor-pointer transition-transform duration-300 media-coverflow-slide video-5"
-                            onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1')">
+                        <div class="custom-media-slide absolute left-1/2 w-[280px] sm:w-[400px] md:w-[480px] lg:w-[640px] aspect-[3/2] rounded-none overflow-hidden group cursor-pointer transition-all duration-1000 media-coverflow-slide video-5"
+                            data-video="video/Takashi Ocean Suite Ky Co.mp4">
                             <div
-                                class="absolute inset-0 bg-black/60 group-[.swiper-slide-active]:bg-black/10 transition-colors duration-500 pointer-events-none">
+                                class="absolute inset-0 bg-black/60 group-[.media-slide-active]:bg-black/10 transition-colors duration-1000 pointer-events-none">
                             </div>
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <div
-                                    class="w-14 h-14 md:w-20 md:h-20 rounded-full border-[2px] border-white flex items-center justify-center backdrop-blur-sm bg-white/10 group-hover:scale-110 transition-transform duration-300">
-                                    <svg class="w-6 h-6 md:w-10 md:h-10 text-white ml-2" fill="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path d="M8 5v14l11-7z" />
-                                    </svg>
-                                </div>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                <img src="images/icon-video.svg" alt="Play"
+                                    class="w-14 h-14 md:w-[72px] md:h-[72px] group-hover:scale-110 transition-transform duration-300">
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Navigation custom -->
-                <div
-                    class="media-button-prev absolute top-[41%] md:top-1/2 -translate-y-1/2 left-[5%] md:left-[50%] md:-ml-[310px] w-8 h-8 md:w-[46px] md:h-[46px] border border-white/50 flex items-center justify-center z-20 cursor-pointer hover:bg-white/30 transition-colors backdrop-blur-sm select-none">
-                    <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-3 h-3 md:w-4 md:h-4 filter invert">
-                </div>
-                <div
-                    class="media-button-next absolute top-[41%] md:top-1/2 -translate-y-1/2 right-[5%] md:right-[50%] md:-mr-[310px] w-8 h-8 md:w-[46px] md:h-[46px] border border-white/50 flex items-center justify-center z-20 cursor-pointer hover:bg-white/30 transition-colors backdrop-blur-sm select-none">
-                    <img src="images/Icon-arrow-right.svg" alt="Next" class="w-3 h-3 md:w-4 md:h-4 filter invert">
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Tài liệu Section -->
+    <section class="py-[84px] bg-primary text-white">
+        <div class="main-container max-w-[1200px] mx-auto">
+
+            <!-- Tiêu đề 1 mình 1 hàng -->
+            <div class="mb-12">
+                <h2 class="text-[24px] md:text-[32px] font-medium leading-tight mb-4 text-white">
+                    Tài liệu về
+                    <br>
+                    <span class="font-bold">Danh Khôi Miền Bắc</span>
+                </h2>
+                <div class="w-[60px] h-[2px] bg-white"></div>
+            </div>
+
+            <!-- 2 khối tài liệu tỉ lệ 1:1 nằm dưới -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 xl:gap-[60px] xl:pr-[40px] h-full mb-12">
+                <!-- Card 1 -->
+                <div
+                    class="bg-white p-6 flex flex-row items-center gap-6 shadow-lg group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+                        <img src="images/icon-Document.svg" alt="Hồ sơ năng lực"
+                            class="w-full h-full object-contain filter-red">
+                    </div>
+                    <div class="flex flex-col flex-1">
+                        <h5 class="text-[18px] md:text-[20px] font-bold uppercase leading-snug mb-3 uppercase"
+                            style="color: var(--color-primary) !important;">
+                            Hồ sơ năng lực<br>Danh Khôi Miền Bắc
+                        </h5>
+                        <a href="#" class="flex flex-row items-center text-[14px] hover:opacity-80 gap-3 w-full"
+                            style="color: var(--color-primary) !important;">
+                            <span class="font-medium">Tải xuống Hồ sơ mới nhất để tìm hiểu thêm về chúng tôi</span>
+                            <img src="images/download.svg" alt="Download"
+                                class="w-4 h-4 md:w-5 md:h-5 ml-auto flex-shrink-0 transition-transform group-hover:translate-y-1 block"
+                                style="filter: invert(18%) sepia(85%) saturate(5477%) hue-rotate(349deg) brightness(102%) contrast(106%);">
+                            <!-- Note: Filter is to turn black SVG into #EE2031 (primary color) if needed, otherwise rely on the text color if it's an inline SVG, but img tag needs filter if it's not red -->
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div
+                    class="bg-white p-6 flex flex-row items-center gap-6 shadow-lg group cursor-pointer hover:-translate-y-2 transition-transform duration-300">
+                    <div class="w-16 h-16 md:w-20 md:h-20 flex-shrink-0">
+                        <img src="images/icon-Document.svg" alt="Báo cáo thường niên"
+                            class="w-full h-full object-contain filter-red">
+                    </div>
+                    <div class="flex flex-col flex-1">
+                        <h5 class="text-[18px] md:text-[20px] font-bold uppercase leading-snug mb-3 uppercase"
+                            style="color: var(--color-primary) !important;">
+                            Báo cáo thường niên<br>Quý I - 2022
+                        </h5>
+                        <a href="#" class="flex flex-row items-center text-[14px] hover:opacity-80 gap-3 w-full"
+                            style="color: var(--color-primary) !important;">
+                            <span class="font-medium">Tải xuống Báo cáo thường niên mới nhất tại đây</span>
+                            <img src="images/download.svg" alt="Download"
+                                class="w-4 h-4 md:w-5 md:h-5 ml-auto flex-shrink-0 transition-transform group-hover:translate-y-1 block"
+                                style="filter: invert(18%) sepia(85%) saturate(5477%) hue-rotate(349deg) brightness(102%) contrast(106%);">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nút xem tất cả ở dưới cùng -->
+            <div class="mt-8 block">
+                <a href="#"
+                    class="inline-flex flex-row items-center gap-2 text-[14px] md:text-[15px] font-semibold transition-opacity hover:opacity-80 group text-white">
+                    Xem tất cả
+                    <img src="images/Icon-arrow-right.svg" alt="Arrow Right"
+                        class="w-4 h-4 md:w-5 md:h-5 object-contain brightness-0 invert transition-transform group-hover:translate-x-1"
+                        style="filter: brightness(0) invert(1);">
+                </a>
+            </div>
+
+        </div>
+    </section>
+
     <!-- Footer (đồng bộ với contact.html) -->
-    <footer class="bg-bgDarkBlue text-white pt-16 pb-8">
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Col 1: Thương hiệu -->
                 <div>
-                    <a href="index.html" class="inline-block mb-6">
-                        <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc"
-                            class="h-12 w-auto brightness-0 invert">
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Miền Bắc" class="h-[50px] w-auto">
                     </a>
-                    <p class="text-sm text-gray-300 leading-relaxed mb-6">Công ty Cổ phần Danh Khôi Miền Bắc – Đồng hành
-                        cùng thị trường bất động sản Việt Nam.</p>
+                    <p class="text-[13px] text-primary font-bold leading-snug mb-6">
+                        Đây là website công bố thông tin chính thức của<br>
+                        Công ty Cổ phần Danh Khôi Miền Bắc
+                    </p>
+                    <div class="w-full h-px bg-gray-100 mb-6"></div>
+                    <p class="text-[13px] text-textHide mb-3">Theo dõi chúng tôi trên</p>
                     <div class="flex gap-4">
                         <!-- Facebook -->
-                        <a href="#"
-                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
-                            aria-label="Facebook">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Facebook">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
+                        <!-- Instagram -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Instagram">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="LinkedIn">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <!-- Twitter/X -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Twitter">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
                         <!-- YouTube -->
-                        <a href="#"
-                            class="w-9 h-9 rounded-full bg-white/10 hover:bg-primary transition-colors flex items-center justify-center"
-                            aria-label="YouTube">
-                            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="YouTube">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
                             </svg>
                         </a>
                     </div>
                 </div>
-                <!-- Col 2 -->
+
+                <!-- Col 2: Thông tin liên hệ -->
+                <div class="lg:pl-8">
+                    <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
+                        THÔNG TIN LIÊN HỆ
+                    </h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li>
+                            <p class="mb-1">Địa chỉ:</p>
+                            <p>Số 24 Phố Nguyễn Khang, Tổ 20, Phường Yên Hoà, Quận Cầu Giấy, Hà Nội, Việt Nam</p>
+                        </li>
+                        <li class="mt-2">Mã số thuế: 0108097371</li>
+                        <li>Email: <a href="mailto:info@danhkhoi.com.vn"
+                                class="hover:text-primary transition-colors">info@danhkhoi.com.vn</a></li>
+                        <li>Hotline: <a href="tel:02836221399" class="hover:text-primary transition-colors">028 3622
+                                1399</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Về Danh Khôi -->
                 <div>
-                    <h4
-                        class="text-sm font-bold text-white mb-6 uppercase tracking-wider relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-primary">
-                        Liên kết nhanh</h4>
-                    <ul class="flex flex-col gap-3 text-sm text-gray-300">
-                        <li><a href="index.html" class="hover:text-primary transition-colors">Về chúng tôi</a></li>
-                        <li><a href="projects.html" class="hover:text-primary transition-colors">Dự án nổi bật</a></li>
+                    <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
+                        VỀ DANH KHÔI
+                    </h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Trang chủ</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Giới thiệu Tập đoàn</a>
+                        </li>
                         <li><a href="domains.html" class="hover:text-primary transition-colors">Lĩnh vực hoạt động</a>
                         </li>
-                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức - Sự kiện</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Quan hệ cổ đông</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Phát triển bền vững</a></li>
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a></li>
                         <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
                     </ul>
                 </div>
-                <!-- Col 3 -->
+
+                <!-- Col 4: Tin tức -->
                 <div>
-                    <h4
-                        class="text-sm font-bold text-white mb-6 uppercase tracking-wider relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-primary">
-                        Dự án đầu tư</h4>
-                    <ul class="flex flex-col gap-3 text-sm text-gray-300">
-                        <li><a href="#" class="hover:text-primary transition-colors">Aria Vũng Tàu Hotel &amp;
-                                Resort</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">The Matrix One - Mỹ Đình</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Khai Sơn City Long Biên</a></li>
-                        <li><a href="#" class="hover:text-primary transition-colors">Vinhomes New Center Hà Tĩnh</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Col 4 -->
-                <div>
-                    <h4
-                        class="text-sm font-bold text-white mb-6 uppercase tracking-wider relative inline-block pb-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-1/2 after:h-0.5 after:bg-primary">
-                        Thông tin liên hệ</h4>
-                    <ul class="flex flex-col gap-4 text-sm text-gray-300">
-                        <li class="flex items-start gap-3">
-                            <svg class="w-4 h-4 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
-                                </path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span>Tầng 3, Center Building, Số 1 Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
-                                </path>
-                            </svg>
-                            <span>(024) 1234 5678</span>
-                        </li>
-                        <li class="flex items-center gap-3">
-                            <svg class="w-4 h-4 text-primary shrink-0" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-                                </path>
-                            </svg>
-                            <a href="mailto:info@danhkhoidatbac.vn"
-                                class="hover:text-primary transition-colors">info@danhkhoidatbac.vn</a>
-                        </li>
+                    <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
+                        TIN TỨC
+                    </h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <!-- Copyright -->
-        <div class="border-t border-white/10 pt-6 mt-6">
-            <div
-                class="main-container flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-                <p>&copy; 2026 Danh Khôi Đất Bắc. Tất cả các quyền được bảo lưu.</p>
-                <div class="flex gap-4">
-                    <a href="#" class="hover:text-white transition-colors">Điều khoản sử dụng</a>
-                    <a href="#" class="hover:text-white transition-colors">Chính sách bảo mật</a>
-                </div>
+        <div class="border-t border-gray-100 pt-6 mt-6">
+            <div class="main-container text-[12px] text-textHide text-left">
+                <p>Copyright &copy; 2022 Danh Khoi Mien Bac. All Right Reserved</p>
             </div>
         </div>
     </footer>
@@ -1496,42 +1546,99 @@
         })();
 
         // Media Coverflow Carousel
-        const mediaSwiper = new Swiper('.media-swiper', {
-            effect: 'coverflow',
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: 'auto',
-            loop: true,
-            speed: 1000,
-            coverflowEffect: {
-                rotate: 0,
-                stretch: -10, // Độ giãn cách mở rộng để lộ rõ 2 video phụ hai bên
-                depth: 180,  // Scale các video phụ vừa phải
-                modifier: 1,
-                slideShadows: true,
-            },
-            navigation: {
-                nextEl: '.media-button-next',
-                prevEl: '.media-button-prev',
-            },
-            on: {
-                init: function () {
-                    // Cấu hình Hover để nhảy tới slide 
-                    const swiperInstance = this;
-                    const slides = document.querySelectorAll('.media-swiper .swiper-slide');
-                    slides.forEach(slide => {
-                        slide.addEventListener('mouseenter', function () {
-                            if (!this.classList.contains('swiper-slide-active')) {
-                                const realIndex = this.getAttribute('data-swiper-slide-index');
-                                if (realIndex !== null) {
-                                    swiperInstance.slideToLoop(parseInt(realIndex));
-                                }
-                            }
-                        });
-                    });
-                }
+
+        // Custom 3D Carousel Logic (Replacing Swiper)
+        (function () {
+            const carousel = document.querySelector('.custom-media-carousel');
+            if (!carousel) return;
+            const slides = document.querySelectorAll('.custom-media-slide');
+            const btnNext = document.querySelector('.media-button-next');
+            const btnPrev = document.querySelector('.media-button-prev');
+            let activeIndex = 2; // Default center slide index for 5 items
+            const total = slides.length;
+
+            function updateCarousel() {
+                slides.forEach((slide, i) => {
+                    let diff = i - activeIndex;
+                    if (diff > 2) diff -= total;
+                    if (diff < -2) diff += total;
+
+                    let opacity = 1;
+                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
+                    let zIndex = 0;
+
+                    if (diff === 0) {
+                        transform += "translateX(0%) scale(1)";
+                        zIndex = 10;
+                        slide.classList.add('media-slide-active');
+                    } else if (diff === -1) {
+                        transform += "translateX(-28%) scale(0.85)";
+                        zIndex = 9;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === 1) {
+                        transform += "translateX(28%) scale(0.85)";
+                        zIndex = 9;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === -2) {
+                        transform += "translateX(-46%) scale(0.7)";
+                        zIndex = 8;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === 2) {
+                        transform += "translateX(46%) scale(0.7)";
+                        zIndex = 8;
+                        slide.classList.remove('media-slide-active');
+                    }
+
+                    // Apply styles
+                    slide.style.top = "50%";
+                    slide.style.left = "50%";
+                    slide.style.transform = transform;
+                    slide.style.zIndex = zIndex;
+                    slide.style.opacity = opacity;
+                });
             }
-        });
+
+            btnNext.addEventListener('click', () => {
+                activeIndex = (activeIndex + 1) % total;
+                updateCarousel();
+            });
+
+            btnPrev.addEventListener('click', () => {
+                activeIndex = (activeIndex - 1 + total) % total;
+                updateCarousel();
+            });
+
+            slides.forEach((slide, i) => {
+                slide.addEventListener('click', (e) => {
+                    let diff = i - activeIndex;
+                    if (diff > 2) diff -= total;
+                    if (diff < -2) diff += total;
+                    if (diff !== 0) {
+                        activeIndex = i;
+                        updateCarousel();
+                    } else {
+                        if (slide.dataset.video) {
+                            openVideoModal(slide.dataset.video);
+                        }
+                    }
+                });
+
+                // Add hover effect
+                slide.addEventListener('mouseenter', () => {
+                    if (activeIndex !== i) {
+                        activeIndex = i;
+                        updateCarousel();
+                    }
+                });
+            });
+
+            // Initial render
+            setTimeout(() => {
+                updateCarousel();
+            }, 100);
+        })();
+
+
 
         // Video Modal Script
         function openVideoModal(videoUrl) {
@@ -1555,6 +1662,8 @@
             setTimeout(() => {
                 modal.classList.remove('flex');
                 modal.classList.add('hidden');
+                iframe.pause();
+                iframe.currentTime = 0;
                 iframe.src = '';
             }, 300);
         }
@@ -1570,9 +1679,8 @@
             </svg>
         </div>
         <div class="relative w-[95%] md:w-[80%] max-w-[1100px] aspect-video">
-            <iframe id="videoIframe" class="w-full h-full rounded-xl shadow-2xl" src="" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
+            <video id="videoIframe" class="w-full h-full object-cover rounded-xl shadow-2xl" src="" controls
+                autoplay></video>
         </div>
     </div>
 </body>

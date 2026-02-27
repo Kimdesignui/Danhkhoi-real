@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Khôi Đất Bắc | Tin tức</title>
+    <meta name="description"
+        content="Danh Khôi Đất Bắc – Công ty cổ phần bất động sản hàng đầu miền Bắc. Phát triển quỹ đất, dự án, tiếp thị và quản lý vận hành.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        display: ['Lato', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        primaryDark: 'var(--color-primary-dark)',
+                        secondary: 'var(--color-secondary)',
+                        darkText: 'var(--color-dark-text)',
+                        textHide: 'var(--color-text-hide)',
+                        bg1: 'var(--color-bg1)',
+                        bg2: 'var(--color-bg2)',
+                        bgDarkBlue: 'var(--color-bg-darkblue)',
+                        darkBlue2: 'var(--color-darkblue-2)',
+                        icon: 'var(--color-icon)',
+                        link: 'var(--color-link)',
+                        line: 'var(--color-line)',
+                    },
+                    maxWidth: {
+                        'container': '1200px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+        }
+
+        .main-container {
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    </style>
+
+    <!-- Select2 Custom Styles -->
+    <style>
+        .lang-select-container .select2-container--default .select2-selection--single {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-right: 24px;
+            line-height: 34px;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6px;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
+        }
+
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {
+            background-color: var(--color-primary);
+        }
+
+        /* Scrolled state for language selector */
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: var(--color-darkText);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: #2B3B51 transparent transparent transparent !important;
+        }
+
+        .lang-flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 8px;
+            margin-top: -2px;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        /* Hero Tab Active */
+        .hero-tab.active {
+            background-color: #DA1626 !important;
+        }
+
+        /* Hero Tab Active Pointer */
+        .hero-tab.active::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0 16px 16px 16px;
+            border-style: solid;
+            border-color: transparent transparent #DA1626 transparent;
+            z-index: 10;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
+        style="background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);">
+
+        <div class="main-container h-20 flex justify-between items-center relative">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center flex-shrink-0">
+                <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc" class="h-12 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-0">
+                <a href="index.html"
+                    class="text-white font-semibold text-sm px-4 py-2 hover:opacity-75 transition-opacity">Trang chủ</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="about.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Giới
+                    thiệu</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="domains.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Lĩnh vực hoạt
+                    động</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="projects.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Dự án</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="news.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Tin tức - Sự
+                    kiện</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="careers.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Tuyển
+                    dụng</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="contact.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Liên hệ</a>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="hidden lg:flex items-center">
+                <div class="lang-select-container">
+                    <select id="lang-switcher" class="lang-select">
+                        <option value="vi" data-flag="https://flagcdn.com/20x15/vn.png">Tiếng Việt</option>
+                        <option value="en" data-flag="https://flagcdn.com/20x15/gb.png">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Mobile menu btn -->
+            <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+            <div class="main-container py-4 flex flex-col gap-1">
+                <a href="index.html"
+                    class="text-darkText font-semibold text-sm py-2 hover:text-primary transition-colors">Trang chủ</a>
+                <a href="about.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Giới
+                    thiệu</a>
+                <a href="domains.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Lĩnh vực
+                    hoạt động</a>
+                <a href="projects.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Dự
+                    án</a>
+                <a href="news.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Tin tức - Sự
+                    kiện</a>
+                <a href="careers.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Tuyển
+                    dụng</a>
+                <a href="contact.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Liên
+                    hệ</a>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Banner for News -->
+    <section class="relative w-full aspect-[1920/776]">
+        <!-- Dark City Banner Image -->
+        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
+            <div class="absolute inset-0 bg-[#030925]/60 z-10 pointer-events-none"></div>
+            <img src="images/Banner-news.jpg" alt="Tin tức Danh Khôi" class="w-full h-full object-cover">
+        </div>
+
+        <div class="absolute inset-0 z-20 flex flex-col items-center pt-[84px] pointer-events-none">
+            <div class="main-container text-center text-white w-full">
+                <!-- Dòng 2 The H1/H2 -->
+                <p class="text-[16px] font-semibold mb-3">Demo background banner</p>
+                <h2 class="text-white text-3xl md:text-4xl lg:text-[42px] font-bold mb-4 leading-tight">Heading tin tức:
+                    Đa dạng tại nhiều tỉnh thành</h2>
+                <p class="text-[16px] font-semibold max-w-4xl mx-auto leading-relaxed text-gray-100">
+                    Demo: Năng lực của Tập đoàn Danh Khôi đã được chứng minh qua các sản phẩm và dịch vụ chất lượng
+                    chuẩn mực. Tập đoàn ngày càng khẳng định được vị thế trong lĩnh vực bất động sản và đang vững
+                    bước tiến vào kỷ nguyên mới với các dự án được đầu tư bài bản từ khâu nghiên cứu nhu cầu, phát
+                    triển ý tưởng, triển khai cùng các đối tác tư vấn quốc tế hàng đầu.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured News Section (Overlapping Hero) -->
+    <section class="relative z-20 pb-16 -mt-32 lg:-mt-[260px]">
+        <!-- Red Diagonal Background Base (1838:410 Aspect) -->
+        <!-- w-[95.73%] matches 1838 out of 1920 width -->
+        <div class="absolute left-0 top-0 w-[95.73%] border-none aspect-[1838/410] bg-primary z-0 pointer-events-none"
+            style="clip-path: polygon(90% 0%, 100% 39%, 100% 100%, 0 100%, 0 0);"></div>
+
+        <div class="main-container relative z-10 pt-[100px]">
+            <div class="bg-white p-8 lg:p-12 shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
+                <!-- Heading -->
+                <div class="border-b border-gray-200 pb-3 mb-6 relative">
+                    <h2 class="text-primary font-bold text-[24px]">Tin nổi bật</h2>
+                    <div class="absolute bottom-[-1px] left-0 w-[120px] h-[2px] bg-primary"></div>
+                </div>
+
+                <!-- Grid Layout for Featured News -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+                    <!-- Main Left Article (6 cols) -->
+                    <div class="lg:col-span-6 flex flex-col group cursor-pointer">
+                        <div class="relative aspect-[16/10] overflow-hidden mb-5">
+                            <img src="images/hero-1.jpg" alt="Bất động sản biển Quy Nhơn hi vọng vực dậy trong năm 2022"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                        </div>
+                        <span class="text-gray-500 text-[13px] mb-2 block">20.07.2022</span>
+                        <h3
+                            class="text-darkText font-bold text-[22px] md:text-[24px] uppercase leading-tight mb-3 group-hover:text-primary transition-colors">
+                            BẤT ĐỘNG SẢN BIỂN QUY NHƠN: HI VỌNG VỰC DẬY TRONG NĂM 2022</h3>
+                        <p class="text-textHide text-[15px] leading-relaxed mb-4">Ngành du lịch Quy Nhơn đang dần
+                            phục hồi kèm theo sự kỳ vọng về sự khởi sắc của lĩnh vực bất động sản địa phương này.
+                        </p>
+                        <p class="text-textHide text-[15px] leading-relaxed">Với đường bờ biển dài 134km, sở hữu bãi
+                            biển trong xanh như ngọc nhắc, danh lam thắng cảnh nổi tiếng còn giữ nguyên vẻ đẹp
+                            nguyên sơ, Quy Nhơn...</p>
+                    </div>
+
+                    <!-- 3 Right Stacked Articles (6 cols) -->
+                    <div class="lg:col-span-6 flex flex-col gap-6">
+
+                        <!-- Sub Article 1 -->
+                        <div class="flex flex-col sm:flex-row gap-4 group cursor-pointer">
+                            <div class="w-1/2 aspect-[3/2] relative overflow-hidden flex-shrink-0">
+                                <img src="images/domain-1.jpg" alt="Bất động sản biển Quy Nhơn"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col w-1/2 pt-1">
+                                <span class="text-gray-500 text-[12px] mb-1">20.07.2022</span>
+                                <h6
+                                    class="text-darkText font-bold text-[15px]  leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    Bất động sản biển Quy Nhơn: Hi vọng vực dậy trong năm 2022</h6>
+                                <p class="text-textHide text-[13px] leading-snug line-clamp-2">Phường Phước Lộc, Thị
+                                    xã La Gi, Tỉnh Bình Thuận</p>
+                            </div>
+                        </div>
+                        <div class="w-full border-b border-gray-100"></div>
+
+                        <!-- Sub Article 2 -->
+                        <div class="flex flex-col sm:flex-row gap-4 group cursor-pointer">
+                            <div class="w-1/2 aspect-[3/2] relative overflow-hidden flex-shrink-0">
+                                <img src="images/domain-2.jpg" alt="Bất động sản biển Quy Nhơn"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col w-1/2 pt-1">
+                                <span class="text-gray-500 text-[12px] mb-1">20.07.2022</span>
+                                <h6
+                                    class="text-darkText font-bold text-[15px]  leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    Bất động sản biển Quy Nhơn: Hi vọng vực dậy trong năm 2022</h6>
+                                <p class="text-textHide text-[13px] leading-snug line-clamp-2">Phường Phước Lộc, Thị
+                                    xã La Gi, Tỉnh Bình Thuận</p>
+                            </div>
+                        </div>
+                        <div class="w-full border-b border-gray-100"></div>
+
+                        <!-- Sub Article 3 -->
+                        <div class="flex flex-col sm:flex-row gap-4 group cursor-pointer">
+                            <div class="w-1/2 aspect-[3/2] relative overflow-hidden flex-shrink-0">
+                                <img src="images/domain-3.jpg" alt="Bất động sản biển Quy Nhơn"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col w-1/2 pt-1">
+                                <span class="text-gray-500 text-[12px] mb-1">20.07.2022</span>
+                                <h6
+                                    class="text-darkText font-bold text-[15px]  leading-tight mb-2 group-hover:text-primary transition-colors">
+                                    Bất động sản biển Quy Nhơn: Hi vọng vực dậy trong năm 2022</h6>
+                                <p class="text-textHide text-[13px] leading-snug line-clamp-2">Phường Phước Lộc, Thị
+                                    xã La Gi, Tỉnh Bình Thuận</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Main News Grid Section -->
+    <section class="pb-24 pt-10 bg-[#F2F6F9]">
+        <div class="main-container">
+            <!-- Tabs Header for Main News -->
+            <div class="border-b border-gray-200 w-full mb-10 overflow-x-auto hide-scrollbar">
+                <nav class="flex gap-8 w-auto min-w-max relative pb-0">
+                    <a href="#"
+                        class="text-primary font-bold text-[20px] relative transition-colors py-3 after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:w-full after:h-[2px] after:bg-primary">Tin
+                        thị trường</a>
+                    <a href="#"
+                        class="text-[#555555] hover:text-primary font-semibold text-[20px] relative transition-colors py-3 after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all">Tin
+                        pháp luật</a>
+                </nav>
+            </div>
+
+            <!-- Grid Layout 3 Columns -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 px-4 md:px-0">
+
+                <!-- News Card 1 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-1.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 1</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 2 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-2.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 2</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 3 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-3.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 3</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 4 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-4.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 4</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 5 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-5.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 5</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 6 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-6.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 6</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 7 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-7.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 7</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 8 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-8.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 8</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 9 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-9.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 9</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 10 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-10.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 10</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 11 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-11.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 11</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+                <!-- News Card 12 -->
+                <div class="group flex flex-col h-full bg-white relative pb-10">
+                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
+                        <img src="images/new-item-12.jpg" alt="Tập đoàn Danh Khôi"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="flex flex-col gap-2 p-4 pt-0">
+                        <span class="text-gray-500 text-[13px]">20.07.2022</span>
+                        <h3
+                            class="text-[17px] font-bold text-darkText leading-tight mt-1 group-hover:text-primary transition-colors cursor-pointer">
+                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 12</h3>
+                    </div>
+                    <a href="#"
+                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[13px] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
+                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
+                        Chi tiết
+                    </a>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+
+            <div class="flex justify-center items-center mt-16 gap-2">
+                <a href="#"
+                    class="flex items-center justify-center cursor-pointer mr-2 opacity-50 hover:opacity-100 transition-opacity">
+                    <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-4 h-auto object-contain">
+                </a>
+                <a href="#"
+                    class="w-8 h-8 flex items-center justify-center text-primary font-bold text-[15px] hover:bg-gray-100 transition-colors rounded-sm">1</a>
+                <a href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-500 font-medium text-[15px] hover:bg-gray-100 transition-colors rounded-sm">2</a>
+                <a href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-500 font-medium text-[15px] hover:bg-gray-100 transition-colors rounded-sm">3</a>
+                <a href="#"
+                    class="w-8 h-8 flex items-center justify-center text-gray-500 font-medium text-[15px] hover:bg-gray-100 transition-colors rounded-sm">4</a>
+                <a href="#"
+                    class="flex items-center justify-center cursor-pointer ml-2 opacity-50 hover:opacity-100 transition-opacity">
+                    <img src="images/Icon-arrow-right.svg" alt="Next" class="w-4 h-auto object-contain">
+                </a>
+            </div>
+
+        </div>
+    </section>
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="main-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: Thương hiệu -->
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Miền Bắc" class="h-[50px] w-auto">
+                    </a>
+                    <p class="text-[13px] text-primary font-bold leading-snug mb-6">
+                        Đây là website công bố thông tin chính thức của<br>
+                        Công ty Cổ phần Danh Khôi Miền Bắc
+                    </p>
+                    <div class="w-full h-px bg-gray-100 mb-6"></div>
+                    <p class="text-[13px] text-textHide mb-3">Theo dõi chúng tôi trên</p>
+                    <div class="flex gap-4">
+                        <!-- Facebook -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Facebook">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Instagram">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="LinkedIn">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <!-- Twitter/X -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Twitter">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="YouTube">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Thông tin liên hệ -->
+                <div class="lg:pl-8">
+                    <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
+                        THÔNG TIN LIÊN HỆ
+                    </h6>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li>
+                            <p class="mb-1">Địa chỉ:</p>
+                            <p>Số 24 Phố Nguyễn Khang, Tổ 20, Phường Yên Hoà, Quận Cầu Giấy, Hà Nội, Việt Nam</p>
+                        </li>
+                        <li class="mt-2">Mã số thuế: 0108097371</li>
+                        <li>Email: <a href="mailto:info@danhkhoi.com.vn"
+                                class="hover:text-primary transition-colors">info@danhkhoi.com.vn</a></li>
+                        <li>Hotline: <a href="tel:02836221399" class="hover:text-primary transition-colors">028 3622
+                                1399</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Về Danh Khôi -->
+                <div>
+                    <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
+                        VỀ DANH KHÔI
+                    </h6>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Trang chủ</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Giới thiệu Tập
+                                đoàn</a>
+                        </li>
+                        <li><a href="domains.html" class="hover:text-primary transition-colors">Lĩnh vực hoạt
+                                động</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Quan hệ cổ đông</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Phát triển bền vững</a></li>
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a>
+                        </li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Tin tức -->
+                <div>
+                    <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
+                        TIN TỨC
+                    </h6>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a>
+                        </li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-100 pt-6 mt-6">
+            <div class="main-container text-[12px] text-textHide text-left">
+                <p>Copyright &copy; 2022 Danh Khoi Mien Bac. All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Left Indicator -->
+    <div id="scrollTopIndicator" class="scroll-top-left-indicator">
+        <div class="stl-line"></div>
+        <span class="stl-text">VỀ ĐẦU TRANG</span>
+    </div>
+
+    <!-- Scroll To Top Circle Button -->
+    <button id="scrollTopCircle" class="scroll-top-circle" aria-label="Về đầu trang">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+            </path>
+        </svg>
+    </button>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const spans = mobileBtn.querySelectorAll('span');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    spans[0].classList.add('rotate-45', 'translate-y-2');
+                    spans[1].classList.add('opacity-0');
+                    spans[2].classList.add('-rotate-45', '-translate-y-2');
+                } else {
+                    spans[0].classList.remove('rotate-45', 'translate-y-2');
+                    spans[1].classList.remove('opacity-0');
+                    spans[2].classList.remove('-rotate-45', '-translate-y-2');
+                }
+            });
+        }
+
+        // Header Scroll
+        const header = document.getElementById('main-header');
+        const HEADER_GRADIENT = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
+        if (header) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 80) {
+                    header.style.background = 'rgba(255,255,255,0.97)';
+                    header.style.backdropFilter = 'blur(12px)';
+                    header.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
+                    header.classList.add('scrolled');
+                    header.querySelectorAll('nav a').forEach(a => { a.classList.remove('text-white'); a.classList.add('text-darkText'); });
+                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-white', 'bg-darkText'));
+                } else {
+                    header.style.background = HEADER_GRADIENT;
+                    header.style.backdropFilter = '';
+                    header.style.boxShadow = '';
+                    header.classList.remove('scrolled');
+                    header.querySelectorAll('nav a').forEach(a => { a.classList.add('text-white'); a.classList.remove('text-darkText'); });
+                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-darkText', 'bg-white'));
+                }
+            });
+        }
+
+        // Hero Slider (Swiper)
+        const heroSwiper = new Swiper('.hero-swiper', {
+            loop: true,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            speed: 1000,
+            allowTouchMove: false,
+            on: {
+                slideChange: function () {
+                    // Update custom tabs
+                    const currentIdx = this.realIndex;
+                    document.querySelectorAll('.hero-tab').forEach((tab, index) => {
+                        if (index === currentIdx) {
+                            tab.classList.add('active');
+                            tab.classList.remove('border-white/20');
+                            tab.classList.add('border-primary'); // Make active border same as bg or primary
+                        } else {
+                            tab.classList.remove('active');
+                            tab.classList.remove('border-primary');
+                            tab.classList.add('border-white/20');
+                        }
+                    });
+                }
+            }
+        });
+
+        // Click on custom tabs to change slide
+        document.querySelectorAll('.hero-tab').forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                heroSwiper.slideToLoop(index);
+            });
+        });
+
+        // Select2
+        function formatLang(lang) {
+            if (!lang.id) return lang.text;
+            var flag = $(lang.element).data('flag');
+            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
+        }
+        $(document).ready(function () {
+            $('#lang-switcher').select2({
+                minimumResultsForSearch: Infinity,
+                dropdownAutoWidth: true,
+                width: 'auto',
+                templateResult: formatLang,
+                templateSelection: formatLang
+            });
+            var $s2 = $('#lang-switcher').next('.select2-container');
+            var lockedW = $s2.outerWidth();
+            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
+
+            // Duplicate Slides for Infinite Loop on Desktop
+            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
+            if (swiperWrapper) {
+                const originalSlides = Array.from(swiperWrapper.children);
+                if (originalSlides.length > 0 && originalSlides.length <= 4) {
+                    originalSlides.forEach(slide => {
+                        swiperWrapper.appendChild(slide.cloneNode(true));
+                    });
+                }
+            }
+
+            // Dự án tiêu biểu Slider
+            const projectSwiper = new Swiper('.project-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                },
+                on: {
+                    init: function () {
+                        updateCustomPagination(this);
+                    },
+                    slideChange: function () {
+                        updateCustomPagination(this);
+                    }
+                }
+            });
+
+            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
+            function updateCustomPagination(swiper) {
+                setTimeout(() => {
+                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
+                    if (bullets.length === 0) return;
+
+                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
+                    const realIndex = swiper.realIndex % 4;
+                    if (bullets[realIndex]) {
+                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
+                    }
+                }, 10);
+            }
+
+            // Duplicate Slides for Infinite Loop on Desktop for Partner Slider
+            const partnerWrapper = document.querySelector('.partner-swiper .swiper-wrapper');
+            if (partnerWrapper) {
+                const partnerSlides = Array.from(partnerWrapper.children);
+                if (partnerSlides.length > 0 && partnerSlides.length <= 5) {
+                    partnerSlides.forEach(slide => {
+                        partnerWrapper.appendChild(slide.cloneNode(true));
+                    });
+                }
+            }
+
+            // Đối tác tiêu biểu Slider
+            const partnerSwiper = new Swiper('.partner-swiper', {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.partner-button-next',
+                    prevEl: '.partner-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 24,
+                    },
+                }
+            });
+        });
+
+        // Scroll to top
+        (function () {
+            var indicator = document.getElementById('scrollTopIndicator');
+            var circle = document.getElementById('scrollTopCircle');
+            var threshold = 300;
+            function onScroll() {
+                var show = window.pageYOffset > threshold;
+                if (indicator) indicator.classList.toggle('visible', show);
+                if (circle) circle.classList.toggle('visible', show);
+            }
+            function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            if (indicator) indicator.addEventListener('click', scrollTop);
+            if (circle) circle.addEventListener('click', scrollTop);
+            onScroll();
+        })();
+
+        // Odometer Counter Animation
+        (function () {
+            // Initialize digit columns for each odometer-group
+            var groups = document.querySelectorAll('.odometer-group');
+            if (!groups.length) return;
+
+            groups.forEach(function (group) {
+                var value = group.getAttribute('data-value');
+                var digits = value.split('');
+
+                digits.forEach(function (digit, index) {
+                    var digitEl = document.createElement('div');
+                    digitEl.className = 'odometer-digit';
+
+                    var inner = document.createElement('div');
+                    inner.className = 'odometer-digit-inner';
+
+                    // Create digit column: 0 through 9
+                    for (var i = 0; i <= 9; i++) {
+                        var span = document.createElement('span');
+                        span.textContent = i;
+                        inner.appendChild(span);
+                    }
+
+                    digitEl.appendChild(inner);
+                    group.appendChild(digitEl);
+
+                    // Store target digit and stagger delay
+                    digitEl.setAttribute('data-target', digit);
+                    digitEl.setAttribute('data-delay', index * 120);
+                });
+            });
+
+            function rollOdometers() {
+                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
+                    var target = parseInt(digitEl.getAttribute('data-target'));
+                    var delay = parseInt(digitEl.getAttribute('data-delay')) || 0;
+                    var inner = digitEl.querySelector('.odometer-digit-inner');
+                    setTimeout(function () {
+                        inner.style.transform = 'translateY(-' + target + 'em)';
+                    }, delay);
+                });
+            }
+
+            function resetOdometers() {
+                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
+                    var inner = digitEl.querySelector('.odometer-digit-inner');
+                    inner.style.transition = 'none';
+                    inner.style.transform = 'translateY(0)';
+                    inner.offsetHeight; // force reflow
+                    inner.style.transition = 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                });
+            }
+
+            // Trigger on scroll into view
+            var section = document.getElementById('achievements');
+            if (!section) return;
+            var hasAnimated = false;
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        resetOdometers();
+                        setTimeout(rollOdometers, 100);
+                        hasAnimated = true;
+                    } else if (hasAnimated) {
+                        resetOdometers();
+                        hasAnimated = false;
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(section);
+        })();
+
+        // Media Coverflow Carousel
+
+        // Custom 3D Carousel Logic (Replacing Swiper)
+        (function () {
+            const carousel = document.querySelector('.custom-media-carousel');
+            if (!carousel) return;
+            const slides = document.querySelectorAll('.custom-media-slide');
+            const btnNext = document.querySelector('.media-button-next');
+            const btnPrev = document.querySelector('.media-button-prev');
+            let activeIndex = 2; // Default center slide index for 5 items
+            const total = slides.length;
+
+            function updateCarousel() {
+                slides.forEach((slide, i) => {
+                    let diff = i - activeIndex;
+                    if (diff > 2) diff -= total;
+                    if (diff < -2) diff += total;
+
+                    let opacity = 1;
+                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
+                    let zIndex = 0;
+
+                    if (diff === 0) {
+                        transform += "translateX(0%) scale(1)";
+                        zIndex = 10;
+                        slide.classList.add('media-slide-active');
+                    } else if (diff === -1) {
+                        transform += "translateX(-28%) scale(0.85)";
+                        zIndex = 9;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === 1) {
+                        transform += "translateX(28%) scale(0.85)";
+                        zIndex = 9;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === -2) {
+                        transform += "translateX(-46%) scale(0.7)";
+                        zIndex = 8;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === 2) {
+                        transform += "translateX(46%) scale(0.7)";
+                        zIndex = 8;
+                        slide.classList.remove('media-slide-active');
+                    }
+
+                    // Apply styles
+                    slide.style.top = "50%";
+                    slide.style.left = "50%";
+                    slide.style.transform = transform;
+                    slide.style.zIndex = zIndex;
+                    slide.style.opacity = opacity;
+                });
+            }
+
+            btnNext.addEventListener('click', () => {
+                activeIndex = (activeIndex + 1) % total;
+                updateCarousel();
+            });
+
+            btnPrev.addEventListener('click', () => {
+                activeIndex = (activeIndex - 1 + total) % total;
+                updateCarousel();
+            });
+
+            slides.forEach((slide, i) => {
+                slide.addEventListener('click', (e) => {
+                    let diff = i - activeIndex;
+                    if (diff > 2) diff -= total;
+                    if (diff < -2) diff += total;
+                    if (diff !== 0) {
+                        activeIndex = i;
+                        updateCarousel();
+                    } else {
+                        if (slide.dataset.video) {
+                            openVideoModal(slide.dataset.video);
+                        }
+                    }
+                });
+
+                // Add hover effect
+                slide.addEventListener('mouseenter', () => {
+                    if (activeIndex !== i) {
+                        activeIndex = i;
+                        updateCarousel();
+                    }
+                });
+            });
+
+            // Initial render
+            setTimeout(() => {
+                updateCarousel();
+            }, 100);
+        })();
+
+
+
+        // Video Modal Script
+        function openVideoModal(videoUrl) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = videoUrl;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Allow CSS transition to complete by running opacity toggle asynchronously
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+            }, 50);
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                iframe.pause();
+                iframe.currentTime = 0;
+                iframe.src = '';
+            }, 300);
+        }
+    </script>
+
+    <!-- Video Modal Popup -->
+    <div id="videoModal"
+        class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="absolute top-4 right-4 text-white hover:text-primary transition-colors cursor-pointer z-[10000] p-3"
+            onclick="closeVideoModal()">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                </path>
+            </svg>
+        </div>
+        <div class="relative w-[95%] md:w-[80%] max-w-[1100px] aspect-video">
+            <video id="videoIframe" class="w-full h-full object-cover rounded-xl shadow-2xl" src="" controls
+                autoplay></video>
+        </div>
+    </div>
+</body>
+
+</html>
