@@ -53,7 +53,7 @@
                         line: 'var(--color-line)',
                     },
                     maxWidth: {
-                        'container': '1200px',
+                        'container': '1110px',
                     }
                 }
             }
@@ -83,14 +83,6 @@
         h5 {
             font-family: 'Lato', sans-serif;
             color: var(--color-dark-text);
-        }
-
-        .main-container {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
         }
     </style>
 
@@ -946,6 +938,45 @@
                 autoplay></video>
         </div>
     </div>
+    <!-- Active Nav State Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            var activeHref = currentPath;
+            if (currentPath === 'career-details.html') activeHref = 'careers.html';
+            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
+
+            var desktopLinks = document.querySelectorAll('#main-header nav a');
+            desktopLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-white', 'text-darkText');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+
+            var mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

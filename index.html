@@ -56,7 +56,7 @@
                         line: 'var(--color-line)',
                     },
                     maxWidth: {
-                        'container': '1200px',
+                        'container': '1110px',
                     }
                 }
             }
@@ -80,14 +80,6 @@
         h5 {
             font-family: 'Lato', sans-serif;
             color: var(--color-dark-text);
-        }
-
-        .main-container {
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-            padding-left: 1rem;
-            padding-right: 1rem;
         }
     </style>
 
@@ -956,7 +948,7 @@
         <!-- Đáy đỏ -->
         <div class="absolute bottom-0 left-0 w-full h-[35%] md:h-[40%] bg-primary"></div>
 
-        <div class="main-container relative z-10 w-full max-w-[1200px] mx-auto">
+        <div class="main-container relative z-10 w-full max-w-[1110px] mx-auto">
             <!-- Header -->
             <div class="text-center mb-0 md:mb-0">
                 <h2 class="text-[24px] md:text-[32px] font-bold text-primary">
@@ -1055,7 +1047,7 @@
 
     <!-- Tài liệu Section -->
     <section class="py-[84px] bg-primary text-white">
-        <div class="main-container max-w-[1200px] mx-auto">
+        <div class="main-container max-w-[1110px] mx-auto">
 
             <!-- Tiêu đề 1 mình 1 hàng -->
             <div class="mb-12">
@@ -1683,6 +1675,45 @@
                 autoplay></video>
         </div>
     </div>
+    <!-- Active Nav State Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            var activeHref = currentPath;
+            if (currentPath === 'career-details.html') activeHref = 'careers.html';
+            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
+
+            var desktopLinks = document.querySelectorAll('#main-header nav a');
+            desktopLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-white', 'text-darkText');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+
+            var mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

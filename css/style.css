@@ -1,8 +1,45 @@
 /* ============================================
    Danh Khôi Đất Bắc - Stylesystem
    ============================================ */
+
+/* Font Family - Lato (Vietnamese support) */
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato\ Viet\ Hoa/Lato\ Viet\ Hoa/Lato\ Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato\ Viet\ Hoa/Lato\ Viet\ Hoa/Lato\ Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato\ Viet\ Hoa/Lato\ Viet\ Hoa/Lato\ Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato\ Viet\ Hoa/Lato\ Viet\ Hoa/Lato\ Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
 /* Cấu hình các biến màu Design Tokens lấy từ Bảng màu (Color Palette) */
 :root {
+  --font-main: 'Lato', sans-serif;
+  /* Đảm bảo có font dự phòng sans-serif */
+
   /* Brand Core */
   --color-primary: #EE2031;
   /* Đỏ */
@@ -43,6 +80,23 @@
   /* Xanh dương Aria VT */
   --color-aria-2: #FFB800;
   /* Vàng Aria VT 2 */
+}
+
+/* Layout Containers */
+.main-container {
+  max-width: 1110px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.content-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /* Fallback base styles cho Web (trước khi tailwind base render) */
@@ -221,7 +275,7 @@ body {
 /* < 1600px: thu về content width để tránh ảnh sát cạnh */
 @media (max-width: 1600px) {
   .domain-section-inner {
-    max-width: 1200px;
+    max-width: 1110px;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -461,7 +515,7 @@ body {
 
   /* domain-section-inner dùng content width như main-container */
   .domain-section-inner {
-    max-width: 1200px;
+    max-width: 1110px;
     padding-left: 1rem;
     padding-right: 1rem;
     gap: 16px;

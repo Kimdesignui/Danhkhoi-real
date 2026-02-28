@@ -1,0 +1,774 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh Khôi Đất Bắc | Chi tiết tuyển dụng</title>
+    <meta name="description"
+        content="Danh Khôi Đất Bắc – Chi tiết tin tuyển dụng. Mô tả công việc, quyền lợi và yêu cầu ứng viên.">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['var(--font-main)'],
+                        display: ['var(--font-main)'],
+                        roboto: ['var(--font-main)'],
+                    },
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        primaryDark: 'var(--color-primary-dark)',
+                        secondary: 'var(--color-secondary)',
+                        darkText: 'var(--color-dark-text)',
+                        textHide: 'var(--color-text-hide)',
+                        bg1: 'var(--color-bg1)',
+                        bg2: 'var(--color-bg2)',
+                        bgDarkBlue: 'var(--color-bg-darkblue)',
+                        darkBlue2: 'var(--color-darkblue-2)',
+                        icon: 'var(--color-icon)',
+                        link: 'var(--color-link)',
+                        line: 'var(--color-line)',
+                    },
+                    maxWidth: {
+                        'container': '1110px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: clip;
+        }
+
+        html {
+            overflow-x: clip;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+        }
+    </style>
+
+    <!-- Select2 Custom Styles -->
+    <style>
+        .lang-select-container .select2-container--default .select2-selection--single {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-right: 24px;
+            line-height: 34px;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6px;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
+        }
+
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {
+            background-color: var(--color-primary);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: var(--color-darkText);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: #2B3B51 transparent transparent transparent !important;
+        }
+
+        .lang-flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 8px;
+            margin-top: -2px;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body class="bg-white text-[16px]">
+
+    <!-- Header -->
+    <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
+        style="background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);">
+
+        <div class="main-container h-20 flex justify-between items-center relative">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center flex-shrink-0">
+                <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc" class="h-12 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-0">
+                <a href="index.html"
+                    class="text-white font-semibold text-sm px-4 py-2 hover:opacity-75 transition-opacity">Trang chủ</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="about.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Giới
+                    thiệu</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="domains.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Lĩnh vực hoạt
+                    động</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="projects.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Dự án</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="news.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Tin tức - Sự
+                    kiện</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="careers.html"
+                    class="text-white font-semibold text-sm px-4 py-2 hover:opacity-75 transition-opacity">Tuyển
+                    dụng</a>
+                <span class="text-white/40 text-xs self-center select-none">|</span>
+                <a href="contact.html"
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Liên hệ</a>
+            </nav>
+
+            <!-- Language Switcher -->
+            <div class="hidden lg:flex items-center">
+                <div class="lang-select-container">
+                    <select id="lang-switcher" class="lang-select">
+                        <option value="vi" data-flag="https://flagcdn.com/20x15/vn.png">Tiếng Việt</option>
+                        <option value="en" data-flag="https://flagcdn.com/20x15/gb.png">English</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Mobile menu btn -->
+            <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
+            <div class="main-container py-4 flex flex-col gap-1">
+                <a href="index.html"
+                    class="text-darkText font-semibold text-sm py-2 hover:text-primary transition-colors">Trang chủ</a>
+                <a href="about.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Giới
+                    thiệu</a>
+                <a href="domains.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Lĩnh vực
+                    hoạt động</a>
+                <a href="projects.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Dự
+                    án</a>
+                <a href="news.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Tin tức - Sự
+                    kiện</a>
+                <a href="careers.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Tuyển
+                    dụng</a>
+                <a href="contact.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Liên
+                    hệ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner Section -->
+    <section class="relative w-full aspect-[1920/600] min-h-[400px] overflow-hidden">
+        <img src="images/banner-career-details.jpg" alt="Chi tiết tuyển dụng Danh Khôi"
+            class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-black/20 pointer-events-none"></div>
+    </section>
+
+    <!-- Section 1: Red Title Bar overlapping hero -->
+    <section class="relative z-20 -mt-24 lg:-mt-28 pb-0">
+        <div class="content-container">
+            <div class="relative w-full lg:w-[1000px] mx-auto z-20 pointer-events-none mb-8">
+                <div
+                    class="relative w-full bg-primary text-white py-6 sm:py-8 md:py-10 lg:py-12 pointer-events-auto shadow-[0_10px_30px_rgba(218,22,38,0.2)] lg:shadow-none">
+                    <!-- Left Bleed Box -->
+                    <div class="hidden lg:block absolute top-0 bottom-0 right-full w-[50vw] bg-primary"></div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 w-full flex flex-col justify-center gap-2">
+                        <p class="text-[14px] font-bold text-white tracking-wider leading-normal">Danh Khôi Miền Bắc
+                            tuyển dụng vị trí</p>
+                        <h1 class="text-2xl sm:text-[32px] font-bold leading-[1.3] text-white">
+                            Giám đốc Sàn
+                        </h1>
+                    </div>
+
+                    <!-- Right Slant -->
+                    <div class="hidden lg:block absolute top-0 left-full bottom-0 w-[85px] bg-primary pointer-events-none"
+                        style="clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Nội dung tuyển dụng - Two columns -->
+    <section class="pt-8 md:pt-16 pb-0 bg-white">
+        <div class="content-container">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
+                <!-- Left Column: Job Description -->
+                <div class="lg:col-span-8 lg:border-r lg:border-gray-200 lg:pr-10 text-justify">
+                    <!-- Mô tả công việc -->
+                    <div class="mb-8">
+                        <h3 class="text-[15px] font-bold text-darkText mb-4">Mô tả công việc:</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-[18px] leading-[1.5] text-darkText">
+                            <li>Lập và tổ chức triển khai kế hoạch kinh doanh của Sàn</li>
+                            <li>Đào tạo nhân viên, đảm bảo cung cấp đủ nguồn nhân lực cho công ty trong phạm vi phụ
+                                trách</li>
+                            <li>Trực tiếp quản lý và điều hành toàn bộ hoạt động kinh doanh tại Sàn trong phạm vi được
+                                phân công.</li>
+                            <li>Chịu trách nhiệm về doanh số mà Công ty đưa ra.</li>
+                            <li>Báo cáo trực tiếp công việc hàng tuần cho cấp quản lý trực tiếp</li>
+                            <li>Phối kết hợp các bộ phận hỗ trợ liên quan để xử lý, điều phối công việc được hiệu quả
+                                nhất</li>
+                        </ul>
+                    </div>
+
+                    <!-- Quyền lợi -->
+                    <div class="mb-8">
+                        <h3 class="text-[15px] font-bold text-darkText mb-4">Quyền lợi:</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-[18px] leading-[1.5] text-darkText">
+                            <li>Lương từ 35 - 45 triệu/tháng (Thu nhập không giới hạn)</li>
+                            <li>Làm việc trong công ty thuộc Top 3 trong lĩnh vực Bất động sản, môi trường năng động,
+                                chuyên nghiệp</li>
+                            <li>Chính sách BHYT, BHXH, BHTN sau thử việc</li>
+                            <li>Chính sách du lịch thường niên, Bảo hiểm sức khoẻ, thưởng các ngày lễ, Tết,... cùng
+                                nhiều các chính sách hấp dẫn khác</li>
+                            <li>Chương trình đào tạo và lộ trình phát triển chuyên nghiệp, lộ trình thăng tiến rõ ràng
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Yêu cầu -->
+                    <div class="mb-8">
+                        <h3 class="text-[15px] font-bold text-darkText mb-4">Yêu cầu:</h3>
+                        <ul class="list-disc pl-6 space-y-2 text-[18px] leading-[1.5] text-darkText">
+                            <li>Tốt nghiệp CĐ/ ĐH các khối ngành Kinh tế, Quản trị kinh doanh, Marketing,...và các ngành
+                                liên quan.</li>
+                            <li>Có tối thiểu 2-5 năm kinh nghiệm ở vị trí tương đương, ưu tiên ứng viên có kinh nghiệm
+                                ngành Bất động sản.</li>
+                            <li>Có kiến thức vững mạnh về quản trị chiến lược, xây dựng kế hoạch triển khai công tác bán
+                                hàng, kinh doanh Bất động sản.</li>
+                            <li>Kỹ năng giao tiếp tốt.</li>
+                            <li>Thông thạo tin học, có ngoại ngữ là một lợi thế.</li>
+                            <li>Quyết đoán, nhạy bén trong đầu tư kinh doanh; chính trực, liêm chính, chịu được áp lực
+                                cao trong công việc.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right Column: Job Info Sidebar -->
+                <div class="lg:col-span-4 relative">
+                    <div class="sticky top-32 space-y-6">
+                        <div>
+                            <p class="text-[13px] text-textHide mb-1">Loại công việc</p>
+                            <p class="text-[16px] font-bold text-darkText">Toàn thời gian</p>
+                        </div>
+                        <div>
+                            <p class="text-[13px] text-textHide mb-1">Số lượng</p>
+                            <p class="text-[16px] font-bold text-darkText">3</p>
+                        </div>
+                        <div>
+                            <p class="text-[13px] text-textHide mb-1">Hạn nộp hồ sơ</p>
+                            <p class="text-[16px] font-bold text-darkText">30.04.2022</p>
+                        </div>
+                        <div>
+                            <p class="text-[13px] text-textHide mb-1">Địa điểm</p>
+                            <p class="text-[16px] font-bold text-darkText">Tp. Hồ Chí Minh, Hà Nội</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Nộp đơn ứng tuyển -->
+    <section class="relative py-12 md:py-16">
+        <div class="content-container">
+
+            <!-- State 1: Red bar with info + buttons (default) -->
+            <div id="apply-red" class="relative w-full lg:w-[1000px] mx-auto pointer-events-none">
+                <div
+                    class="relative w-full bg-primary text-white py-8 sm:py-10 md:py-12 pointer-events-auto shadow-[0_10px_30px_rgba(218,22,38,0.2)] lg:shadow-none">
+                    <!-- Left Bleed Box -->
+                    <div class="hidden lg:block absolute top-0 bottom-0 right-full w-[50vw] bg-primary"></div>
+
+                    <!-- Content -->
+                    <div class="relative z-10 w-full">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                            <!-- Left: Info -->
+                            <div>
+                                <h3
+                                    class="text-[22px] md:text-[26px] font-bold text-white uppercase mb-2 tracking-wide">
+                                    HỒ SƠ DỰ TUYỂN GỬI VỀ</h3>
+                                <div class="w-12 h-[3px] bg-white mb-6"></div>
+                                <div class="space-y-2 text-[18px] text-white leading-[1.7]">
+                                    <p>Địa chỉ: 24 Đ. Nguyễn Khang, Trung Hoà, Cầu Giấy, Hà Nội</p>
+                                    <p>Email: tuyendung.dkrb@gmail.com</p>
+                                    <p>Hotline: 1900 599 933</p>
+                                </div>
+                            </div>
+                            <!-- Right: Buttons -->
+                            <div class="flex gap-8 justify-start md:justify-end">
+                                <div class="relative inline-block"
+                                    style="clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                    <div class="absolute inset-0 bg-white"></div>
+                                    <button id="btn-upload-cv" type="button"
+                                        class="relative bg-primary hover:bg-white text-white hover:text-primary font-bold text-[14px] py-[0.5rem] px-[1.5rem] transition-colors uppercase tracking-wider"
+                                        style="margin: 2px; clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                        Tải lên CV
+                                    </button>
+                                </div>
+                                <div class="relative inline-block"
+                                    style="clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                    <div class="absolute inset-0 bg-white"></div>
+                                    <button type="button"
+                                        class="relative bg-primary hover:bg-white text-white hover:text-primary font-bold text-[14px] py-[0.5rem] px-[1.5rem] transition-colors uppercase tracking-wider"
+                                        style="margin: 2px; clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                        Tải về mẫu CV
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Slant -->
+                    <div class="hidden lg:block absolute top-0 left-full bottom-0 w-[85px] bg-primary pointer-events-none"
+                        style="clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);"></div>
+                </div>
+            </div>
+
+            <div id="apply-form-wrapper" class="hidden relative w-full lg:w-[1000px] mx-auto pointer-events-none"
+                style="filter: drop-shadow(0 4px 20px rgba(0,0,0,0.08));">
+                <div class="relative w-full bg-white py-8 sm:py-10 md:py-12 pointer-events-auto">
+                    <!-- Left Bleed Box -->
+                    <div class="hidden lg:block absolute top-0 bottom-0 right-full w-[50vw] bg-white">
+                    </div>
+
+                    <!-- Close button -->
+                    <button id="close-form" type="button"
+                        class="absolute top-4 right-4 z-20 hover:opacity-70 transition-opacity">
+                        <img src="images/Icon-close.svg" alt="Đóng" class="w-5 h-5">
+                    </button>
+
+                    <!-- Content -->
+                    <div class="relative z-10 w-full">
+                        <form class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-6">
+                            <!-- Họ tên -->
+                            <div>
+                                <label class="block text-[13px] text-textHide mb-2">Họ tên <span
+                                        class="text-primary">*</span></label>
+                                <input type="text" placeholder="Nhập họ tên của bạn"
+                                    class="w-full bg-transparent border-b border-gray-400 focus:border-primary outline-none py-2 text-[14px] text-darkText transition-colors">
+                            </div>
+                            <!-- Vị trí tuyển dụng -->
+                            <div>
+                                <label class="block text-[13px] text-textHide mb-2">Vị trí tuyển dụng <span
+                                        class="text-primary">*</span></label>
+                                <input type="text" placeholder="Vị trí bạn muốn ứng tuyển"
+                                    class="w-full bg-transparent border-b border-gray-400 focus:border-primary outline-none py-2 text-[14px] text-darkText transition-colors">
+                            </div>
+                            <!-- Số điện thoại -->
+                            <div>
+                                <label class="block text-[13px] text-textHide mb-2">Số điện thoại <span
+                                        class="text-primary">*</span></label>
+                                <input type="tel" placeholder="Nhập số điện thoại liên hệ"
+                                    class="w-full bg-transparent border-b border-gray-400 focus:border-primary outline-none py-2 text-[14px] text-darkText transition-colors">
+                            </div>
+                            <!-- Ghi chú -->
+                            <div>
+                                <label class="block text-[13px] text-textHide mb-2">Ghi chú</label>
+                                <input type="text" placeholder="Nhập nội dung"
+                                    class="w-full bg-transparent border-b border-gray-400 focus:border-primary outline-none py-2 text-[14px] text-darkText transition-colors">
+                            </div>
+                            <!-- Email -->
+                            <div>
+                                <label class="block text-[13px] text-textHide mb-2">Email</label>
+                                <input type="email" placeholder="Nhập địa chỉ thư điện tử của bạn"
+                                    class="w-full bg-transparent border-b border-gray-400 focus:border-primary outline-none py-2 text-[14px] text-darkText transition-colors">
+                            </div>
+                            <!-- Buttons (same row as Email) -->
+                            <div class="flex gap-4 items-end">
+                                <button type="submit"
+                                    class="bg-primary hover:bg-primaryDark text-white font-bold text-[14px] py-[0.5rem] px-[1.5rem] transition-colors uppercase tracking-wider"
+                                    style="clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                    Gửi đơn
+                                </button>
+                                <div class="relative inline-block"
+                                    style="clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                    <div class="absolute inset-0 bg-primary"></div>
+                                    <button type="button"
+                                        class="relative bg-white hover:bg-primary text-primary hover:text-white font-bold text-[14px] py-[0.5rem] px-[1.5rem] transition-colors uppercase tracking-wider"
+                                        style="margin: 2px; clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                                        Tải lên CV
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Right Slant (white to match form bg) -->
+                    <div class="hidden lg:block absolute top-0 left-full bottom-0 w-[85px] bg-white pointer-events-none"
+                        style="clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);"></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="main-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: Thương hiệu -->
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Miền Bắc" class="h-[50px] w-auto">
+                    </a>
+                    <p class="text-[13px] text-primary font-bold leading-snug mb-6">
+                        Đây là website công bố thông tin chính thức của<br>
+                        Công ty Cổ phần Danh Khôi Miền Bắc
+                    </p>
+                    <div class="w-full h-px bg-gray-100 mb-6"></div>
+                    <p class="text-[13px] text-textHide mb-3">Theo dõi chúng tôi trên</p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Facebook">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Instagram">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="LinkedIn">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Twitter">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="YouTube">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Thông tin liên hệ -->
+                <div class="lg:pl-8">
+                    <h6 class="text-[14px] font-bold text-primary mb-6 tracking-wider">
+                        THÔNG TIN LIÊN HỆ
+                    </h6>
+                    <ul class="flex flex-col gap-[0.5rem] text-[13px] text-textHide">
+                        <li>
+                            <p class="mb-1">Địa chỉ:</p>
+                            <p>Số 24 Phố Nguyễn Khang, Tổ 20, Phường Yên Hoà, Quận Cầu Giấy, Hà Nội, Việt Nam</p>
+                        </li>
+                        <li class="mt-2">Mã số thuế: 0108097371</li>
+                        <li>Email: <a href="mailto:info@danhkhoi.com.vn"
+                                class="hover:text-primary transition-colors">info@danhkhoi.com.vn</a></li>
+                        <li>Hotline: <a href="tel:02836221399" class="hover:text-primary transition-colors">028 3622
+                                1399</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Về Danh Khôi -->
+                <div>
+                    <h6 class="text-[14px] font-bold text-primary mb-6 tracking-wider">
+                        VỀ DANH KHÔI
+                    </h6>
+                    <ul class="flex flex-col gap-[0.5rem] text-[13px] text-textHide">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Trang chủ</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Giới thiệu Tập
+                                đoàn</a></li>
+                        <li><a href="domains.html" class="hover:text-primary transition-colors">Lĩnh vực hoạt
+                                động</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Quan hệ cổ đông</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Phát triển bền vững</a></li>
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Tin tức -->
+                <div>
+                    <h6 class="text-[14px] font-bold text-primary mb-6 tracking-wider">
+                        TIN TỨC
+                    </h6>
+                    <ul class="flex flex-col gap-[0.5rem] text-[13px] text-textHide">
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-100 pt-6 mt-6">
+            <div class="main-container text-[12px] text-textHide text-left">
+                <p>Copyright &copy; 2022 Danh Khoi Mien Bac. All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Left Indicator -->
+    <div id="scrollTopIndicator" class="scroll-top-left-indicator">
+        <div class="stl-line"></div>
+        <span class="stl-text">VỀ ĐẦU TRANG</span>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const spans = mobileBtn.querySelectorAll('span');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    spans[0].style.transform = 'rotate(45deg) translateY(6px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translateY(-6px)';
+                } else {
+                    spans[0].style.transform = '';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = '';
+                }
+            });
+        }
+
+        // Header scroll effect
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+                header.style.background = 'rgba(255, 255, 255, 0.9)';
+                header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
+                header.querySelectorAll('nav a').forEach(a => {
+                    a.classList.remove('text-white');
+                    a.classList.add('text-darkText');
+                });
+                header.querySelectorAll('nav span').forEach(s => {
+                    s.classList.remove('text-white/40');
+                    s.classList.add('text-gray-300');
+                });
+                const logo = header.querySelector('img');
+                if (logo) logo.style.filter = '';
+                const spans = document.querySelectorAll('#mobile-menu-btn span');
+                spans.forEach(s => {
+                    s.classList.remove('bg-white');
+                    s.classList.add('bg-darkText');
+                });
+            } else {
+                header.classList.remove('scrolled');
+                header.style.background = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
+                header.style.boxShadow = 'none';
+                header.querySelectorAll('nav a').forEach(a => {
+                    a.classList.remove('text-darkText');
+                    a.classList.add('text-white');
+                });
+                header.querySelectorAll('nav span').forEach(s => {
+                    s.classList.remove('text-gray-300');
+                    s.classList.add('text-white/40');
+                });
+                const spans = document.querySelectorAll('#mobile-menu-btn span');
+                spans.forEach(s => {
+                    s.classList.remove('bg-darkText');
+                    s.classList.add('bg-white');
+                });
+            }
+        });
+
+        // Scroll to top
+        const scrollIndicator = document.getElementById('scrollTopIndicator');
+        if (scrollIndicator) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollIndicator.classList.add('visible');
+                } else {
+                    scrollIndicator.classList.remove('visible');
+                }
+            });
+            scrollIndicator.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Toggle Apply Form + Sync Heights
+        const btnUploadCv = document.getElementById('btn-upload-cv');
+        const applyRed = document.getElementById('apply-red');
+        const applyFormWrapper = document.getElementById('apply-form-wrapper');
+        const closeFormBtn = document.getElementById('close-form');
+
+        // Sync heights so both states have identical dimensions
+        function syncApplyHeights() {
+            if (!applyRed || !applyFormWrapper) return;
+            const redInner = applyRed.querySelector(':scope > div');
+            const formInner = applyFormWrapper.querySelector(':scope > div');
+            if (!redInner || !formInner) return;
+
+            // Reset any previously set height
+            redInner.style.minHeight = '';
+            formInner.style.minHeight = '';
+
+            // Temporarily show form to measure it
+            applyFormWrapper.style.position = 'absolute';
+            applyFormWrapper.style.visibility = 'hidden';
+            applyFormWrapper.classList.remove('hidden');
+
+            const redH = redInner.offsetHeight;
+            const formH = formInner.offsetHeight;
+            const maxH = Math.max(redH, formH);
+
+            // Hide form again
+            applyFormWrapper.classList.add('hidden');
+            applyFormWrapper.style.position = '';
+            applyFormWrapper.style.visibility = '';
+
+            // Apply same height to both
+            redInner.style.minHeight = maxH + 'px';
+            formInner.style.minHeight = maxH + 'px';
+        }
+
+        // Run on load and resize
+        syncApplyHeights();
+        window.addEventListener('resize', syncApplyHeights);
+
+        if (btnUploadCv && applyRed && applyFormWrapper) {
+            btnUploadCv.addEventListener('click', () => {
+                applyRed.classList.add('hidden');
+                applyFormWrapper.classList.remove('hidden');
+            });
+        }
+
+        if (closeFormBtn && applyRed && applyFormWrapper) {
+            closeFormBtn.addEventListener('click', () => {
+                applyFormWrapper.classList.add('hidden');
+                applyRed.classList.remove('hidden');
+            });
+        }
+
+        // Select2
+        function formatLang(lang) {
+            if (!lang.id) return lang.text;
+            var flag = $(lang.element).data('flag');
+            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
+        }
+        $(document).ready(function () {
+            $('#lang-switcher').select2({
+                minimumResultsForSearch: Infinity,
+                dropdownAutoWidth: true,
+                width: 'auto',
+                templateResult: formatLang,
+                templateSelection: formatLang
+            });
+            var $s2 = $('#lang-switcher').next('.select2-container');
+            var lockedW = $s2.outerWidth();
+            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
+        });
+    </script>
+
+    <!-- Active Nav State Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            var activeHref = currentPath;
+            if (currentPath === 'career-details.html') activeHref = 'careers.html';
+            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
+
+            var desktopLinks = document.querySelectorAll('#main-header nav a');
+            desktopLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-white', 'text-darkText');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+
+            var mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
