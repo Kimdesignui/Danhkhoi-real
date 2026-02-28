@@ -39,6 +39,8 @@
 :root {
   --font-main: 'Lato', sans-serif;
   /* Đảm bảo có font dự phòng sans-serif */
+  --font-nav: 'Lato', sans-serif;
+  /* Font riêng cho Navbar để dễ tùy chỉnh */
 
   /* Brand Core */
   --color-primary: #EE2031;
@@ -97,6 +99,14 @@
   margin-right: auto;
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+/* ============================================
+   Navbar Typography
+   ============================================ */
+#main-header nav a,
+#mobile-menu a {
+  font-family: var(--font-nav);
 }
 
 /* Fallback base styles cho Web (trước khi tailwind base render) */

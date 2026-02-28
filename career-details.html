@@ -601,14 +601,23 @@
 
         // Header scroll effect
         const header = document.getElementById('main-header');
+        var _cp = window.location.pathname.split('/').pop() || 'index.html';
+        if (_cp === 'career-details.html') _cp = 'careers.html';
+        if (_cp === 'news-detail.html' || _cp === 'emagazine.html') _cp = 'news.html';
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('scrolled');
                 header.style.background = 'rgba(255, 255, 255, 0.9)';
                 header.style.boxShadow = '0 2px 10px rgba(0,0,0,0.08)';
                 header.querySelectorAll('nav a').forEach(a => {
-                    a.classList.remove('text-white');
-                    a.classList.add('text-darkText');
+                    var hp = (a.getAttribute('href') || '').split('/').pop();
+                    if (hp === _cp) {
+                        a.classList.remove('text-[#FFB800]', 'text-[#FEDA00]', 'text-white');
+                        a.classList.add('text-primary');
+                    } else {
+                        a.classList.remove('text-white');
+                        a.classList.add('text-darkText');
+                    }
                 });
                 header.querySelectorAll('nav span').forEach(s => {
                     s.classList.remove('text-white/40');
@@ -626,8 +635,14 @@
                 header.style.background = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
                 header.style.boxShadow = 'none';
                 header.querySelectorAll('nav a').forEach(a => {
-                    a.classList.remove('text-darkText');
-                    a.classList.add('text-white');
+                    var hp = (a.getAttribute('href') || '').split('/').pop();
+                    if (hp === _cp) {
+                        a.classList.remove('text-primary', 'text-darkText');
+                        a.classList.add('text-[#FFB800]');
+                    } else {
+                        a.classList.remove('text-darkText');
+                        a.classList.add('text-white');
+                    }
                 });
                 header.querySelectorAll('nav span').forEach(s => {
                     s.classList.remove('text-gray-300');
@@ -745,11 +760,13 @@
                 var linkPath = href.split('/').pop();
 
                 if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-white', 'text-darkText');
+                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
                     link.classList.add('text-[#FFB800]', 'font-semibold');
+                    link.dataset.active = 'true';
                 } else {
                     link.classList.remove('font-semibold', 'text-[#FFB800]');
                     link.classList.add('font-normal');
+                    delete link.dataset.active;
                 }
             });
 

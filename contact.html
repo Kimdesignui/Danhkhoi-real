@@ -539,6 +539,9 @@
         // Header Scroll
         const header = document.getElementById('main-header');
         const HEADER_GRADIENT = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
+        var _cp = window.location.pathname.split('/').pop() || 'index.html';
+        if (_cp === 'career-details.html') _cp = 'careers.html';
+        if (_cp === 'news-detail.html' || _cp === 'emagazine.html') _cp = 'news.html';
         if (header) {
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 80) {
@@ -547,8 +550,14 @@
                     header.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
                     header.classList.add('scrolled');
                     header.querySelectorAll('nav a').forEach(a => {
-                        a.classList.remove('text-white');
-                        a.classList.add('text-darkText');
+                        var hp = (a.getAttribute('href') || '').split('/').pop();
+                        if (hp === _cp) {
+                            a.classList.remove('text-[#FFB800]', 'text-[#FEDA00]', 'text-white');
+                            a.classList.add('text-primary');
+                        } else {
+                            a.classList.remove('text-white');
+                            a.classList.add('text-darkText');
+                        }
                     });
                     header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-white', 'bg-darkText'));
                 } else {
@@ -557,8 +566,14 @@
                     header.style.boxShadow = '';
                     header.classList.remove('scrolled');
                     header.querySelectorAll('nav a').forEach(a => {
-                        a.classList.add('text-white');
-                        a.classList.remove('text-darkText');
+                        var hp = (a.getAttribute('href') || '').split('/').pop();
+                        if (hp === _cp) {
+                            a.classList.remove('text-primary', 'text-darkText');
+                            a.classList.add('text-[#FFB800]');
+                        } else {
+                            a.classList.add('text-white');
+                            a.classList.remove('text-darkText');
+                        }
                     });
                     header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-darkText', 'bg-white'));
                 }
@@ -611,11 +626,13 @@
                 var linkPath = href.split('/').pop();
 
                 if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-white', 'text-darkText');
+                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
                     link.classList.add('text-[#FFB800]', 'font-semibold');
+                    link.dataset.active = 'true';
                 } else {
                     link.classList.remove('font-semibold', 'text-[#FFB800]');
                     link.classList.add('font-normal');
+                    delete link.dataset.active;
                 }
             });
 
