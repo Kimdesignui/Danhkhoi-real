@@ -179,474 +179,281 @@
     </style>
 </head>
 
-<body class="bg-[#F2F6F9]">
+<body class="font-sans antialiased bg-white">
+    <!-- Top Progress Indicator Placeholder -->
+    <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-[3px] z-[101] bg-gray-200 hidden">
+        <div id="scroll-progress-bar" class="h-full bg-primary w-0"></div>
+    </div>
 
-    <!-- Header -->
-    <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
-        style="background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);">
 
-        <div class="main-container h-20 flex justify-between items-center relative">
-            <!-- Logo -->
-            <a href="index.html" class="flex items-center flex-shrink-0">
-                <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc" class="h-12 w-auto">
+    <!-- header -->
+
+    <header id="emagazine-header"
+        class="w-full fixed top-0 left-0 right-0 z-50 bg-primary shadow-sm transition-all duration-300">
+        <div class="main-container h-[60px] flex justify-between items-center relative">
+
+            <!-- Left: Danh Khoi Logo -->
+            <a href="index.html"
+                class="flex-shrink-0 cursor-pointer transition-transform hover:scale-105 z-10 w-28 md:w-[150px]">
+                <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc"
+                    class="w-full h-auto object-contain brightness-0 invert">
             </a>
 
-            <!-- Desktop Nav -->
-            <nav class="hidden lg:flex items-center gap-0">
-                <a href="index.html"
-                    class="text-white font-semibold text-sm px-4 py-2 hover:opacity-75 transition-opacity">Trang chủ</a>
-                <span class="text-white/40 text-xs self-center select-none">|</span>
-                <a href="about.html"
-                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Giới
-                    thiệu</a>
-                <span class="text-white/40 text-xs self-center select-none">|</span>
-                <a href="domains.html"
-                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Lĩnh vực hoạt
-                    động</a>
-                <span class="text-white/40 text-xs self-center select-none">|</span>
-                <a href="projects.html"
-                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Dự án</a>
-                <span class="text-white/40 text-xs self-center select-none">|</span>
-                <a href="news.html"
-                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Tin tức - Sự
-                    kiện</a>
-                <span class="text-white/40 text-xs self-center select-none">|</span>
-                <a href="careers.html"
-                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Tuyển
-                    dụng</a>
-                <span class="text-white/40 text-xs self-center select-none">|</span>
-                <a href="contact.html"
-                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Liên hệ</a>
-            </nav>
+            <!-- Center: Emagazine Logo -->
+            <a href="emagazine.html"
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center flex-shrink-0 cursor-pointer transition-transform hover:scale-105 z-0">
+                <img src="images/logo-emz.jpg" alt="Danh Khôi Emagazine Logo"
+                    class="w-[120px] md:w-[150px] h-auto object-contain" style="filter: brightness(0) invert(1);">
+            </a>
 
-            <!-- Language Switcher -->
-            <div class="hidden lg:flex items-center">
+            <!-- Right: Language Switcher -->
+            <div class="hidden lg:flex items-center z-10">
                 <div class="lang-select-container">
-                    <select id="lang-switcher" class="lang-select">
+                    <select id="lang-switcher-emz" class="lang-select">
                         <option value="vi" data-flag="https://flagcdn.com/20x15/vn.png">Tiếng Việt</option>
                         <option value="en" data-flag="https://flagcdn.com/20x15/gb.png">English</option>
                     </select>
                 </div>
             </div>
 
-            <!-- Mobile menu btn -->
-            <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
-                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
-                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
-                <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
-            </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
-            <div class="main-container py-4 flex flex-col gap-1">
-                <a href="index.html"
-                    class="text-darkText font-semibold text-sm py-2 hover:text-primary transition-colors">Trang chủ</a>
-                <a href="about.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Giới
-                    thiệu</a>
-                <a href="domains.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Lĩnh vực
-                    hoạt động</a>
-                <a href="projects.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Dự
-                    án</a>
-                <a href="news.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Tin tức - Sự
-                    kiện</a>
-                <a href="careers.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Tuyển
-                    dụng</a>
-                <a href="contact.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">Liên
-                    hệ</a>
-            </div>
         </div>
     </header>
-    <!-- Hero Banner for News -->
-    <section class="relative w-full aspect-[1920/776]">
-        <!-- Dark City Banner Image -->
-        <div class="absolute inset-0 w-full h-full z-0 overflow-hidden">
-            <div class="absolute inset-0 bg-[#030925]/60 z-10 pointer-events-none"></div>
-            <img src="images/Banner-news.jpg" alt="Tin tức Danh Khôi" class="w-full h-full object-cover">
-        </div>
 
-        <!-- BUG-01 FIX: Responsive hero padding (80px mobile → 120px sm → 180px md+) -->
-        <div
-            class="absolute inset-0 z-20 flex flex-col items-center pt-[80px] sm:pt-[120px] md:pt-[180px] pointer-events-none px-4">
-            <div class="main-container text-center text-white w-full">
-                <!-- BUG-02 FIX: Progressive font scaling (xl → 2xl → 4xl → 42px) -->
-                <h2 class="text-white text-xl sm:text-2xl md:text-4xl lg:text-[42px] font-bold mb-4 leading-tight">Sản
-                    phẩm đa dạng
-                    tại nhiều tỉnh thành</h2>
-                <!-- BUG-03 FIX: Hide long description on mobile for visual balance -->
-                <p
-                    class="hidden sm:block text-[14px] sm:text-[16px] font-semibold max-w-4xl mx-auto leading-relaxed text-gray-100">
-                    Demo: Năng lực của Tập đoàn Danh Khôi đã được chứng minh qua các sản phẩm và dịch vụ chất lượng
-                    chuẩn mực. Tập đoàn ngày càng khẳng định được vị thế trong lĩnh vực bất động sản và đang vững
-                    bước tiến vào kỷ nguyên mới với các dự án được đầu tư bài bản từ khâu nghiên cứu nhu cầu, phát
-                    triển ý tưởng, triển khai cùng các đối tác tư vấn quốc tế hàng đầu.
-                </p>
+
+    <!-- Empty div for header spacing -->
+    <div class="h-[60px] w-full bg-primary/0 pointer-events-none absolute top-0"></div>
+
+    <!-- Banner -->
+    <section class="relative w-full mt-[60px]">
+        <img src="images/banner-emagazine.jpg" alt="Sức hấp dẫn từ BĐS Quy Nhơn"
+            class="w-full h-auto object-cover block">
+    </section>
+
+    <!-- Main Content Part 1: Under Banner -->
+    <section class="relative z-20 overflow-hidden bg-bg1">
+        <div class="max-w-[660px] mx-auto w-full px-4 md:px-0 py-10 relative z-10">
+            <div class="text-gray-700 text-[18px] leading-[1.6]">
+                <p class="mb-6">Sau dịch, khẩu vị của giới đầu tư BĐS cũng chuyển dịch theo hướng ưu tiên lựa chọn các
+                    loại hình BĐS xanh ven biển ở những thị trường mới nổi như Bình Định để hưởng trọn làn sóng tăng giá
+                    tuyệt vời.</p>
+                <p class="mb-6">Tại thị trường Bình Định, <strong class="text-primary cursor-pointer hover:underline">Kỳ
+                        Co Gateway</strong> đang trở thành tâm điểm của giới đầu tư khi nằm trong top pháp lý sở hữu lâu
+                    dài, chú trọng phát triển các tiện ích sức khỏe cùng tiềm năng phát triển du lịch hứa hẹn mang lại
+                    lợi nhuận bền vững cho nhà đầu tư trong tương lai.</p>
+                <p class="mb-8 font-bold text-darkText">Xu hướng đầu tư BĐS xanh ven biển</p>
+
+                <figure class="mb-8">
+                    <img src="images/news-details-1.jpg" alt="Article Image 1"
+                        class="w-full h-auto object-cover rounded-sm">
+                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">Thành phố biển Quy Nhơn hiền hòa
+                    </figcaption>
+                </figure>
+
+                <p class="mb-6">Có thể nói, nhu cầu sống xanh ưu tiên sức khỏe đã tác động mạnh mẽ đến tâm lý lựa chọn
+                    nơi an cư và "ngôi nhà thứ hai" của nhiều người. Trong đó, các khu vực kề sông cận biển, các BĐS
+                    xanh gần gũi thiên nhiên có nhiều tiện ích sức khỏe ngày càng được ưa chuộng.</p>
+                <p class="mb-8">Đặc biệt tại các ranh giới ven biển của các tỉnh miền Trung, làn sóng đầu tư BĐS xanh
+                    đang diễn ra vô cùng sôi động. Quy Nhơn (Bình Định) hiện là một trong những khu vực thu hút mạnh mẽ
+                    dòng vốn này nhờ quỹ đất rộng lớn, giao thông kết nối đồng bộ và tiềm năng du lịch đang trên đà cất
+                    cánh.</p>
+
+                <figure class="mb-12">
+                    <img src="images/news-details-2.jpg" alt="Article Image 2"
+                        class="w-full h-auto object-cover border-4 border-white shadow-md mx-auto">
+                    <figcaption class="text-center text-sm text-gray-500 mt-3 italic">Phối cảnh khu đô thị sinh thái Kỳ
+                        Co Gateway</figcaption>
+                </figure>
+
+                <p class="mb-12">Nắm bắt xu thế đó, Tập đoàn Danh Khôi đã phát triển dự án Kỳ Co Gateway theo mô hình
+                    khu đô thị sinh thái xanh ven biển, tích hợp hệ thống tiện ích đẳng cấp, mang đến không gian sống
+                    trong lành và giá trị sinh lời bền vững cho các nhà đầu tư.</p>
             </div>
         </div>
     </section>
 
-    <!-- Featured News Section (Overlapping Hero) -->
-    <!-- BUG-06 FIX: Progressive negative margin for smooth breakpoint transitions -->
-    <section class="relative z-20 pb-16 -mt-16 sm:-mt-24 md:-mt-32 lg:-mt-[260px]">
-        <!-- Red Diagonal Background Base (1838:410 Aspect) -->
-        <!-- w-[93%] matches 1838 out of 1920 width -->
-        <div class="absolute left-0 top-0 w-[93%] border-none aspect-[1838/410] bg-primary z-0 pointer-events-none"
-            style="clip-path: polygon(90% 0%, 100% 39%, 100% 100%, 0 100%, 0 0);"></div>
+    <!-- 2nd Banner: Full Screen Width -->
+    <section class="w-full">
+        <img src="images/news-details-3.png" alt="Banner thứ 2 đệm giữa thân bài"
+            class="w-full h-auto object-cover block">
+    </section>
 
-        <!-- BUG-07 FIX: Responsive top padding on content container -->
-        <div class="main-container relative z-10 pt-10 sm:pt-[60px] md:pt-[80px] lg:pt-[100px]">
-            <!-- BUG-05 FIX: Progressive container padding (p-4 mobile → p-6 sm → py-8 px-12 lg) -->
-            <div class="bg-white p-4 sm:p-6 lg:py-8 lg:px-12 shadow-[0_10px_40px_rgba(0,0,0,0.08)]">
-                <!-- Heading -->
-                <div class="border-b border-gray-200 pb-3 mb-6 relative">
-                    <h2 class="text-primary font-bold text-[24px] leading-[1.3]">Tin nổi bật</h2>
-                    <div class="absolute bottom-[-1px] left-0 w-[120px] h-[2px] bg-primary"></div>
+    <!-- Main Content Part 2: Quote & Continued Images -->
+    <section class="relative z-20 overflow-hidden bg-white">
+        <div class="max-w-[660px] mx-auto w-full px-4 md:px-0 py-10 relative z-10">
+            <div class="text-gray-700 text-[18px] leading-[1.6]">
+
+
+                <p class="mb-8">Nhờ bệ phóng tài chính vững chắc, Danh Khôi tiếp tục khẳng định vị thế trên thị trường
+                    bằng các dự án quy mô, chất lượng, pháp lý minh bạch, được thị trường đón nhận nồng nhiệt. Đặc biệt,
+                    phân khúc BĐS ven biển nghỉ dưỡng kết hợp đô thị đang là mũi nhọn chiến lược của tập đoàn trong giai
+                    đoạn 2022-2025.</p>
+
+                <div class="text-center mb-8">
+                    <p class="font-bold text-[20px] text-darkText mb-4 uppercase">SO SÁNH VỐN ĐIỀU LỆ CỦA DANH KHÔI GIAI
+                        ĐOẠN 2018-2021</p>
+                    <img src="images/news-details-4.jpg" onerror="this.src='images/news-details-4.png'"
+                        alt="Biểu đồ vốn điều lệ" class="mx-auto max-w-full h-auto object-contain">
+                    <p class="text-center text-sm text-gray-500 mt-3 italic">Sự tăng trưởng thần tốc của Tập đoàn Danh
+                        Khôi từ năm 2018 đến 2021.</p>
                 </div>
 
-                <!-- Grid Layout for Featured News -->
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
-                    <!-- Main Left Article (6 cols) -->
-                    <a href="emagazine.html" class="lg:col-span-6 flex flex-col group cursor-pointer">
-                        <div class="relative aspect-[16/10] overflow-hidden mb-5">
-                            <img src="images/hero-1.jpg" alt="Bất động sản biển Quy Nhơn hi vọng vực dậy trong năm 2022"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                <h2 class="text-[24px] md:text-[28px] font-bold text-primary text-center mb-6 uppercase">CHIẾN LƯỢC
+                    "ĐỨNG TRÊN VAI NGƯỜI KHỔNG LỒ"</h2>
+                <p class="mb-6">Cùng với việc nhanh chóng thiết lập hệ sinh thái đối tác chiến lược hàng đầu, Danh Khôi
+                    đã và đang triển khai nhiều dự án quy mô lớn, tạo điểm nhấn kiến trúc và thúc đẩy quá trình đô thị
+                    hóa tại các tỉnh thành...</p>
 
-                        </div>
-                        <span class="text-gray-500 text-[14px] leading-[1.5] mb-2 block">20.07.2022</span>
-                        <h3
-                            class="text-darkText font-bold text-[24px] uppercase leading-[1.3] mb-3 group-hover:text-primary transition-colors">
-                            BẤT ĐỘNG SẢN BIỂN QUY NHƠN: HI VỌNG VỰC DẬY TRONG NĂM 2022</h3>
-                        <p class="text-textHide text-[16px] leading-[1.3] mb-4">Ngành du lịch Quy Nhơn đang dần
-                            phục hồi kèm theo sự kỳ vọng về sự khởi sắc của lĩnh vực bất động sản địa phương này.
-                        </p>
-                        <p class="text-textHide text-[16px] leading-[1.3]">Với đường bờ biển dài 134km, sở hữu bãi
-                            biển trong xanh như ngọc nhắc, danh lam thắng cảnh nổi tiếng còn giữ nguyên vẻ đẹp
-                            nguyên sơ, Quy Nhơn...</p>
-                    </a>
+                <figure class="mb-8 mt-10">
+                    <img src="images/news-details-5.jpg" onerror="this.src='images/news-details-5.png'"
+                        alt="Article Image 5" class="w-full h-auto object-cover rounded-sm">
+                </figure>
 
-                    <!-- 3 Right Stacked Articles (6 cols) -->
-                    <div class="lg:col-span-6 flex flex-col gap-6">
+                <!-- Author Signature -->
+                <div class="mt-14 mx-auto w-48 border-t border-gray-400 pt-4 text-center">
+                    <p class="font-bold text-[#333] text-[16px] md:text-[18px]">Giang Chi Anh</p>
+                </div>
+            </div>
 
-                        <!-- Sub Article 1 -->
-                        <!-- Always keep image-left / content-right layout on all viewports -->
-                        <a href="emagazine.html" class="flex flex-row gap-4 group cursor-pointer block">
-                            <div class="w-1/2 md:w-[200px] aspect-[4/3] relative overflow-hidden flex-shrink-0">
-                                <img src="images/domain-1.jpg" alt="Bất động sản biển Quy Nhơn"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            </div>
-                            <div class="flex flex-col w-1/2 flex-grow pt-1">
-                                <span class="text-gray-500 text-[14px] leading-[1.5] mb-1">20.07.2022</span>
-                                <h6
-                                    class="text-darkText font-bold text-[16px] leading-[1.4] mb-2 group-hover:text-primary transition-colors">
-                                    Bất động sản biển Quy Nhơn: Hi vọng vực dậy trong năm 2022</h6>
-                                <p class="text-textHide text-[14px] leading-[1.5] line-clamp-2">Phường Phước Lộc, Thị
-                                    xã La Gi, Tỉnh Bình Thuận</p>
-                            </div>
-                        </a>
-                        <div class="w-full border-b border-gray-100"></div>
-
-                        <!-- Sub Article 2 -->
-                        <!-- Always keep image-left / content-right layout on all viewports -->
-                        <a href="emagazine.html" class="flex flex-row gap-4 group cursor-pointer block">
-                            <div class="w-1/2 md:w-[200px] aspect-[4/3] relative overflow-hidden flex-shrink-0">
-                                <img src="images/domain-2.jpg" alt="Bất động sản biển Quy Nhơn"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            </div>
-                            <div class="flex flex-col w-1/2 flex-grow pt-1">
-                                <span class="text-gray-500 text-[14px] leading-[1.5] mb-1">20.07.2022</span>
-                                <h6
-                                    class="text-darkText font-bold text-[16px] leading-[1.4] mb-2 group-hover:text-primary transition-colors">
-                                    Bất động sản biển Quy Nhơn: Hi vọng vực dậy trong năm 2022</h6>
-                                <p class="text-textHide text-[14px] leading-[1.5] line-clamp-2">Phường Phước Lộc, Thị
-                                    xã La Gi, Tỉnh Bình Thuận</p>
-                            </div>
-                        </a>
-                        <div class="w-full border-b border-gray-100"></div>
-
-                        <!-- Sub Article 3 -->
-                        <!-- Always keep image-left / content-right layout on all viewports -->
-                        <a href="emagazine.html" class="flex flex-row gap-4 group cursor-pointer block">
-                            <div class="w-1/2 md:w-[200px] aspect-[4/3] relative overflow-hidden flex-shrink-0">
-                                <img src="images/domain-3.jpg" alt="Bất động sản biển Quy Nhơn"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            </div>
-                            <div class="flex flex-col w-1/2 flex-grow pt-1">
-                                <span class="text-gray-500 text-[14px] leading-[1.5] mb-1">20.07.2022</span>
-                                <h6
-                                    class="text-darkText font-bold text-[16px] leading-[1.4] mb-2 group-hover:text-primary transition-colors">
-                                    Bất động sản biển Quy Nhơn: Hi vọng vực dậy trong năm 2022</h6>
-                                <p class="text-textHide text-[14px] leading-[1.5] line-clamp-2">Phường Phước Lộc, Thị
-                                    xã La Gi, Tỉnh Bình Thuận</p>
-                            </div>
-                        </a>
-
+            <!-- Comment Section -->
+            <div class="mt-12 pt-10 border-t border-gray-200">
+                <div class="flex items-start gap-4">
+                    <div
+                        class="w-12 h-12 flex-shrink-0 bg-gray-300 rounded-full overflow-hidden flex items-center justify-center pt-2">
+                        <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
                     </div>
+                    <input type="text" placeholder="BÌNH LUẬN"
+                        class="flex-1 h-12 px-4 border border-gray-300 focus:outline-none focus:border-primary text-[14px]">
+                </div>
+                <div class="flex justify-end mt-4">
+                    <!-- Chamfered Right Button (Hexagon with right slanted corners) -->
+                    <button
+                        class="bg-primary hover:bg-[#c21422] transition-colors text-white font-semibold py-[0.5rem] px-[1.5rem] text-[15px] relative"
+                        style="clip-path: polygon(0 0, 85% 0, 100% 25%, 100% 75%, 85% 100%, 0 100%);">
+                        BÌNH LUẬN
+                    </button>
                 </div>
             </div>
-        </div>
+
         </div>
     </section>
 
-    <!-- Main News Grid Section -->
-    <section class="pb-24 pt-10">
+    <!-- Bạn có thể quan tâm Section -->
+    <!-- Bạn có thể quan tâm Section -->
+    <section class="py-12 md:py-20 bg-bg1">
         <div class="main-container">
-            <!-- Tabs Header for Main News -->
-            <div class="border-b border-gray-200 w-full mb-10 overflow-x-auto hide-scrollbar">
-                <nav class="flex gap-8 w-auto min-w-max relative pb-0">
-                    <a href="#"
-                        class="text-primary font-bold text-[20px] leading-[1.4] relative transition-colors py-3 after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:w-full after:h-[2px] after:bg-primary">Tin
-                        thị trường</a>
-                    <a href="#"
-                        class="text-[#555555] hover:text-primary font-bold text-[20px] leading-[1.4] relative transition-colors py-3 after:content-[''] after:absolute after:bottom-[-1px] after:left-0 after:w-0 hover:after:w-full after:h-[2px] after:bg-primary after:transition-all">Tin
-                        pháp luật</a>
-                </nav>
+            <!-- Header: Tiêu đề và Xem tất cả -->
+            <div class="flex justify-between items-end mb-8 pb-4 relative">
+                <div class="relative">
+                    <h2 class="text-[24px] md:text-[32px] font-bold text-primary mb-3">Tin tức nổi bật</h2>
+                    <!-- Đường viền đỏ gạch chân ngắn -->
+                    <div class="w-[60px] h-[2px] bg-primary"></div>
+                </div>
+                <a href="news.html"
+                    class="text-[13px] text-textHide hover:text-primary transition-colors relative z-10">Xem tất cả</a>
             </div>
 
-            <!-- Grid Layout 3 Columns -->
-            <!-- Equal gap between rows and columns -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-0">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- News 1 -->
+                <div
+                    class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <!-- Badge Danh mục -->
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] px-3 py-1 rounded-full shadow-sm">
+                            Danh mục
+                        </div>
+                        <img src="images/project-1.jpg"
+                            alt="BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
+                    </div>
+                    <!-- Nội dung bài viết -->
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3
+                            class="text-[14px] md:text-[15px] font-bold text-[#333] hover:text-primary transition-colors line-clamp-3 mb-3 leading-snug uppercase">
+                            BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU
+                        </h3>
+                        <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
+                            động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
 
-                <!-- News Card 1 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-1.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <!-- Nút Chi tiết -->
+                        <div
+                            class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
+                            <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                class="w-3 h-3 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
+                            Chi tiết
+                        </div>
                     </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 1</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
                 </div>
-                <!-- News Card 2 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-2.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <!-- News 2 -->
+                <div
+                    class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <!-- Badge Danh mục -->
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] px-3 py-1 rounded-full shadow-sm">
+                            Danh mục
+                        </div>
+                        <img src="images/project-2.jpg" alt="ARIA VŨNG TÀU HOTEL & RESORT"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                     </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
+                    <!-- Nội dung bài viết -->
+                    <div class="p-6 flex flex-col flex-1">
                         <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 2</h3>
+                            class="text-[14px] md:text-[15px] font-bold text-[#333] hover:text-primary transition-colors line-clamp-3 mb-3 leading-snug uppercase">
+                            ARIA VŨNG TÀU HOTEL & RESORT
+                        </h3>
+                        <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
+                            động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
+
+                        <!-- Nút Chi tiết -->
+                        <div
+                            class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
+                            <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                class="w-3 h-3 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
+                            Chi tiết
+                        </div>
                     </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
                 </div>
-                <!-- News Card 3 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-3.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+
+                <!-- News 3 -->
+                <div
+                    class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <!-- Badge Danh mục -->
+                        <div
+                            class="absolute top-4 left-4 z-10 bg-primary text-white text-[12px] px-3 py-1 rounded-full shadow-sm">
+                            Danh mục
+                        </div>
+                        <img src="images/project-3.jpg"
+                            alt="BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000">
                     </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
+                    <!-- Nội dung bài viết -->
+                    <div class="p-6 flex flex-col flex-1">
                         <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 3</h3>
+                            class="text-[14px] md:text-[15px] font-bold text-[#333] hover:text-primary transition-colors line-clamp-3 mb-3 leading-snug uppercase">
+                            BLOCK SEA (HH2) - PHONG CÁCH SỐNG WELLNESS NƠI VỊNH BIỂN CỦA GIỚI THƯỢNG LƯU
+                        </h3>
+                        <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
+                            động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
+
+                        <!-- Nút Chi tiết -->
+                        <div
+                            class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
+                            <img src="images/Icon-arrow-right.svg" alt="Chi tiết"
+                                class="w-3 h-3 filter grayscale opacity-60 group-hover:grayscale-0 group-hover:opacity-100 group-hover:[filter:invert(32%)_sepia(85%)_saturate(3922%)_hue-rotate(339deg)_brightness(94%)_contrast(109%)] transition-all">
+                            Chi tiết
+                        </div>
                     </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 4 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-4.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 4</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 5 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-5.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 5</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 6 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-6.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 6</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 7 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-7.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 7</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 8 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-8.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 8</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 9 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-9.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 9</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 10 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-10.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 10</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 11 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-11.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 11</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
-                </div>
-                <!-- News Card 12 -->
-                <div class="group flex flex-col h-full bg-white relative pb-10">
-                    <div class="relative overflow-hidden aspect-[16/10] mb-4">
-                        <img src="images/new-item-12.jpg" alt="Tập đoàn Danh Khôi"
-                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                    </div>
-                    <div class="flex flex-col gap-2 p-4 pt-0">
-                        <span class="text-gray-500 text-[14px] leading-[1.5]">20.07.2022</span>
-                        <h3
-                            class="text-[16px] font-bold text-darkText leading-[1.4] mt-1 group-hover:text-primary transition-colors cursor-pointer">
-                            Tin tức chuyên sâu về Tập đoàn Danh Khôi và Thị trường Bất động sản 12</h3>
-                    </div>
-                    <a href="news-detail.html"
-                        class="absolute bottom-4 left-4 flex items-center gap-2 text-[14px] leading-[1.5] text-gray-600 hover:text-primary transition-colors font-medium mt-auto group/btn">
-                        <img src="images/Icon-arrow-right.svg" alt="Arrow Right" class="w-3.5 h-auto object-contain">
-                        Chi tiết
-                    </a>
                 </div>
             </div>
-
-            <!-- Pagination -->
-
-            <div class="flex justify-center items-center mt-16 gap-2">
-                <a href="news-detail.html"
-                    class="flex items-center justify-center cursor-pointer mr-2 opacity-50 hover:opacity-100 transition-opacity">
-                    <img src="images/Icon-arrow-left.svg" alt="Prev" class="w-4 h-auto object-contain">
-                </a>
-                <a href="news-detail.html"
-                    class="w-8 h-8 flex items-center justify-center text-primary font-bold text-[15px] hover:bg-gray-100 transition-colors rounded-sm">1</a>
-                <a href="news-detail.html"
-                    class="w-8 h-8 flex items-center justify-center text-gray-500 font-medium text-[15px] hover:bg-gray-100 transition-colors rounded-sm">2</a>
-                <a href="news-detail.html"
-                    class="w-8 h-8 flex items-center justify-center text-gray-500 font-medium text-[15px] hover:bg-gray-100 transition-colors rounded-sm">3</a>
-                <a href="news-detail.html"
-                    class="w-8 h-8 flex items-center justify-center text-gray-500 font-medium text-[15px] hover:bg-gray-100 transition-colors rounded-sm">4</a>
-                <a href="news-detail.html"
-                    class="flex items-center justify-center cursor-pointer ml-2 opacity-50 hover:opacity-100 transition-opacity">
-                    <img src="images/Icon-arrow-right.svg" alt="Next" class="w-4 h-auto object-contain">
-                </a>
-            </div>
-
         </div>
     </section>
+
     <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -663,40 +470,35 @@
                     <p class="text-[13px] text-textHide mb-3">Theo dõi chúng tôi trên</p>
                     <div class="flex gap-4">
                         <!-- Facebook -->
-                        <a href="news-detail.html" class="text-textHide hover:text-primary transition-colors"
-                            aria-label="Facebook">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Facebook">
                             <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                             </svg>
                         </a>
                         <!-- Instagram -->
-                        <a href="news-detail.html" class="text-textHide hover:text-primary transition-colors"
-                            aria-label="Instagram">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Instagram">
                             <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
                             </svg>
                         </a>
                         <!-- LinkedIn -->
-                        <a href="news-detail.html" class="text-textHide hover:text-primary transition-colors"
-                            aria-label="LinkedIn">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="LinkedIn">
                             <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
                             </svg>
                         </a>
                         <!-- Twitter/X -->
-                        <a href="news-detail.html" class="text-textHide hover:text-primary transition-colors"
-                            aria-label="Twitter">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Twitter">
                             <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
                             </svg>
                         </a>
                         <!-- YouTube -->
-                        <a href="news-detail.html" class="text-textHide hover:text-primary transition-colors"
-                            aria-label="YouTube">
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="YouTube">
                             <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
                                 <path
                                     d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
@@ -736,10 +538,8 @@
                         <li><a href="domains.html" class="hover:text-primary transition-colors">Lĩnh vực hoạt
                                 động</a>
                         </li>
-                        <li><a href="news-detail.html" class="hover:text-primary transition-colors">Quan hệ cổ đông</a>
-                        </li>
-                        <li><a href="news-detail.html" class="hover:text-primary transition-colors">Phát triển bền
-                                vững</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Quan hệ cổ đông</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Phát triển bền vững</a></li>
                         <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a>
                         </li>
                         <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
@@ -769,6 +569,7 @@
             </div>
         </div>
     </footer>
+
 
     <!-- Scroll To Top Left Indicator -->
     <div id="scrollTopIndicator" class="scroll-top-left-indicator">
@@ -1213,6 +1014,44 @@
                 autoplay></video>
         </div>
     </div>
+
+    <script>
+        // Landing page header scroll effect
+        window.addEventListener('scroll', function () {
+            const header = document.getElementById('emagazine-header');
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('shadow-md');
+                } else {
+                    header.classList.remove('shadow-md');
+                }
+            }
+        });
+
+        // Initialize Select2 Language Switcher
+        $(document).ready(function () {
+            function formatLanguage(state) {
+                if (!state.id) return state.text;
+                var flagUrl = state.element.getAttribute('data-flag');
+                var $state = $('<span><img src="' + flagUrl + '" class="img-flag inline-block w-5 h-4 object-cover mr-2" />' + state.text + '</span>');
+                return $state;
+            }
+
+            if ($.fn.select2) {
+                $('#lang-switcher-emz').select2({
+                    minimumResultsForSearch: Infinity,
+                    templateResult: formatLanguage,
+                    templateSelection: formatLanguage
+                });
+
+                // Fix dropdown active states
+                $('#lang-switcher-emz').on('select2:open', function () {
+                    $('.select2-results__options').css('background-color', '#fff').css('color', '#333');
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>
