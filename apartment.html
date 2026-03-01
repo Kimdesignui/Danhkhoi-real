@@ -1,68 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh Khôi Đất Bắc | Căn hộ & Biệt thự</title>
+    <title>Danh Khôi Đất Bắc | Trang chủ</title>
     <meta name="description"
         content="Danh Khôi Đất Bắc – Công ty cổ phần bất động sản hàng đầu miền Bắc. Phát triển quỹ đất, dự án, tiếp thị và quản lý vận hành.">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-
     <!-- Select2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Select2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { sans: ["Lato", "sans-serif"], display: ["Lato", "sans-serif"], roboto: ["Roboto", "sans-serif"] }, colors: { primary: "var(--color-primary)", primaryDark: "var(--color-primary-dark)", secondary: "var(--color-secondary)", darkText: "var(--color-dark-text)", textHide: "var(--color-text-hide)", bg1: "var(--color-bg1)", bg2: "var(--color-bg2)", bgDarkBlue: "var(--color-bg-darkblue)", darkBlue2: "var(--color-darkblue-2)", icon: "var(--color-icon)", link: "var(--color-link)", line: "var(--color-line)" }, maxWidth: { "container": "1110px" } } } } </script>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        display: ['Lato', 'sans-serif'],
-                        roboto: ['Roboto', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: 'var(--color-primary)',
-                        primaryDark: 'var(--color-primary-dark)',
-                        secondary: 'var(--color-secondary)',
-                        darkText: 'var(--color-dark-text)',
-                        textHide: 'var(--color-text-hide)',
-                        bg1: 'var(--color-bg1)',
-                        bg2: 'var(--color-bg2)',
-                        bgDarkBlue: 'var(--color-bg-darkblue)',
-                        darkBlue2: 'var(--color-darkblue-2)',
-                        icon: 'var(--color-icon)',
-                        link: 'var(--color-link)',
-                        line: 'var(--color-line)',
-                    },
-                    maxWidth: {
-                        'container': '1110px',
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
     <style>
         body {
@@ -72,7 +35,6 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
         h1,
         h2,
         h3,
@@ -82,7 +44,6 @@
             color: var(--color-dark-text);
         }
     </style>
-
     <!-- Select2 Custom Styles -->
     <style>
         .lang-select-container .select2-container--default .select2-selection--single {
@@ -93,7 +54,6 @@
             display: flex;
             align-items: center;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -102,34 +62,27 @@
             padding-right: 24px;
             line-height: 34px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
-
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
-
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
-
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -138,12 +91,10 @@
             vertical-align: middle;
             border-radius: 2px;
         }
-
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
-
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -156,7 +107,6 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
-
         .lang-option {
             display: flex;
             align-items: center;
@@ -164,19 +114,15 @@
         }
     </style>
 </head>
-
 <body>
-
     <!-- Header -->
     <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
         style="background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);">
-
         <div class="main-container h-20 flex justify-between items-center relative">
             <!-- Logo -->
             <a href="index.html" class="flex items-center flex-shrink-0">
                 <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc" class="h-12 w-auto">
             </a>
-
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-0">
                 <a href="index.html"
@@ -191,7 +137,7 @@
                     động</a>
                 <span class="text-white/40 text-xs self-center select-none">|</span>
                 <a href="projects.html"
-                    class="text-[#FEDA00] text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Dự án</a>
+                    class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Dự án</a>
                 <span class="text-white/40 text-xs self-center select-none">|</span>
                 <a href="news.html"
                     class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Tin tức - Sự
@@ -204,7 +150,6 @@
                 <a href="contact.html"
                     class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Liên hệ</a>
             </nav>
-
             <!-- Language Switcher -->
             <div class="hidden lg:flex items-center">
                 <div class="lang-select-container">
@@ -214,7 +159,6 @@
                     </select>
                 </div>
             </div>
-
             <!-- Mobile menu btn -->
             <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
                 <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
@@ -222,7 +166,6 @@
                 <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
             </button>
         </div>
-
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
             <div class="main-container py-4 flex flex-col gap-1">
@@ -243,96 +186,385 @@
             </div>
         </div>
     </header>
-    <!-- Hero Banner & Stats Section -->
-    <section class="relative w-full overflow-visible mb-12">
-        <!-- Banner Image -->
-        <!-- Đảm bảo responsive tỉ lệ ảnh không đổi, 100% chiều rộng -->
-        <div class="w-full relative">
-            <img src="images/Banner-project.jpg" alt="Danh Khôi Dự Án" class="w-full h-auto block">
+
+    <!-- NỘI DUNG CHÍNH (Đã áp dụng layout CSS TAB thuần và Sidebar 3 box) -->
+<main class="page-apartment min-h-screen bg-[#F5F7FA]">
+    
+    <!-- PURE CSS TABS RADIO BUTTONS -->
+    <input type="radio" name="apt-tabs-group" id="radio-tong-quan" class="apt-tab-radio hidden" checked>
+    <input type="radio" name="apt-tabs-group" id="radio-vi-tri" class="apt-tab-radio hidden">
+    <input type="radio" name="apt-tabs-group" id="radio-tien-ich" class="apt-tab-radio hidden">
+    <input type="radio" name="apt-tabs-group" id="radio-mat-bang" class="apt-tab-radio hidden">
+    <input type="radio" name="apt-tabs-group" id="radio-tien-do" class="apt-tab-radio hidden">
+    <input type="radio" name="apt-tabs-group" id="radio-video-360" class="apt-tab-radio hidden">
+
+    <!-- CSS Modal Tab Video -->
+    <input type="checkbox" id="radio-video-modal" class="hidden">
+
+    <!-- Hero Banner (No Text) -->
+    <div class="hero-apt-banner">
+        <img src="images/hero-3.jpg" alt="Aria Vũng Tàu">
+    </div>
+
+    <!-- Tabs Navigation Bar -->
+    <div class="apt-tabs-nav sticky top-[84px] lg:top-[84px] z-40 shadow-sm transition-all duration-300">
+        <div class="main-container">
+            <div class="apt-tabs-list flex overflow-x-auto whitespace-nowrap">
+                <label for="radio-tong-quan" class="apt-tab-btn">Tổng quan</label>
+                <label for="radio-vi-tri" class="apt-tab-btn">Vị trí</label>
+                <label for="radio-tien-ich" class="apt-tab-btn">Tiện ích</label>
+                <label for="radio-mat-bang" class="apt-tab-btn">Mặt bằng</label>
+                <label for="radio-tien-do" class="apt-tab-btn">Tiến độ</label>
+                <label for="radio-video-360" class="apt-tab-btn">Video 360°</label>
+            </div>
         </div>
+    </div>
 
-        <!-- Red Stats Bar (Cấu trúc tương tự slide bar trang chủ, thu gọn chiều cao) -->
-        <div class="relative lg:absolute lg:bottom-[-68px] left-0 w-full z-20 pointer-events-none mt-[-20px] lg:mt-0">
-            <div class="main-container relative h-auto lg:h-[136px] pointer-events-auto">
-                <div
-                    class="hero-tabs-wrap relative h-full grid grid-cols-2 lg:flex lg:flex-row w-full lg:w-[1040px] bg-primary">
-                    <!-- Left Bleed Box -->
-                    <div class="hidden lg:block absolute top-0 bottom-0 right-full w-[50vw] bg-primary"></div>
+    <!-- Main Content Grid -->
+    <div class="main-container py-12 apt-main-grid">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+            
+            <!-- LEFT COLUMN (Content) -->
+            <div class="lg:col-span-8">
+                <div class="apt-tab-content rounded-sm">
+                    <!-- TAB 1: TỔNG QUAN -->
+                    <div id="pane-tong-quan" class="apt-tab-pane">
+                        <h2 class="apt-content-title">TỔNG QUAN DỰ ÁN</h2>
+                        
+                        <p class="text-[15px] font-medium text-[#4a5568] leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                            Aria Vũng Tàu hay còn được biết đến với tên gọi Blue Sapphire Resort là tổ hợp nghỉ dưỡng Biệt Thự Biển – Căn Hộ – Nhà Hàng Khách Sạn đạt chuẩn 5 sao được phát triển bởi tập đoàn Danh Khôi. Nơi đây sẽ là một không gian sống và trải nghiệm tuyệt vời với đẳng cấp resort đúng nghĩa – cùng các đặc quyền riêng giành cho các cư dân tương lai.
+                        </p>
 
-                    <!-- Stat 1 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center border-b border-r lg:border-none border-white/10 group">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">60</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Dự án Đã
-                            triển khai</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
+                        <!-- Video Thumbnail block (pure css trigger via label) -->
+                        <label for="radio-video-modal" class="block relative w-full aspect-[16/9] mb-8 group cursor-pointer" onclick="document.getElementById('youtube-iframe-player').src='https://www.youtube.com/embed/0nwAUIw8DvA?autoplay=1'">
+                            <img src="images/apartment-img-1.jpg" alt="Tổng quan dự án" class="w-full h-full object-cover rounded-sm">
+                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors pointer-events-none"></div>
+                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                <img src="images/icon-video.svg" alt="Play Video" class="w-16 h-16 md:w-20 md:h-20 group-hover:scale-110 transition-transform duration-300">
+                            </div>
+                        </label>
+
+                        <!-- Table Chi Tiết -->
+                        <div class="overflow-x-auto">
+                            <table class="apt-detail-table">
+                                <tbody>
+                                    <tr>
+                                        <td>Tên dự án</td>
+                                        <td>Aria Vũng Tàu Hotel & Resort</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vị trí</td>
+                                        <td>Số 79 đường D5, Phường 10, Thành Phố Vũng Tàu, Tỉnh Bà Rịa – Vũng Tàu</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chủ đầu tư</td>
+                                        <td>Công ty Cổ Phần Du lịch và Đầu tư Xây dựng Châu Á (COTECASIA)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tiềm năng tăng trưởng khu vực</td>
+                                        <td>Phát triển loạt tiện ích cao cấp, hướng đến khai thác tiềm năng tăng trưởng du lịch của Bà Rịa – Vũng Tàu.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tiềm năng tăng trưởng dự án</td>
+                                        <td>Aria Vũng Tàu ôm trọn chiều dài bãi biển 400 m dọc biển, sở hữu không gian thiên nhiên, biển xanh, cát trắng, nắng vàng. Dự án bố trí và phân bổ căn hộ tập trung về mặt biển. Nhờ đó, hơn 90% căn hộ có tầm nhìn trực diện biển, đi kèm diện tích xây dựng từng căn hộ rộng và tiện ích riêng cao cấp.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tỉ suất lợi nhuận dự kiến hàng năm</td>
+                                        <td>Cam kết lợi nhuận đến 12%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Giá cho thuê căn hộ tại khu vực</td>
+                                        <td>50,000 tr / tháng</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đơn vị phát triển</td>
+                                        <td>Công ty cổ phần tập đoàn DANH KHÔI</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đại lý Phân phối</td>
+                                        <td>Công ty cổ phần TPI LAND - Đơn vị Độc Quyền</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Đơn vị xây dựng</td>
+                                        <td>Công ty cổ phần Đầu tư xây dựng THẾ SƠN</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tư vấn giám sát</td>
+                                        <td>Công ty cổ phần Tư vấn xây dựng Tổng Hợp (NAGECCO)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quy mô</td>
+                                        <td>Bao gồm 3 khu: – Khu Biệt Thự Blue Sapphire: 36 căn biệt thự nghỉ dưỡng cao cấp có khuôn viên riêng, hồ bơi riêng – Khu Căn hộ Condotel: Gồm 2 block cao 13 tầng và 1 block cao 36 tầng – Khu khách sạn: Cao 18 tầng với 250 phòng khách sạn cao cấp</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tiện ích nổi bật</td>
+                                        <td>Bãi biển riêng dài gần 400m, Khu Bar bãi biển Seashell, Sky Bar, Hồ cảnh quan trên tầng thượng, Hồ bơi view biển Dolphin, Cầu tình yêu Amor & Psyche…vvv</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Biểu đồ tăng trưởng</td>
+                                        <td><a href="#" class="text-[#215388] hover:underline hover:text-[#2367B0] transition-colors">Xem chi tiết tại đây</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Loại hình</td>
+                                        <td>Căn hộ du lịch biển tiêu chuẩn 5 sao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bàn Giao</td>
+                                        <td>Nội thất cao cấp – dính tường tiêu chuẩn 5 sao</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Hotline dự án</td>
+                                        <td><span class="text-[#f7b11c] font-bold">0938 458 451</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
 
-                    <!-- Stat 2 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center border-b lg:border-none border-white/10 group">
-                        <span class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">759
-                            ha</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Quỹ
-                            đất</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
-                        </div>
+                    <!-- TAB 2: VỊ TRÍ -->
+                    <div id="pane-vi-tri" class="apt-tab-pane">
+                        <h2 class="apt-content-title">VỊ TRÍ DỰ ÁN</h2>
+                        <p class="text-center text-gray-500 py-20">Nội dung Vị trí đang được cập nhật...</p>
+                    </div>
+                    
+                    <!-- TAB 3: TIỆN ÍCH -->
+                    <div id="pane-tien-ich" class="apt-tab-pane">
+                        <h2 class="apt-content-title">TIỆN ÍCH DỰ ÁN</h2>
+                        <p class="text-center text-gray-500 py-20">Nội dung Tiện ích đang được cập nhật...</p>
                     </div>
 
-                    <!-- Stat 3 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center border-r lg:border-none border-white/10 group">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">09</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Tỉnh
-                            thành</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
-                        </div>
+                    <!-- TAB 4: MẶT BẰNG -->
+                    <div id="pane-mat-bang" class="apt-tab-pane">
+                        <h2 class="apt-content-title">MẶT BẰNG DỰ ÁN</h2>
+                        <p class="text-center text-gray-500 py-20">Nội dung Mặt bằng đang được cập nhật...</p>
                     </div>
 
-                    <!-- Stat 4 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center lg:border-none border-white/10 group">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">50.000</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Đơn vị
-                            sản phẩm</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
-                        </div>
+                    <!-- TAB 5: TIẾN ĐỘ -->
+                    <div id="pane-tien-do" class="apt-tab-pane">
+                        <h2 class="apt-content-title">TIẾN ĐỘ THI CÔNG</h2>
+                        <p class="text-center text-gray-500 py-20">Nội dung Tiến độ đang được cập nhật...</p>
                     </div>
 
-                    <!-- Stat 5 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center lg:border-none border-white/10 group col-span-2 lg:col-span-1">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">40.000</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Khách
-                            hàng đã phục vụ</span>
+                    <!-- TAB 6: VIDEO 360 -->
+                    <div id="pane-video-360" class="apt-tab-pane">
+                        <h2 class="apt-content-title">VIDEO 360° & VR</h2>
+                        <p class="text-center text-gray-500 py-20">Nội dung Video 360° đang được cập nhật...</p>
                     </div>
-
-                    <!-- Right Slant -->
-                    <div class="hidden lg:block absolute top-0 left-full bottom-0 w-[85px] bg-primary pointer-events-none"
-                        style="clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);"></div>
                 </div>
+            </div>
+
+            <!-- RIGHT COLUMN (Sidebar) -->
+            <div class="lg:col-span-4 relative">
+                <div class="apt-sidebar flex flex-col pt-2 shadow-sm">
+                    <!-- Box 1 -->
+                    <div class="sb-box-1 rounded-t-lg">
+                        <h4>Chỉ cần để lại số điện thoại,</h4>
+                        <p>Chúng tôi sẽ gọi lại tư vấn miễn phí cho đến khi bạn mua được nhà!</p>
+                        <div class="flex flex-col xl:flex-row gap-0 border-[3px] border-white/20 rounded-md overflow-hidden shadow-sm">
+                            <input type="text" placeholder="Nhập số điện thoại" class="w-full flex-1 text-gray-800">
+                            <button class="whitespace-nowrap w-full xl:w-auto font-bold px-4 hover:shadow-lg">Gọi lại cho tôi</button>
+                        </div>
+                    </div>
+                    <!-- Box 2 -->
+                    <div class="sb-box-2 border-x border-[#e2e8f0]">
+                        <div class="hotline-wrap">
+                            <div class="w-8 h-8 rounded-full bg-[#f7b11c] flex items-center justify-center flex-shrink-0">
+                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                                </svg>
+                            </div>
+                            <span class="hotline-num">0938 458 451</span>
+                        </div>
+                        <p>Tư vấn ngay lập tức mọi nhu cầu của bạn</p>
+                    </div>
+                    <!-- Box 3 -->
+                    <div class="sb-box-3 rounded-b-lg justify-center group/box3 cursor-pointer">
+                        <div class="w-[30px] h-[30px] rounded-full bg-[#f7b11c] flex items-center justify-center flex-shrink-0 transition-transform group-hover/box3:translate-y-1">
+                            <svg class="w-4 h-4 text-white font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                            </svg>
+                        </div>
+                        <span>Tải tài liệu liên quan tới dự án</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+    <!-- Custom Style for Project Swiper Pagination -->
+    <style>
+        /* Phân trang: Đưa thẻ div chứa Pagination ra Full-Width viewport => Tự động Centered */
+        .project-pagination-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            pointer-events: none;
+            /* Khóa khung wrapper để click gỡ màn hình */
+        }
+        .project-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            pointer-events: auto;
+            /* Mở lại tính năng click cho chính các nút bấm */
+        }
+        /* Giới hạn chỉ hiển thị 4 chấm Pagination của dự án */
+        .project-pagination .swiper-pagination-bullet:nth-child(n+5) {
+            display: none !important;
+        }
+        .project-pagination .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background-color: var(--color-dark-text);
+            opacity: 0.5;
+            transition: all 0.3s ease;
+            margin: 0 !important;
+        }
+        .project-pagination .swiper-pagination-bullet-active {
+            opacity: 1;
+            width: 20px;
+            height: 20px;
+            border: 0.5px solid var(--color-dark-text);
+            background-color: var(--color-dark-text);
+            padding: 6px;
+            background-clip: content-box;
+            box-sizing: border-box;
+            position: relative;
+        }
+        /* Responsive Wrapper Tràn 84px ở Màn Hình Lớn */
+        .project-slider-bleed {
+            width: 100%;
+            position: relative;
+        }
+        @media (min-width: 1024px) {
+            .project-slider-bleed {
+                /* Container to hơn màn hình 168px và đẩy lùi trái 84px => cắt đi 84px 2 bên bức ảnh số 1 và số 4 */
+                width: calc(100% + 168px);
+                margin-left: -84px;
+            }
+        }
+    </style>
+    <!-- Dự án Tiêu biểu Section -->
+    <section class="relative py-16 md:py-24 bg-[var(--color-bg1)] overflow-hidden">
+        <div class="main-container">
+            <div class="text-center mb-10 md:mb-14">
+                <h2 class="section-title text-[24px] md:text-[32px]">Các dự án tiêu biểu</h2>
+                <p
+                    class="text-[14px] md:text-[15px] mt-4 max-w-2xl mx-auto text-center font-medium font-body text-body-color">
+                    Ghi dấu những dự án nổi bật của
+                    Danh Khôi Miền Bắc tham gia triển khai</p>
+            </div>
+        </div>
+        <div class="project-slider-bleed">
+            <!-- Swiper Slider -->
+            <div class="swiper project-swiper overflow-visible">
+                <div class="swiper-wrapper">
+                    <!-- Project 1: Ky Co -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="images/project-1.jpg" alt="Kỳ Co"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
+                                    khách sạn</span>
+                                <h3
+                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    I OCEAN SUITE KỲ CO</h3>
+                                <span class="text-[14px] text-textHide mt-1">Huyện Nhơn Lý, TP. Quy Nhơn, Tỉnh Bình
+                                    Định</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2: Astral City -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="images/project-2.jpg" alt="ASTRAL CITY"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <!-- Play icon overlay -->
+                                <div
+                                    class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                    <div
+                                        class="w-16 h-16 rounded-full border-[3px] border-white flex items-center justify-center bg-transparent group-hover:bg-primary/80 transition-colors backdrop-blur-sm pointer-events-auto cursor-pointer">
+                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                            <path d="M8 5v14l11-7z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
+                                    khách sạn</span>
+                                <h3
+                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    ASTRAL CITY</h3>
+                                <span class="text-[14px] text-textHide mt-1">Đại lộ Bình Dương, P. Bình Hoà, TP. Thuận
+                                    An, Tỉnh Bình Dương</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3: Aria Vung Tau -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="images/project-3.jpg" alt="ARIA VŨNG TÀU HOTEL & RESORT"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Khách sạn & Khu nghỉ
+                                    dưỡng</span>
+                                <h3
+                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    ARIA VŨNG TÀU HOTEL &amp; RESORT</h3>
+                                <span class="text-[14px] text-textHide mt-1">Đường 3/2, Phường 10, TP. Vũng Tàu, Tỉnh Bà
+                                    Rịa - Vũng Tàu</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4: Nhon Hoi New City -->
+                    <div class="swiper-slide">
+                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                <img src="images/project-4.jpg" alt="NHƠN HỘI NEW CITY"
+                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                            </div>
+                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                <span class="text-[14px] text-textHide font-medium tracking-wide">Khu đô thị</span>
+                                <h3
+                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                    NHƠN HỘI NEW CITY</h3>
+                                <span class="text-[14px] text-textHide mt-1">Tâm điểm BĐS duyên hải miền Trung</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Pagination ra ngoài project-slider-container để dễ căn giữa -->
+            <div class="project-pagination-wrapper mt-[66px]">
+                <div class="swiper-pagination project-pagination mt-0" style="bottom: 0px;"></div>
             </div>
         </div>
     </section>
-
-    <!-- Main Content for Detail Page -->
-    <section class="py-12 md:pt-32 md:pb-20 bg-white">
-        <div class="main-container">
-            <h1 class="text-3xl font-bold text-primary mb-6">Chi tiết Căn hộ & Biệt thự</h1>
-            <p class="text-gray-600">Nội dung chi tiết dự án sẽ được cập nhật tại đây.</p>
+    
+    
+    <!-- Video Modal Overlay (Pure CSS toggle) -->
+    <div class="video-modal-overlay fixed inset-0 z-[1000] bg-black/90 hidden items-center justify-center p-4">
+        <label for="radio-video-modal" class="absolute top-4 right-4 text-white hover:text-red-500 w-10 h-10 flex flex-col items-center justify-center bg-black/50 rounded-full cursor-pointer" onclick="document.getElementById('youtube-iframe-player').src=''">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </label>
+        <div class="w-full max-w-5xl aspect-video relative rounded-lg overflow-hidden shadow-2xl">
+            <iframe id="youtube-iframe-player" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
-    </section>
+    </div>
+</main>
 
-    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+    <!-- KẾT THÚC NỘI DUNG CHÍNH -->
+
+<footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Col 1: Thương hiệu -->
@@ -384,7 +616,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Col 2: Thông tin liên hệ -->
                 <div class="lg:pl-8">
                     <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
@@ -402,7 +633,6 @@
                                 1399</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 3: Về Danh Khôi -->
                 <div>
                     <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
@@ -421,7 +651,6 @@
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 4: Tin tức -->
                 <div>
                     <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
@@ -435,7 +664,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="border-t border-gray-100 pt-6 mt-6">
             <div class="main-container text-[12px] text-textHide text-left">
@@ -443,455 +671,20 @@
             </div>
         </div>
     </footer>
-
     <!-- Scroll To Top Left Indicator -->
     <div id="scrollTopIndicator" class="scroll-top-left-indicator">
         <div class="stl-line"></div>
         <span class="stl-text">VỀ ĐẦU TRANG</span>
     </div>
-
     <!-- Scroll To Top Circle Button -->
     <button id="scrollTopCircle" class="scroll-top-circle" aria-label="Về đầu trang">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const spans = mobileBtn.querySelectorAll('span');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    spans[0].classList.add('rotate-45', 'translate-y-2');
-                    spans[1].classList.add('opacity-0');
-                    spans[2].classList.add('-rotate-45', '-translate-y-2');
-                } else {
-                    spans[0].classList.remove('rotate-45', 'translate-y-2');
-                    spans[1].classList.remove('opacity-0');
-                    spans[2].classList.remove('-rotate-45', '-translate-y-2');
-                }
-            });
-        }
-
-        // Header Scroll
-        const header = document.getElementById('main-header');
-        const HEADER_GRADIENT = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
-        var _cp = window.location.pathname.split('/').pop() || 'index.html';
-        if (_cp === 'career-details.html') _cp = 'careers.html';
-        if (_cp === 'news-detail.html' || _cp === 'emagazine.html') _cp = 'news.html';
-        if (header) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 80) {
-                    header.style.background = 'rgba(255,255,255,0.97)';
-                    header.style.backdropFilter = 'blur(12px)';
-                    header.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
-                    header.classList.add('scrolled');
-                    header.querySelectorAll('nav a').forEach(a => {
-                        var hp = (a.getAttribute('href') || '').split('/').pop();
-                        if (hp === _cp) {
-                            a.classList.remove('text-[#FFB800]', 'text-[#FEDA00]', 'text-white');
-                            a.classList.add('text-primary');
-                        } else {
-                            a.classList.remove('text-white');
-                            a.classList.add('text-darkText');
-                        }
-                    });
-                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-white', 'bg-darkText'));
-                } else {
-                    header.style.background = HEADER_GRADIENT;
-                    header.style.backdropFilter = '';
-                    header.style.boxShadow = '';
-                    header.classList.remove('scrolled');
-                    header.querySelectorAll('nav a').forEach(a => {
-                        var hp = (a.getAttribute('href') || '').split('/').pop();
-                        if (hp === _cp) {
-                            a.classList.remove('text-primary', 'text-darkText');
-                            a.classList.add('text-[#FFB800]');
-                        } else {
-                            a.classList.add('text-white');
-                            a.classList.remove('text-darkText');
-                        }
-                    });
-                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-darkText', 'bg-white'));
-                }
-            });
-        }
-
-        // Hero Slider (Swiper)
-        const heroSwiper = new Swiper('.hero-swiper', {
-            loop: true,
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-            speed: 1000,
-            allowTouchMove: false,
-            on: {
-                slideChange: function () {
-                    // Update custom tabs
-                    const currentIdx = this.realIndex;
-                    document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-                        if (index === currentIdx) {
-                            tab.classList.add('active');
-                            tab.classList.remove('border-white/20');
-                            tab.classList.add('border-primary'); // Make active border same as bg or primary
-                        } else {
-                            tab.classList.remove('active');
-                            tab.classList.remove('border-primary');
-                            tab.classList.add('border-white/20');
-                        }
-                    });
-                }
-            }
-        });
-
-        // Click on custom tabs to change slide
-        document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-            tab.addEventListener('click', () => {
-                heroSwiper.slideToLoop(index);
-            });
-        });
-
-        // Select2
-        function formatLang(lang) {
-            if (!lang.id) return lang.text;
-            var flag = $(lang.element).data('flag');
-            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
-        }
-        $(document).ready(function () {
-            $('#lang-switcher').select2({
-                minimumResultsForSearch: Infinity,
-                dropdownAutoWidth: true,
-                width: 'auto',
-                templateResult: formatLang,
-                templateSelection: formatLang
-            });
-            var $s2 = $('#lang-switcher').next('.select2-container');
-            var lockedW = $s2.outerWidth();
-            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
-
-            // Duplicate Slides for Infinite Loop on Desktop
-            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
-            if (swiperWrapper) {
-                const originalSlides = Array.from(swiperWrapper.children);
-                if (originalSlides.length > 0 && originalSlides.length <= 4) {
-                    originalSlides.forEach(slide => {
-                        swiperWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Dự án tiêu biểu Slider
-            const projectSwiper = new Swiper('.project-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.project-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                },
-                on: {
-                    init: function () {
-                        updateCustomPagination(this);
-                    },
-                    slideChange: function () {
-                        updateCustomPagination(this);
-                    }
-                }
-            });
-
-            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
-            function updateCustomPagination(swiper) {
-                setTimeout(() => {
-                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
-                    if (bullets.length === 0) return;
-
-                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
-                    const realIndex = swiper.realIndex % 4;
-                    if (bullets[realIndex]) {
-                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
-                    }
-                }, 10);
-            }
-
-            // Duplicate Slides for Infinite Loop on Desktop for Partner Slider
-            const partnerWrapper = document.querySelector('.partner-swiper .swiper-wrapper');
-            if (partnerWrapper) {
-                const partnerSlides = Array.from(partnerWrapper.children);
-                if (partnerSlides.length > 0 && partnerSlides.length <= 5) {
-                    partnerSlides.forEach(slide => {
-                        partnerWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Đối tác tiêu biểu Slider
-            const partnerSwiper = new Swiper('.partner-swiper', {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.partner-button-next',
-                    prevEl: '.partner-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 24,
-                    },
-                }
-            });
-        });
-
-        // Scroll to top
-        (function () {
-            var indicator = document.getElementById('scrollTopIndicator');
-            var circle = document.getElementById('scrollTopCircle');
-            var threshold = 300;
-            function onScroll() {
-                var show = window.pageYOffset > threshold;
-                if (indicator) indicator.classList.toggle('visible', show);
-                if (circle) circle.classList.toggle('visible', show);
-            }
-            function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-            window.addEventListener('scroll', onScroll, { passive: true });
-            if (indicator) indicator.addEventListener('click', scrollTop);
-            if (circle) circle.addEventListener('click', scrollTop);
-            onScroll();
-        })();
-
-        // Odometer Counter Animation
-        (function () {
-            // Initialize digit columns for each odometer-group
-            var groups = document.querySelectorAll('.odometer-group');
-            if (!groups.length) return;
-
-            groups.forEach(function (group) {
-                var value = group.getAttribute('data-value');
-                var digits = value.split('');
-
-                digits.forEach(function (digit, index) {
-                    var digitEl = document.createElement('div');
-                    digitEl.className = 'odometer-digit';
-
-                    var inner = document.createElement('div');
-                    inner.className = 'odometer-digit-inner';
-
-                    // Create digit column: 0 through 9
-                    for (var i = 0; i <= 9; i++) {
-                        var span = document.createElement('span');
-                        span.textContent = i;
-                        inner.appendChild(span);
-                    }
-
-                    digitEl.appendChild(inner);
-                    group.appendChild(digitEl);
-
-                    // Store target digit and stagger delay
-                    digitEl.setAttribute('data-target', digit);
-                    digitEl.setAttribute('data-delay', index * 120);
-                });
-            });
-
-            function rollOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var target = parseInt(digitEl.getAttribute('data-target'));
-                    var delay = parseInt(digitEl.getAttribute('data-delay')) || 0;
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    setTimeout(function () {
-                        inner.style.transform = 'translateY(-' + target + 'em)';
-                    }, delay);
-                });
-            }
-
-            function resetOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    inner.style.transition = 'none';
-                    inner.style.transform = 'translateY(0)';
-                    inner.offsetHeight; // force reflow
-                    inner.style.transition = 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
-                });
-            }
-
-            // Trigger on scroll into view
-            var section = document.getElementById('achievements');
-            if (!section) return;
-            var hasAnimated = false;
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        resetOdometers();
-                        setTimeout(rollOdometers, 100);
-                        hasAnimated = true;
-                    } else if (hasAnimated) {
-                        resetOdometers();
-                        hasAnimated = false;
-                    }
-                });
-            }, { threshold: 0.3 });
-            observer.observe(section);
-        })();
-
-        // Media Coverflow Carousel
-
-        // Custom 3D Carousel Logic (Replacing Swiper)
-        (function () {
-            const carousel = document.querySelector('.custom-media-carousel');
-            if (!carousel) return;
-            const slides = document.querySelectorAll('.custom-media-slide');
-            const btnNext = document.querySelector('.media-button-next');
-            const btnPrev = document.querySelector('.media-button-prev');
-            let activeIndex = 2; // Default center slide index for 5 items
-            const total = slides.length;
-
-            function updateCarousel() {
-                slides.forEach((slide, i) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-
-                    let opacity = 1;
-                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
-                    let zIndex = 0;
-
-                    if (diff === 0) {
-                        transform += "translateX(0%) scale(1)";
-                        zIndex = 10;
-                        slide.classList.add('media-slide-active');
-                    } else if (diff === -1) {
-                        transform += "translateX(-28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 1) {
-                        transform += "translateX(28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === -2) {
-                        transform += "translateX(-46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 2) {
-                        transform += "translateX(46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    }
-
-                    // Apply styles
-                    slide.style.top = "50%";
-                    slide.style.left = "50%";
-                    slide.style.transform = transform;
-                    slide.style.zIndex = zIndex;
-                    slide.style.opacity = opacity;
-                });
-            }
-
-            btnNext.addEventListener('click', () => {
-                activeIndex = (activeIndex + 1) % total;
-                updateCarousel();
-            });
-
-            btnPrev.addEventListener('click', () => {
-                activeIndex = (activeIndex - 1 + total) % total;
-                updateCarousel();
-            });
-
-            slides.forEach((slide, i) => {
-                slide.addEventListener('click', (e) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-                    if (diff !== 0) {
-                        activeIndex = i;
-                        updateCarousel();
-                    } else {
-                        if (slide.dataset.video) {
-                            openVideoModal(slide.dataset.video);
-                        }
-                    }
-                });
-
-                // Add hover effect
-                slide.addEventListener('mouseenter', () => {
-                    if (activeIndex !== i) {
-                        activeIndex = i;
-                        updateCarousel();
-                    }
-                });
-            });
-
-            // Initial render
-            setTimeout(() => {
-                updateCarousel();
-            }, 100);
-        })();
-
-
-
-        // Video Modal Script
-        function openVideoModal(videoUrl) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            iframe.src = videoUrl;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            // Allow CSS transition to complete by running opacity toggle asynchronously
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('opacity-100');
-            }, 50);
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                iframe.pause();
-                iframe.currentTime = 0;
-                iframe.src = '';
-            }, 300);
-        }
-    </script>
-
+    
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -906,47 +699,6 @@
                 autoplay></video>
         </div>
     </div>
-    <!-- Active Nav State Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            var activeHref = currentPath;
-            if (currentPath === 'career-details.html') activeHref = 'careers.html';
-            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
-
-            var desktopLinks = document.querySelectorAll('#main-header nav a');
-            desktopLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                    link.dataset.active = 'true';
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                    delete link.dataset.active;
-                }
-            });
-
-            var mobileLinks = document.querySelectorAll('#mobile-menu a');
-            mobileLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

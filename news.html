@@ -1,68 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Khôi Đất Bắc | Tin tức</title>
     <meta name="description"
         content="Danh Khôi Đất Bắc – Công ty cổ phần bất động sản hàng đầu miền Bắc. Phát triển quỹ đất, dự án, tiếp thị và quản lý vận hành.">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-
     <!-- Select2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Select2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { sans: ["Lato", "sans-serif"], display: ["Lato", "sans-serif"], roboto: ["Roboto", "sans-serif"] }, colors: { primary: "var(--color-primary)", primaryDark: "var(--color-primary-dark)", secondary: "var(--color-secondary)", darkText: "var(--color-dark-text)", textHide: "var(--color-text-hide)", bg1: "var(--color-bg1)", bg2: "var(--color-bg2)", bgDarkBlue: "var(--color-bg-darkblue)", darkBlue2: "var(--color-darkblue-2)", icon: "var(--color-icon)", link: "var(--color-link)", line: "var(--color-line)" }, maxWidth: { "container": "1110px" } } } } </script>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        display: ['Lato', 'sans-serif'],
-                        roboto: ['Roboto', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: 'var(--color-primary)',
-                        primaryDark: 'var(--color-primary-dark)',
-                        secondary: 'var(--color-secondary)',
-                        darkText: 'var(--color-dark-text)',
-                        textHide: 'var(--color-text-hide)',
-                        bg1: 'var(--color-bg1)',
-                        bg2: 'var(--color-bg2)',
-                        bgDarkBlue: 'var(--color-bg-darkblue)',
-                        darkBlue2: 'var(--color-darkblue-2)',
-                        icon: 'var(--color-icon)',
-                        link: 'var(--color-link)',
-                        line: 'var(--color-line)',
-                    },
-                    maxWidth: {
-                        'container': '1110px',
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
     <style>
         body {
@@ -74,11 +37,9 @@
             /* BUG-08 FIX: Prevent horizontal scroll from clip-path & absolute elements */
             overflow-x: hidden;
         }
-
         html {
             overflow-x: hidden;
         }
-
         h1,
         h2,
         h3,
@@ -88,7 +49,6 @@
             color: var(--color-dark-text);
         }
     </style>
-
     <!-- Select2 Custom Styles -->
     <style>
         .lang-select-container .select2-container--default .select2-selection--single {
@@ -99,7 +59,6 @@
             display: flex;
             align-items: center;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -108,34 +67,27 @@
             padding-right: 24px;
             line-height: 34px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
-
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
-
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
-
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -144,12 +96,10 @@
             vertical-align: middle;
             border-radius: 2px;
         }
-
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
-
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -162,7 +112,6 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
-
         .lang-option {
             display: flex;
             align-items: center;
@@ -170,19 +119,15 @@
         }
     </style>
 </head>
-
 <body class="bg-[#F2F6F9]">
-
     <!-- Header -->
     <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
         style="background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%);">
-
         <div class="main-container h-20 flex justify-between items-center relative">
             <!-- Logo -->
             <a href="index.html" class="flex items-center flex-shrink-0">
                 <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc" class="h-12 w-auto">
             </a>
-
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-0">
                 <a href="index.html"
@@ -210,7 +155,6 @@
                 <a href="contact.html"
                     class="text-white text-sm font-semibold px-4 py-2 hover:opacity-75 transition-opacity">Liên hệ</a>
             </nav>
-
             <!-- Language Switcher -->
             <div class="hidden lg:flex items-center">
                 <div class="lang-select-container">
@@ -220,7 +164,6 @@
                     </select>
                 </div>
             </div>
-
             <!-- Mobile menu btn -->
             <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
                 <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
@@ -228,7 +171,6 @@
                 <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
             </button>
         </div>
-
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg">
             <div class="main-container py-4 flex flex-col gap-1">
@@ -256,7 +198,6 @@
             <div class="absolute inset-0 bg-[#030925]/60 z-10 pointer-events-none"></div>
             <img src="images/Banner-news.jpg" alt="Tin tức Danh Khôi" class="w-full h-full object-cover">
         </div>
-
         <!-- BUG-01 FIX: Responsive hero padding (80px mobile → 120px sm → 180px md+) -->
         <div
             class="absolute inset-0 z-20 flex flex-col items-center pt-[80px] sm:pt-[120px] md:pt-[180px] pointer-events-none px-4">
@@ -276,7 +217,6 @@
             </div>
         </div>
     </section>
-
     <!-- Featured News Section (Overlapping Hero) -->
     <!-- BUG-06 FIX: Progressive negative margin for smooth breakpoint transitions -->
     <section class="relative z-20 pb-16 -mt-16 sm:-mt-24 md:-mt-32 lg:-mt-[260px]">
@@ -284,7 +224,6 @@
         <!-- w-[93%] matches 1838 out of 1920 width -->
         <div class="absolute left-0 top-0 w-[93%] border-none aspect-[1838/410] bg-primary z-0 pointer-events-none"
             style="clip-path: polygon(90% 0%, 100% 39%, 100% 100%, 0 100%, 0 0);"></div>
-
         <!-- BUG-07 FIX: Responsive top padding on content container -->
         <div class="main-container relative z-10 pt-10 sm:pt-[60px] md:pt-[80px] lg:pt-[100px]">
             <!-- BUG-05 FIX: Progressive container padding (p-4 mobile → p-6 sm → py-8 px-12 lg) -->
@@ -294,7 +233,6 @@
                     <h2 class="text-primary font-bold text-[24px] leading-[1.3]">Tin nổi bật</h2>
                     <div class="absolute bottom-[-1px] left-0 w-[120px] h-[2px] bg-primary"></div>
                 </div>
-
                 <!-- Grid Layout for Featured News -->
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
                     <!-- Main Left Article (6 cols) -->
@@ -302,7 +240,6 @@
                         <div class="relative aspect-[16/10] overflow-hidden mb-5">
                             <img src="images/hero-1.jpg" alt="Bất động sản biển Quy Nhơn hi vọng vực dậy trong năm 2022"
                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-
                         </div>
                         <span class="text-gray-500 text-[14px] leading-[1.5] mb-2 block">20.07.2022</span>
                         <h3
@@ -315,10 +252,8 @@
                             biển trong xanh như ngọc nhắc, danh lam thắng cảnh nổi tiếng còn giữ nguyên vẻ đẹp
                             nguyên sơ, Quy Nhơn...</p>
                     </a>
-
                     <!-- 3 Right Stacked Articles (6 cols) -->
                     <div class="lg:col-span-6 flex flex-col gap-6">
-
                         <!-- Sub Article 1 -->
                         <!-- Always keep image-left / content-right layout on all viewports -->
                         <a href="emagazine.html" class="flex flex-row gap-4 group cursor-pointer block">
@@ -336,7 +271,6 @@
                             </div>
                         </a>
                         <div class="w-full border-b border-gray-100"></div>
-
                         <!-- Sub Article 2 -->
                         <!-- Always keep image-left / content-right layout on all viewports -->
                         <a href="emagazine.html" class="flex flex-row gap-4 group cursor-pointer block">
@@ -354,7 +288,6 @@
                             </div>
                         </a>
                         <div class="w-full border-b border-gray-100"></div>
-
                         <!-- Sub Article 3 -->
                         <!-- Always keep image-left / content-right layout on all viewports -->
                         <a href="emagazine.html" class="flex flex-row gap-4 group cursor-pointer block">
@@ -371,14 +304,12 @@
                                     xã La Gi, Tỉnh Bình Thuận</p>
                             </div>
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
         </div>
     </section>
-
     <!-- Main News Grid Section -->
     <section class="pb-24 pt-10">
         <div class="main-container">
@@ -393,11 +324,9 @@
                         pháp luật</a>
                 </nav>
             </div>
-
             <!-- Grid Layout 3 Columns -->
             <!-- Equal gap between rows and columns -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4 md:px-0">
-
                 <!-- News Card 1 -->
                 <div class="group flex flex-col h-full bg-white relative pb-10">
                     <div class="relative overflow-hidden aspect-[16/10] mb-4">
@@ -615,9 +544,7 @@
                     </a>
                 </div>
             </div>
-
             <!-- Pagination -->
-
             <div class="flex justify-center items-center mt-16 gap-2">
                 <a href="news-detail.html"
                     class="flex items-center justify-center cursor-pointer mr-2 opacity-50 hover:opacity-100 transition-opacity">
@@ -636,7 +563,6 @@
                     <img src="images/Icon-arrow-right.svg" alt="Next" class="w-4 h-auto object-contain">
                 </a>
             </div>
-
         </div>
     </section>
     <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
@@ -696,7 +622,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Col 2: Thông tin liên hệ -->
                 <div class="lg:pl-8">
                     <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
@@ -714,7 +639,6 @@
                                 1399</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 3: Về Danh Khôi -->
                 <div>
                     <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
@@ -738,7 +662,6 @@
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 4: Tin tức -->
                 <div>
                     <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
@@ -753,7 +676,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="border-t border-gray-100 pt-6 mt-6">
             <div class="main-container text-[12px] text-textHide text-left">
@@ -761,13 +683,11 @@
             </div>
         </div>
     </footer>
-
     <!-- Scroll To Top Left Indicator -->
     <div id="scrollTopIndicator" class="scroll-top-left-indicator">
         <div class="stl-line"></div>
         <span class="stl-text">VỀ ĐẦU TRANG</span>
     </div>
-
     <!-- Scroll To Top Circle Button -->
     <button id="scrollTopCircle" class="scroll-top-circle" aria-label="Về đầu trang">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -775,442 +695,9 @@
             </path>
         </svg>
     </button>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const spans = mobileBtn.querySelectorAll('span');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    spans[0].classList.add('rotate-45', 'translate-y-2');
-                    spans[1].classList.add('opacity-0');
-                    spans[2].classList.add('-rotate-45', '-translate-y-2');
-                } else {
-                    spans[0].classList.remove('rotate-45', 'translate-y-2');
-                    spans[1].classList.remove('opacity-0');
-                    spans[2].classList.remove('-rotate-45', '-translate-y-2');
-                }
-            });
-        }
-
-        // Header Scroll
-        const header = document.getElementById('main-header');
-        const HEADER_GRADIENT = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
-        var _cp = window.location.pathname.split('/').pop() || 'index.html';
-        if (_cp === 'career-details.html') _cp = 'careers.html';
-        if (_cp === 'news-detail.html' || _cp === 'emagazine.html') _cp = 'news.html';
-        if (header) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 80) {
-                    header.style.background = 'rgba(255,255,255,0.97)';
-                    header.style.backdropFilter = 'blur(12px)';
-                    header.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
-                    header.classList.add('scrolled');
-                    header.querySelectorAll('nav a').forEach(a => {
-                        var hp = (a.getAttribute('href') || '').split('/').pop();
-                        if (hp === _cp) {
-                            a.classList.remove('text-[#FFB800]', 'text-[#FEDA00]', 'text-white');
-                            a.classList.add('text-primary');
-                        } else {
-                            a.classList.remove('text-white');
-                            a.classList.add('text-darkText');
-                        }
-                    });
-                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-white', 'bg-darkText'));
-                } else {
-                    header.style.background = HEADER_GRADIENT;
-                    header.style.backdropFilter = '';
-                    header.style.boxShadow = '';
-                    header.classList.remove('scrolled');
-                    header.querySelectorAll('nav a').forEach(a => {
-                        var hp = (a.getAttribute('href') || '').split('/').pop();
-                        if (hp === _cp) {
-                            a.classList.remove('text-primary', 'text-darkText');
-                            a.classList.add('text-[#FFB800]');
-                        } else {
-                            a.classList.add('text-white');
-                            a.classList.remove('text-darkText');
-                        }
-                    });
-                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-darkText', 'bg-white'));
-                }
-            });
-        }
-
-        // Hero Slider (Swiper)
-        const heroSwiper = new Swiper('.hero-swiper', {
-            loop: true,
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-            speed: 1000,
-            allowTouchMove: false,
-            on: {
-                slideChange: function () {
-                    // Update custom tabs
-                    const currentIdx = this.realIndex;
-                    document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-                        if (index === currentIdx) {
-                            tab.classList.add('active');
-                            tab.classList.remove('border-white/20');
-                            tab.classList.add('border-primary'); // Make active border same as bg or primary
-                        } else {
-                            tab.classList.remove('active');
-                            tab.classList.remove('border-primary');
-                            tab.classList.add('border-white/20');
-                        }
-                    });
-                }
-            }
-        });
-
-        // Click on custom tabs to change slide
-        document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-            tab.addEventListener('click', () => {
-                heroSwiper.slideToLoop(index);
-            });
-        });
-
-        // Select2
-        function formatLang(lang) {
-            if (!lang.id) return lang.text;
-            var flag = $(lang.element).data('flag');
-            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
-        }
-        $(document).ready(function () {
-            $('#lang-switcher').select2({
-                minimumResultsForSearch: Infinity,
-                dropdownAutoWidth: true,
-                width: 'auto',
-                templateResult: formatLang,
-                templateSelection: formatLang
-            });
-            var $s2 = $('#lang-switcher').next('.select2-container');
-            var lockedW = $s2.outerWidth();
-            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
-
-            // Duplicate Slides for Infinite Loop on Desktop
-            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
-            if (swiperWrapper) {
-                const originalSlides = Array.from(swiperWrapper.children);
-                if (originalSlides.length > 0 && originalSlides.length <= 4) {
-                    originalSlides.forEach(slide => {
-                        swiperWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Dự án tiêu biểu Slider
-            const projectSwiper = new Swiper('.project-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.project-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                },
-                on: {
-                    init: function () {
-                        updateCustomPagination(this);
-                    },
-                    slideChange: function () {
-                        updateCustomPagination(this);
-                    }
-                }
-            });
-
-            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
-            function updateCustomPagination(swiper) {
-                setTimeout(() => {
-                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
-                    if (bullets.length === 0) return;
-
-                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
-                    const realIndex = swiper.realIndex % 4;
-                    if (bullets[realIndex]) {
-                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
-                    }
-                }, 10);
-            }
-
-            // Duplicate Slides for Infinite Loop on Desktop for Partner Slider
-            const partnerWrapper = document.querySelector('.partner-swiper .swiper-wrapper');
-            if (partnerWrapper) {
-                const partnerSlides = Array.from(partnerWrapper.children);
-                if (partnerSlides.length > 0 && partnerSlides.length <= 5) {
-                    partnerSlides.forEach(slide => {
-                        partnerWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Đối tác tiêu biểu Slider
-            const partnerSwiper = new Swiper('.partner-swiper', {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.partner-button-next',
-                    prevEl: '.partner-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 24,
-                    },
-                }
-            });
-        });
-
-        // Scroll to top
-        (function () {
-            var indicator = document.getElementById('scrollTopIndicator');
-            var circle = document.getElementById('scrollTopCircle');
-            var threshold = 300;
-            function onScroll() {
-                var show = window.pageYOffset > threshold;
-                if (indicator) indicator.classList.toggle('visible', show);
-                if (circle) circle.classList.toggle('visible', show);
-            }
-            function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-            window.addEventListener('scroll', onScroll, { passive: true });
-            if (indicator) indicator.addEventListener('click', scrollTop);
-            if (circle) circle.addEventListener('click', scrollTop);
-            onScroll();
-        })();
-
-        // Odometer Counter Animation
-        (function () {
-            // Initialize digit columns for each odometer-group
-            var groups = document.querySelectorAll('.odometer-group');
-            if (!groups.length) return;
-
-            groups.forEach(function (group) {
-                var value = group.getAttribute('data-value');
-                var digits = value.split('');
-
-                digits.forEach(function (digit, index) {
-                    var digitEl = document.createElement('div');
-                    digitEl.className = 'odometer-digit';
-
-                    var inner = document.createElement('div');
-                    inner.className = 'odometer-digit-inner';
-
-                    // Create digit column: 0 through 9
-                    for (var i = 0; i <= 9; i++) {
-                        var span = document.createElement('span');
-                        span.textContent = i;
-                        inner.appendChild(span);
-                    }
-
-                    digitEl.appendChild(inner);
-                    group.appendChild(digitEl);
-
-                    // Store target digit and stagger delay
-                    digitEl.setAttribute('data-target', digit);
-                    digitEl.setAttribute('data-delay', index * 120);
-                });
-            });
-
-            function rollOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var target = parseInt(digitEl.getAttribute('data-target'));
-                    var delay = parseInt(digitEl.getAttribute('data-delay')) || 0;
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    setTimeout(function () {
-                        inner.style.transform = 'translateY(-' + target + 'em)';
-                    }, delay);
-                });
-            }
-
-            function resetOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    inner.style.transition = 'none';
-                    inner.style.transform = 'translateY(0)';
-                    inner.offsetHeight; // force reflow
-                    inner.style.transition = 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
-                });
-            }
-
-            // Trigger on scroll into view
-            var section = document.getElementById('achievements');
-            if (!section) return;
-            var hasAnimated = false;
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        resetOdometers();
-                        setTimeout(rollOdometers, 100);
-                        hasAnimated = true;
-                    } else if (hasAnimated) {
-                        resetOdometers();
-                        hasAnimated = false;
-                    }
-                });
-            }, { threshold: 0.3 });
-            observer.observe(section);
-        })();
-
-        // Media Coverflow Carousel
-
-        // Custom 3D Carousel Logic (Replacing Swiper)
-        (function () {
-            const carousel = document.querySelector('.custom-media-carousel');
-            if (!carousel) return;
-            const slides = document.querySelectorAll('.custom-media-slide');
-            const btnNext = document.querySelector('.media-button-next');
-            const btnPrev = document.querySelector('.media-button-prev');
-            let activeIndex = 2; // Default center slide index for 5 items
-            const total = slides.length;
-
-            function updateCarousel() {
-                slides.forEach((slide, i) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-
-                    let opacity = 1;
-                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
-                    let zIndex = 0;
-
-                    if (diff === 0) {
-                        transform += "translateX(0%) scale(1)";
-                        zIndex = 10;
-                        slide.classList.add('media-slide-active');
-                    } else if (diff === -1) {
-                        transform += "translateX(-28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 1) {
-                        transform += "translateX(28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === -2) {
-                        transform += "translateX(-46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 2) {
-                        transform += "translateX(46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    }
-
-                    // Apply styles
-                    slide.style.top = "50%";
-                    slide.style.left = "50%";
-                    slide.style.transform = transform;
-                    slide.style.zIndex = zIndex;
-                    slide.style.opacity = opacity;
-                });
-            }
-
-            btnNext.addEventListener('click', () => {
-                activeIndex = (activeIndex + 1) % total;
-                updateCarousel();
-            });
-
-            btnPrev.addEventListener('click', () => {
-                activeIndex = (activeIndex - 1 + total) % total;
-                updateCarousel();
-            });
-
-            slides.forEach((slide, i) => {
-                slide.addEventListener('click', (e) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-                    if (diff !== 0) {
-                        activeIndex = i;
-                        updateCarousel();
-                    } else {
-                        if (slide.dataset.video) {
-                            openVideoModal(slide.dataset.video);
-                        }
-                    }
-                });
-
-                // Add hover effect
-                slide.addEventListener('mouseenter', () => {
-                    if (activeIndex !== i) {
-                        activeIndex = i;
-                        updateCarousel();
-                    }
-                });
-            });
-
-            // Initial render
-            setTimeout(() => {
-                updateCarousel();
-            }, 100);
-        })();
-
-
-
-        // Video Modal Script
-        function openVideoModal(videoUrl) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            iframe.src = videoUrl;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            // Allow CSS transition to complete by running opacity toggle asynchronously
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('opacity-100');
-            }, 50);
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                iframe.pause();
-                iframe.currentTime = 0;
-                iframe.src = '';
-            }, 300);
-        }
-    </script>
-
+    
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -1226,47 +713,6 @@
                 autoplay></video>
         </div>
     </div>
-    <!-- Active Nav State Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            var activeHref = currentPath;
-            if (currentPath === 'career-details.html') activeHref = 'careers.html';
-            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
-
-            var desktopLinks = document.querySelectorAll('#main-header nav a');
-            desktopLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                    link.dataset.active = 'true';
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                    delete link.dataset.active;
-                }
-            });
-
-            var mobileLinks = document.querySelectorAll('#mobile-menu a');
-            mobileLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

@@ -1,68 +1,31 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Danh Khôi Đất Bắc | Tin tức</title>
     <meta name="description"
         content="Danh Khôi Đất Bắc – Công ty cổ phần bất động sản hàng đầu miền Bắc. Phát triển quỹ đất, dự án, tiếp thị và quản lý vận hành.">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-
     <!-- Select2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Select2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { sans: ["Lato", "sans-serif"], display: ["Lato", "sans-serif"], roboto: ["Roboto", "sans-serif"] }, colors: { primary: "var(--color-primary)", primaryDark: "var(--color-primary-dark)", secondary: "var(--color-secondary)", darkText: "var(--color-dark-text)", textHide: "var(--color-text-hide)", bg1: "var(--color-bg1)", bg2: "var(--color-bg2)", bgDarkBlue: "var(--color-bg-darkblue)", darkBlue2: "var(--color-darkblue-2)", icon: "var(--color-icon)", link: "var(--color-link)", line: "var(--color-line)" }, maxWidth: { "container": "1110px" } } } } </script>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        display: ['Lato', 'sans-serif'],
-                        roboto: ['Roboto', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: 'var(--color-primary)',
-                        primaryDark: 'var(--color-primary-dark)',
-                        secondary: 'var(--color-secondary)',
-                        darkText: 'var(--color-dark-text)',
-                        textHide: 'var(--color-text-hide)',
-                        bg1: 'var(--color-bg1)',
-                        bg2: 'var(--color-bg2)',
-                        bgDarkBlue: 'var(--color-bg-darkblue)',
-                        darkBlue2: 'var(--color-darkblue-2)',
-                        icon: 'var(--color-icon)',
-                        link: 'var(--color-link)',
-                        line: 'var(--color-line)',
-                    },
-                    maxWidth: {
-                        'container': '1110px',
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
     <style>
         body {
@@ -74,11 +37,9 @@
             /* BUG-08 FIX: Prevent horizontal scroll from clip-path & absolute elements */
             overflow-x: hidden;
         }
-
         html {
             overflow-x: hidden;
         }
-
         h1,
         h2,
         h3,
@@ -88,7 +49,6 @@
             color: var(--color-dark-text);
         }
     </style>
-
     <!-- Select2 Custom Styles -->
     <style>
         .lang-select-container .select2-container--default .select2-selection--single {
@@ -99,7 +59,6 @@
             display: flex;
             align-items: center;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -108,34 +67,27 @@
             padding-right: 24px;
             line-height: 34px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
-
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
-
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
-
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -144,12 +96,10 @@
             vertical-align: middle;
             border-radius: 2px;
         }
-
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
-
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -162,7 +112,6 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
-
         .lang-option {
             display: flex;
             align-items: center;
@@ -170,34 +119,27 @@
         }
     </style>
 </head>
-
 <body class="font-sans antialiased bg-white">
     <!-- Top Progress Indicator Placeholder -->
     <div id="scroll-progress-container" class="fixed top-0 left-0 w-full h-[3px] z-[101] bg-gray-200 hidden">
         <div id="scroll-progress-bar" class="h-full bg-primary w-0"></div>
     </div>
-
-
     <!-- header -->
-
     <header id="emagazine-header"
         class="w-full fixed top-0 left-0 right-0 z-50 bg-primary shadow-sm transition-all duration-300">
         <div class="main-container h-[60px] flex justify-between items-center relative">
-
             <!-- Left: Danh Khoi Logo -->
             <a href="index.html"
                 class="flex-shrink-0 cursor-pointer transition-transform hover:scale-105 z-10 w-28 md:w-[150px]">
                 <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Đất Bắc"
                     class="w-full h-auto object-contain brightness-0 invert">
             </a>
-
             <!-- Center: Emagazine Logo -->
             <a href="emagazine.html"
                 class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center flex-shrink-0 cursor-pointer transition-transform hover:scale-105 z-0">
                 <img src="images/logo-emz.jpg" alt="Danh Khôi Emagazine Logo"
                     class="w-[120px] md:w-[150px] h-auto object-contain" style="filter: brightness(0) invert(1);">
             </a>
-
             <!-- Right: Language Switcher -->
             <div class="hidden lg:flex items-center z-10">
                 <div class="lang-select-container">
@@ -207,20 +149,15 @@
                     </select>
                 </div>
             </div>
-
         </div>
     </header>
-
-
     <!-- Empty div for header spacing -->
     <div class="h-[60px] w-full bg-primary/0 pointer-events-none absolute top-0"></div>
-
     <!-- Banner -->
     <section class="relative w-full mt-[60px]">
         <img src="images/banner-emagazine.jpg" alt="Sức hấp dẫn từ BĐS Quy Nhơn"
             class="w-full h-auto object-cover block">
     </section>
-
     <!-- Main Content Part 1: Under Banner -->
     <section class="relative z-20 overflow-hidden bg-bg1">
         <div class="max-w-[660px] mx-auto w-full px-4 md:px-0 py-10 relative z-10">
@@ -233,14 +170,12 @@
                     dài, chú trọng phát triển các tiện ích sức khỏe cùng tiềm năng phát triển du lịch hứa hẹn mang lại
                     lợi nhuận bền vững cho nhà đầu tư trong tương lai.</p>
                 <p class="mb-8 font-bold text-darkText">Xu hướng đầu tư BĐS xanh ven biển</p>
-
                 <figure class="mb-8">
                     <img src="images/news-details-1.jpg" alt="Article Image 1"
                         class="w-full h-auto object-cover rounded-sm">
                     <figcaption class="text-center text-sm text-gray-500 mt-3 italic">Thành phố biển Quy Nhơn hiền hòa
                     </figcaption>
                 </figure>
-
                 <p class="mb-6">Có thể nói, nhu cầu sống xanh ưu tiên sức khỏe đã tác động mạnh mẽ đến tâm lý lựa chọn
                     nơi an cư và "ngôi nhà thứ hai" của nhiều người. Trong đó, các khu vực kề sông cận biển, các BĐS
                     xanh gần gũi thiên nhiên có nhiều tiện ích sức khỏe ngày càng được ưa chuộng.</p>
@@ -248,38 +183,31 @@
                     đang diễn ra vô cùng sôi động. Quy Nhơn (Bình Định) hiện là một trong những khu vực thu hút mạnh mẽ
                     dòng vốn này nhờ quỹ đất rộng lớn, giao thông kết nối đồng bộ và tiềm năng du lịch đang trên đà cất
                     cánh.</p>
-
                 <figure class="mb-12">
                     <img src="images/news-details-2.jpg" alt="Article Image 2"
                         class="w-full h-auto object-cover border-4 border-white shadow-md mx-auto">
                     <figcaption class="text-center text-sm text-gray-500 mt-3 italic">Phối cảnh khu đô thị sinh thái Kỳ
                         Co Gateway</figcaption>
                 </figure>
-
                 <p class="mb-12">Nắm bắt xu thế đó, Tập đoàn Danh Khôi đã phát triển dự án Kỳ Co Gateway theo mô hình
                     khu đô thị sinh thái xanh ven biển, tích hợp hệ thống tiện ích đẳng cấp, mang đến không gian sống
                     trong lành và giá trị sinh lời bền vững cho các nhà đầu tư.</p>
             </div>
         </div>
     </section>
-
     <!-- 2nd Banner: Full Screen Width -->
     <section class="w-full">
         <img src="images/news-details-3.png" alt="Banner thứ 2 đệm giữa thân bài"
             class="w-full h-auto object-cover block">
     </section>
-
     <!-- Main Content Part 2: Quote & Continued Images -->
     <section class="relative z-20 overflow-hidden bg-white">
         <div class="max-w-[660px] mx-auto w-full px-4 md:px-0 py-10 relative z-10">
             <div class="text-gray-700 text-[18px] leading-[1.6]">
-
-
                 <p class="mb-8">Nhờ bệ phóng tài chính vững chắc, Danh Khôi tiếp tục khẳng định vị thế trên thị trường
                     bằng các dự án quy mô, chất lượng, pháp lý minh bạch, được thị trường đón nhận nồng nhiệt. Đặc biệt,
                     phân khúc BĐS ven biển nghỉ dưỡng kết hợp đô thị đang là mũi nhọn chiến lược của tập đoàn trong giai
                     đoạn 2022-2025.</p>
-
                 <div class="text-center mb-8">
                     <p class="font-bold text-[20px] text-darkText mb-4 uppercase">SO SÁNH VỐN ĐIỀU LỆ CỦA DANH KHÔI GIAI
                         ĐOẠN 2018-2021</p>
@@ -288,24 +216,20 @@
                     <p class="text-center text-sm text-gray-500 mt-3 italic">Sự tăng trưởng thần tốc của Tập đoàn Danh
                         Khôi từ năm 2018 đến 2021.</p>
                 </div>
-
                 <h2 class="text-[24px] md:text-[28px] font-bold text-primary text-center mb-6 uppercase">CHIẾN LƯỢC
                     "ĐỨNG TRÊN VAI NGƯỜI KHỔNG LỒ"</h2>
                 <p class="mb-6">Cùng với việc nhanh chóng thiết lập hệ sinh thái đối tác chiến lược hàng đầu, Danh Khôi
                     đã và đang triển khai nhiều dự án quy mô lớn, tạo điểm nhấn kiến trúc và thúc đẩy quá trình đô thị
                     hóa tại các tỉnh thành...</p>
-
                 <figure class="mb-8 mt-10">
                     <img src="images/news-details-5.jpg" onerror="this.src='images/news-details-5.png'"
                         alt="Article Image 5" class="w-full h-auto object-cover rounded-sm">
                 </figure>
-
                 <!-- Author Signature -->
                 <div class="mt-14 mx-auto w-48 border-t border-gray-400 pt-4 text-center">
                     <p class="font-bold text-[#333] text-[16px] md:text-[18px]">Giang Chi Anh</p>
                 </div>
             </div>
-
             <!-- Comment Section -->
             <div class="mt-12 pt-10 border-t border-gray-200">
                 <div class="flex items-start gap-4">
@@ -330,10 +254,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-
     <!-- Bạn có thể quan tâm Section -->
     <!-- Bạn có thể quan tâm Section -->
     <section class="py-12 md:py-20 bg-bg1">
@@ -348,7 +270,6 @@
                 <a href="news.html"
                     class="text-[13px] text-textHide hover:text-primary transition-colors relative z-10">Xem tất cả</a>
             </div>
-
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <!-- News 1 -->
                 <div
@@ -371,7 +292,6 @@
                         </h3>
                         <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
                             động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
-
                         <!-- Nút Chi tiết -->
                         <div
                             class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
@@ -381,7 +301,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- News 2 -->
                 <div
                     class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
@@ -402,7 +321,6 @@
                         </h3>
                         <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
                             động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
-
                         <!-- Nút Chi tiết -->
                         <div
                             class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
@@ -412,7 +330,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- News 3 -->
                 <div
                     class="group cursor-pointer bg-white flex flex-col h-full overflow-hidden shadow-sm hover:shadow-md transition-shadow">
@@ -434,7 +351,6 @@
                         </h3>
                         <p class="text-[14px] text-textHide line-clamp-3 mb-6">Sở hữu các yếu tố tiên quyết của một bất
                             động sản wellness như công viên cây xanh, không gian thoáng đãng kết hợp ...</p>
-
                         <!-- Nút Chi tiết -->
                         <div
                             class="mt-auto flex items-center gap-2 text-[13px] text-textHide group-hover:text-primary transition-colors">
@@ -447,7 +363,6 @@
             </div>
         </div>
     </section>
-
     <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -500,7 +415,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Col 2: Thông tin liên hệ -->
                 <div class="lg:pl-8">
                     <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
@@ -518,7 +432,6 @@
                                 1399</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 3: Về Danh Khôi -->
                 <div>
                     <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
@@ -540,7 +453,6 @@
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 4: Tin tức -->
                 <div>
                     <h6 class="text-[14px] font-bold text-primary mb-6  tracking-wider">
@@ -555,7 +467,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="border-t border-gray-100 pt-6 mt-6">
             <div class="main-container text-[12px] text-textHide text-left">
@@ -563,14 +474,11 @@
             </div>
         </div>
     </footer>
-
-
     <!-- Scroll To Top Left Indicator -->
     <div id="scrollTopIndicator" class="scroll-top-left-indicator">
         <div class="stl-line"></div>
         <span class="stl-text">VỀ ĐẦU TRANG</span>
     </div>
-
     <!-- Scroll To Top Circle Button -->
     <button id="scrollTopCircle" class="scroll-top-circle" aria-label="Về đầu trang">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -578,442 +486,9 @@
             </path>
         </svg>
     </button>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const spans = mobileBtn.querySelectorAll('span');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    spans[0].classList.add('rotate-45', 'translate-y-2');
-                    spans[1].classList.add('opacity-0');
-                    spans[2].classList.add('-rotate-45', '-translate-y-2');
-                } else {
-                    spans[0].classList.remove('rotate-45', 'translate-y-2');
-                    spans[1].classList.remove('opacity-0');
-                    spans[2].classList.remove('-rotate-45', '-translate-y-2');
-                }
-            });
-        }
-
-        // Header Scroll
-        const header = document.getElementById('main-header');
-        const HEADER_GRADIENT = 'linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0) 100%)';
-        var _cp = window.location.pathname.split('/').pop() || 'index.html';
-        if (_cp === 'career-details.html') _cp = 'careers.html';
-        if (_cp === 'news-detail.html' || _cp === 'emagazine.html') _cp = 'news.html';
-        if (header) {
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 80) {
-                    header.style.background = 'rgba(255,255,255,0.97)';
-                    header.style.backdropFilter = 'blur(12px)';
-                    header.style.boxShadow = '0 2px 16px rgba(0,0,0,0.08)';
-                    header.classList.add('scrolled');
-                    header.querySelectorAll('nav a').forEach(a => {
-                        var hp = (a.getAttribute('href') || '').split('/').pop();
-                        if (hp === _cp) {
-                            a.classList.remove('text-[#FFB800]', 'text-[#FEDA00]', 'text-white');
-                            a.classList.add('text-primary');
-                        } else {
-                            a.classList.remove('text-white');
-                            a.classList.add('text-darkText');
-                        }
-                    });
-                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-white', 'bg-darkText'));
-                } else {
-                    header.style.background = HEADER_GRADIENT;
-                    header.style.backdropFilter = '';
-                    header.style.boxShadow = '';
-                    header.classList.remove('scrolled');
-                    header.querySelectorAll('nav a').forEach(a => {
-                        var hp = (a.getAttribute('href') || '').split('/').pop();
-                        if (hp === _cp) {
-                            a.classList.remove('text-primary', 'text-darkText');
-                            a.classList.add('text-[#FFB800]');
-                        } else {
-                            a.classList.add('text-white');
-                            a.classList.remove('text-darkText');
-                        }
-                    });
-                    header.querySelectorAll('#mobile-menu-btn span').forEach(s => s.classList.replace('bg-darkText', 'bg-white'));
-                }
-            });
-        }
-
-        // Hero Slider (Swiper)
-        const heroSwiper = new Swiper('.hero-swiper', {
-            loop: true,
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-            speed: 1000,
-            allowTouchMove: false,
-            on: {
-                slideChange: function () {
-                    // Update custom tabs
-                    const currentIdx = this.realIndex;
-                    document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-                        if (index === currentIdx) {
-                            tab.classList.add('active');
-                            tab.classList.remove('border-white/20');
-                            tab.classList.add('border-primary'); // Make active border same as bg or primary
-                        } else {
-                            tab.classList.remove('active');
-                            tab.classList.remove('border-primary');
-                            tab.classList.add('border-white/20');
-                        }
-                    });
-                }
-            }
-        });
-
-        // Click on custom tabs to change slide
-        document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-            tab.addEventListener('click', () => {
-                heroSwiper.slideToLoop(index);
-            });
-        });
-
-        // Select2
-        function formatLang(lang) {
-            if (!lang.id) return lang.text;
-            var flag = $(lang.element).data('flag');
-            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
-        }
-        $(document).ready(function () {
-            $('#lang-switcher').select2({
-                minimumResultsForSearch: Infinity,
-                dropdownAutoWidth: true,
-                width: 'auto',
-                templateResult: formatLang,
-                templateSelection: formatLang
-            });
-            var $s2 = $('#lang-switcher').next('.select2-container');
-            var lockedW = $s2.outerWidth();
-            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
-
-            // Duplicate Slides for Infinite Loop on Desktop
-            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
-            if (swiperWrapper) {
-                const originalSlides = Array.from(swiperWrapper.children);
-                if (originalSlides.length > 0 && originalSlides.length <= 4) {
-                    originalSlides.forEach(slide => {
-                        swiperWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Dự án tiêu biểu Slider
-            const projectSwiper = new Swiper('.project-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.project-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                },
-                on: {
-                    init: function () {
-                        updateCustomPagination(this);
-                    },
-                    slideChange: function () {
-                        updateCustomPagination(this);
-                    }
-                }
-            });
-
-            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
-            function updateCustomPagination(swiper) {
-                setTimeout(() => {
-                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
-                    if (bullets.length === 0) return;
-
-                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
-                    const realIndex = swiper.realIndex % 4;
-                    if (bullets[realIndex]) {
-                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
-                    }
-                }, 10);
-            }
-
-            // Duplicate Slides for Infinite Loop on Desktop for Partner Slider
-            const partnerWrapper = document.querySelector('.partner-swiper .swiper-wrapper');
-            if (partnerWrapper) {
-                const partnerSlides = Array.from(partnerWrapper.children);
-                if (partnerSlides.length > 0 && partnerSlides.length <= 5) {
-                    partnerSlides.forEach(slide => {
-                        partnerWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Đối tác tiêu biểu Slider
-            const partnerSwiper = new Swiper('.partner-swiper', {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.partner-button-next',
-                    prevEl: '.partner-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 24,
-                    },
-                }
-            });
-        });
-
-        // Scroll to top
-        (function () {
-            var indicator = document.getElementById('scrollTopIndicator');
-            var circle = document.getElementById('scrollTopCircle');
-            var threshold = 300;
-            function onScroll() {
-                var show = window.pageYOffset > threshold;
-                if (indicator) indicator.classList.toggle('visible', show);
-                if (circle) circle.classList.toggle('visible', show);
-            }
-            function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-            window.addEventListener('scroll', onScroll, { passive: true });
-            if (indicator) indicator.addEventListener('click', scrollTop);
-            if (circle) circle.addEventListener('click', scrollTop);
-            onScroll();
-        })();
-
-        // Odometer Counter Animation
-        (function () {
-            // Initialize digit columns for each odometer-group
-            var groups = document.querySelectorAll('.odometer-group');
-            if (!groups.length) return;
-
-            groups.forEach(function (group) {
-                var value = group.getAttribute('data-value');
-                var digits = value.split('');
-
-                digits.forEach(function (digit, index) {
-                    var digitEl = document.createElement('div');
-                    digitEl.className = 'odometer-digit';
-
-                    var inner = document.createElement('div');
-                    inner.className = 'odometer-digit-inner';
-
-                    // Create digit column: 0 through 9
-                    for (var i = 0; i <= 9; i++) {
-                        var span = document.createElement('span');
-                        span.textContent = i;
-                        inner.appendChild(span);
-                    }
-
-                    digitEl.appendChild(inner);
-                    group.appendChild(digitEl);
-
-                    // Store target digit and stagger delay
-                    digitEl.setAttribute('data-target', digit);
-                    digitEl.setAttribute('data-delay', index * 120);
-                });
-            });
-
-            function rollOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var target = parseInt(digitEl.getAttribute('data-target'));
-                    var delay = parseInt(digitEl.getAttribute('data-delay')) || 0;
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    setTimeout(function () {
-                        inner.style.transform = 'translateY(-' + target + 'em)';
-                    }, delay);
-                });
-            }
-
-            function resetOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    inner.style.transition = 'none';
-                    inner.style.transform = 'translateY(0)';
-                    inner.offsetHeight; // force reflow
-                    inner.style.transition = 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
-                });
-            }
-
-            // Trigger on scroll into view
-            var section = document.getElementById('achievements');
-            if (!section) return;
-            var hasAnimated = false;
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        resetOdometers();
-                        setTimeout(rollOdometers, 100);
-                        hasAnimated = true;
-                    } else if (hasAnimated) {
-                        resetOdometers();
-                        hasAnimated = false;
-                    }
-                });
-            }, { threshold: 0.3 });
-            observer.observe(section);
-        })();
-
-        // Media Coverflow Carousel
-
-        // Custom 3D Carousel Logic (Replacing Swiper)
-        (function () {
-            const carousel = document.querySelector('.custom-media-carousel');
-            if (!carousel) return;
-            const slides = document.querySelectorAll('.custom-media-slide');
-            const btnNext = document.querySelector('.media-button-next');
-            const btnPrev = document.querySelector('.media-button-prev');
-            let activeIndex = 2; // Default center slide index for 5 items
-            const total = slides.length;
-
-            function updateCarousel() {
-                slides.forEach((slide, i) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-
-                    let opacity = 1;
-                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
-                    let zIndex = 0;
-
-                    if (diff === 0) {
-                        transform += "translateX(0%) scale(1)";
-                        zIndex = 10;
-                        slide.classList.add('media-slide-active');
-                    } else if (diff === -1) {
-                        transform += "translateX(-28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 1) {
-                        transform += "translateX(28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === -2) {
-                        transform += "translateX(-46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 2) {
-                        transform += "translateX(46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    }
-
-                    // Apply styles
-                    slide.style.top = "50%";
-                    slide.style.left = "50%";
-                    slide.style.transform = transform;
-                    slide.style.zIndex = zIndex;
-                    slide.style.opacity = opacity;
-                });
-            }
-
-            btnNext.addEventListener('click', () => {
-                activeIndex = (activeIndex + 1) % total;
-                updateCarousel();
-            });
-
-            btnPrev.addEventListener('click', () => {
-                activeIndex = (activeIndex - 1 + total) % total;
-                updateCarousel();
-            });
-
-            slides.forEach((slide, i) => {
-                slide.addEventListener('click', (e) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-                    if (diff !== 0) {
-                        activeIndex = i;
-                        updateCarousel();
-                    } else {
-                        if (slide.dataset.video) {
-                            openVideoModal(slide.dataset.video);
-                        }
-                    }
-                });
-
-                // Add hover effect
-                slide.addEventListener('mouseenter', () => {
-                    if (activeIndex !== i) {
-                        activeIndex = i;
-                        updateCarousel();
-                    }
-                });
-            });
-
-            // Initial render
-            setTimeout(() => {
-                updateCarousel();
-            }, 100);
-        })();
-
-
-
-        // Video Modal Script
-        function openVideoModal(videoUrl) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            iframe.src = videoUrl;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            // Allow CSS transition to complete by running opacity toggle asynchronously
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('opacity-100');
-            }, 50);
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                iframe.pause();
-                iframe.currentTime = 0;
-                iframe.src = '';
-            }, 300);
-        }
-    </script>
-
+    
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -1029,7 +504,6 @@
                 autoplay></video>
         </div>
     </div>
-
     <script>
         // Landing page header scroll effect
         window.addEventListener('scroll', function () {
@@ -1042,7 +516,6 @@
                 }
             }
         });
-
         // Initialize Select2 Language Switcher
         $(document).ready(function () {
             function formatLanguage(state) {
@@ -1051,14 +524,12 @@
                 var $state = $('<span><img src="' + flagUrl + '" class="img-flag inline-block w-5 h-4 object-cover mr-2" />' + state.text + '</span>');
                 return $state;
             }
-
             if ($.fn.select2) {
                 $('#lang-switcher-emz').select2({
                     minimumResultsForSearch: Infinity,
                     templateResult: formatLanguage,
                     templateSelection: formatLanguage
                 });
-
                 // Fix dropdown active states
                 $('#lang-switcher-emz').on('select2:open', function () {
                     $('.select2-results__options').css('background-color', '#fff').css('color', '#333');
@@ -1066,48 +537,6 @@
             }
         });
     </script>
-
-    <!-- Active Nav State Script -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            var activeHref = currentPath;
-            if (currentPath === 'career-details.html') activeHref = 'careers.html';
-            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
-
-            var desktopLinks = document.querySelectorAll('#main-header nav a');
-            desktopLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                    link.dataset.active = 'true';
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                    delete link.dataset.active;
-                }
-            });
-
-            var mobileLinks = document.querySelectorAll('#mobile-menu a');
-            mobileLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>

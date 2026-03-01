@@ -1,36 +1,30 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aria Vũng Tàu Hotel & Resort | Danh Khôi Đất Bắc</title>
     <meta name="description"
         content="Danh Khôi Đất Bắc – Công ty cổ phần bất động sản hàng đầu miền Bắc. Phát triển quỹ đất, dự án, tiếp thị và quản lý vận hành.">
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
-
     <!-- Select2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
-
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <!-- Select2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script> tailwind.config = { theme: { extend: { fontFamily: { sans: ["Lato", "sans-serif"], display: ["Lato", "sans-serif"], roboto: ["Roboto", "sans-serif"] }, colors: { primary: "var(--color-primary)", primaryDark: "var(--color-primary-dark)", secondary: "var(--color-secondary)", darkText: "var(--color-dark-text)", textHide: "var(--color-text-hide)", bg1: "var(--color-bg1)", bg2: "var(--color-bg2)", bgDarkBlue: "var(--color-bg-darkblue)", darkBlue2: "var(--color-darkblue-2)", icon: "var(--color-icon)", link: "var(--color-link)", line: "var(--color-line)" }, maxWidth: { "container": "1110px" } } } } </script>
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <!-- Landing Page Styles -->
     <style>
         .lpd-overview-pagination .swiper-pagination-bullet-active,
@@ -38,45 +32,12 @@
             background: #333 !important;
             transform: scale(1.2);
         }
-
         .lpd-tiendo-pagination .swiper-pagination-bullet-active {
             background: #fff !important;
             transform: scale(1.2);
         }
     </style>
-
     <!-- Tailwind Configuration -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        display: ['Lato', 'sans-serif'],
-                        roboto: ['Roboto', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: 'var(--color-primary)',
-                        primaryDark: 'var(--color-primary-dark)',
-                        secondary: 'var(--color-secondary)',
-                        darkText: 'var(--color-dark-text)',
-                        textHide: 'var(--color-text-hide)',
-                        bg1: 'var(--color-bg1)',
-                        bg2: 'var(--color-bg2)',
-                        bgDarkBlue: 'var(--color-bg-darkblue)',
-                        darkBlue2: 'var(--color-darkblue-2)',
-                        icon: 'var(--color-icon)',
-                        link: 'var(--color-link)',
-                        line: 'var(--color-line)',
-                    },
-                    maxWidth: {
-                        'container': '1110px',
-                    }
-                }
-            }
-        }
-    </script>
-
     <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
     <style>
         body {
@@ -86,7 +47,6 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
-
         h1,
         h2,
         h3,
@@ -96,7 +56,6 @@
             color: var(--color-dark-text);
         }
     </style>
-
     <!-- Select2 Custom Styles -->
     <style>
         .lang-select-container .select2-container--default .select2-selection--single {
@@ -107,7 +66,6 @@
             display: flex;
             align-items: center;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -116,34 +74,27 @@
             padding-right: 24px;
             line-height: 34px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
-
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
-
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
-
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
-
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
-
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -152,12 +103,10 @@
             vertical-align: middle;
             border-radius: 2px;
         }
-
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
-
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -170,7 +119,6 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
-
         .lang-option {
             display: flex;
             align-items: center;
@@ -178,9 +126,7 @@
         }
     </style>
 </head>
-
 <body>
-
     <!-- Landing Page Header -->
     <header id="landing-header" class="w-full fixed top-0 left-0 right-0 z-50 bg-primary">
         <!-- Main Navbar -->
@@ -190,7 +136,6 @@
                 <a href="landing-page-project.html" class="flex items-center flex-shrink-0">
                     <img src="images/Logo-Aria.svg" alt="Aria Vũng Tàu" class="h-[75px] w-auto py-2">
                 </a>
-
                 <!-- Center: Desktop Nav (scroll to section) -->
                 <nav id="landing-nav" class="hidden lg:flex items-center gap-1">
                     <a href="#tong-quan"
@@ -217,7 +162,6 @@
                         class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Video
                         360°</a>
                 </nav>
-
                 <!-- Right: Language Switcher -->
                 <div class="hidden lg:flex items-center">
                     <div class="lang-select-container landing-lang">
@@ -227,7 +171,6 @@
                         </select>
                     </div>
                 </div>
-
                 <!-- Mobile menu btn -->
                 <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
                     <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
@@ -236,7 +179,6 @@
                 </button>
             </div>
         </div>
-
         <!-- Back to main site link bar -->
         <div class="w-full absolute top-[75px] left-0 z-40 pointer-events-none">
             <div class="w-full h-auto flex items-start">
@@ -254,7 +196,6 @@
                 </a>
             </div>
         </div>
-
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg mt-[75px]">
             <div class="px-6 py-4 flex flex-col gap-1">
@@ -282,7 +223,6 @@
             </div>
         </div>
     </header>
-
     <!-- Hero Banner -->
     <section class="relative w-full pt-[75px]">
         <div class="w-full relative" style="min-height: 400px;">
@@ -297,12 +237,10 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Tổng quan -->
     <section id="tong-quan" class="py-16 md:py-24 bg-white">
         <div class="main-container">
             <h2 class="section-title text-[24px] md:text-[32px] text-center mb-8">TỔNG QUAN DỰ ÁN</h2>
-
             <!-- Mô tả -->
             <p class="text-[13px] md:text-[14px] text-center text-textHide leading-relaxed max-w-4xl mx-auto mb-10">
                 <span class="font-bold text-darkText">ARIA VŨNG TÀU</span> hay còn được biết đến với tên gọi
@@ -312,7 +250,6 @@
                 sống và trải nghiệm
                 tuyệt vời với đẳng cấp resort đúng nghĩa – cùng các đặc quyền riêng giành cho các cư dân tương lai.
             </p>
-
             <!-- Image Slider -->
             <div class="relative mb-10">
                 <div class="swiper lpd-overview-swiper">
@@ -334,7 +271,6 @@
                 <!-- Pagination -->
                 <div class="lpd-overview-pagination flex justify-center gap-2 mt-6"></div>
             </div>
-
             <!-- Bảng thông tin dự án -->
             <div class="max-w-4xl mx-auto border border-gray-200 rounded-lg overflow-hidden">
                 <table class="w-full text-[13px] md:text-[14px] text-textHide">
@@ -399,13 +335,11 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Vị trí -->
     <section id="vi-tri" class="py-16 md:py-24" style="background: linear-gradient(180deg, #e8f4f8 0%, #d0eaf2 100%);">
         <div class="main-container">
             <h2 class="section-title text-[24px] md:text-[32px] font-bold text-center mb-10 uppercase"
                 style="color: var(--color-darkblue-2, #1a3a5c);">VỊ TRÍ DỰ ÁN ĐẮC ĐỊA</h2>
-
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
                 <!-- Left: Text content -->
                 <div>
@@ -413,12 +347,9 @@
                         <p>"Dự án Aria Vũng Tàu Hotel & Resort là dự án hiếm hoi ở thành phố Vũng Tàu sở hữu 400m mặt
                             tiền bờ biển và cách bãi biển chỉ 100m, không cần phải băng qua đường mới đến được bãi biển.
                         </p>
-
                         <p>Vị trí không quá gần để ảnh hưởng bởi sự ồn ào náo nhiệt.</p>
-
                         <p>Cũng không quá xa để có thể tận hưởng ngay những món ăn đặc sản và dịch vụ tiện ích tại trung
                             tâm thành phố".</p>
-
                         <p>Tọa lạc ngay trung tâm thành phố biển, dự án Aria Vũng Tàu sở hữu tầm nhìn hướng biển thông
                             thoáng cùng hệ thống hạ tầng giao thông liên kết vùng thuận lợi. Mặt hướng biển, lưng tựa
                             núi, vị thế của Aria Vũng Tàu không chỉ đắc địa về mặt phong thủy thịnh vượng mà còn mang
@@ -427,7 +358,6 @@
                             thiết của một khu du lịch nghỉ dưỡng hấp dẫn hàng đầu.</p>
                     </div>
                 </div>
-
                 <!-- Right: Map image -->
                 <div class="flex justify-center lg:justify-end">
                     <img src="images/lpd-image-2.jpg" alt="Vị trí dự án Aria Vũng Tàu"
@@ -436,7 +366,6 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Tiện ích -->
     <section id="tien-ich" class="py-16 md:py-24 relative overflow-hidden"
         style="background-color: var(--color-primary); background-image: url('images/lpd-image-grid-bg.png'); background-repeat: repeat;">
@@ -445,7 +374,6 @@
                 ÍCH NỘI KHU ARIA
                 VŨNG TÀU</h2>
             <p class="text-white/90 text-center text-[14px] mb-3">Chuẩn Resort</p>
-
             <p class="text-white/80 text-[13px] md:text-[14px] text-center leading-relaxed max-w-4xl mx-auto mb-10">
                 Được thiết kế tỉ mỉ dưới bàn tay tài hoa của những kiến trúc sư và nhà thiết kế nội thất nổi tiếng, Aria
                 Vũng Tàu là kiệt tác có một không hai, mang đến không gian sống hiện đại, hòa quyện tinh tế cùng hơi thở
@@ -455,7 +383,6 @@
                 dễ chịu với những con đường rộng rãi, thoáng đãng. Biển xanh. Phía sau là những ngọn núi hùng vĩ … cùng
                 vô vàn những danh lam thắng cảnh, tiện ích ngoại khu nổi tiếng của Thành Phố.
             </p>
-
             <!-- Image grid 4x3 -->
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
                 <!-- Item 1 -->
@@ -569,12 +496,10 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Mặt bằng -->
     <section id="mat-bang" class="py-16 md:py-24 bg-white">
         <div class="main-container">
             <h2 class="section-title text-[24px] md:text-[32px] text-center mb-6 uppercase">MẶT BẰNG ARIA VŨNG TÀU</h2>
-
             <p class="text-[13px] md:text-[14px] text-center text-textHide leading-relaxed max-w-4xl mx-auto mb-10">
                 Cách bố trí hợp lý, với địa thế tả thanh long, hữu bạch hổ, khu nghỉ dưỡng dự án Aria Vũng Tàu hứa hẹn
                 mang lại một cuộc sống trường tồn, hưng thịnh cho chủ sở hữu. Tất cả các căn biệt thự hay căn hộ cao cấp
@@ -582,7 +507,6 @@
                 đặc trưng của vùng miền nhiệt đới..., mang đến cho chủ nhân tương lai một không gian trong lành, gần gũi
                 với thiên nhiên.
             </p>
-
             <!-- Mặt bằng Slider -->
             <div class="relative">
                 <div class="swiper lpd-matbang-swiper">
@@ -610,7 +534,6 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Tiến độ -->
     <section id="tien-do" class="py-16 md:py-24 bg-[#f5f5f5] relative overflow-hidden">
         <!-- Decorator white shape background -->
@@ -620,26 +543,22 @@
         <div class="main-container relative z-10">
             <h2 class="section-title text-[24px] md:text-[32px] text-center mb-6 uppercase">TIẾN ĐỘ XÂY DỰNG ARIA VŨNG
                 TÀU</h2>
-
             <p class="text-[13px] md:text-[14px] text-center text-textHide leading-relaxed max-w-4xl mx-auto mb-10">
                 Hiện tại Block B – Aquamarine thuộc dự án Aria Vũng Tàu đã hoàn thiện xong, khuôn viên được trồng cây
                 thoáng mát. 100% căn hộ tại đây đã đầy đủ nội thất cao cấp, khách hàng chỉ cần dọn vào là có thể tận
                 hưởng ngay cuộc sống sang trọng nơi phố biển. Các tiện ích nội khu như hồ bơi, cà phê view biển, khu vui
                 chơi trẻ em, nhà hàng đã có thể phục vụ cư dân Aria.
             </p>
-
             <!-- Tiến độ Content: Timeline + Slider -->
             <div class="bg-white rounded-xl shadow-lg overflow-hidden">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
                     <!-- Left: Timeline -->
                     <div class="p-6 md:p-8">
                         <h3 class="text-primary text-[18px] md:text-[20px] font-bold mb-6 uppercase">TIẾN ĐỘ DỰ ÁN</h3>
-
                         <!-- Timeline items -->
                         <div class="relative pl-8">
                             <!-- Vertical line -->
                             <div class="absolute left-[11px] top-2 bottom-2 w-[2px] bg-gray-200"></div>
-
                             <!-- Item 1: Active -->
                             <div class="relative mb-6">
                                 <div
@@ -683,7 +602,6 @@
                             </div>
                         </div>
                     </div>
-
                     <!-- Right: Image Slider -->
                     <div class="relative bg-gray-100">
                         <div class="swiper lpd-tiendo-swiper h-full">
@@ -711,13 +629,11 @@
             </div>
         </div>
     </section>
-
     <!-- Section: Video 360 -->
     <section id="video-360" class="w-full h-[60vh] md:h-[80vh]">
         <iframe src="https://view360.flyingcam-vietnam.com/Project2021/ArialVungTau/" width="100%" height="100%"
             frameborder="0" allowfullscreen></iframe>
     </section>
-
     <!-- Section: Tải tài liệu về dự án -->
     <section class="py-16 md:py-24 bg-cover bg-center relative"
         style="background-image: url('images/lpd-contact.jpg');">
@@ -729,7 +645,6 @@
                         TẢI TÀI LIỆU VỀ DỰ ÁN ARIA VŨNG TÀU
                     </h4>
                     <p class="text-[14px] text-textHide mb-8">Thông tin gì về dự án bạn muốn nhận?</p>
-
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
                         <label class="flex items-center space-x-3 cursor-pointer">
                             <input type="checkbox"
@@ -756,7 +671,6 @@
                             <span class="text-[13px] text-textHide">Đăng ký đi xem căn hộ mẫu</span>
                         </label>
                     </div>
-
                     <div
                         class="flex flex-col sm:flex-row justify-between items-center sm:items-end mt-auto relative z-10 w-fit pb-4 md:pb-8">
                         <button
@@ -768,7 +682,6 @@
                     <img src="images/Logo-Aria-2.svg" alt="Aria Vung Tau Logo"
                         class="absolute bottom-4 md:bottom-8 right-6 md:right-10 h-[100px] md:h-[120px] w-auto object-contain z-0 pointer-events-none opacity-20 md:opacity-100 mix-blend-multiply md:mix-blend-normal">
                 </div>
-
                 <!-- Right: Image -->
                 <div class="w-full md:w-1/2 min-h-[300px] md:min-h-full relative">
                     <img src="images/lpd-image-5.jpg" alt="Tải tài liệu dự án Aria Vũng Tàu"
@@ -777,7 +690,6 @@
             </div>
         </div>
     </section>
-
     <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -830,7 +742,6 @@
                         </a>
                     </div>
                 </div>
-
                 <!-- Col 2: Thông tin liên hệ -->
                 <div class="lg:pl-8">
                     <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
@@ -848,7 +759,6 @@
                                 1399</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 3: Về Danh Khôi -->
                 <div>
                     <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
@@ -867,7 +777,6 @@
                         <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
                     </ul>
                 </div>
-
                 <!-- Col 4: Tin tức -->
                 <div>
                     <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
@@ -881,7 +790,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Copyright -->
         <div class="border-t border-gray-100 pt-6 mt-6">
             <div class="main-container text-[12px] text-textHide text-left">
@@ -889,504 +797,20 @@
             </div>
         </div>
     </footer>
-
     <!-- Scroll To Top Left Indicator -->
     <div id="scrollTopIndicator" class="scroll-top-left-indicator">
         <div class="stl-line"></div>
         <span class="stl-text">VỀ ĐẦU TRANG</span>
     </div>
-
     <!-- Scroll To Top Circle Button -->
     <button id="scrollTopCircle" class="scroll-top-circle" aria-label="Về đầu trang">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
         </svg>
     </button>
-
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script>
-        // Mobile Menu Toggle
-        const mobileBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if (mobileBtn && mobileMenu) {
-            mobileBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const spans = mobileBtn.querySelectorAll('span');
-                if (!mobileMenu.classList.contains('hidden')) {
-                    spans[0].classList.add('rotate-45', 'translate-y-2');
-                    spans[1].classList.add('opacity-0');
-                    spans[2].classList.add('-rotate-45', '-translate-y-2');
-                } else {
-                    spans[0].classList.remove('rotate-45', 'translate-y-2');
-                    spans[1].classList.remove('opacity-0');
-                    spans[2].classList.remove('-rotate-45', '-translate-y-2');
-                }
-            });
-        }
-
-        // Landing Page: Smooth Scroll Navigation
-        document.querySelectorAll('.landing-nav-link, .landing-nav-link-mobile').forEach(link => {
-            link.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetEl = document.querySelector(targetId);
-                if (targetEl) {
-                    const headerHeight = document.getElementById('landing-header').offsetHeight;
-                    const targetPos = targetEl.offsetTop - headerHeight;
-                    window.scrollTo({ top: targetPos, behavior: 'smooth' });
-                    // Close mobile menu if open
-                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                        const spans = mobileBtn.querySelectorAll('span');
-                        spans[0].classList.remove('rotate-45', 'translate-y-2');
-                        spans[1].classList.remove('opacity-0');
-                        spans[2].classList.remove('-rotate-45', '-translate-y-2');
-                    }
-                }
-            });
-        });
-
-        // Landing Page: Active Section Highlighting
-        const landingSections = document.querySelectorAll('section[id]');
-        const landingNavLinks = document.querySelectorAll('.landing-nav-link');
-        function updateActiveNavLink() {
-            const headerHeight = document.getElementById('landing-header').offsetHeight;
-            let currentSection = '';
-            landingSections.forEach(section => {
-                const sectionTop = section.offsetTop - headerHeight - 10;
-                if (window.scrollY >= sectionTop) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-            landingNavLinks.forEach(link => {
-                link.classList.remove('text-[#FEDA00]');
-                link.classList.add('text-white');
-                if (link.getAttribute('href') === '#' + currentSection) {
-                    link.classList.remove('text-white');
-                    link.classList.add('text-[#FEDA00]');
-                }
-            });
-        }
-        window.addEventListener('scroll', updateActiveNavLink, { passive: true });
-        updateActiveNavLink();
-
-        // Hero Slider (Swiper)
-        const heroSwiper = new Swiper('.hero-swiper', {
-            loop: true,
-            effect: 'fade',
-            fadeEffect: { crossFade: true },
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
-            speed: 1000,
-            allowTouchMove: false,
-            on: {
-                slideChange: function () {
-                    // Update custom tabs
-                    const currentIdx = this.realIndex;
-                    document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-                        if (index === currentIdx) {
-                            tab.classList.add('active');
-                            tab.classList.remove('border-white/20');
-                            tab.classList.add('border-primary'); // Make active border same as bg or primary
-                        } else {
-                            tab.classList.remove('active');
-                            tab.classList.remove('border-primary');
-                            tab.classList.add('border-white/20');
-                        }
-                    });
-                }
-            }
-        });
-
-        // Click on custom tabs to change slide
-        document.querySelectorAll('.hero-tab').forEach((tab, index) => {
-            tab.addEventListener('click', () => {
-                heroSwiper.slideToLoop(index);
-            });
-        });
-
-        // Select2
-        function formatLang(lang) {
-            if (!lang.id) return lang.text;
-            var flag = $(lang.element).data('flag');
-            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
-        }
-        $(document).ready(function () {
-            $('#lang-switcher').select2({
-                minimumResultsForSearch: Infinity,
-                dropdownAutoWidth: true,
-                width: 'auto',
-                templateResult: formatLang,
-                templateSelection: formatLang
-            });
-            var $s2 = $('#lang-switcher').next('.select2-container');
-            var lockedW = $s2.outerWidth();
-            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
-
-            // Duplicate Slides for Infinite Loop on Desktop
-            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
-            if (swiperWrapper) {
-                const originalSlides = Array.from(swiperWrapper.children);
-                if (originalSlides.length > 0 && originalSlides.length <= 4) {
-                    originalSlides.forEach(slide => {
-                        swiperWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Dự án tiêu biểu Slider
-            const projectSwiper = new Swiper('.project-swiper', {
-                slidesPerView: 1,
-                spaceBetween: 20,
-                loop: true,
-                autoplay: {
-                    delay: 3000,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: '.project-pagination',
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 24,
-                    },
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 30,
-                    },
-                },
-                on: {
-                    init: function () {
-                        updateCustomPagination(this);
-                    },
-                    slideChange: function () {
-                        updateCustomPagination(this);
-                    }
-                }
-            });
-
-            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
-            function updateCustomPagination(swiper) {
-                setTimeout(() => {
-                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
-                    if (bullets.length === 0) return;
-
-                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
-                    const realIndex = swiper.realIndex % 4;
-                    if (bullets[realIndex]) {
-                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
-                    }
-                }, 10);
-            }
-
-            // Duplicate Slides for Infinite Loop on Desktop for Partner Slider
-            const partnerWrapper = document.querySelector('.partner-swiper .swiper-wrapper');
-            if (partnerWrapper) {
-                const partnerSlides = Array.from(partnerWrapper.children);
-                if (partnerSlides.length > 0 && partnerSlides.length <= 5) {
-                    partnerSlides.forEach(slide => {
-                        partnerWrapper.appendChild(slide.cloneNode(true));
-                    });
-                }
-            }
-
-            // Đối tác tiêu biểu Slider
-            const partnerSwiper = new Swiper('.partner-swiper', {
-                slidesPerView: 2,
-                spaceBetween: 16,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                navigation: {
-                    nextEl: '.partner-button-next',
-                    prevEl: '.partner-button-prev',
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 3,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 20,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 24,
-                    },
-                }
-            });
-        });
-
-        // --- Landing Page Swipers ---
-        // Tổng quan overview slider
-        const lpdOverviewSwiper = new Swiper('.lpd-overview-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: {
-                el: '.lpd-overview-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '" style="width:10px;height:10px;background:#ccc;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>';
-                },
-            },
-        });
-
-        // Mặt bằng slider
-        const lpdMatbangSwiper = new Swiper('.lpd-matbang-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            autoplay: { delay: 5000, disableOnInteraction: false },
-            pagination: {
-                el: '.lpd-matbang-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '" style="width:10px;height:10px;background:#ccc;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>';
-                },
-            },
-        });
-
-        // Tiến độ slider (white pagination)
-        const lpdTiendoSwiper = new Swiper('.lpd-tiendo-swiper', {
-            slidesPerView: 1,
-            spaceBetween: 0,
-            loop: true,
-            autoplay: { delay: 4000, disableOnInteraction: false },
-            pagination: {
-                el: '.lpd-tiendo-pagination',
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + '" style="width:10px;height:10px;background:rgba(255,255,255,0.5);border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>';
-                },
-            },
-        });
-
-        // Scroll to top
-        (function () {
-            var indicator = document.getElementById('scrollTopIndicator');
-            var circle = document.getElementById('scrollTopCircle');
-            var threshold = 300;
-            function onScroll() {
-                var show = window.pageYOffset > threshold;
-                if (indicator) indicator.classList.toggle('visible', show);
-                if (circle) circle.classList.toggle('visible', show);
-            }
-            function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-            window.addEventListener('scroll', onScroll, { passive: true });
-            if (indicator) indicator.addEventListener('click', scrollTop);
-            if (circle) circle.addEventListener('click', scrollTop);
-            onScroll();
-        })();
-
-        // Odometer Counter Animation
-        (function () {
-            // Initialize digit columns for each odometer-group
-            var groups = document.querySelectorAll('.odometer-group');
-            if (!groups.length) return;
-
-            groups.forEach(function (group) {
-                var value = group.getAttribute('data-value');
-                var digits = value.split('');
-
-                digits.forEach(function (digit, index) {
-                    var digitEl = document.createElement('div');
-                    digitEl.className = 'odometer-digit';
-
-                    var inner = document.createElement('div');
-                    inner.className = 'odometer-digit-inner';
-
-                    // Create digit column: 0 through 9
-                    for (var i = 0; i <= 9; i++) {
-                        var span = document.createElement('span');
-                        span.textContent = i;
-                        inner.appendChild(span);
-                    }
-
-                    digitEl.appendChild(inner);
-                    group.appendChild(digitEl);
-
-                    // Store target digit and stagger delay
-                    digitEl.setAttribute('data-target', digit);
-                    digitEl.setAttribute('data-delay', index * 120);
-                });
-            });
-
-            function rollOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var target = parseInt(digitEl.getAttribute('data-target'));
-                    var delay = parseInt(digitEl.getAttribute('data-delay')) || 0;
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    setTimeout(function () {
-                        inner.style.transform = 'translateY(-' + target + 'em)';
-                    }, delay);
-                });
-            }
-
-            function resetOdometers() {
-                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
-                    var inner = digitEl.querySelector('.odometer-digit-inner');
-                    inner.style.transition = 'none';
-                    inner.style.transform = 'translateY(0)';
-                    inner.offsetHeight; // force reflow
-                    inner.style.transition = 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
-                });
-            }
-
-            // Trigger on scroll into view
-            var section = document.getElementById('achievements');
-            if (!section) return;
-            var hasAnimated = false;
-            var observer = new IntersectionObserver(function (entries) {
-                entries.forEach(function (entry) {
-                    if (entry.isIntersecting) {
-                        resetOdometers();
-                        setTimeout(rollOdometers, 100);
-                        hasAnimated = true;
-                    } else if (hasAnimated) {
-                        resetOdometers();
-                        hasAnimated = false;
-                    }
-                });
-            }, { threshold: 0.3 });
-            observer.observe(section);
-        })();
-
-        // Media Coverflow Carousel
-
-        // Custom 3D Carousel Logic (Replacing Swiper)
-        (function () {
-            const carousel = document.querySelector('.custom-media-carousel');
-            if (!carousel) return;
-            const slides = document.querySelectorAll('.custom-media-slide');
-            const btnNext = document.querySelector('.media-button-next');
-            const btnPrev = document.querySelector('.media-button-prev');
-            let activeIndex = 2; // Default center slide index for 5 items
-            const total = slides.length;
-
-            function updateCarousel() {
-                slides.forEach((slide, i) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-
-                    let opacity = 1;
-                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
-                    let zIndex = 0;
-
-                    if (diff === 0) {
-                        transform += "translateX(0%) scale(1)";
-                        zIndex = 10;
-                        slide.classList.add('media-slide-active');
-                    } else if (diff === -1) {
-                        transform += "translateX(-28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 1) {
-                        transform += "translateX(28%) scale(0.85)";
-                        zIndex = 9;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === -2) {
-                        transform += "translateX(-46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    } else if (diff === 2) {
-                        transform += "translateX(46%) scale(0.7)";
-                        zIndex = 8;
-                        slide.classList.remove('media-slide-active');
-                    }
-
-                    // Apply styles
-                    slide.style.top = "50%";
-                    slide.style.left = "50%";
-                    slide.style.transform = transform;
-                    slide.style.zIndex = zIndex;
-                    slide.style.opacity = opacity;
-                });
-            }
-
-            btnNext.addEventListener('click', () => {
-                activeIndex = (activeIndex + 1) % total;
-                updateCarousel();
-            });
-
-            btnPrev.addEventListener('click', () => {
-                activeIndex = (activeIndex - 1 + total) % total;
-                updateCarousel();
-            });
-
-            slides.forEach((slide, i) => {
-                slide.addEventListener('click', (e) => {
-                    let diff = i - activeIndex;
-                    if (diff > 2) diff -= total;
-                    if (diff < -2) diff += total;
-                    if (diff !== 0) {
-                        activeIndex = i;
-                        updateCarousel();
-                    } else {
-                        if (slide.dataset.video) {
-                            openVideoModal(slide.dataset.video);
-                        }
-                    }
-                });
-
-                // Add hover effect
-                slide.addEventListener('mouseenter', () => {
-                    if (activeIndex !== i) {
-                        activeIndex = i;
-                        updateCarousel();
-                    }
-                });
-            });
-
-            // Initial render
-            setTimeout(() => {
-                updateCarousel();
-            }, 100);
-        })();
-
-
-
-        // Video Modal Script
-        function openVideoModal(videoUrl) {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            iframe.src = videoUrl;
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-            // Allow CSS transition to complete by running opacity toggle asynchronously
-            setTimeout(() => {
-                modal.classList.remove('opacity-0');
-                modal.classList.add('opacity-100');
-            }, 50);
-        }
-
-        function closeVideoModal() {
-            const modal = document.getElementById('videoModal');
-            const iframe = document.getElementById('videoIframe');
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.remove('flex');
-                modal.classList.add('hidden');
-                iframe.pause();
-                iframe.currentTime = 0;
-                iframe.src = '';
-            }, 300);
-        }
-
-    </script>
-
+    
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -1401,7 +825,6 @@
                 autoplay></video>
         </div>
     </div>
-
     <!-- Lightbox Modal -->
     <div id="lightboxModal"
         class="fixed inset-0 z-[9999] bg-black/95 flex flex-col items-center justify-center transition-opacity duration-300 pointer-events-none opacity-0">
@@ -1424,12 +847,10 @@
                 <div class="swiper-button-prev !text-white !left-4 md:!left-0 hidden md:flex"></div>
             </div>
         </div>
-
         <!-- Caption -->
         <div id="lightbox-caption"
             class="text-white text-center mt-3 mb-2 px-4 max-w-3xl text-sm md:text-base font-bold uppercase tracking-wider">
         </div>
-
         <!-- Swiper Container for Lightbox Thumbnails -->
         <div class="w-full max-w-[1000px] px-4 md:px-10 mt-2 h-20 md:h-28">
             <div class="swiper lightbox-thumbs-swiper h-full">
@@ -1439,206 +860,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Active Nav State Script -->
-    <script>
-        // Global variables for Lightbox so they can be accessed by inline onclick attributes
-        let lightboxSwiper;
-        let lightboxThumbsSwiper;
-        let lightboxModalRef;
-        let slideDataList = [];
-
-        function openLightbox(index) {
-            if (!lightboxModalRef || !lightboxSwiper) return;
-            const captionEl = document.getElementById('lightbox-caption');
-
-            lightboxModalRef.classList.remove('pointer-events-none');
-            lightboxModalRef.classList.add('pointer-events-auto');
-
-            // Reset zoom back to normal before changing slides or opening
-            if (lightboxSwiper.zoom) lightboxSwiper.zoom.out();
-
-            lightboxSwiper.update();
-            if (lightboxThumbsSwiper) lightboxThumbsSwiper.update();
-
-            lightboxSwiper.slideTo(index, 0);
-            if (slideDataList[index] && captionEl) {
-                captionEl.innerText = slideDataList[index].caption;
-            }
-
-            // Allow CSS transition
-            setTimeout(() => {
-                lightboxModalRef.classList.remove('opacity-0');
-                lightboxModalRef.classList.add('opacity-100');
-            }, 50);
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeLightbox() {
-            if (!lightboxModalRef) return;
-            lightboxModalRef.classList.remove('opacity-100');
-            lightboxModalRef.classList.add('opacity-0');
-            setTimeout(() => {
-                lightboxModalRef.classList.remove('pointer-events-auto');
-                lightboxModalRef.classList.add('pointer-events-none');
-            }, 300);
-            document.body.style.overflow = '';
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-            // ---- Lightbox Initialization ----
-            lightboxModalRef = document.getElementById('lightboxModal');
-            const lightboxWrapper = document.getElementById('lightbox-wrapper');
-            const lightboxThumbsWrapper = document.getElementById('lightbox-thumbs-wrapper');
-            const lightboxCaption = document.getElementById('lightbox-caption');
-
-            if (lightboxModalRef && lightboxWrapper && lightboxThumbsWrapper && lightboxCaption) {
-                const gridItems = document.querySelectorAll('#tien-ich .grid .group');
-
-                gridItems.forEach((item, index) => {
-                    item.classList.add('cursor-pointer');
-
-                    const imgEl = item.querySelector('img');
-                    const pEl = item.querySelector('p');
-
-                    if (imgEl && pEl) {
-                        slideDataList.push({
-                            src: imgEl.src,
-                            alt: imgEl.alt,
-                            caption: pEl.innerText
-                        });
-
-                        item.addEventListener('click', () => {
-                            openLightbox(index);
-                        });
-                    }
-                });
-
-                slideDataList.forEach(data => {
-                    // Main Slider template (Wrapped in swiper-zoom-container for zoom support)
-                    const slideHTML = `
-                        <div class="swiper-slide flex items-center justify-center">
-                            <div class="swiper-zoom-container">
-                                <img src="${data.src}" alt="${data.alt}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
-                            </div>
-                        </div>
-                    `;
-                    lightboxWrapper.insertAdjacentHTML('beforeend', slideHTML);
-
-                    // Thumbs Slider template
-                    const thumbHTML = `
-                        <div class="swiper-slide cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-300">
-                            <img src="${data.src}" alt="Thumb ${data.alt}" class="w-full h-full object-cover rounded border-2 border-transparent">
-                        </div>
-                    `;
-                    lightboxThumbsWrapper.insertAdjacentHTML('beforeend', thumbHTML);
-                });
-
-                lightboxThumbsSwiper = new Swiper('.lightbox-thumbs-swiper', {
-                    spaceBetween: 10,
-                    slidesPerView: 4,
-                    freeMode: true,
-                    watchSlidesProgress: true,
-                    observer: true,
-                    observeParents: true,
-                    slideToClickedSlide: true, // Allow clicking thumbnails to change main slide
-                    breakpoints: {
-                        640: { slidesPerView: 5 },
-                        768: { slidesPerView: 6 },
-                        1024: { slidesPerView: 8 }
-                    }
-                });
-
-                lightboxSwiper = new Swiper('.lightbox-swiper', {
-                    slidesPerView: 1,
-                    spaceBetween: 30,
-                    zoom: true, // Enable Zoom capability
-                    observer: true,
-                    observeParents: true,
-                    navigation: {
-                        nextEl: '.lightbox-swiper .swiper-button-next',
-                        prevEl: '.lightbox-swiper .swiper-button-prev',
-                    },
-                    thumbs: {
-                        swiper: lightboxThumbsSwiper,
-                    },
-                    on: {
-                        slideChange: function () {
-                            if (slideDataList[this.activeIndex] && lightboxCaption) {
-                                lightboxCaption.innerText = slideDataList[this.activeIndex].caption;
-                            }
-                            // Reset zoom of previous slide when changing slides safely
-                            try {
-                                if (this.previousIndex !== undefined && this.slides) {
-                                    const previousSlide = this.slides[this.previousIndex];
-                                    if (previousSlide) {
-                                        const zoomContainer = previousSlide.querySelector('.swiper-zoom-container');
-                                        if (zoomContainer && zoomContainer.style.transform && this.zoom) {
-                                            this.zoom.out();
-                                        }
-                                    }
-                                }
-                            } catch (e) {
-                                console.warn("Zoom reset bypassed", e);
-                            }
-                        }
-                    }
-                });
-
-                // Active states for thumbnails manually
-                lightboxSwiper.on('slideChange', function () {
-                    const thumbs = lightboxThumbsWrapper.querySelectorAll('.swiper-slide');
-                    thumbs.forEach((t) => {
-                        t.classList.remove('opacity-100', 'border-primary');
-                        t.classList.add('opacity-50', 'border-transparent');
-                    });
-                    const activeThumb = thumbs[lightboxSwiper.activeIndex];
-                    if (activeThumb) {
-                        activeThumb.classList.remove('opacity-50', 'border-transparent');
-                        activeThumb.classList.add('opacity-100', 'border-primary');
-                    }
-                });
-            }
-
-            // ---- Navigation Scroll Spy ----
-            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
-            var activeHref = currentPath;
-            if (currentPath === 'career-details.html') activeHref = 'careers.html';
-            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
-
-            var desktopLinks = document.querySelectorAll('#main-header nav a');
-            desktopLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                    link.dataset.active = 'true';
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                    delete link.dataset.active;
-                }
-            });
-
-            var mobileLinks = document.querySelectorAll('#mobile-menu a');
-            mobileLinks.forEach(function (link) {
-                var href = link.getAttribute('href');
-                if (!href) return;
-                var linkPath = href.split('/').pop();
-
-                if (linkPath === activeHref) {
-                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
-                    link.classList.add('text-[#FFB800]', 'font-semibold');
-                } else {
-                    link.classList.remove('font-semibold', 'text-[#FFB800]');
-                    link.classList.add('font-normal');
-                }
-            });
-        });
-    </script>
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
