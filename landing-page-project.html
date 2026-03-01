@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aria Vũng Tàu Hotel & Resort | Danh Khôi Đất Bắc</title>
+    <meta name="description"
+        content="Danh Khôi Đất Bắc – Công ty cổ phần bất động sản hàng đầu miền Bắc. Phát triển quỹ đất, dự án, tiếp thị và quản lý vận hành.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" />
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Select2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Landing Page Styles -->
+    <style>
+        .lpd-overview-pagination .swiper-pagination-bullet-active,
+        .lpd-matbang-pagination .swiper-pagination-bullet-active {
+            background: #333 !important;
+            transform: scale(1.2);
+        }
+
+        .lpd-tiendo-pagination .swiper-pagination-bullet-active {
+            background: #fff !important;
+            transform: scale(1.2);
+        }
+    </style>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        display: ['Lato', 'sans-serif'],
+                        roboto: ['Roboto', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: 'var(--color-primary)',
+                        primaryDark: 'var(--color-primary-dark)',
+                        secondary: 'var(--color-secondary)',
+                        darkText: 'var(--color-dark-text)',
+                        textHide: 'var(--color-text-hide)',
+                        bg1: 'var(--color-bg1)',
+                        bg2: 'var(--color-bg2)',
+                        bgDarkBlue: 'var(--color-bg-darkblue)',
+                        darkBlue2: 'var(--color-darkblue-2)',
+                        icon: 'var(--color-icon)',
+                        link: 'var(--color-link)',
+                        line: 'var(--color-line)',
+                    },
+                    maxWidth: {
+                        'container': '1110px',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Khắc phục cảnh báo Unknown at rule @apply của VSCode bằng CSS thuần -->
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+            background-color: #fff;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Lato', sans-serif;
+            color: var(--color-dark-text);
+        }
+    </style>
+
+    <!-- Select2 Custom Styles -->
+    <style>
+        .lang-select-container .select2-container--default .select2-selection--single {
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px;
+            height: 34px;
+            display: flex;
+            align-items: center;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding-left: 10px;
+            padding-right: 24px;
+            line-height: 34px;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
+            top: 50%;
+            transform: translateY(-50%);
+            right: 6px;
+        }
+
+        .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
+        }
+
+        .select2-container--default .select2-results__option--highlighted[aria-selected] {
+            background-color: var(--color-primary);
+        }
+
+        /* Scrolled state for language selector */
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
+            color: var(--color-darkText);
+        }
+
+        #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: #2B3B51 transparent transparent transparent !important;
+        }
+
+        .lang-flag {
+            width: 20px;
+            height: 15px;
+            margin-right: 8px;
+            margin-top: -2px;
+            vertical-align: middle;
+            border-radius: 2px;
+        }
+
+        /* Hero Tab Active */
+        .hero-tab.active {
+            background-color: #DA1626 !important;
+        }
+
+        /* Hero Tab Active Pointer */
+        .hero-tab.active::before {
+            content: '';
+            position: absolute;
+            top: -16px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 0 16px 16px 16px;
+            border-style: solid;
+            border-color: transparent transparent #DA1626 transparent;
+            z-index: 10;
+        }
+
+        .lang-option {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Landing Page Header -->
+    <header id="landing-header" class="w-full fixed top-0 left-0 right-0 z-50 bg-primary">
+        <!-- Main Navbar -->
+        <div class="w-full" style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+            <div class="h-[75px] flex justify-between items-center">
+                <!-- Left: Logo dự án -->
+                <a href="landing-page-project.html" class="flex items-center flex-shrink-0">
+                    <img src="images/Logo-Aria.svg" alt="Aria Vũng Tàu" class="h-[75px] w-auto py-2">
+                </a>
+
+                <!-- Center: Desktop Nav (scroll to section) -->
+                <nav id="landing-nav" class="hidden lg:flex items-center gap-1">
+                    <a href="#tong-quan"
+                        class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Tổng
+                        quan</a>
+                    <span class="text-white/30 text-xs select-none">|</span>
+                    <a href="#vi-tri"
+                        class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Vị
+                        trí</a>
+                    <span class="text-white/30 text-xs select-none">|</span>
+                    <a href="#tien-ich"
+                        class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Tiện
+                        ích</a>
+                    <span class="text-white/30 text-xs select-none">|</span>
+                    <a href="#mat-bang"
+                        class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Mặt
+                        bằng</a>
+                    <span class="text-white/30 text-xs select-none">|</span>
+                    <a href="#tien-do"
+                        class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Tiến
+                        độ</a>
+                    <span class="text-white/30 text-xs select-none">|</span>
+                    <a href="#video-360"
+                        class="landing-nav-link text-white text-sm font-semibold px-4 py-2 hover:text-[#FEDA00] transition-colors">Video
+                        360°</a>
+                </nav>
+
+                <!-- Right: Language Switcher -->
+                <div class="hidden lg:flex items-center">
+                    <div class="lang-select-container landing-lang">
+                        <select id="lang-switcher" class="lang-select">
+                            <option value="vi" data-flag="https://flagcdn.com/20x15/vn.png">Tiếng Việt</option>
+                            <option value="en" data-flag="https://flagcdn.com/20x15/gb.png">English</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Mobile menu btn -->
+                <button id="mobile-menu-btn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+                    <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                    <span class="w-6 h-0.5 bg-white block transition-all duration-300"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Back to main site link bar -->
+        <div class="w-full absolute top-[75px] left-0 z-40 pointer-events-none">
+            <div class="w-full h-auto flex items-start">
+                <!-- Left piece: "Về danhkhoimienbac.com" with requested transparent background extending to the left edge -->
+                <!-- The padding formula ensures text aligns with the 1400px container logo (50vw - 700px) + 24px padding -->
+                <a href="index.html"
+                    class="pointer-events-auto inline-flex items-center gap-2 text-white text-[13px] hover:text-[#FEDA00] transition-colors"
+                    style="border-radius: 0 0 30px 0; background: rgba(21, 27, 60, 0.65); padding: 8px 32px 8px max(24px, calc(50vw - 700px + 24px)); display: inline-flex;">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 19l-7-7m0 0l7-7m-7 7h18">
+                        </path>
+                    </svg>
+                    Về danhkhoimienbac.com
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white shadow-lg mt-[75px]">
+            <div class="px-6 py-4 flex flex-col gap-1">
+                <a href="#tong-quan"
+                    class="landing-nav-link-mobile text-darkText text-sm font-semibold py-2 hover:text-primary transition-colors">Tổng
+                    quan</a>
+                <a href="#vi-tri"
+                    class="landing-nav-link-mobile text-darkText text-sm py-2 hover:text-primary transition-colors">Vị
+                    trí</a>
+                <a href="#tien-ich"
+                    class="landing-nav-link-mobile text-darkText text-sm py-2 hover:text-primary transition-colors">Tiện
+                    ích</a>
+                <a href="#mat-bang"
+                    class="landing-nav-link-mobile text-darkText text-sm py-2 hover:text-primary transition-colors">Mặt
+                    bằng</a>
+                <a href="#tien-do"
+                    class="landing-nav-link-mobile text-darkText text-sm py-2 hover:text-primary transition-colors">Tiến
+                    độ</a>
+                <a href="#video-360"
+                    class="landing-nav-link-mobile text-darkText text-sm py-2 hover:text-primary transition-colors">Video
+                    360°</a>
+                <hr class="my-2 border-gray-200">
+                <a href="index.html" class="text-darkText text-sm py-2 hover:text-primary transition-colors">← Về
+                    danhkhoimienbac.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative w-full pt-[75px]">
+        <div class="w-full relative" style="min-height: 400px;">
+            <img src="images/banner-lpd.jpg" alt="Aria Vũng Tàu Hotel & Resort" class="w-full h-auto block"
+                style="min-height: 400px; object-fit: cover;">
+            <!-- Overlay text bottom-left -->
+            <div class="absolute bottom-[112px] left-0 w-full">
+                <div class="main-container">
+                    <h1 class="text-white text-3xl md:text-5xl font-bold drop-shadow-lg"
+                        style="text-shadow: 2px 2px 8px rgba(0,0,0,0.5);">Aria Vũng Tàu Hotel & Resort</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Tổng quan -->
+    <section id="tong-quan" class="py-16 md:py-24 bg-white">
+        <div class="main-container">
+            <h2 class="section-title text-[24px] md:text-[32px] text-center mb-8">TỔNG QUAN DỰ ÁN</h2>
+
+            <!-- Mô tả -->
+            <p class="text-[13px] md:text-[14px] text-center text-textHide leading-relaxed max-w-4xl mx-auto mb-10">
+                <span class="font-bold text-darkText">ARIA VŨNG TÀU</span> hay còn được biết đến với tên gọi
+                <span class="font-bold text-darkText">BLUE SAPPHIRE RESORT</span> là tổ hợp nghỉ dưỡng Biệt Thự Biển –
+                Căn Hộ –
+                Nhà Hàng Khách Sạn đạt chuẩn 5 sao được phát triển bởi tập đoàn Danh Khôi. Nơi đây sẽ là một không gian
+                sống và trải nghiệm
+                tuyệt vời với đẳng cấp resort đúng nghĩa – cùng các đặc quyền riêng giành cho các cư dân tương lai.
+            </p>
+
+            <!-- Image Slider -->
+            <div class="relative mb-10">
+                <div class="swiper lpd-overview-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-1.jpg" alt="Tổng quan Aria Vũng Tàu"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-4.jpg" alt="Tổng quan Aria Vũng Tàu 2"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-5.jpg" alt="Tổng quan Aria Vũng Tàu 3"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="lpd-overview-pagination flex justify-center gap-2 mt-6"></div>
+            </div>
+
+            <!-- Bảng thông tin dự án -->
+            <div class="max-w-4xl mx-auto border border-gray-200 rounded-lg overflow-hidden">
+                <table class="w-full text-[13px] md:text-[14px] text-textHide">
+                    <tbody>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText w-[200px] md:w-[280px] bg-gray-50 border-r border-gray-200">
+                                Tên dự án</td>
+                            <td class="py-3 px-4 md:px-6">Aria Vũng Tàu Hotel & Resort</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Vị trí</td>
+                            <td class="py-3 px-4 md:px-6">Số 79 đường D5, Phường 10, Thành Phố Vũng Tàu, Tỉnh Bà Rịa –
+                                Vũng Tàu</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Tiềm năng tăng trưởng khu vực</td>
+                            <td class="py-3 px-4 md:px-6">Phát triển loạt tiện ích cao cấp, hướng đến khai thác tiềm
+                                năng tăng trưởng du lịch của Bà Rịa - Vũng Tàu.</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Tiềm năng tăng trưởng dự án</td>
+                            <td class="py-3 px-4 md:px-6">Aria Vũng Tàu ôm trọn chiều dài bãi biển 400 m dọc biển, sở
+                                hữu không gian thiên nhiên, biển xanh, cát trắng, nắng vàng. Dự án bố trí và phân bổ căn
+                                hộ tập trung về mặt biển. Nhờ đó, hơn 90% căn hộ có tầm nhìn trực diện biển, đi kèm diện
+                                tích xây dựng từng căn hộ rộng và tiện ích riêng cao cấp.</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Tỉ suất lợi nhuận dự kiến hàng năm</td>
+                            <td class="py-3 px-4 md:px-6">Cam kết lợi nhuận đến 12%</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Giá cho thuê căn hộ tại khu vực</td>
+                            <td class="py-3 px-4 md:px-6">50,000 tr / tháng</td>
+                        </tr>
+                        <tr class="border-b border-gray-200">
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Biểu đồ tăng trưởng</td>
+                            <td class="py-3 px-4 md:px-6"><a href="#"
+                                    class="text-primary hover:underline font-semibold">Xem chi tiết tại đây</a></td>
+                        </tr>
+                        <tr>
+                            <td
+                                class="py-3 px-4 md:px-6 font-semibold text-darkText bg-gray-50 border-r border-gray-200">
+                                Hotline dự án</td>
+                            <td class="py-3 px-4 md:px-6"><a href="tel:0938458451"
+                                    class="text-primary font-bold hover:underline">0938 458 451</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Vị trí -->
+    <section id="vi-tri" class="py-16 md:py-24" style="background: linear-gradient(180deg, #e8f4f8 0%, #d0eaf2 100%);">
+        <div class="main-container">
+            <h2 class="section-title text-[24px] md:text-[32px] font-bold text-center mb-10 uppercase"
+                style="color: var(--color-darkblue-2, #1a3a5c);">VỊ TRÍ DỰ ÁN ĐẮC ĐỊA</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+                <!-- Left: Text content -->
+                <div>
+                    <div class="text-[13px] md:text-[14px] text-textHide leading-relaxed space-y-4">
+                        <p>"Dự án Aria Vũng Tàu Hotel & Resort là dự án hiếm hoi ở thành phố Vũng Tàu sở hữu 400m mặt
+                            tiền bờ biển và cách bãi biển chỉ 100m, không cần phải băng qua đường mới đến được bãi biển.
+                        </p>
+
+                        <p>Vị trí không quá gần để ảnh hưởng bởi sự ồn ào náo nhiệt.</p>
+
+                        <p>Cũng không quá xa để có thể tận hưởng ngay những món ăn đặc sản và dịch vụ tiện ích tại trung
+                            tâm thành phố".</p>
+
+                        <p>Tọa lạc ngay trung tâm thành phố biển, dự án Aria Vũng Tàu sở hữu tầm nhìn hướng biển thông
+                            thoáng cùng hệ thống hạ tầng giao thông liên kết vùng thuận lợi. Mặt hướng biển, lưng tựa
+                            núi, vị thế của Aria Vũng Tàu không chỉ đắc địa về mặt phong thủy thịnh vượng mà còn mang
+                            đến về cảnh quan hùng vĩ, hữu tình tuyệt đẹp. Kết hợp với môi trường ven biển trong lành,
+                            thông thoáng, thanh bình, có thể nói Aria Vũng Tàu chính là nơi hội đủ những yếu tố cần
+                            thiết của một khu du lịch nghỉ dưỡng hấp dẫn hàng đầu.</p>
+                    </div>
+                </div>
+
+                <!-- Right: Map image -->
+                <div class="flex justify-center lg:justify-end">
+                    <img src="images/lpd-image-2.jpg" alt="Vị trí dự án Aria Vũng Tàu"
+                        class="w-full max-w-[500px] h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Tiện ích -->
+    <section id="tien-ich" class="py-16 md:py-24 relative overflow-hidden"
+        style="background-color: var(--color-primary); background-image: url('images/lpd-image-grid-bg.png'); background-repeat: repeat;">
+        <div class="main-container relative z-10">
+            <h2 class="section-title text-white text-[24px] md:text-[32px] font-bold text-center mb-3 uppercase">TIỆN
+                ÍCH NỘI KHU ARIA
+                VŨNG TÀU</h2>
+            <p class="text-white/90 text-center text-[14px] mb-3">Chuẩn Resort</p>
+
+            <p class="text-white/80 text-[13px] md:text-[14px] text-center leading-relaxed max-w-4xl mx-auto mb-10">
+                Được thiết kế tỉ mỉ dưới bàn tay tài hoa của những kiến trúc sư và nhà thiết kế nội thất nổi tiếng, Aria
+                Vũng Tàu là kiệt tác có một không hai, mang đến không gian sống hiện đại, hòa quyện tinh tế cùng hơi thở
+                của biển.
+                <br><br>
+                Hơn 30 Tiện Ích Hiện Hữu Tại Aria Vũng Tàu. Đến với Aria Vũng Tàu, quý khách sẽ có cảm giác: bình yên,
+                dễ chịu với những con đường rộng rãi, thoáng đãng. Biển xanh. Phía sau là những ngọn núi hùng vĩ … cùng
+                vô vàn những danh lam thắng cảnh, tiện ích ngoại khu nổi tiếng của Thành Phố.
+            </p>
+
+            <!-- Image grid 4x3 -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
+                <!-- Item 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-1.png" alt="Cổng chào dự án"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">CỔNG
+                        CHÀO DỰ ÁN ARIA VŨNG TÀU</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-2.png" alt="Skybar tầng thượng"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">SKYBAR
+                        TẦNG THƯỢNG ARIA VŨNG TÀU</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-3.png" alt="Quảng trường biển"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">QUẢNG
+                        TRƯỜNG BIỂN ARIA VŨNG TÀU</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-4.png" alt="Vườn thư giãn"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">VƯỜN
+                        THƯ GIÃN</p>
+                </div>
+                <!-- Item 5 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-5.png" alt="Sảnh đón sang trọng"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">SẢNH
+                        ĐÓN SANG TRỌNG</p>
+                </div>
+                <!-- Item 6 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-6.png" alt="Cầu tình yêu"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">CẦU
+                        TÌNH YÊU BẮT RA BIỂN 100M</p>
+                </div>
+                <!-- Item 7 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-7.png" alt="Hồ bơi resort"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">HỒ BƠI
+                        CHUẨN RESORT 1500M2</p>
+                </div>
+                <!-- Item 8 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-8.png" alt="Đường đi dạo ven biển"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">ĐƯỜNG
+                        ĐI DẠO VEN BIỂN</p>
+                </div>
+                <!-- Item 9 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-9.png" alt="Công viên 4 mùa"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">CÔNG
+                        VIÊN 4 MÙA ARIA VŨNG TÀU</p>
+                </div>
+                <!-- Item 10 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-10.png" alt="Sân chơi trẻ em"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">SÂN
+                        CHƠI TRẺ EM ARIA VŨNG TÀU</p>
+                </div>
+                <!-- Item 11 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-11.png" alt="Phố đi bộ"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">PHỐ ĐI
+                        BỘ ARIA VŨNG TÀU</p>
+                </div>
+                <!-- Item 12 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg group">
+                    <div class="overflow-hidden aspect-[4/3]">
+                        <img src="images/lpd-image-grid-12.png" alt="Quầy bar bãi biển"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <p class="text-primary text-[12px] md:text-[13px] font-bold text-center py-3 px-2 uppercase">QUẦY
+                        BAR BÃI BIỂN ARIA VŨNG TÀU</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Mặt bằng -->
+    <section id="mat-bang" class="py-16 md:py-24 bg-white">
+        <div class="main-container">
+            <h2 class="section-title text-[24px] md:text-[32px] text-center mb-6 uppercase">MẶT BẰNG ARIA VŨNG TÀU</h2>
+
+            <p class="text-[13px] md:text-[14px] text-center text-textHide leading-relaxed max-w-4xl mx-auto mb-10">
+                Cách bố trí hợp lý, với địa thế tả thanh long, hữu bạch hổ, khu nghỉ dưỡng dự án Aria Vũng Tàu hứa hẹn
+                mang lại một cuộc sống trường tồn, hưng thịnh cho chủ sở hữu. Tất cả các căn biệt thự hay căn hộ cao cấp
+                đều có thiết kế mở với hướng nhìn ra biển kết hợp với không gian xanh mát từ hồ cảnh quan và hệ thực vật
+                đặc trưng của vùng miền nhiệt đới..., mang đến cho chủ nhân tương lai một không gian trong lành, gần gũi
+                với thiên nhiên.
+            </p>
+
+            <!-- Mặt bằng Slider -->
+            <div class="relative">
+                <div class="swiper lpd-matbang-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-3.jpg" alt="Mặt bằng Aria Vũng Tàu"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-1.jpg" alt="Mặt bằng Aria Vũng Tàu 2"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-4.jpg" alt="Mặt bằng Aria Vũng Tàu 3"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="images/lpd-image-5.jpg" alt="Mặt bằng Aria Vũng Tàu 4"
+                                class="w-full h-auto rounded-lg">
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination styled like homepage project slider -->
+                <div class="lpd-matbang-pagination flex justify-center gap-2 mt-6"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Tiến độ -->
+    <section id="tien-do" class="py-16 md:py-24 bg-[#f5f5f5] relative overflow-hidden">
+        <!-- Decorator white shape background -->
+        <div class="absolute bottom-0 right-0 w-[80%] md:w-[60%] h-[80%] md:h-[70%] bg-white z-0"
+            style="clip-path: polygon(0 100%, 30% 0, 100% 0, 100% 100%);">
+        </div>
+        <div class="main-container relative z-10">
+            <h2 class="section-title text-[24px] md:text-[32px] text-center mb-6 uppercase">TIẾN ĐỘ XÂY DỰNG ARIA VŨNG
+                TÀU</h2>
+
+            <p class="text-[13px] md:text-[14px] text-center text-textHide leading-relaxed max-w-4xl mx-auto mb-10">
+                Hiện tại Block B – Aquamarine thuộc dự án Aria Vũng Tàu đã hoàn thiện xong, khuôn viên được trồng cây
+                thoáng mát. 100% căn hộ tại đây đã đầy đủ nội thất cao cấp, khách hàng chỉ cần dọn vào là có thể tận
+                hưởng ngay cuộc sống sang trọng nơi phố biển. Các tiện ích nội khu như hồ bơi, cà phê view biển, khu vui
+                chơi trẻ em, nhà hàng đã có thể phục vụ cư dân Aria.
+            </p>
+
+            <!-- Tiến độ Content: Timeline + Slider -->
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    <!-- Left: Timeline -->
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-primary text-[18px] md:text-[20px] font-bold mb-6 uppercase">TIẾN ĐỘ DỰ ÁN</h3>
+
+                        <!-- Timeline items -->
+                        <div class="relative pl-8">
+                            <!-- Vertical line -->
+                            <div class="absolute left-[11px] top-2 bottom-2 w-[2px] bg-gray-200"></div>
+
+                            <!-- Item 1: Active -->
+                            <div class="relative mb-6">
+                                <div
+                                    class="absolute left-[-25px] top-1 w-[14px] h-[14px] rounded-full bg-primary border-2 border-primary shadow-md">
+                                </div>
+                                <p class="text-[11px] text-gray-400 mb-0.5">↑ Tiếp tục cập nhật</p>
+                                <p class="text-primary font-bold text-[14px]">15/09/2018</p>
+                                <p class="text-textHide text-[13px]">Tiến độ thi công dự án tháng 9/2018</p>
+                            </div>
+                            <!-- Item 2 -->
+                            <div class="relative mb-6">
+                                <div
+                                    class="absolute left-[-25px] top-1 w-[14px] h-[14px] rounded-full bg-gray-300 border-2 border-gray-300">
+                                </div>
+                                <p class="text-textHide font-semibold text-[14px]">31/08/2018</p>
+                                <p class="text-textHide text-[13px]">Tiến độ thi công dự án tháng 8/2018</p>
+                            </div>
+                            <!-- Item 3 -->
+                            <div class="relative mb-6">
+                                <div
+                                    class="absolute left-[-25px] top-1 w-[14px] h-[14px] rounded-full bg-gray-300 border-2 border-gray-300">
+                                </div>
+                                <p class="text-textHide font-semibold text-[14px]">19/07/2018</p>
+                                <p class="text-textHide text-[13px]">Tiến độ tháng 19/07/2018</p>
+                            </div>
+                            <!-- Item 4 -->
+                            <div class="relative mb-6">
+                                <div
+                                    class="absolute left-[-25px] top-1 w-[14px] h-[14px] rounded-full bg-gray-300 border-2 border-gray-300">
+                                </div>
+                                <p class="text-textHide font-semibold text-[14px]">06/03/2018</p>
+                                <p class="text-textHide text-[13px]">Tiến độ dự án ngày 06-03-2018</p>
+                            </div>
+                            <!-- Item 5 -->
+                            <div class="relative">
+                                <div
+                                    class="absolute left-[-25px] top-1 w-[14px] h-[14px] rounded-full bg-gray-300 border-2 border-gray-300">
+                                </div>
+                                <p class="text-textHide font-semibold text-[14px]">06/03/2018</p>
+                                <p class="text-textHide text-[13px]">Tiến độ dự án ngày 06-03-2018</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Image Slider -->
+                    <div class="relative bg-gray-100">
+                        <div class="swiper lpd-tiendo-swiper h-full">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="images/lpd-image-4.jpg" alt="Tiến độ xây dựng 1"
+                                        class="w-full h-full object-cover" style="min-height: 350px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/lpd-image-5.jpg" alt="Tiến độ xây dựng 2"
+                                        class="w-full h-full object-cover" style="min-height: 350px;">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="images/lpd-image-1.jpg" alt="Tiến độ xây dựng 3"
+                                        class="w-full h-full object-cover" style="min-height: 350px;">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- White pagination -->
+                        <div
+                            class="lpd-tiendo-pagination absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Video 360 -->
+    <section id="video-360" class="w-full h-[60vh] md:h-[80vh]">
+        <iframe src="https://view360.flyingcam-vietnam.com/Project2021/ArialVungTau/" width="100%" height="100%"
+            frameborder="0" allowfullscreen></iframe>
+    </section>
+
+    <!-- Section: Tải tài liệu về dự án -->
+    <section class="py-16 md:py-24 bg-cover bg-center relative"
+        style="background-image: url('images/lpd-contact.jpg');">
+        <div class="main-container relative z-10">
+            <div class="max-w-6xl mx-auto bg-white rounded-lg overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                <!-- Left: Form content -->
+                <div class="w-full md:w-1/2 p-8 md:p-14 flex flex-col justify-center relative">
+                    <h4 class="text-[20px] md:text-[24px] font-bold text-primary mb-4 uppercase leading-snug">
+                        TẢI TÀI LIỆU VỀ DỰ ÁN ARIA VŨNG TÀU
+                    </h4>
+                    <p class="text-[14px] text-textHide mb-8">Thông tin gì về dự án bạn muốn nhận?</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2"
+                                checked>
+                            <span class="text-[13px] text-textHide">Bộ tài liệu đầy đủ về dự án</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2"
+                                checked>
+                            <span class="text-[13px] text-textHide">Bảng báo giá mới nhất</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2"
+                                checked>
+                            <span class="text-[13px] text-textHide">Đăng ký nhận lịch mở bán</span>
+                        </label>
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="checkbox"
+                                class="w-4 h-4 text-primary bg-gray-100 border-gray-300 rounded focus:ring-primary focus:ring-2"
+                                checked>
+                            <span class="text-[13px] text-textHide">Đăng ký đi xem căn hộ mẫu</span>
+                        </label>
+                    </div>
+
+                    <div
+                        class="flex flex-col sm:flex-row justify-between items-center sm:items-end mt-auto relative z-10 w-fit pb-4 md:pb-8">
+                        <button
+                            class="bg-primary hover:bg-red-700 text-white font-bold py-3 px-6 rounded-md text-[13px] transition-colors uppercase w-full sm:w-auto shadow-md relative z-20">
+                            TẢI TÀI LIỆU VỀ DỰ ÁN ARIA VŨNG TÀU
+                        </button>
+                    </div>
+                    <!-- Logo positioned absolutely -->
+                    <img src="images/Logo-Aria-2.svg" alt="Aria Vung Tau Logo"
+                        class="absolute bottom-4 md:bottom-8 right-6 md:right-10 h-[100px] md:h-[120px] w-auto object-contain z-0 pointer-events-none opacity-20 md:opacity-100 mix-blend-multiply md:mix-blend-normal">
+                </div>
+
+                <!-- Right: Image -->
+                <div class="w-full md:w-1/2 min-h-[300px] md:min-h-full relative">
+                    <img src="images/lpd-image-5.jpg" alt="Tải tài liệu dự án Aria Vũng Tàu"
+                        class="absolute inset-0 w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+        <div class="main-container">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <!-- Col 1: Thương hiệu -->
+                <div>
+                    <a href="index.html" class="inline-block mb-4">
+                        <img src="images/Danh Khoi Logo.svg" alt="Danh Khôi Miền Bắc" class="h-[50px] w-auto">
+                    </a>
+                    <p class="text-[13px] text-primary font-bold leading-snug mb-6">
+                        Đây là website công bố thông tin chính thức của<br>
+                        Công ty Cổ phần Danh Khôi Miền Bắc
+                    </p>
+                    <div class="w-full h-px bg-gray-100 mb-6"></div>
+                    <p class="text-[13px] text-textHide mb-3">Theo dõi chúng tôi trên</p>
+                    <div class="flex gap-4">
+                        <!-- Facebook -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Facebook">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Instagram">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                            </svg>
+                        </a>
+                        <!-- LinkedIn -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="LinkedIn">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg>
+                        </a>
+                        <!-- Twitter/X -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="Twitter">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="#" class="text-textHide hover:text-primary transition-colors" aria-label="YouTube">
+                            <svg class="w-[18px] h-[18px] fill-current" viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Thông tin liên hệ -->
+                <div class="lg:pl-8">
+                    <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
+                        THÔNG TIN LIÊN HỆ
+                    </h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li>
+                            <p class="mb-1">Địa chỉ:</p>
+                            <p>Số 24 Phố Nguyễn Khang, Tổ 20, Phường Yên Hoà, Quận Cầu Giấy, Hà Nội, Việt Nam</p>
+                        </li>
+                        <li class="mt-2">Mã số thuế: 0108097371</li>
+                        <li>Email: <a href="mailto:info@danhkhoi.com.vn"
+                                class="hover:text-primary transition-colors">info@danhkhoi.com.vn</a></li>
+                        <li>Hotline: <a href="tel:02836221399" class="hover:text-primary transition-colors">028 3622
+                                1399</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Về Danh Khôi -->
+                <div>
+                    <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
+                        VỀ DANH KHÔI
+                    </h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li><a href="index.html" class="hover:text-primary transition-colors">Trang chủ</a></li>
+                        <li><a href="about.html" class="hover:text-primary transition-colors">Giới thiệu Tập đoàn</a>
+                        </li>
+                        <li><a href="domains.html" class="hover:text-primary transition-colors">Lĩnh vực hoạt động</a>
+                        </li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Quan hệ cổ đông</a></li>
+                        <li><a href="#" class="hover:text-primary transition-colors">Phát triển bền vững</a></li>
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Tin tức -->
+                <div>
+                    <h4 class="text-[14px] font-bold text-primary mb-6 uppercase tracking-wider">
+                        TIN TỨC
+                    </h4>
+                    <ul class="flex flex-col gap-3 text-[13px] text-textHide">
+                        <li><a href="news.html" class="hover:text-primary transition-colors">Tin tức sự kiện</a></li>
+                        <li><a href="careers.html" class="hover:text-primary transition-colors">Tuyển dụng</a></li>
+                        <li><a href="contact.html" class="hover:text-primary transition-colors">Liên hệ</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="border-t border-gray-100 pt-6 mt-6">
+            <div class="main-container text-[12px] text-textHide text-left">
+                <p>Copyright &copy; 2022 Danh Khoi Mien Bac. All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Left Indicator -->
+    <div id="scrollTopIndicator" class="scroll-top-left-indicator">
+        <div class="stl-line"></div>
+        <span class="stl-text">VỀ ĐẦU TRANG</span>
+    </div>
+
+    <!-- Scroll To Top Circle Button -->
+    <button id="scrollTopCircle" class="scroll-top-circle" aria-label="Về đầu trang">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (mobileBtn && mobileMenu) {
+            mobileBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                const spans = mobileBtn.querySelectorAll('span');
+                if (!mobileMenu.classList.contains('hidden')) {
+                    spans[0].classList.add('rotate-45', 'translate-y-2');
+                    spans[1].classList.add('opacity-0');
+                    spans[2].classList.add('-rotate-45', '-translate-y-2');
+                } else {
+                    spans[0].classList.remove('rotate-45', 'translate-y-2');
+                    spans[1].classList.remove('opacity-0');
+                    spans[2].classList.remove('-rotate-45', '-translate-y-2');
+                }
+            });
+        }
+
+        // Landing Page: Smooth Scroll Navigation
+        document.querySelectorAll('.landing-nav-link, .landing-nav-link-mobile').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    const headerHeight = document.getElementById('landing-header').offsetHeight;
+                    const targetPos = targetEl.offsetTop - headerHeight;
+                    window.scrollTo({ top: targetPos, behavior: 'smooth' });
+                    // Close mobile menu if open
+                    if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                        const spans = mobileBtn.querySelectorAll('span');
+                        spans[0].classList.remove('rotate-45', 'translate-y-2');
+                        spans[1].classList.remove('opacity-0');
+                        spans[2].classList.remove('-rotate-45', '-translate-y-2');
+                    }
+                }
+            });
+        });
+
+        // Landing Page: Active Section Highlighting
+        const landingSections = document.querySelectorAll('section[id]');
+        const landingNavLinks = document.querySelectorAll('.landing-nav-link');
+        function updateActiveNavLink() {
+            const headerHeight = document.getElementById('landing-header').offsetHeight;
+            let currentSection = '';
+            landingSections.forEach(section => {
+                const sectionTop = section.offsetTop - headerHeight - 10;
+                if (window.scrollY >= sectionTop) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            landingNavLinks.forEach(link => {
+                link.classList.remove('text-[#FEDA00]');
+                link.classList.add('text-white');
+                if (link.getAttribute('href') === '#' + currentSection) {
+                    link.classList.remove('text-white');
+                    link.classList.add('text-[#FEDA00]');
+                }
+            });
+        }
+        window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+        updateActiveNavLink();
+
+        // Hero Slider (Swiper)
+        const heroSwiper = new Swiper('.hero-swiper', {
+            loop: true,
+            effect: 'fade',
+            fadeEffect: { crossFade: true },
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: false,
+            },
+            speed: 1000,
+            allowTouchMove: false,
+            on: {
+                slideChange: function () {
+                    // Update custom tabs
+                    const currentIdx = this.realIndex;
+                    document.querySelectorAll('.hero-tab').forEach((tab, index) => {
+                        if (index === currentIdx) {
+                            tab.classList.add('active');
+                            tab.classList.remove('border-white/20');
+                            tab.classList.add('border-primary'); // Make active border same as bg or primary
+                        } else {
+                            tab.classList.remove('active');
+                            tab.classList.remove('border-primary');
+                            tab.classList.add('border-white/20');
+                        }
+                    });
+                }
+            }
+        });
+
+        // Click on custom tabs to change slide
+        document.querySelectorAll('.hero-tab').forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                heroSwiper.slideToLoop(index);
+            });
+        });
+
+        // Select2
+        function formatLang(lang) {
+            if (!lang.id) return lang.text;
+            var flag = $(lang.element).data('flag');
+            return $('<span class="lang-option"><img class="lang-flag" src="' + flag + '" alt=""><span>' + lang.text + '</span></span>');
+        }
+        $(document).ready(function () {
+            $('#lang-switcher').select2({
+                minimumResultsForSearch: Infinity,
+                dropdownAutoWidth: true,
+                width: 'auto',
+                templateResult: formatLang,
+                templateSelection: formatLang
+            });
+            var $s2 = $('#lang-switcher').next('.select2-container');
+            var lockedW = $s2.outerWidth();
+            if (lockedW > 0) $s2.css('min-width', lockedW + 'px');
+
+            // Duplicate Slides for Infinite Loop on Desktop
+            const swiperWrapper = document.querySelector('.project-swiper .swiper-wrapper');
+            if (swiperWrapper) {
+                const originalSlides = Array.from(swiperWrapper.children);
+                if (originalSlides.length > 0 && originalSlides.length <= 4) {
+                    originalSlides.forEach(slide => {
+                        swiperWrapper.appendChild(slide.cloneNode(true));
+                    });
+                }
+            }
+
+            // Dự án tiêu biểu Slider
+            const projectSwiper = new Swiper('.project-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 20,
+                loop: true,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: '.project-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1024: {
+                        slidesPerView: 4,
+                        spaceBetween: 30,
+                    },
+                },
+                on: {
+                    init: function () {
+                        updateCustomPagination(this);
+                    },
+                    slideChange: function () {
+                        updateCustomPagination(this);
+                    }
+                }
+            });
+
+            // Hàm xử lý giới hạn 4 dấu chấm active trượt vô hạn
+            function updateCustomPagination(swiper) {
+                setTimeout(() => {
+                    const bullets = document.querySelectorAll('.project-pagination .swiper-pagination-bullet');
+                    if (bullets.length === 0) return;
+
+                    bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
+                    const realIndex = swiper.realIndex % 4;
+                    if (bullets[realIndex]) {
+                        bullets[realIndex].classList.add('swiper-pagination-bullet-active');
+                    }
+                }, 10);
+            }
+
+            // Duplicate Slides for Infinite Loop on Desktop for Partner Slider
+            const partnerWrapper = document.querySelector('.partner-swiper .swiper-wrapper');
+            if (partnerWrapper) {
+                const partnerSlides = Array.from(partnerWrapper.children);
+                if (partnerSlides.length > 0 && partnerSlides.length <= 5) {
+                    partnerSlides.forEach(slide => {
+                        partnerWrapper.appendChild(slide.cloneNode(true));
+                    });
+                }
+            }
+
+            // Đối tác tiêu biểu Slider
+            const partnerSwiper = new Swiper('.partner-swiper', {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                loop: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                navigation: {
+                    nextEl: '.partner-button-next',
+                    prevEl: '.partner-button-prev',
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 20,
+                    },
+                    1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 24,
+                    },
+                }
+            });
+        });
+
+        // --- Landing Page Swipers ---
+        // Tổng quan overview slider
+        const lpdOverviewSwiper = new Swiper('.lpd-overview-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: {
+                el: '.lpd-overview-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '" style="width:10px;height:10px;background:#ccc;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>';
+                },
+            },
+        });
+
+        // Mặt bằng slider
+        const lpdMatbangSwiper = new Swiper('.lpd-matbang-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: { delay: 5000, disableOnInteraction: false },
+            pagination: {
+                el: '.lpd-matbang-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '" style="width:10px;height:10px;background:#ccc;border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>';
+                },
+            },
+        });
+
+        // Tiến độ slider (white pagination)
+        const lpdTiendoSwiper = new Swiper('.lpd-tiendo-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: { delay: 4000, disableOnInteraction: false },
+            pagination: {
+                el: '.lpd-tiendo-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '" style="width:10px;height:10px;background:rgba(255,255,255,0.5);border-radius:50%;display:inline-block;cursor:pointer;transition:all 0.3s;"></span>';
+                },
+            },
+        });
+
+        // Scroll to top
+        (function () {
+            var indicator = document.getElementById('scrollTopIndicator');
+            var circle = document.getElementById('scrollTopCircle');
+            var threshold = 300;
+            function onScroll() {
+                var show = window.pageYOffset > threshold;
+                if (indicator) indicator.classList.toggle('visible', show);
+                if (circle) circle.classList.toggle('visible', show);
+            }
+            function scrollTop() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            if (indicator) indicator.addEventListener('click', scrollTop);
+            if (circle) circle.addEventListener('click', scrollTop);
+            onScroll();
+        })();
+
+        // Odometer Counter Animation
+        (function () {
+            // Initialize digit columns for each odometer-group
+            var groups = document.querySelectorAll('.odometer-group');
+            if (!groups.length) return;
+
+            groups.forEach(function (group) {
+                var value = group.getAttribute('data-value');
+                var digits = value.split('');
+
+                digits.forEach(function (digit, index) {
+                    var digitEl = document.createElement('div');
+                    digitEl.className = 'odometer-digit';
+
+                    var inner = document.createElement('div');
+                    inner.className = 'odometer-digit-inner';
+
+                    // Create digit column: 0 through 9
+                    for (var i = 0; i <= 9; i++) {
+                        var span = document.createElement('span');
+                        span.textContent = i;
+                        inner.appendChild(span);
+                    }
+
+                    digitEl.appendChild(inner);
+                    group.appendChild(digitEl);
+
+                    // Store target digit and stagger delay
+                    digitEl.setAttribute('data-target', digit);
+                    digitEl.setAttribute('data-delay', index * 120);
+                });
+            });
+
+            function rollOdometers() {
+                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
+                    var target = parseInt(digitEl.getAttribute('data-target'));
+                    var delay = parseInt(digitEl.getAttribute('data-delay')) || 0;
+                    var inner = digitEl.querySelector('.odometer-digit-inner');
+                    setTimeout(function () {
+                        inner.style.transform = 'translateY(-' + target + 'em)';
+                    }, delay);
+                });
+            }
+
+            function resetOdometers() {
+                document.querySelectorAll('.odometer-digit').forEach(function (digitEl) {
+                    var inner = digitEl.querySelector('.odometer-digit-inner');
+                    inner.style.transition = 'none';
+                    inner.style.transform = 'translateY(0)';
+                    inner.offsetHeight; // force reflow
+                    inner.style.transition = 'transform 1.8s cubic-bezier(0.22, 1, 0.36, 1)';
+                });
+            }
+
+            // Trigger on scroll into view
+            var section = document.getElementById('achievements');
+            if (!section) return;
+            var hasAnimated = false;
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        resetOdometers();
+                        setTimeout(rollOdometers, 100);
+                        hasAnimated = true;
+                    } else if (hasAnimated) {
+                        resetOdometers();
+                        hasAnimated = false;
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(section);
+        })();
+
+        // Media Coverflow Carousel
+
+        // Custom 3D Carousel Logic (Replacing Swiper)
+        (function () {
+            const carousel = document.querySelector('.custom-media-carousel');
+            if (!carousel) return;
+            const slides = document.querySelectorAll('.custom-media-slide');
+            const btnNext = document.querySelector('.media-button-next');
+            const btnPrev = document.querySelector('.media-button-prev');
+            let activeIndex = 2; // Default center slide index for 5 items
+            const total = slides.length;
+
+            function updateCarousel() {
+                slides.forEach((slide, i) => {
+                    let diff = i - activeIndex;
+                    if (diff > 2) diff -= total;
+                    if (diff < -2) diff += total;
+
+                    let opacity = 1;
+                    let transform = "translate(-50%, -50%) "; // Center based on left: 50%, top: 50%
+                    let zIndex = 0;
+
+                    if (diff === 0) {
+                        transform += "translateX(0%) scale(1)";
+                        zIndex = 10;
+                        slide.classList.add('media-slide-active');
+                    } else if (diff === -1) {
+                        transform += "translateX(-28%) scale(0.85)";
+                        zIndex = 9;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === 1) {
+                        transform += "translateX(28%) scale(0.85)";
+                        zIndex = 9;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === -2) {
+                        transform += "translateX(-46%) scale(0.7)";
+                        zIndex = 8;
+                        slide.classList.remove('media-slide-active');
+                    } else if (diff === 2) {
+                        transform += "translateX(46%) scale(0.7)";
+                        zIndex = 8;
+                        slide.classList.remove('media-slide-active');
+                    }
+
+                    // Apply styles
+                    slide.style.top = "50%";
+                    slide.style.left = "50%";
+                    slide.style.transform = transform;
+                    slide.style.zIndex = zIndex;
+                    slide.style.opacity = opacity;
+                });
+            }
+
+            btnNext.addEventListener('click', () => {
+                activeIndex = (activeIndex + 1) % total;
+                updateCarousel();
+            });
+
+            btnPrev.addEventListener('click', () => {
+                activeIndex = (activeIndex - 1 + total) % total;
+                updateCarousel();
+            });
+
+            slides.forEach((slide, i) => {
+                slide.addEventListener('click', (e) => {
+                    let diff = i - activeIndex;
+                    if (diff > 2) diff -= total;
+                    if (diff < -2) diff += total;
+                    if (diff !== 0) {
+                        activeIndex = i;
+                        updateCarousel();
+                    } else {
+                        if (slide.dataset.video) {
+                            openVideoModal(slide.dataset.video);
+                        }
+                    }
+                });
+
+                // Add hover effect
+                slide.addEventListener('mouseenter', () => {
+                    if (activeIndex !== i) {
+                        activeIndex = i;
+                        updateCarousel();
+                    }
+                });
+            });
+
+            // Initial render
+            setTimeout(() => {
+                updateCarousel();
+            }, 100);
+        })();
+
+
+
+        // Video Modal Script
+        function openVideoModal(videoUrl) {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            iframe.src = videoUrl;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            // Allow CSS transition to complete by running opacity toggle asynchronously
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.classList.add('opacity-100');
+            }, 50);
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframe = document.getElementById('videoIframe');
+            modal.classList.remove('opacity-100');
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.remove('flex');
+                modal.classList.add('hidden');
+                iframe.pause();
+                iframe.currentTime = 0;
+                iframe.src = '';
+            }, 300);
+        }
+
+    </script>
+
+    <!-- Video Modal Popup -->
+    <div id="videoModal"
+        class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
+        <div class="absolute top-4 right-4 text-white hover:text-primary transition-colors cursor-pointer z-[10000] p-3"
+            onclick="closeVideoModal()">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </div>
+        <div class="relative w-[95%] md:w-[80%] max-w-[1100px] aspect-video">
+            <video id="videoIframe" class="w-full h-full object-cover rounded-xl shadow-2xl" src="" controls
+                autoplay></video>
+        </div>
+    </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightboxModal"
+        class="fixed inset-0 z-[9999] bg-black/95 flex flex-col items-center justify-center transition-opacity duration-300 pointer-events-none opacity-0">
+        <!-- Close Button -->
+        <button
+            class="absolute top-4 right-4 text-white hover:text-primary transition-colors cursor-pointer z-[10000] p-3"
+            onclick="closeLightbox()">
+            <svg class="w-8 h-8 md:w-10 md:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+        </button>
+        <!-- Swiper Container for Lightbox Main Image -->
+        <div class="w-full max-w-[1200px] px-4 md:px-10 h-[60vh] md:h-[70vh] relative">
+            <div class="swiper lightbox-swiper h-full rounded-lg">
+                <div class="swiper-wrapper" id="lightbox-wrapper">
+                    <!-- Slides will be injected here dynamically -->
+                </div>
+                <!-- Navigation -->
+                <div class="swiper-button-next !text-white !right-4 md:!right-0 hidden md:flex"></div>
+                <div class="swiper-button-prev !text-white !left-4 md:!left-0 hidden md:flex"></div>
+            </div>
+        </div>
+
+        <!-- Caption -->
+        <div id="lightbox-caption"
+            class="text-white text-center mt-3 mb-2 px-4 max-w-3xl text-sm md:text-base font-bold uppercase tracking-wider">
+        </div>
+
+        <!-- Swiper Container for Lightbox Thumbnails -->
+        <div class="w-full max-w-[1000px] px-4 md:px-10 mt-2 h-20 md:h-28">
+            <div class="swiper lightbox-thumbs-swiper h-full">
+                <div class="swiper-wrapper" id="lightbox-thumbs-wrapper">
+                    <!-- Thumbnail Slides will be injected here dynamically -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Active Nav State Script -->
+    <script>
+        // Global variables for Lightbox so they can be accessed by inline onclick attributes
+        let lightboxSwiper;
+        let lightboxThumbsSwiper;
+        let lightboxModalRef;
+        let slideDataList = [];
+
+        function openLightbox(index) {
+            if (!lightboxModalRef || !lightboxSwiper) return;
+            const captionEl = document.getElementById('lightbox-caption');
+
+            lightboxModalRef.classList.remove('pointer-events-none');
+            lightboxModalRef.classList.add('pointer-events-auto');
+
+            // Reset zoom back to normal before changing slides or opening
+            if (lightboxSwiper.zoom) lightboxSwiper.zoom.out();
+
+            lightboxSwiper.update();
+            if (lightboxThumbsSwiper) lightboxThumbsSwiper.update();
+
+            lightboxSwiper.slideTo(index, 0);
+            if (slideDataList[index] && captionEl) {
+                captionEl.innerText = slideDataList[index].caption;
+            }
+
+            // Allow CSS transition
+            setTimeout(() => {
+                lightboxModalRef.classList.remove('opacity-0');
+                lightboxModalRef.classList.add('opacity-100');
+            }, 50);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            if (!lightboxModalRef) return;
+            lightboxModalRef.classList.remove('opacity-100');
+            lightboxModalRef.classList.add('opacity-0');
+            setTimeout(() => {
+                lightboxModalRef.classList.remove('pointer-events-auto');
+                lightboxModalRef.classList.add('pointer-events-none');
+            }, 300);
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // ---- Lightbox Initialization ----
+            lightboxModalRef = document.getElementById('lightboxModal');
+            const lightboxWrapper = document.getElementById('lightbox-wrapper');
+            const lightboxThumbsWrapper = document.getElementById('lightbox-thumbs-wrapper');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+
+            if (lightboxModalRef && lightboxWrapper && lightboxThumbsWrapper && lightboxCaption) {
+                const gridItems = document.querySelectorAll('#tien-ich .grid .group');
+
+                gridItems.forEach((item, index) => {
+                    item.classList.add('cursor-pointer');
+
+                    const imgEl = item.querySelector('img');
+                    const pEl = item.querySelector('p');
+
+                    if (imgEl && pEl) {
+                        slideDataList.push({
+                            src: imgEl.src,
+                            alt: imgEl.alt,
+                            caption: pEl.innerText
+                        });
+
+                        item.addEventListener('click', () => {
+                            openLightbox(index);
+                        });
+                    }
+                });
+
+                slideDataList.forEach(data => {
+                    // Main Slider template (Wrapped in swiper-zoom-container for zoom support)
+                    const slideHTML = `
+                        <div class="swiper-slide flex items-center justify-center">
+                            <div class="swiper-zoom-container">
+                                <img src="${data.src}" alt="${data.alt}" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl">
+                            </div>
+                        </div>
+                    `;
+                    lightboxWrapper.insertAdjacentHTML('beforeend', slideHTML);
+
+                    // Thumbs Slider template
+                    const thumbHTML = `
+                        <div class="swiper-slide cursor-pointer opacity-50 hover:opacity-100 transition-opacity duration-300">
+                            <img src="${data.src}" alt="Thumb ${data.alt}" class="w-full h-full object-cover rounded border-2 border-transparent">
+                        </div>
+                    `;
+                    lightboxThumbsWrapper.insertAdjacentHTML('beforeend', thumbHTML);
+                });
+
+                lightboxThumbsSwiper = new Swiper('.lightbox-thumbs-swiper', {
+                    spaceBetween: 10,
+                    slidesPerView: 4,
+                    freeMode: true,
+                    watchSlidesProgress: true,
+                    observer: true,
+                    observeParents: true,
+                    slideToClickedSlide: true, // Allow clicking thumbnails to change main slide
+                    breakpoints: {
+                        640: { slidesPerView: 5 },
+                        768: { slidesPerView: 6 },
+                        1024: { slidesPerView: 8 }
+                    }
+                });
+
+                lightboxSwiper = new Swiper('.lightbox-swiper', {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                    zoom: true, // Enable Zoom capability
+                    observer: true,
+                    observeParents: true,
+                    navigation: {
+                        nextEl: '.lightbox-swiper .swiper-button-next',
+                        prevEl: '.lightbox-swiper .swiper-button-prev',
+                    },
+                    thumbs: {
+                        swiper: lightboxThumbsSwiper,
+                    },
+                    on: {
+                        slideChange: function () {
+                            if (slideDataList[this.activeIndex] && lightboxCaption) {
+                                lightboxCaption.innerText = slideDataList[this.activeIndex].caption;
+                            }
+                            // Reset zoom of previous slide when changing slides safely
+                            try {
+                                if (this.previousIndex !== undefined && this.slides) {
+                                    const previousSlide = this.slides[this.previousIndex];
+                                    if (previousSlide) {
+                                        const zoomContainer = previousSlide.querySelector('.swiper-zoom-container');
+                                        if (zoomContainer && zoomContainer.style.transform && this.zoom) {
+                                            this.zoom.out();
+                                        }
+                                    }
+                                }
+                            } catch (e) {
+                                console.warn("Zoom reset bypassed", e);
+                            }
+                        }
+                    }
+                });
+
+                // Active states for thumbnails manually
+                lightboxSwiper.on('slideChange', function () {
+                    const thumbs = lightboxThumbsWrapper.querySelectorAll('.swiper-slide');
+                    thumbs.forEach((t) => {
+                        t.classList.remove('opacity-100', 'border-primary');
+                        t.classList.add('opacity-50', 'border-transparent');
+                    });
+                    const activeThumb = thumbs[lightboxSwiper.activeIndex];
+                    if (activeThumb) {
+                        activeThumb.classList.remove('opacity-50', 'border-transparent');
+                        activeThumb.classList.add('opacity-100', 'border-primary');
+                    }
+                });
+            }
+
+            // ---- Navigation Scroll Spy ----
+            var currentPath = window.location.pathname.split('/').pop() || 'index.html';
+            var activeHref = currentPath;
+            if (currentPath === 'career-details.html') activeHref = 'careers.html';
+            if (currentPath === 'news-detail.html' || currentPath === 'emagazine.html') activeHref = 'news.html';
+
+            var desktopLinks = document.querySelectorAll('#main-header nav a');
+            desktopLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-white', 'text-darkText', 'text-[#FEDA00]');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                    link.dataset.active = 'true';
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                    delete link.dataset.active;
+                }
+            });
+
+            var mobileLinks = document.querySelectorAll('#mobile-menu a');
+            mobileLinks.forEach(function (link) {
+                var href = link.getAttribute('href');
+                if (!href) return;
+                var linkPath = href.split('/').pop();
+
+                if (linkPath === activeHref) {
+                    link.classList.remove('font-normal', 'text-darkText', 'text-white');
+                    link.classList.add('text-[#FFB800]', 'font-semibold');
+                } else {
+                    link.classList.remove('font-semibold', 'text-[#FFB800]');
+                    link.classList.add('font-normal');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
