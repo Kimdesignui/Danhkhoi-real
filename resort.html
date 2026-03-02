@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +36,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
         h1,
         h2,
         h3,
@@ -54,6 +56,7 @@
             display: flex;
             align-items: center;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -62,27 +65,34 @@
             padding-right: 24px;
             line-height: 34px;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
+
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
+
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
+
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
+
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
+
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -91,10 +101,12 @@
             vertical-align: middle;
             border-radius: 2px;
         }
+
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
+
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -107,6 +119,7 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
+
         .lang-option {
             display: flex;
             align-items: center;
@@ -114,6 +127,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
@@ -186,86 +200,519 @@
             </div>
         </div>
     </header>
-    <!-- Hero Banner & Stats Section -->
-    <section class="relative w-full overflow-visible mb-12">
-        <!-- Banner Image -->
-        <!-- Đảm bảo responsive tỉ lệ ảnh không đổi, 100% chiều rộng -->
-        <div class="w-full relative">
-            <img src="images/Banner-project.jpg" alt="Danh Khôi Dự Án" class="w-full h-auto block">
-        </div>
-        <!-- Red Stats Bar (Cấu trúc tương tự slide bar trang chủ, thu gọn chiều cao) -->
-        <div class="relative lg:absolute lg:bottom-[-68px] left-0 w-full z-20 pointer-events-none mt-[-20px] lg:mt-0">
-            <div class="main-container relative h-auto lg:h-[136px] pointer-events-auto">
-                <div
-                    class="hero-tabs-wrap relative h-full grid grid-cols-2 lg:flex lg:flex-row w-full lg:w-[1040px] bg-primary">
-                    <!-- Left Bleed Box -->
-                    <div class="hidden lg:block absolute top-0 bottom-0 right-full w-[50vw] bg-primary"></div>
-                    <!-- Stat 1 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center border-b border-r lg:border-none border-white/10 group">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">60</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Dự án Đã
-                            triển khai</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
+    <!-- Main Content for Detail Page -->
+    <main class="page-resort min-h-screen bg-white pt-[80px]">
+
+        <!-- HERO BANNER -->
+        <section class="relative w-full">
+            <img src="images/banner-resort.jpg" alt="Danh Khôi Resort"
+                class="w-full h-[300px] lg:h-[500px] object-cover block">
+        </section>
+
+        <!-- RED STICKY NAV -->
+        <nav class="w-full bg-[#E32128] sticky top-[80px] z-40 shadow-md border-b-4 border-[#C21A20]">
+            <div class="main-container relative">
+                <ul class="flex flex-row overflow-x-auto whitespace-nowrap scrollbar-hide">
+                    <li><a href="#tong_quan"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Tổng
+                            quan</a></li>
+                    <li><a href="#vi_tri"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Vị
+                            trí</a></li>
+                    <li><a href="#tien_ich"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Tiện
+                            ích</a></li>
+                    <li><a href="#mat_bang"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Mặt
+                            bằng</a></li>
+                    <li><a href="#tien_do"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Tiến
+                            độ</a></li>
+                    <li><a href="#chinh_sach"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Chính
+                            sách ưu đãi</a></li>
+                    <li><a href="#thu_vien"
+                            class="block text-white font-bold text-[13px] lg:text-[14px] py-4 px-4 lg:px-6 hover:bg-white/20 transition-colors uppercase">Tin
+                            tức dự án</a></li>
+                </ul>
+                <!-- Góc vát đỏ (Clip-path) bên phải thanh điều hướng nếu có không gian -->
+                <div class="hidden lg:block absolute top-0 left-[100%] h-full w-[60px] bg-[#E32128]"
+                    style="clip-path: polygon(0 0, 100% 0, calc(100% - 20px) 100%, 0 100%);"></div>
+            </div>
+        </nav>
+
+        <!-- SECTION 1: TỔNG QUAN -->
+        <section id="tong_quan" class="py-12 lg:py-20 bg-[#F9F9F9]">
+            <div class="main-container">
+                <div class="bg-white shadow-sm p-6 lg:p-10 border border-gray-100 flex flex-col lg:flex-row gap-10">
+                    <!-- Info Table -->
+                    <div class="lg:w-[55%]">
+                        <h2
+                            class="text-[#E32128] font-bold text-[18px] lg:text-[22px] uppercase border-l-4 border-[#E32128] pl-3 mb-8">
+                            THÔNG TIN CHUNG KHU CHUNG CƯ ARIA VŨNG TÀU</h2>
+                        <div class="overflow-x-auto w-full">
+                            <table class="w-full text-left text-[13px] lg:text-[14px] border-collapse bg-white">
+                                <tbody>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold w-[120px] lg:w-[150px]">Tên
+                                            dự án</td>
+                                        <td class="py-3 px-2 lg:px-4 font-bold text-darkText">Khu Du lịch Nghỉ dưỡng Cao
+                                            cấp Aria Vũng Tàu</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 bg-[#F9F9F9]">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Vị trí</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText leading-relaxed">Đường D5, Phường 10,
+                                            Thành phố Vũng Tàu, Tỉnh Bà Rịa - Vũng Tàu</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Chủ đầu tư</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText">Công ty Cổ phần Đầu tư Danh Khôi
+                                            Holdings (DKR)</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 bg-[#F9F9F9]">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Tổng thầu Xây dựng</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText leading-relaxed">Công ty Cổ phần Xây
+                                            dựng Central (CENTRAL)</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Quản lý vận hành</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText">Tập đoàn quản lý Anabuki (Nhật Bản)
+                                        </td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 bg-[#F9F9F9]">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Tổng diện tích</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText">76.905,3 m2</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Mật độ xây dựng</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText">Gần 23%</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100 bg-[#F9F9F9]">
+                                        <td class="py-3 px-2 lg:px-4 text-gray-500 font-bold">Quy mô thiết kế</td>
+                                        <td class="py-3 px-2 lg:px-4 text-darkText leading-relaxed">Gồm 04 toà tháp Căn
+                                            hộ Condotel và dãy biệt thự cao cấp. Căn 1PN, 2PN, 3PN với diện tích từ
+                                            73-160 m2</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-100">
+                                        <td class="py-4 px-2 lg:px-4 text-gray-500 font-bold">Tìm hiểu thêm</td>
+                                        <td
+                                            class="py-4 px-2 lg:px-4 text-[#E32128] font-bold underline cursor-pointer hover:text-primaryDark">
+                                            Tải về máy</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
-                    <!-- Stat 2 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center border-b lg:border-none border-white/10 group">
-                        <span class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">759
-                            ha</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Quỹ
-                            đất</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
-                        </div>
+                    <!-- Image -->
+                    <div class="lg:w-[45%]">
+                        <img src="images/banner-apartment.jpg" alt="Aria Vũng Tàu"
+                            class="w-full h-auto object-cover border-4 border-gray-100">
                     </div>
-                    <!-- Stat 3 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center border-r lg:border-none border-white/10 group">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">09</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Tỉnh
-                            thành</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
-                        </div>
-                    </div>
-                    <!-- Stat 4 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center lg:border-none border-white/10 group">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">50.000</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Đơn vị
-                            sản phẩm</span>
-                        <div
-                            class="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[1px] h-[50%] bg-white/50">
-                        </div>
-                    </div>
-                    <!-- Stat 5 -->
-                    <div
-                        class="relative flex-1 lg:w-[208px] flex flex-col items-center justify-center py-4 lg:py-2 text-center lg:border-none border-white/10 group col-span-2 lg:col-span-1">
-                        <span
-                            class="text-white font-bold text-3xl lg:text-[36px] leading-none pointer-events-none">40.000</span>
-                        <span class="text-white text-[12px] lg:text-[13px] uppercase mt-2 pointer-events-none">Khách
-                            hàng đã phục vụ</span>
-                    </div>
-                    <!-- Right Slant -->
-                    <div class="hidden lg:block absolute top-0 left-full bottom-0 w-[85px] bg-primary pointer-events-none"
-                        style="clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);"></div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Main Content for Detail Page -->
-    <section class="py-12 md:pt-32 md:pb-20 bg-white">
-        <div class="main-container">
-            <h1 class="text-3xl font-bold text-primary mb-6">Chi tiết Khách sạn & Nghỉ dưỡng</h1>
-            <p class="text-gray-600">Nội dung chi tiết dự án sẽ được cập nhật tại đây.</p>
-        </div>
-    </section>
+        </section>
+
+        <!-- SECTION 2: CĂN HỘ CAO CẤP VIDEO -->
+        <section class="relative w-full h-[400px] lg:h-[500px]">
+            <img src="images/banner-career-details.jpg" alt="Căn hộ cao cấp" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center px-4">
+                <p
+                    class="text-white text-[15px] lg:text-[18px] uppercase mb-2 tracking-[0.2em] font-medium drop-shadow-md">
+                    TÍNH NĂNG VÀ THUẦN CHẤT RESORT</p>
+                <h2
+                    class="text-white text-[28px] lg:text-[44px] font-bold font-display uppercase mb-8 leading-tight drop-shadow-xl w-full lg:w-3/4">
+                    CĂN HỘ CAO CẤP <br class="hidden md:block" /> NÂNG TẦM TRẢI NGHIỆM SỐNG TẠI BÀ RỊA VŨNG TÀU
+                </h2>
+                <!-- Nút Play Tròn có viền Stroke, dùng absolute center -->
+                <button
+                    class="w-[70px] h-[70px] rounded-full border-[3px] border-white flex items-center justify-center hover:bg-white/20 hover:scale-105 transition-all duration-300 group"
+                    onclick="openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+                    <svg class="w-8 h-8 text-white ml-2 transition-transform duration-300 group-hover:scale-110"
+                        fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- SECTION 3: VỊ TRÍ KIM CƯƠNG -->
+        <section id="vi_tri" class="py-16 lg:py-24 bg-white relative overflow-hidden">
+            <!-- Nền hoa văn mờ nhạt nếu cần -->
+            <div class="main-container relative z-10">
+                <div class="flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="lg:w-[45%]">
+                        <h2
+                            class="text-[#E32128] font-bold text-[20px] lg:text-[24px] uppercase border-l-4 border-[#E32128] pl-3 mb-6 block lg:bg-white p-2">
+                            VỊ TRÍ KIM CƯƠNG BÃI CHÍ</h2>
+                        <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify mb-5">
+                            Dự án Aria Vũng Tàu toạ lạc trên cung đường Resort đẹp nhất thành phố Vũng Tàu.
+                            Sở hữu đường bờ biển dài 400m, mang đến không gian sống sinh thái resort đích thực.
+                            Giao thông kết nối thuận tiện khi nằm trong định hướng phát triển tổng thể về dịch vụ, du
+                            lịch của tỉnh nhà.
+                        </p>
+                        <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify">
+                            Từ dự án, cư dân dễ dàng di chuyển tới các điểm du lịch nổi tiếng xung quanh với khoảng cách
+                            ngắn,
+                            góp phần gia tăng giá trị đầu tư và trải nghiệm phong cách nghỉ dưỡng riêng biệt, sang
+                            trọng.
+                        </p>
+                    </div>
+                    <div class="lg:w-[55%] relative">
+                        <!-- Bản đồ -->
+                        <img src="images/banner-news-details.jpg" alt="Bản đồ vị trí"
+                            class="w-full h-auto object-cover border-8 border-white shadow-xl relative z-20">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dòng watermark Text Khổng lồ (ARIA VŨNG TÀU) ở Background -->
+            <div class="absolute bottom-0 left-0 w-full text-center pointer-events-none pb-4 z-0 overflow-hidden">
+                <span
+                    class="text-[60px] md:text-[100px] lg:text-[160px] font-black text-gray-50 leading-none tracking-widest uppercase whitespace-nowrap block opacity-70">
+                    ARIA VŨNG TÀU
+                </span>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TIỆN ÍCH HOÀN HẢO -->
+        <section id="tien_ich" class="py-16 lg:py-24 relative overflow-hidden">
+            <!-- Background Image Blurry cho Tiện ích -->
+            <div class="absolute inset-0 z-0">
+                <img src="images/banner-lpd.jpg" alt="Background Tiện ích" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-white/90 backdrop-blur-sm"></div>
+            </div>
+
+            <div class="main-container relative z-10">
+                <div class="bg-white/80 p-8 lg:p-12 shadow-2xl rounded border border-gray-100">
+                    <h2
+                        class="text-[#E32128] font-bold text-[20px] lg:text-[24px] uppercase border-l-4 border-[#E32128] pl-3 mb-8">
+                        TIỆN ÍCH TIỂU CHUẨN 5 SAO</h2>
+                    <div class="flex flex-col lg:flex-row gap-8 lg:gap-14">
+                        <div class="lg:w-[40%]">
+                            <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify mb-8">
+                                Nội khu dự án được thiết kế chuẩn mực 5 sao, mang đến hệ tiện ích hoàn hảo phục vụ mọi
+                                nhu cầu sống, nghỉ dưỡng đẳng cấp cho cư dân. Trải nghiệm một không gian sống trọn vẹn
+                                tại thành phố biển.
+                            </p>
+                            <ul class="text-[14px] lg:text-[15px] text-darkText font-medium space-y-4">
+                                <li class="flex items-start gap-3 border-b border-gray-200 pb-3">
+                                    <span class="text-[#E32128] mt-1"><svg class="w-4 h-4" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></span>
+                                    Cầu tình yêu dài 100m vươn ra biển
+                                </li>
+                                <li class="flex items-start gap-3 border-b border-gray-200 pb-3">
+                                    <span class="text-[#E32128] mt-1"><svg class="w-4 h-4" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></span>
+                                    Hồ bơi tràn bờ sát biển
+                                </li>
+                                <li class="flex items-start gap-3 border-b border-gray-200 pb-3">
+                                    <span class="text-[#E32128] mt-1"><svg class="w-4 h-4" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></span>
+                                    Bar & Cafe Rooftop cực chill
+                                </li>
+                                <li class="flex items-start gap-3 pb-3">
+                                    <span class="text-[#E32128] mt-1"><svg class="w-4 h-4" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                                                clip-rule="evenodd"></path>
+                                        </svg></span>
+                                    Dịch vụ Spa & Chăm sóc sắc đẹp
+                                </li>
+                            </ul>
+                            <button
+                                class="mt-4 text-[#E32128] font-bold text-[14px] uppercase flex items-center gap-2 hover:underline">
+                                Xem thêm tiện ích
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="lg:w-[60%] flex flex-col md:flex-row gap-4 h-[400px]">
+                            <!-- Bức ảnh lớn bên trái -->
+                            <div class="md:w-[60%] h-full">
+                                <img src="images/Banner-project.jpg" alt="Tiện ích 1"
+                                    class="w-full h-full object-cover rounded shadow-md border-4 border-white">
+                            </div>
+                            <!-- 2 bức ảnh nhỏ chồng nhau bên phải -->
+                            <div class="md:w-[40%] flex flex-row md:flex-col gap-4 h-[200px] md:h-full">
+                                <img src="images/banner-recruitment.jpg" alt="Tiện ích 2"
+                                    class="w-1/2 md:w-full h-full md:h-[48%] object-cover rounded shadow-sm border-2 border-white">
+                                <img src="images/domain-1.jpg" alt="Tiện ích 3"
+                                    class="w-1/2 md:w-full h-full md:h-[48%] object-cover rounded shadow-sm border-2 border-white">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: MẶT BẰNG -->
+        <section id="mat_bang" class="py-16 lg:py-24 bg-white">
+            <div class="main-container text-center">
+                <h2
+                    class="text-[#E32128] font-bold text-[20px] lg:text-[24px] uppercase border-[#E32128] mb-6 inline-block border-b-2 pb-2">
+                    MẶT BẰNG ARIA VŨNG TÀU</h2>
+                <p class="text-[14px] lg:text-[15px] text-gray-500 max-w-3xl mx-auto mb-12">
+                    Mặt bằng tổng thể đẳng cấp, đón trọn vẹn ánh sáng và gió biển mát rượi. Dự án được chia theo các khu
+                    vực tĩnh và động trải dài, hòa hợp với cảnh quan thiên nhiên. Các căn hộ đều sở hữu thiết kế thông
+                    thoáng.
+                </p>
+                <div class="w-full relative bg-gray-50 p-4 border border-gray-100 rounded">
+                    <!-- Ảnh mặt bằng -->
+                    <img src="images/banner-emagazine.jpg" alt="Sơ đồ Mặt bằng"
+                        class="w-full max-w-5xl mx-auto h-[400px] lg:h-[600px] object-cover shadow-lg">
+                </div>
+                <!-- Pagination Dots giả lập -->
+                <div class="flex justify-center gap-2 mt-8">
+                    <span class="w-2.5 h-2.5 rounded-full bg-[#E32128]"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-gray-300"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: TIẾN ĐỘ XÂY DỰNG -->
+        <section id="tien_do" class="bg-[#E32128] py-16 lg:py-24 relative overflow-hidden">
+            <div class="main-container relative z-10">
+                <h2
+                    class="text-white font-bold text-[20px] lg:text-[24px] uppercase text-center mb-10 pb-4 border-b border-white/20 inline-block w-full">
+                    TIẾN ĐỘ XÂY DỰNG ARIA VŨNG TÀU</h2>
+                <div class="bg-white shadow-2xl flex flex-col lg:flex-row relative">
+                    <!-- Red shape decoration on white box (Top Right Corner) -->
+                    <div class="absolute top-0 right-0 w-[40px] h-[40px] bg-[#E32128]"
+                        style="clip-path: polygon(100% 0, 0 0, 100% 100%);"></div>
+
+                    <!-- Timeline Box (Left) -->
+                    <div class="lg:w-[40%] p-8 lg:p-12 border-r border-gray-100">
+                        <h3 class="text-[#E32128] font-bold text-[18px] uppercase mb-8 flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 bg-[#E32128] rounded-full inline-block"></span>
+                            TIẾN ĐỘ DỰ ÁN
+                        </h3>
+                        <ul class="relative border-l border-gray-200 ml-3 space-y-8">
+                            <!-- Active Timeline Item -->
+                            <li class="mb-6 ml-8">
+                                <span
+                                    class="absolute flex items-center justify-center w-3.5 h-3.5 bg-[#E32128] rounded-full -left-[7px] ring-4 ring-white"></span>
+                                <h4 class="font-bold text-[#E32128] text-[15px] underline mb-1">Tháng 05/2023</h4>
+                                <p class="text-[14px] text-gray-500 font-medium">Thi công hoàn thiện mặt ngoài 80%</p>
+                            </li>
+                            <!-- Passive Items -->
+                            <li class="mb-6 ml-8">
+                                <span
+                                    class="absolute flex items-center justify-center w-3.5 h-3.5 bg-gray-300 rounded-full -left-[7px] ring-4 ring-white"></span>
+                                <h4 class="font-bold text-gray-400 text-[14px] mb-1">Tháng 03/2023</h4>
+                                <p class="text-[14px] text-gray-400">Hoàn thiện phần thô Block B</p>
+                            </li>
+                            <li class="mb-6 ml-8">
+                                <span
+                                    class="absolute flex items-center justify-center w-3.5 h-3.5 bg-gray-300 rounded-full -left-[7px] ring-4 ring-white"></span>
+                                <h4 class="font-bold text-gray-400 text-[14px] mb-1">Tháng 12/2022</h4>
+                                <p class="text-[14px] text-gray-400">Cất nóc toà nhà</p>
+                            </li>
+                            <li class="ml-8">
+                                <span
+                                    class="absolute flex items-center justify-center w-3.5 h-3.5 bg-gray-300 rounded-full -left-[7px] ring-4 ring-white"></span>
+                                <h4 class="font-bold text-gray-400 text-[14px] mb-1">Tháng 08/2022</h4>
+                                <p class="text-[14px] text-gray-400">Thi công sàn tầng 10</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Image Slider Box (Right) -->
+                    <div class="lg:w-[60%] relative h-[300px] lg:h-auto min-h-[400px]">
+                        <!-- Replace with Swiper Slider if requested later, for now just image -->
+                        <img src="images/banner-apartment.jpg" alt="Tiến độ thực tế" class="w-full h-full object-cover">
+                        <!-- Red Triangle Play Button Center -->
+                        <div class="absolute inset-0 flex items-center justify-center mix-blend-screen bg-black/10">
+                            <!-- Overlay watermark "TIẾN ĐỘ" -->
+                            <!-- Or play button -->
+                        </div>
+                    </div>
+                    <!-- Background White Wing extension to the right (like in design) -->
+                    <div class="hidden lg:block absolute bottom-0 -right-[40px] w-[40px] h-[50px] bg-white"
+                        style="clip-path: polygon(0 0, 0 100%, 100% 100%);"></div>
+                </div>
+            </div>
+            <!-- Decorative Large Red Slant Background -->
+            <div class="absolute top-0 right-0 w-[30%] h-full bg-[#C21A20]"
+                style="clip-path: polygon(100% 0, 100% 100%, 0 100%); z-index: 0;"></div>
+        </section>
+
+        <!-- SECTION 7: NHẬN TÀI LIỆU DỰ ÁN & CHÍNH SÁCH BÁN HÀNG -->
+        <section id="chinh_sach" class="py-0 relative overflow-hidden"
+            style="background: linear-gradient(135deg, #FFB800 0%, #FF8A00 100%);">
+            <div class="main-container relative z-10">
+                <div class="flex flex-col-reverse lg:flex-row shadow-none items-stretch">
+                    <!-- Form Box -->
+                    <div class="lg:w-1/2 p-8 lg:p-14 w-full bg-white/10 flex flex-col justify-center">
+                        <div class="bg-white p-8 lg:p-10 rounded shadow-md border-t-4 border-[#E32128]">
+                            <h2 class="text-[#E32128] font-bold text-[20px] lg:text-[22px] uppercase mb-4 text-center">
+                                TẢI TÀI LIỆU VÀ CHÍNH SÁCH MỚI NHẤT</h2>
+                            <p class="text-[13px] text-gray-600 mb-6 text-center">Đăng ký thông tin để nhận báo giá, mặt
+                                bằng và chương trình ưu đãi mới nhất từ Chủ đầu tư.</p>
+                            <form class="space-y-5">
+                                <div class="flex flex-wrap items-center gap-y-3 w-full">
+                                    <div class="w-1/2 flex items-center gap-2">
+                                        <input type="checkbox" id="book_mau"
+                                            class="w-4 h-4 text-[#E32128] rounded border-gray-300 focus:ring-[#E32128]">
+                                        <label for="book_mau"
+                                            class="text-[13px] text-darkText font-medium cursor-pointer">Bảng vật liệu
+                                            bàn giao</label>
+                                    </div>
+                                    <div class="w-1/2 flex items-center gap-2">
+                                        <input type="checkbox" id="book_gia"
+                                            class="w-4 h-4 text-[#E32128] rounded border-gray-300 focus:ring-[#E32128]">
+                                        <label for="book_gia"
+                                            class="text-[13px] text-darkText font-medium cursor-pointer">Bảng giá tham
+                                            khảo</label>
+                                    </div>
+                                    <div class="w-1/2 flex items-center gap-2">
+                                        <input type="checkbox" id="book_mb"
+                                            class="w-4 h-4 text-[#E32128] rounded border-gray-300 focus:ring-[#E32128]">
+                                        <label for="book_mb"
+                                            class="text-[13px] text-darkText font-medium cursor-pointer">Mặt bằng chi
+                                            tiết</label>
+                                    </div>
+                                    <div class="w-1/2 flex items-center gap-2">
+                                        <input type="checkbox" id="book_cs"
+                                            class="w-4 h-4 text-[#E32128] rounded border-gray-300 focus:ring-[#E32128]">
+                                        <label for="book_cs"
+                                            class="text-[13px] text-darkText font-medium cursor-pointer">Chính sách ưu
+                                            đãi</label>
+                                    </div>
+                                </div>
+                                <input type="text" placeholder="Họ và tên bắt buộc" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-[14px] focus:outline-none focus:border-[#E32128] transition-colors rounded">
+                                <input type="email" placeholder="Email bắt buộc" required
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-[14px] focus:outline-none focus:border-[#E32128] transition-colors rounded">
+                                <input type="tel" placeholder="Số điện thoại"
+                                    class="w-full px-4 py-3 bg-gray-50 border border-gray-200 text-[14px] focus:outline-none focus:border-[#E32128] transition-colors rounded">
+                                <button type="button"
+                                    class="bg-[#E32128] text-white font-bold text-[14px] uppercase py-3.5 px-8 hover:bg-[#C21A20] transition-colors w-full rounded tracking-wide shadow-red-500/50 shadow-lg">Gửi
+                                    Yêu Cầu</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- Image Box -->
+                    <div class="lg:w-1/2 w-full h-[300px] lg:h-auto min-h-[400px]">
+                        <img src="images/banner-career-details.jpg" alt="Nhận tài liệu Aria"
+                            class="w-full h-full object-cover opacity-90 mix-blend-multiply">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: CÁC DỰ ÁN LIÊN QUAN -->
+        <section class="py-16 bg-[#F9F9F9]">
+            <div class="main-container text-center mb-10">
+                <h2
+                    class="text-[#E32128] font-bold text-[20px] lg:text-[24px] uppercase border-[#E32128] mb-2 inline-block border-b-2 pb-2">
+                    CÁC DỰ ÁN LIÊN QUAN</h2>
+                <p class="text-[13px] text-gray-500">Khám phá thêm các dự án đẳng cấp khác do Danh Khôi triển khai</p>
+            </div>
+            <div class="main-container">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Project Card 1 -->
+                    <div
+                        class="bg-white group cursor-pointer border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <img src="images/domain-1.jpg" alt="Kỳ Co Gateway"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <!-- Overlay -->
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <span
+                                    class="bg-[#E32128] text-white text-[11px] font-bold px-3 py-1 uppercase rounded-sm">Xem
+                                    chi tiết</span>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p class="text-[12px] text-gray-400 font-medium tracking-wide mb-1">Chung cư cao cấp</p>
+                            <h3
+                                class="text-[16px] font-bold text-darkText group-hover:text-[#E32128] transition-colors leading-snug">
+                                The Aston Luxury Residence</h3>
+                        </div>
+                    </div>
+                    <!-- Project Card 2 -->
+                    <div
+                        class="bg-white group cursor-pointer border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <img src="images/domain-2.jpg" alt="Aria Vũng Tàu"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <span
+                                    class="bg-[#E32128] text-white text-[11px] font-bold px-3 py-1 uppercase rounded-sm">Xem
+                                    chi tiết</span>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p class="text-[12px] text-gray-400 font-medium tracking-wide mb-1">Quần thể nghỉ dưỡng</p>
+                            <h3
+                                class="text-[16px] font-bold text-darkText group-hover:text-[#E32128] transition-colors leading-snug">
+                                Kỳ Co Gateway Quy Nhơn</h3>
+                        </div>
+                    </div>
+                    <!-- Project Card 3 -->
+                    <div
+                        class="bg-white group cursor-pointer border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <img src="images/domain-3.jpg" alt="Nhon Hoi"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <span
+                                    class="bg-[#E32128] text-white text-[11px] font-bold px-3 py-1 uppercase rounded-sm">Xem
+                                    chi tiết</span>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p class="text-[12px] text-gray-400 font-medium tracking-wide mb-1">Khu Đô Thị Sinh Thái</p>
+                            <h3
+                                class="text-[16px] font-bold text-darkText group-hover:text-[#E32128] transition-colors leading-snug">
+                                Nhơn Hội New City</h3>
+                        </div>
+                    </div>
+                    <!-- Project Card 4 -->
+                    <div
+                        class="bg-white group cursor-pointer border border-gray-100 shadow-sm hover:shadow-xl transition-all duration-300">
+                        <div class="relative overflow-hidden aspect-[4/3]">
+                            <img src="images/domain-4.jpg" alt="Astral City"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                                <span
+                                    class="bg-[#E32128] text-white text-[11px] font-bold px-3 py-1 uppercase rounded-sm">Xem
+                                    chi tiết</span>
+                            </div>
+                        </div>
+                        <div class="p-6 text-center">
+                            <p class="text-[12px] text-gray-400 font-medium tracking-wide mb-1">Phức Hợp Thương Mại &
+                                Căn Hộ</p>
+                            <h3
+                                class="text-[16px] font-bold text-darkText group-hover:text-[#E32128] transition-colors leading-snug">
+                                Astral City Bình Dương</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
     <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
@@ -386,7 +833,7 @@
     </button>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -403,4 +850,5 @@
     </div>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
