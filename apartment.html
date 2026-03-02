@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,6 +36,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
         h1,
         h2,
         h3,
@@ -54,6 +56,7 @@
             display: flex;
             align-items: center;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -62,27 +65,34 @@
             padding-right: 24px;
             line-height: 34px;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
+
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
+
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
+
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
+
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
+
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -91,10 +101,12 @@
             vertical-align: middle;
             border-radius: 2px;
         }
+
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
+
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -107,6 +119,7 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
+
         .lang-option {
             display: flex;
             align-items: center;
@@ -114,6 +127,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
@@ -188,383 +202,429 @@
     </header>
 
     <!-- NỘI DUNG CHÍNH (Đã áp dụng layout CSS TAB thuần và Sidebar 3 box) -->
-<main class="page-apartment min-h-screen bg-[#F5F7FA]">
-    
-    <!-- PURE CSS TABS RADIO BUTTONS -->
-    <input type="radio" name="apt-tabs-group" id="radio-tong-quan" class="apt-tab-radio hidden" checked>
-    <input type="radio" name="apt-tabs-group" id="radio-vi-tri" class="apt-tab-radio hidden">
-    <input type="radio" name="apt-tabs-group" id="radio-tien-ich" class="apt-tab-radio hidden">
-    <input type="radio" name="apt-tabs-group" id="radio-mat-bang" class="apt-tab-radio hidden">
-    <input type="radio" name="apt-tabs-group" id="radio-tien-do" class="apt-tab-radio hidden">
-    <input type="radio" name="apt-tabs-group" id="radio-video-360" class="apt-tab-radio hidden">
+    <main class="page-apartment min-h-screen bg-[#F5F7FA]">
 
-    <!-- CSS Modal Tab Video -->
-    <input type="checkbox" id="radio-video-modal" class="hidden">
+        <!-- PURE CSS TABS RADIO BUTTONS -->
+        <input type="radio" name="apt-tabs-group" id="radio-tong-quan" class="apt-tab-radio hidden" checked>
+        <input type="radio" name="apt-tabs-group" id="radio-vi-tri" class="apt-tab-radio hidden">
+        <input type="radio" name="apt-tabs-group" id="radio-tien-ich" class="apt-tab-radio hidden">
+        <input type="radio" name="apt-tabs-group" id="radio-mat-bang" class="apt-tab-radio hidden">
+        <input type="radio" name="apt-tabs-group" id="radio-tien-do" class="apt-tab-radio hidden">
+        <input type="radio" name="apt-tabs-group" id="radio-video-360" class="apt-tab-radio hidden">
 
-    <!-- Hero Banner (No Text) -->
-    <div class="hero-apt-banner">
-        <img src="images/hero-3.jpg" alt="Aria Vũng Tàu">
-    </div>
+        <!-- CSS Modal Tab Video -->
+        <input type="checkbox" id="radio-video-modal" class="hidden">
 
-    <!-- Tabs Navigation Bar -->
-    <div class="apt-tabs-nav sticky top-[84px] lg:top-[84px] z-40 shadow-sm transition-all duration-300">
-        <div class="main-container">
-            <div class="apt-tabs-list flex overflow-x-auto whitespace-nowrap">
-                <label for="radio-tong-quan" class="apt-tab-btn">Tổng quan</label>
-                <label for="radio-vi-tri" class="apt-tab-btn">Vị trí</label>
-                <label for="radio-tien-ich" class="apt-tab-btn">Tiện ích</label>
-                <label for="radio-mat-bang" class="apt-tab-btn">Mặt bằng</label>
-                <label for="radio-tien-do" class="apt-tab-btn">Tiến độ</label>
-                <label for="radio-video-360" class="apt-tab-btn">Video 360°</label>
-            </div>
+        <!-- Hero Banner (No Text) -->
+        <div class="hero-apt-banner">
+            <img src="images/hero-3.jpg" alt="Aria Vũng Tàu">
         </div>
-    </div>
 
-    <!-- Main Content Grid -->
-    <div class="main-container py-12 apt-main-grid">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
-            
-            <!-- LEFT COLUMN (Content) -->
-            <div class="lg:col-span-8">
-                <div class="apt-tab-content rounded-sm">
-                    <!-- TAB 1: TỔNG QUAN -->
-                    <div id="pane-tong-quan" class="apt-tab-pane">
-                        <h2 class="apt-content-title">TỔNG QUAN DỰ ÁN</h2>
-                        
-                        <p class="text-[15px] font-medium text-[#4a5568] leading-relaxed mb-8 text-center max-w-3xl mx-auto">
-                            Aria Vũng Tàu hay còn được biết đến với tên gọi Blue Sapphire Resort là tổ hợp nghỉ dưỡng Biệt Thự Biển – Căn Hộ – Nhà Hàng Khách Sạn đạt chuẩn 5 sao được phát triển bởi tập đoàn Danh Khôi. Nơi đây sẽ là một không gian sống và trải nghiệm tuyệt vời với đẳng cấp resort đúng nghĩa – cùng các đặc quyền riêng giành cho các cư dân tương lai.
-                        </p>
-
-                        <!-- Video Thumbnail block (pure css trigger via label) -->
-                        <label for="radio-video-modal" class="block relative w-full aspect-[16/9] mb-8 group cursor-pointer" onclick="document.getElementById('youtube-iframe-player').src='https://www.youtube.com/embed/0nwAUIw8DvA?autoplay=1'">
-                            <img src="images/apartment-img-1.jpg" alt="Tổng quan dự án" class="w-full h-full object-cover rounded-sm">
-                            <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors pointer-events-none"></div>
-                            <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                                <img src="images/icon-video.svg" alt="Play Video" class="w-16 h-16 md:w-20 md:h-20 group-hover:scale-110 transition-transform duration-300">
-                            </div>
-                        </label>
-
-                        <!-- Table Chi Tiết -->
-                        <div class="overflow-x-auto">
-                            <table class="apt-detail-table">
-                                <tbody>
-                                    <tr>
-                                        <td>Tên dự án</td>
-                                        <td>Aria Vũng Tàu Hotel & Resort</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vị trí</td>
-                                        <td>Số 79 đường D5, Phường 10, Thành Phố Vũng Tàu, Tỉnh Bà Rịa – Vũng Tàu</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Chủ đầu tư</td>
-                                        <td>Công ty Cổ Phần Du lịch và Đầu tư Xây dựng Châu Á (COTECASIA)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tiềm năng tăng trưởng khu vực</td>
-                                        <td>Phát triển loạt tiện ích cao cấp, hướng đến khai thác tiềm năng tăng trưởng du lịch của Bà Rịa – Vũng Tàu.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tiềm năng tăng trưởng dự án</td>
-                                        <td>Aria Vũng Tàu ôm trọn chiều dài bãi biển 400 m dọc biển, sở hữu không gian thiên nhiên, biển xanh, cát trắng, nắng vàng. Dự án bố trí và phân bổ căn hộ tập trung về mặt biển. Nhờ đó, hơn 90% căn hộ có tầm nhìn trực diện biển, đi kèm diện tích xây dựng từng căn hộ rộng và tiện ích riêng cao cấp.</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tỉ suất lợi nhuận dự kiến hàng năm</td>
-                                        <td>Cam kết lợi nhuận đến 12%</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Giá cho thuê căn hộ tại khu vực</td>
-                                        <td>50,000 tr / tháng</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Đơn vị phát triển</td>
-                                        <td>Công ty cổ phần tập đoàn DANH KHÔI</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Đại lý Phân phối</td>
-                                        <td>Công ty cổ phần TPI LAND - Đơn vị Độc Quyền</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Đơn vị xây dựng</td>
-                                        <td>Công ty cổ phần Đầu tư xây dựng THẾ SƠN</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tư vấn giám sát</td>
-                                        <td>Công ty cổ phần Tư vấn xây dựng Tổng Hợp (NAGECCO)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Quy mô</td>
-                                        <td>Bao gồm 3 khu: – Khu Biệt Thự Blue Sapphire: 36 căn biệt thự nghỉ dưỡng cao cấp có khuôn viên riêng, hồ bơi riêng – Khu Căn hộ Condotel: Gồm 2 block cao 13 tầng và 1 block cao 36 tầng – Khu khách sạn: Cao 18 tầng với 250 phòng khách sạn cao cấp</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tiện ích nổi bật</td>
-                                        <td>Bãi biển riêng dài gần 400m, Khu Bar bãi biển Seashell, Sky Bar, Hồ cảnh quan trên tầng thượng, Hồ bơi view biển Dolphin, Cầu tình yêu Amor & Psyche…vvv</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Biểu đồ tăng trưởng</td>
-                                        <td><a href="#" class="text-[#215388] hover:underline hover:text-[#2367B0] transition-colors">Xem chi tiết tại đây</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Loại hình</td>
-                                        <td>Căn hộ du lịch biển tiêu chuẩn 5 sao</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Bàn Giao</td>
-                                        <td>Nội thất cao cấp – dính tường tiêu chuẩn 5 sao</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Hotline dự án</td>
-                                        <td><span class="text-[#f7b11c] font-bold">0938 458 451</span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                    <!-- TAB 2: VỊ TRÍ -->
-                    <div id="pane-vi-tri" class="apt-tab-pane">
-                        <h2 class="apt-content-title">VỊ TRÍ DỰ ÁN</h2>
-                        <p class="text-center text-gray-500 py-20">Nội dung Vị trí đang được cập nhật...</p>
-                    </div>
-                    
-                    <!-- TAB 3: TIỆN ÍCH -->
-                    <div id="pane-tien-ich" class="apt-tab-pane">
-                        <h2 class="apt-content-title">TIỆN ÍCH DỰ ÁN</h2>
-                        <p class="text-center text-gray-500 py-20">Nội dung Tiện ích đang được cập nhật...</p>
-                    </div>
-
-                    <!-- TAB 4: MẶT BẰNG -->
-                    <div id="pane-mat-bang" class="apt-tab-pane">
-                        <h2 class="apt-content-title">MẶT BẰNG DỰ ÁN</h2>
-                        <p class="text-center text-gray-500 py-20">Nội dung Mặt bằng đang được cập nhật...</p>
-                    </div>
-
-                    <!-- TAB 5: TIẾN ĐỘ -->
-                    <div id="pane-tien-do" class="apt-tab-pane">
-                        <h2 class="apt-content-title">TIẾN ĐỘ THI CÔNG</h2>
-                        <p class="text-center text-gray-500 py-20">Nội dung Tiến độ đang được cập nhật...</p>
-                    </div>
-
-                    <!-- TAB 6: VIDEO 360 -->
-                    <div id="pane-video-360" class="apt-tab-pane">
-                        <h2 class="apt-content-title">VIDEO 360° & VR</h2>
-                        <p class="text-center text-gray-500 py-20">Nội dung Video 360° đang được cập nhật...</p>
-                    </div>
+        <!-- Tabs Navigation Bar -->
+        <div class="apt-tabs-nav sticky top-[84px] lg:top-[84px] z-40 shadow-sm transition-all duration-300">
+            <div class="main-container">
+                <div class="apt-tabs-list flex overflow-x-auto whitespace-nowrap">
+                    <label for="radio-tong-quan" class="apt-tab-btn">Tổng quan</label>
+                    <label for="radio-vi-tri" class="apt-tab-btn">Vị trí</label>
+                    <label for="radio-tien-ich" class="apt-tab-btn">Tiện ích</label>
+                    <label for="radio-mat-bang" class="apt-tab-btn">Mặt bằng</label>
+                    <label for="radio-tien-do" class="apt-tab-btn">Tiến độ</label>
+                    <label for="radio-video-360" class="apt-tab-btn">Video 360°</label>
                 </div>
             </div>
+        </div>
 
-            <!-- RIGHT COLUMN (Sidebar) -->
-            <div class="lg:col-span-4 relative">
-                <div class="apt-sidebar flex flex-col pt-2 shadow-sm">
-                    <!-- Box 1 -->
-                    <div class="sb-box-1 rounded-t-lg">
-                        <h4>Chỉ cần để lại số điện thoại,</h4>
-                        <p>Chúng tôi sẽ gọi lại tư vấn miễn phí cho đến khi bạn mua được nhà!</p>
-                        <div class="flex flex-col xl:flex-row gap-0 border-[3px] border-white/20 rounded-md overflow-hidden shadow-sm">
-                            <input type="text" placeholder="Nhập số điện thoại" class="w-full flex-1 text-gray-800">
-                            <button class="whitespace-nowrap w-full xl:w-auto font-bold px-4 hover:shadow-lg">Gọi lại cho tôi</button>
+        <!-- Main Content Grid -->
+        <div class="main-container py-12 apt-main-grid">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
+
+                <!-- LEFT COLUMN (Content) -->
+                <div class="lg:col-span-9">
+                    <div class="apt-tab-content rounded-sm">
+                        <!-- TAB 1: TỔNG QUAN -->
+                        <div id="pane-tong-quan" class="apt-tab-pane">
+                            <h2 class="apt-content-title">TỔNG QUAN DỰ ÁN</h2>
+
+                            <p
+                                class="text-[15px] font-medium text-[#4a5568] leading-relaxed mb-8 text-center max-w-3xl mx-auto">
+                                Aria Vũng Tàu hay còn được biết đến với tên gọi Blue Sapphire Resort là tổ hợp nghỉ
+                                dưỡng Biệt Thự Biển – Căn Hộ – Nhà Hàng Khách Sạn đạt chuẩn 5 sao được phát triển bởi
+                                tập đoàn Danh Khôi. Nơi đây sẽ là một không gian sống và trải nghiệm tuyệt vời với đẳng
+                                cấp resort đúng nghĩa – cùng các đặc quyền riêng giành cho các cư dân tương lai.
+                            </p>
+
+                            <!-- Video Thumbnail block (pure css trigger via label) -->
+                            <label for="radio-video-modal"
+                                class="block relative w-full aspect-[16/9] mb-8 group cursor-pointer"
+                                onclick="document.getElementById('youtube-iframe-player').src='https://www.youtube.com/embed/0nwAUIw8DvA?autoplay=1'">
+                                <img src="images/apartment-img-1.jpg" alt="Tổng quan dự án"
+                                    class="w-full h-full object-cover rounded-sm">
+                                <div
+                                    class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors pointer-events-none">
+                                </div>
+                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <img src="images/icon-video.svg" alt="Play Video"
+                                        class="w-16 h-16 md:w-20 md:h-20 group-hover:scale-110 transition-transform duration-300">
+                                </div>
+                            </label>
+
+                            <!-- Table Chi Tiết -->
+                            <div class="overflow-x-auto">
+                                <table class="apt-detail-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>Tên dự án</td>
+                                            <td>Aria Vũng Tàu Hotel & Resort</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Vị trí</td>
+                                            <td>Số 79 đường D5, Phường 10, Thành Phố Vũng Tàu, Tỉnh Bà Rịa – Vũng Tàu
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Chủ đầu tư</td>
+                                            <td>Công ty Cổ Phần Du lịch và Đầu tư Xây dựng Châu Á (COTECASIA)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiềm năng tăng trưởng khu vực</td>
+                                            <td>Phát triển loạt tiện ích cao cấp, hướng đến khai thác tiềm năng tăng
+                                                trưởng du lịch của Bà Rịa – Vũng Tàu.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiềm năng tăng trưởng dự án</td>
+                                            <td>Aria Vũng Tàu ôm trọn chiều dài bãi biển 400 m dọc biển, sở hữu không
+                                                gian thiên nhiên, biển xanh, cát trắng, nắng vàng. Dự án bố trí và phân
+                                                bổ căn hộ tập trung về mặt biển. Nhờ đó, hơn 90% căn hộ có tầm nhìn trực
+                                                diện biển, đi kèm diện tích xây dựng từng căn hộ rộng và tiện ích riêng
+                                                cao cấp.</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tỉ suất lợi nhuận dự kiến hàng năm</td>
+                                            <td>Cam kết lợi nhuận đến 12%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Giá cho thuê căn hộ tại khu vực</td>
+                                            <td>50,000 tr / tháng</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Đơn vị phát triển</td>
+                                            <td>Công ty cổ phần tập đoàn DANH KHÔI</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Đại lý Phân phối</td>
+                                            <td>Công ty cổ phần TPI LAND - Đơn vị Độc Quyền</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Đơn vị xây dựng</td>
+                                            <td>Công ty cổ phần Đầu tư xây dựng THẾ SƠN</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tư vấn giám sát</td>
+                                            <td>Công ty cổ phần Tư vấn xây dựng Tổng Hợp (NAGECCO)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quy mô</td>
+                                            <td>Bao gồm 3 khu: – Khu Biệt Thự Blue Sapphire: 36 căn biệt thự nghỉ dưỡng
+                                                cao cấp có khuôn viên riêng, hồ bơi riêng – Khu Căn hộ Condotel: Gồm 2
+                                                block cao 13 tầng và 1 block cao 36 tầng – Khu khách sạn: Cao 18 tầng
+                                                với 250 phòng khách sạn cao cấp</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiện ích nổi bật</td>
+                                            <td>Bãi biển riêng dài gần 400m, Khu Bar bãi biển Seashell, Sky Bar, Hồ cảnh
+                                                quan trên tầng thượng, Hồ bơi view biển Dolphin, Cầu tình yêu Amor &
+                                                Psyche…vvv</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Biểu đồ tăng trưởng</td>
+                                            <td><a href="#"
+                                                    class="text-[#215388] hover:underline hover:text-[#2367B0] transition-colors">Xem
+                                                    chi tiết tại đây</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Loại hình</td>
+                                            <td>Căn hộ du lịch biển tiêu chuẩn 5 sao</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bàn Giao</td>
+                                            <td>Nội thất cao cấp – dính tường tiêu chuẩn 5 sao</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Hotline dự án</td>
+                                            <td><span class="text-[#f7b11c] font-bold">0938 458 451</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <!-- TAB 2: VỊ TRÍ -->
+                        <div id="pane-vi-tri" class="apt-tab-pane">
+                            <h2 class="apt-content-title">VỊ TRÍ DỰ ÁN</h2>
+                            <p class="text-center text-gray-500 py-20">Nội dung Vị trí đang được cập nhật...</p>
+                        </div>
+
+                        <!-- TAB 3: TIỆN ÍCH -->
+                        <div id="pane-tien-ich" class="apt-tab-pane">
+                            <h2 class="apt-content-title">TIỆN ÍCH DỰ ÁN</h2>
+                            <p class="text-center text-gray-500 py-20">Nội dung Tiện ích đang được cập nhật...</p>
+                        </div>
+
+                        <!-- TAB 4: MẶT BẰNG -->
+                        <div id="pane-mat-bang" class="apt-tab-pane">
+                            <h2 class="apt-content-title">MẶT BẰNG DỰ ÁN</h2>
+                            <p class="text-center text-gray-500 py-20">Nội dung Mặt bằng đang được cập nhật...</p>
+                        </div>
+
+                        <!-- TAB 5: TIẾN ĐỘ -->
+                        <div id="pane-tien-do" class="apt-tab-pane">
+                            <h2 class="apt-content-title">TIẾN ĐỘ THI CÔNG</h2>
+                            <p class="text-center text-gray-500 py-20">Nội dung Tiến độ đang được cập nhật...</p>
+                        </div>
+
+                        <!-- TAB 6: VIDEO 360 -->
+                        <div id="pane-video-360" class="apt-tab-pane">
+                            <h2 class="apt-content-title">VIDEO 360° & VR</h2>
+                            <p class="text-center text-gray-500 py-20">Nội dung Video 360° đang được cập nhật...</p>
                         </div>
                     </div>
-                    <!-- Box 2 -->
-                    <div class="sb-box-2 border-x border-[#e2e8f0]">
-                        <div class="hotline-wrap">
-                            <div class="w-8 h-8 rounded-full bg-[#f7b11c] flex items-center justify-center flex-shrink-0">
-                                <svg class="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                  <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
+                </div>
+
+                <!-- RIGHT COLUMN (Sidebar) -->
+                <div class="lg:col-span-3 relative">
+                    <div class="apt-sidebar flex flex-col shadow-sm">
+                        <!-- Box 1 -->
+                        <div class="sb-box-1">
+                            <h4>Chỉ cần để lại số điện thoại</h4>
+                            <p>Chúng tôi sẽ gọi lại tư vấn miễn phí cho đến khi bạn mua được nhà!</p>
+                            <div class="sb-form-row">
+                                <input type="text" placeholder="Nhập số điện thoại">
+                                <button>Gọi lại cho tôi</button>
+                            </div>
+                        </div>
+                        <!-- Box 2 -->
+                        <div class="sb-box-2">
+                            <div class="hotline-wrap">
+                                <div class="hotline-icon-wrap">
+                                    <svg fill="currentColor" viewBox="0 0 20 20">
+                                        <path
+                                            d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <span class="hotline-num">0938 458 451</span>
+                            </div>
+                            <p>Tư vấn ngay lập tức mọi nhu cầu của bạn</p>
+                        </div>
+                        <!-- Box 3 -->
+                        <div class="sb-box-3 group/box3 cursor-pointer">
+                            <div
+                                class="w-[30px] h-[30px] rounded-full bg-[#f7b11c] flex items-center justify-center flex-shrink-0 transition-transform group-hover/box3:translate-y-1">
+                                <svg class="w-4 h-4 text-white font-bold" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
                                 </svg>
                             </div>
-                            <span class="hotline-num">0938 458 451</span>
+                            <span>Tải tài liệu liên quan tới dự án</span>
                         </div>
-                        <p>Tư vấn ngay lập tức mọi nhu cầu của bạn</p>
-                    </div>
-                    <!-- Box 3 -->
-                    <div class="sb-box-3 rounded-b-lg justify-center group/box3 cursor-pointer">
-                        <div class="w-[30px] h-[30px] rounded-full bg-[#f7b11c] flex items-center justify-center flex-shrink-0 transition-transform group-hover/box3:translate-y-1">
-                            <svg class="w-4 h-4 text-white font-bold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
-                            </svg>
-                        </div>
-                        <span>Tải tài liệu liên quan tới dự án</span>
                     </div>
                 </div>
-            </div>
 
-        </div>
-    </div>
-    
-    <!-- Custom Style for Project Swiper Pagination -->
-    <style>
-        /* Phân trang: Đưa thẻ div chứa Pagination ra Full-Width viewport => Tự động Centered */
-        .project-pagination-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            pointer-events: none;
-            /* Khóa khung wrapper để click gỡ màn hình */
-        }
-        .project-pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            pointer-events: auto;
-            /* Mở lại tính năng click cho chính các nút bấm */
-        }
-        /* Giới hạn chỉ hiển thị 4 chấm Pagination của dự án */
-        .project-pagination .swiper-pagination-bullet:nth-child(n+5) {
-            display: none !important;
-        }
-        .project-pagination .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            background-color: var(--color-dark-text);
-            opacity: 0.5;
-            transition: all 0.3s ease;
-            margin: 0 !important;
-        }
-        .project-pagination .swiper-pagination-bullet-active {
-            opacity: 1;
-            width: 20px;
-            height: 20px;
-            border: 0.5px solid var(--color-dark-text);
-            background-color: var(--color-dark-text);
-            padding: 6px;
-            background-clip: content-box;
-            box-sizing: border-box;
-            position: relative;
-        }
-        /* Responsive Wrapper Tràn 84px ở Màn Hình Lớn */
-        .project-slider-bleed {
-            width: 100%;
-            position: relative;
-        }
-        @media (min-width: 1024px) {
-            .project-slider-bleed {
-                /* Container to hơn màn hình 168px và đẩy lùi trái 84px => cắt đi 84px 2 bên bức ảnh số 1 và số 4 */
-                width: calc(100% + 168px);
-                margin-left: -84px;
-            }
-        }
-    </style>
-    <!-- Dự án Tiêu biểu Section -->
-    <section class="relative py-16 md:py-24 bg-[var(--color-bg1)] overflow-hidden">
-        <div class="main-container">
-            <div class="text-center mb-10 md:mb-14">
-                <h2 class="section-title text-[24px] md:text-[32px]">Các dự án tiêu biểu</h2>
-                <p
-                    class="text-[14px] md:text-[15px] mt-4 max-w-2xl mx-auto text-center font-medium font-body text-body-color">
-                    Ghi dấu những dự án nổi bật của
-                    Danh Khôi Miền Bắc tham gia triển khai</p>
             </div>
         </div>
-        <div class="project-slider-bleed">
-            <!-- Swiper Slider -->
-            <div class="swiper project-swiper overflow-visible">
-                <div class="swiper-wrapper">
-                    <!-- Project 1: Ky Co -->
-                    <div class="swiper-slide">
-                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
-                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
-                                <img src="images/project-1.jpg" alt="Kỳ Co"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            </div>
-                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
-                                <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
-                                    khách sạn</span>
-                                <h3
-                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
-                                    I OCEAN SUITE KỲ CO</h3>
-                                <span class="text-[14px] text-textHide mt-1">Huyện Nhơn Lý, TP. Quy Nhơn, Tỉnh Bình
-                                    Định</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Project 2: Astral City -->
-                    <div class="swiper-slide">
-                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
-                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
-                                <img src="images/project-2.jpg" alt="ASTRAL CITY"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                                <!-- Play icon overlay -->
-                                <div
-                                    class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
-                                    <div
-                                        class="w-16 h-16 rounded-full border-[3px] border-white flex items-center justify-center bg-transparent group-hover:bg-primary/80 transition-colors backdrop-blur-sm pointer-events-auto cursor-pointer">
-                                        <svg class="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                            <path d="M8 5v14l11-7z" />
-                                        </svg>
-                                    </div>
+
+        <!-- Custom Style for Project Swiper Pagination -->
+        <style>
+            /* Phân trang: Đưa thẻ div chứa Pagination ra Full-Width viewport => Tự động Centered */
+            .project-pagination-wrapper {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                pointer-events: none;
+                /* Khóa khung wrapper để click gỡ màn hình */
+            }
+
+            .project-pagination {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+                pointer-events: auto;
+                /* Mở lại tính năng click cho chính các nút bấm */
+            }
+
+            /* Giới hạn chỉ hiển thị 4 chấm Pagination của dự án */
+            .project-pagination .swiper-pagination-bullet:nth-child(n+5) {
+                display: none !important;
+            }
+
+            .project-pagination .swiper-pagination-bullet {
+                width: 8px;
+                height: 8px;
+                background-color: var(--color-dark-text);
+                opacity: 0.5;
+                transition: all 0.3s ease;
+                margin: 0 !important;
+            }
+
+            .project-pagination .swiper-pagination-bullet-active {
+                opacity: 1;
+                width: 20px;
+                height: 20px;
+                border: 0.5px solid var(--color-dark-text);
+                background-color: var(--color-dark-text);
+                padding: 6px;
+                background-clip: content-box;
+                box-sizing: border-box;
+                position: relative;
+            }
+
+            /* Responsive Wrapper Tràn 84px ở Màn Hình Lớn */
+            .project-slider-bleed {
+                width: 100%;
+                position: relative;
+            }
+
+            @media (min-width: 1024px) {
+                .project-slider-bleed {
+                    /* Container to hơn màn hình 168px và đẩy lùi trái 84px => cắt đi 84px 2 bên bức ảnh số 1 và số 4 */
+                    width: calc(100% + 168px);
+                    margin-left: -84px;
+                }
+            }
+        </style>
+        <!-- Dự án Tiêu biểu Section -->
+        <section class="relative py-16 md:py-24 bg-[var(--color-bg1)] overflow-hidden">
+            <div class="main-container">
+                <div class="text-center mb-10 md:mb-14">
+                    <h2 class="section-title text-[24px] md:text-[32px]">Các dự án tiêu biểu</h2>
+                    <p
+                        class="text-[14px] md:text-[15px] mt-4 max-w-2xl mx-auto text-center font-medium font-body text-body-color">
+                        Ghi dấu những dự án nổi bật của
+                        Danh Khôi Miền Bắc tham gia triển khai</p>
+                </div>
+            </div>
+            <div class="project-slider-bleed">
+                <!-- Swiper Slider -->
+                <div class="swiper project-swiper overflow-visible">
+                    <div class="swiper-wrapper">
+                        <!-- Project 1: Ky Co -->
+                        <div class="swiper-slide">
+                            <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                                <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                    <img src="images/project-1.jpg" alt="Kỳ Co"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                </div>
+                                <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                    <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
+                                        khách sạn</span>
+                                    <h3
+                                        class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                        I OCEAN SUITE KỲ CO</h3>
+                                    <span class="text-[14px] text-textHide mt-1">Huyện Nhơn Lý, TP. Quy Nhơn, Tỉnh Bình
+                                        Định</span>
                                 </div>
                             </div>
-                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
-                                <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
-                                    khách sạn</span>
-                                <h3
-                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
-                                    ASTRAL CITY</h3>
-                                <span class="text-[14px] text-textHide mt-1">Đại lộ Bình Dương, P. Bình Hoà, TP. Thuận
-                                    An, Tỉnh Bình Dương</span>
+                        </div>
+                        <!-- Project 2: Astral City -->
+                        <div class="swiper-slide">
+                            <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                                <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                    <img src="images/project-2.jpg" alt="ASTRAL CITY"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                    <!-- Play icon overlay -->
+                                    <div
+                                        class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 group-[.media-slide-active]:opacity-100 transition-opacity duration-1000">
+                                        <div
+                                            class="w-16 h-16 rounded-full border-[3px] border-white flex items-center justify-center bg-transparent group-hover:bg-primary/80 transition-colors backdrop-blur-sm pointer-events-auto cursor-pointer">
+                                            <svg class="w-6 h-6 text-white ml-1" fill="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path d="M8 5v14l11-7z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                    <span class="text-[14px] text-textHide font-medium tracking-wide">Căn hộ, biệt thự,
+                                        khách sạn</span>
+                                    <h3
+                                        class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                        ASTRAL CITY</h3>
+                                    <span class="text-[14px] text-textHide mt-1">Đại lộ Bình Dương, P. Bình Hoà, TP.
+                                        Thuận
+                                        An, Tỉnh Bình Dương</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project 3: Aria Vung Tau -->
-                    <div class="swiper-slide">
-                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
-                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
-                                <img src="images/project-3.jpg" alt="ARIA VŨNG TÀU HOTEL & RESORT"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            </div>
-                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
-                                <span class="text-[14px] text-textHide font-medium tracking-wide">Khách sạn & Khu nghỉ
-                                    dưỡng</span>
-                                <h3
-                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
-                                    ARIA VŨNG TÀU HOTEL &amp; RESORT</h3>
-                                <span class="text-[14px] text-textHide mt-1">Đường 3/2, Phường 10, TP. Vũng Tàu, Tỉnh Bà
-                                    Rịa - Vũng Tàu</span>
+                        <!-- Project 3: Aria Vung Tau -->
+                        <div class="swiper-slide">
+                            <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                                <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                    <img src="images/project-3.jpg" alt="ARIA VŨNG TÀU HOTEL & RESORT"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                </div>
+                                <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                    <span class="text-[14px] text-textHide font-medium tracking-wide">Khách sạn & Khu
+                                        nghỉ
+                                        dưỡng</span>
+                                    <h3
+                                        class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                        ARIA VŨNG TÀU HOTEL &amp; RESORT</h3>
+                                    <span class="text-[14px] text-textHide mt-1">Đường 3/2, Phường 10, TP. Vũng Tàu,
+                                        Tỉnh Bà
+                                        Rịa - Vũng Tàu</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Project 4: Nhon Hoi New City -->
-                    <div class="swiper-slide">
-                        <div class="group flex flex-col h-full bg-white md:bg-transparent">
-                            <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
-                                <img src="images/project-4.jpg" alt="NHƠN HỘI NEW CITY"
-                                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
-                            </div>
-                            <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
-                                <span class="text-[14px] text-textHide font-medium tracking-wide">Khu đô thị</span>
-                                <h3
-                                    class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
-                                    NHƠN HỘI NEW CITY</h3>
-                                <span class="text-[14px] text-textHide mt-1">Tâm điểm BĐS duyên hải miền Trung</span>
+                        <!-- Project 4: Nhon Hoi New City -->
+                        <div class="swiper-slide">
+                            <div class="group flex flex-col h-full bg-white md:bg-transparent">
+                                <div class="relative overflow-hidden aspect-[4/3] md:aspect-[16/10] mb-5">
+                                    <img src="images/project-4.jpg" alt="NHƠN HỘI NEW CITY"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                </div>
+                                <div class="flex flex-col gap-1 px-4 pb-4 md:px-0 md:pb-0 text-left">
+                                    <span class="text-[14px] text-textHide font-medium tracking-wide">Khu đô thị</span>
+                                    <h3
+                                        class="text-base md:text-lg font-bold text-darkText uppercase mt-1 group-hover:text-primary transition-colors hover:cursor-pointer">
+                                        NHƠN HỘI NEW CITY</h3>
+                                    <span class="text-[14px] text-textHide mt-1">Tâm điểm BĐS duyên hải miền
+                                        Trung</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Pagination ra ngoài project-slider-container để dễ căn giữa -->
+                <div class="project-pagination-wrapper mt-[66px]">
+                    <div class="swiper-pagination project-pagination mt-0" style="bottom: 0px;"></div>
+                </div>
             </div>
-            <!-- Pagination ra ngoài project-slider-container để dễ căn giữa -->
-            <div class="project-pagination-wrapper mt-[66px]">
-                <div class="swiper-pagination project-pagination mt-0" style="bottom: 0px;"></div>
+        </section>
+
+
+        <!-- Video Modal Overlay (Pure CSS toggle) -->
+        <div class="video-modal-overlay fixed inset-0 z-[1000] bg-black/90 hidden items-center justify-center p-4">
+            <label for="radio-video-modal"
+                class="absolute top-4 right-4 text-white hover:text-red-500 w-10 h-10 flex flex-col items-center justify-center bg-black/50 rounded-full cursor-pointer"
+                onclick="document.getElementById('youtube-iframe-player').src=''">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </label>
+            <div class="w-full max-w-5xl aspect-video relative rounded-lg overflow-hidden shadow-2xl">
+                <iframe id="youtube-iframe-player" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
             </div>
         </div>
-    </section>
-    
-    
-    <!-- Video Modal Overlay (Pure CSS toggle) -->
-    <div class="video-modal-overlay fixed inset-0 z-[1000] bg-black/90 hidden items-center justify-center p-4">
-        <label for="radio-video-modal" class="absolute top-4 right-4 text-white hover:text-red-500 w-10 h-10 flex flex-col items-center justify-center bg-black/50 rounded-full cursor-pointer" onclick="document.getElementById('youtube-iframe-player').src=''">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </label>
-        <div class="w-full max-w-5xl aspect-video relative rounded-lg overflow-hidden shadow-2xl">
-            <iframe id="youtube-iframe-player" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </div>
-</main>
+    </main>
 
     <!-- KẾT THÚC NỘI DUNG CHÍNH -->
 
-<footer class="bg-white pt-16 pb-8 border-t border-gray-100">
+    <footer class="bg-white pt-16 pb-8 border-t border-gray-100">
         <div class="main-container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
                 <!-- Col 1: Thương hiệu -->
@@ -684,7 +744,7 @@
     </button>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -701,4 +761,5 @@
     </div>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
