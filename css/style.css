@@ -1181,3 +1181,161 @@ body {
   font-size: 15px;
   font-weight: 500;
 }
+
+/* --- DOMAINS PAGE STYLES --- */
+.domain-red-box {
+  clip-path: polygon(0 0, 100% 0, calc(100% - 60px) 100%, 0 100%);
+}
+
+@media (max-width: 768px) {
+  .domain-red-box {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 40px) 100%, 0 100%);
+  }
+}
+
+/* CSS Tabs Logic for Domains Page */
+.domain-tab-btn {
+  font-size: 18px;
+  font-weight: 700;
+  color: #6B7280;
+  /* text-gray-500 */
+  padding-bottom: 1rem;
+  position: relative;
+  transition: color 0.3s;
+}
+
+@media (min-width: 1024px) {
+  .domain-tab-btn {
+    font-size: 22px;
+  }
+}
+
+.domain-tab-btn:hover {
+  color: #E32128;
+  /* hover:text-primary */
+}
+
+/* Default state for pseudo-element underline */
+.domain-tab-btn::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  /* aligns with border-b-2 of container */
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+/* Active Tab Styles */
+#tab-quy-dat:checked~* .domain-tab-btn[for="tab-quy-dat"],
+#tab-du-an:checked~* .domain-tab-btn[for="tab-du-an"],
+#tab-tiep-thi:checked~* .domain-tab-btn[for="tab-tiep-thi"],
+#tab-van-hanh:checked~* .domain-tab-btn[for="tab-van-hanh"] {
+  color: #E32128;
+  /* text-primary */
+}
+
+#tab-quy-dat:checked~* .domain-tab-btn[for="tab-quy-dat"]::after,
+#tab-du-an:checked~* .domain-tab-btn[for="tab-du-an"]::after,
+#tab-tiep-thi:checked~* .domain-tab-btn[for="tab-tiep-thi"]::after,
+#tab-van-hanh:checked~* .domain-tab-btn[for="tab-van-hanh"]::after {
+  background-color: #E32128;
+  /* bg-primary */
+}
+
+/* Dynamic Text in Hero Banner based on active tab */
+#tab-quy-dat:checked~* .domain-title::before {
+  content: "PHÁT TRIỂN QUỸ ĐẤT";
+}
+
+#tab-du-an:checked~* .domain-title::before {
+  content: "PHÁT TRIỂN DỰ ÁN";
+}
+
+#tab-tiep-thi:checked~* .domain-title::before {
+  content: "TIẾP THỊ VÀ PHÂN PHỐI";
+}
+
+#tab-van-hanh:checked~* .domain-title::before {
+  content: "QUẢN LÝ VẬN HÀNH";
+}
+
+.domain-title {
+  font-size: 0;
+}
+
+/* Hide original text */
+.domain-title::before {
+  font-size: 28px;
+}
+
+/* Show pseudo element text */
+@media (min-width: 768px) {
+  .domain-title::before {
+    font-size: 36px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .domain-title::before {
+    font-size: 44px;
+  }
+}
+
+#tab-quy-dat:checked~* .domain-desc::before {
+  content: "Tập đoàn Danh Khôi đã sở hữu nền tảng vững chắc để triển khai hiệu quả xuyên suốt các công đoạn phát triển các dự án bất động sản.";
+}
+
+#tab-du-an:checked~* .domain-desc::before {
+  content: "Với kinh nghiệm lâu năm, Danh Khôi triển khai các dự án vượt tiến độ và đạt chất lượng cao.";
+}
+
+#tab-tiep-thi:checked~* .domain-desc::before {
+  content: "Nhờ có hơn 15 năm kinh nghiệm mảng dịch vụ tiếp thị, Danh Khôi có chiến lược Marketing xuất sắc và kênh phân phối rộng khắp toàn quốc.";
+}
+
+#tab-van-hanh:checked~* .domain-desc::before {
+  content: "Áp dụng công nghệ tiên tiến trong giám sát và quản lý tòa nhà. Danh Khôi hướng tới tối ưu năng lượng trọn đời vận hành.";
+}
+
+.domain-desc {
+  font-size: 0;
+}
+
+.domain-desc::before {
+  font-size: 15px;
+}
+
+@media (min-width: 1024px) {
+  .domain-desc::before {
+    font-size: 16px;
+  }
+}
+
+
+/* Show Content based on active tab */
+.domain-tab-content {
+  display: none;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#tab-quy-dat:checked~* #content-quy-dat,
+#tab-du-an:checked~* #content-du-an,
+#tab-tiep-thi:checked~* #content-tiep-thi,
+#tab-van-hanh:checked~* #content-van-hanh {
+  display: block;
+}
