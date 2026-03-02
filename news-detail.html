@@ -35,9 +35,11 @@
             /* BUG-08 FIX: Prevent horizontal scroll from clip-path & absolute elements */
             overflow-x: hidden;
         }
+
         html {
             overflow-x: hidden;
         }
+
         h1,
         h2,
         h3,
@@ -57,6 +59,7 @@
             display: flex;
             align-items: center;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: #fff;
             font-size: 13px;
@@ -65,27 +68,34 @@
             padding-right: 24px;
             line-height: 34px;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow {
             top: 50%;
             transform: translateY(-50%);
             right: 6px;
         }
+
         .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: rgba(255, 255, 255, 0.8) transparent transparent transparent;
         }
+
         .select2-container--default .select2-results__option--highlighted[aria-selected] {
             background-color: var(--color-primary);
         }
+
         /* Scrolled state for language selector */
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single {
             border: 1px solid rgba(0, 0, 0, 0.2);
         }
+
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__rendered {
             color: var(--color-darkText);
         }
+
         #main-header.scrolled .lang-select-container .select2-container--default .select2-selection--single .select2-selection__arrow b {
             border-color: #2B3B51 transparent transparent transparent !important;
         }
+
         .lang-flag {
             width: 20px;
             height: 15px;
@@ -94,10 +104,12 @@
             vertical-align: middle;
             border-radius: 2px;
         }
+
         /* Hero Tab Active */
         .hero-tab.active {
             background-color: #DA1626 !important;
         }
+
         /* Hero Tab Active Pointer */
         .hero-tab.active::before {
             content: '';
@@ -110,6 +122,7 @@
             border-color: transparent transparent #DA1626 transparent;
             z-index: 10;
         }
+
         .lang-option {
             display: flex;
             align-items: center;
@@ -117,6 +130,7 @@
         }
     </style>
 </head>
+
 <body class="bg-[#F2F6F9]">
     <!-- Header -->
     <header id="main-header" class="w-full fixed top-0 left-0 right-0 z-50"
@@ -189,9 +203,8 @@
             </div>
         </div>
     </header>
-    <!-- Hero Banner Section -->
     <section class="relative w-full aspect-[1920/600] min-h-[400px] overflow-hidden">
-        <img src="images/Banner-news-details.jpg" alt="Bất động sản xanh ven biển được nhà đầu tư ưa chuộng"
+        <img src="images/banner-news-details.jpg" alt="Bất động sản xanh ven biển được nhà đầu tư ưa chuộng"
             class="w-full h-full object-cover">
         <div class="absolute inset-0 bg-black/30 pointer-events-none"></div>
     </section>
@@ -424,7 +437,7 @@
     </button>
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    
+
     <!-- Video Modal Popup -->
     <div id="videoModal"
         class="fixed inset-0 z-[9999] bg-black/90 hidden items-center justify-center opacity-0 transition-opacity duration-300">
@@ -442,4 +455,5 @@
     </div>
     <script src="assets/js/main.js"></script>
 </body>
+
 </html>
