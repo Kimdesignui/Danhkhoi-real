@@ -184,174 +184,201 @@
     </header>
 
     <!-- NỘI DUNG CHÍNH (Lĩnh vực hoạt động) -->
-    <main class="page-domains min-h-screen bg-[#F9F9F9] pt-[80px]">
-
+    <main class="page-domains min-h-screen bg-[#F9F9F9] pt-20">
         <!-- PURE CSS TABS RADIO BUTTONS -->
         <input type="radio" name="domain-tabs-group" id="tab-quy-dat" class="domain-tab-radio hidden" checked>
         <input type="radio" name="domain-tabs-group" id="tab-du-an" class="domain-tab-radio hidden">
         <input type="radio" name="domain-tabs-group" id="tab-tiep-thi" class="domain-tab-radio hidden">
         <input type="radio" name="domain-tabs-group" id="tab-van-hanh" class="domain-tab-radio hidden">
 
-        <!-- Hero Banner -->
-        <div class="relative w-full h-[500px] lg:h-[600px]">
+        <!-- Hero Banner Section -->
+        <section class="relative w-full h-[500px] lg:h-[600px] bg-gray-200">
             <img src="images/banner-domains.png" alt="Lĩnh vực hoạt động" class="w-full h-full object-cover">
 
-            <!-- Red Overlay & Glass Box -->
-            <div class="main-container absolute inset-0 flex items-center pb-10 lg:pb-0 z-10 pt-10">
-                <!-- Wrapper for the overlay blocks -->
-                <div class="relative w-full md:w-[80%] lg:w-[600px] xl:w-[700px] mt-20 lg:mt-0">
-                    <!-- White Glass Shadow Layer (bottom) -->
+            <div
+                class="main-container absolute inset-0 flex flex-col justify-end lg:justify-center pb-8 lg:pb-0 z-10 pointer-events-none">
+                <div class="relative w-full lg:w-[680px] mt-20 lg:mt-16 pointer-events-auto">
+                    <!-- Glassmorphism White Background Base -->
                     <div
-                        class="absolute -top-12 -left-8 lg:-top-16 lg:-left-20 w-full lg:w-[calc(100%+80px)] h-[calc(100%+24px)] lg:h-[calc(100%+32px)] bg-white/10 backdrop-blur-md shadow-2xl rounded-sm hidden md:block">
+                        class="absolute -top-4 -left-4 lg:-top-6 lg:-left-6 w-full h-[calc(100%+16px)] lg:h-[calc(100%+24px)] bg-white/10 backdrop-blur-md shadow-[0_15px_30px_rgba(0,0,0,0.15)] rounded-sm">
                     </div>
 
-                    <!-- Red Content Layer (top with clip-path) -->
-                    <div class="relative bg-[#E32128] text-white p-6 md:p-10 lg:p-12 z-10 domain-red-box">
+                    <!-- Red Clip-Path Content Box -->
+                    <div class="domain-red-box relative bg-[#E32128] text-white p-8 lg:p-12 z-10">
                         <span
-                            class="text-white/90 text-[14px] lg:text-[16px] font-semibold tracking-wider mb-2 block">Giới
+                            class="text-white/90 text-[14px] lg:text-[16px] uppercase tracking-wide block mb-2 font-medium">Giới
                             Thiệu Lĩnh Vực Kinh Doanh</span>
-                        <!-- Dynamic Title controlled by CSS tabs -->
                         <h1
-                            class="domain-title text-[28px] md:text-[36px] lg:text-[44px] font-bold font-display uppercase leading-tight mb-6">
-                            PHÁT TRIỂN QUỸ ĐẤT
-                        </h1>
-                        <!-- Dynamic Description controlled by CSS tabs -->
-                        <p
-                            class="domain-desc text-[15px] lg:text-[16px] leading-relaxed mb-10 max-w-full lg:max-w-[85%] font-medium">
+                            class="domain-title text-[28px] lg:text-[40px] font-bold font-display uppercase leading-tight mb-4 tracking-wide">
+                            PHÁT TRIỂN QUỸ ĐẤT</h1>
+                        <p class="domain-desc text-[15px] lg:text-[16px] leading-[1.6] mb-8 text-white/95 max-w-[90%]">
                             Tập đoàn Danh Khôi đã sở hữu nền tảng vững chắc để triển khai hiệu quả xuyên suốt các công
                             đoạn phát triển các dự án bất động sản.
                         </p>
                         <div
-                            class="w-6 h-6 rounded border border-white flex items-center justify-center opacity-80 cursor-pointer hover:opacity-100 transition-opacity">
-                            <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            class="w-7 h-7 rounded-sm flex items-center justify-start cursor-pointer hover:opacity-80 transition-opacity">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
                                     d="M19 9l-7 7-7-7"></path>
                             </svg>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Navigation Tabs Bar -->
-        <div class="main-container mt-12 mb-8 border-b-2 border-gray-200">
-            <div class="flex flex-row overflow-x-auto gap-8 lg:gap-10 pb-4 md:pb-0 scrollbar-hide whitespace-nowrap">
-                <label for="tab-quy-dat" class="domain-tab-btn flex-shrink-0 cursor-pointer">Phát triển quỹ đất</label>
-                <label for="tab-du-an" class="domain-tab-btn flex-shrink-0 cursor-pointer">Phát triển dự án</label>
-                <label for="tab-tiep-thi" class="domain-tab-btn flex-shrink-0 cursor-pointer">Tiếp thị và phân
-                    phối</label>
-                <label for="tab-van-hanh" class="domain-tab-btn flex-shrink-0 cursor-pointer">Quản lý vận hành</label>
-            </div>
-        </div>
-
-        <!-- Tab Content Areas -->
-        <div class="main-container pb-20">
-
-            <!-- CONTENT: Phát triển quỹ đất -->
-            <div id="content-quy-dat" class="domain-tab-content">
-                <div class="mb-14 lg:w-4/5">
-                    <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4">Danh Khôi chú trọng phát triển
-                        quỹ đất vị trí đẹp</h2>
-                    <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify">Tập trung vào những
-                        tỉnh thành có quy hoạch tổng thể cân bằng, bền vững và hạ tầng giao thông đô thị. Quỹ đất Danh
-                        Khôi phát triển có tiềm năng khai thác tốt, khả năng tối ưu hiệu quả kinh doanh ở mọi loại hình.
-                        Năng lực tài chính vững mạnh, kinh nghiệm trong thủ tục pháp lý và sự nhạy bén thị trường giúp
-                        Tập đoàn thành công trong các hoạt động M&A, nhanh chóng tạo quỹ đất.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">1500</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">ha</span>
-                        </div>
-                        <p class="text-[14px] text-gray-500 font-medium">Dự án Đã triển khai</p>
-                    </div>
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">09</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">tỉnh thành</span>
-                        </div>
-                        <p class="text-[14px] text-gray-500 font-medium">Có quỹ đất của Tập đoàn Danh Khôi</p>
-                    </div>
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">759</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">ha</span>
-                        </div>
-                        <p class="text-[14px] text-gray-500 font-medium max-w-[250px]">Tổng quỹ đất đang sẵn sàng phát
-                            triển(tại thời điểm 2020)</p>
-                    </div>
+        <!-- Tabs Navigation -->
+        <section class="bg-[#F9F9F9] pt-12">
+            <div class="main-container border-b border-gray-300">
+                <div class="flex flex-row overflow-x-auto gap-8 lg:gap-12 pb-0 no-scrollbar whitespace-nowrap">
+                    <label for="tab-quy-dat"
+                        class="domain-tab-btn relative pb-4 text-left font-bold text-[18px] lg:text-[22px] text-[#666] hover:text-primary transition-colors cursor-pointer">
+                        Phát triển quỹ đất
+                    </label>
+                    <label for="tab-du-an"
+                        class="domain-tab-btn relative pb-4 text-left font-bold text-[18px] lg:text-[22px] text-[#666] hover:text-primary transition-colors cursor-pointer">
+                        Phát triển dự án
+                    </label>
+                    <label for="tab-tiep-thi"
+                        class="domain-tab-btn relative pb-4 text-left font-bold text-[18px] lg:text-[22px] text-[#666] hover:text-primary transition-colors cursor-pointer">
+                        Tiếp thị và phân phối
+                    </label>
+                    <label for="tab-van-hanh"
+                        class="domain-tab-btn relative pb-4 text-left font-bold text-[18px] lg:text-[22px] text-[#666] hover:text-primary transition-colors cursor-pointer">
+                        Quản lý vận hành
+                    </label>
                 </div>
             </div>
+        </section>
 
-            <!-- CONTENT: Phát triển dự án -->
-            <div id="content-du-an" class="domain-tab-content hidden">
-                <div class="mb-14 lg:w-4/5">
-                    <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4">Danh Khôi tự hào là nhà kiến tạo
-                        không gian sống</h2>
-                    <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify">Với kinh nghiệm lâu
-                        năm, Danh Khôi triển khai các dự án vượt tiến độ và đạt chất lượng cao. Các dự án của chúng tôi
-                        không chỉ mang lại giá trị gia tăng vượt trội mà còn hình thành các cộng đồng dân cư thịnh vượng
-                        bền vững.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">60</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">dự án</span>
-                        </div>
-                        <p class="text-[14px] text-gray-500 font-medium">Đã phát triển thành công</p>
+        <!-- Tab Content Area -->
+        <section class="bg-[#F9F9F9] py-10 lg:py-16">
+            <div class="main-container">
+                <!-- CONTENT: Phát triển quỹ đất -->
+                <div id="content-quy-dat" class="domain-tab-content hidden">
+                    <div class="max-w-4xl mb-12">
+                        <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4 leading-snug">Danh Khôi chú
+                            trọng phát triển quỹ đất vị trí đẹp</h2>
+                        <p class="text-[14px] lg:text-[15px] text-textHide leading-relaxed text-justify">
+                            Tập trung vào những tỉnh thành có quy hoạch tổng thể cân bằng, bền vững và hạ tầng giao
+                            thông đô thị. Quỹ đất Danh Khôi phát triển có tiềm năng khai thác tốt, khả năng tối ưu hiệu
+                            quả kinh doanh ở mọi loại hình. Năng lực tài chính vững mạnh, kinh nghiệm trong thủ tục pháp
+                            lý và sự nhạy bén thị trường giúp Tập đoàn thành công trong các hoạt động M&A, nhanh chóng
+                            tạo quỹ đất.
+                        </p>
                     </div>
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">100</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">%</span>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 border-t border-gray-300 pt-8 lg:pt-10">
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">1500</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">ha</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium">Dự án Đã triển khai</p>
                         </div>
-                        <p class="text-[14px] text-gray-500 font-medium">Cam kết chất lượng công trình</p>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">09</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">tỉnh thành</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium">Có quỹ đất của Tập đoàn Danh
+                                Khôi</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">759</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">ha</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium max-w-[280px]">Tổng quỹ đất
+                                đang sẵn sàng phát triển(tại thời điểm 2020)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT: Phát triển dự án -->
+                <div id="content-du-an" class="domain-tab-content hidden">
+                    <div class="max-w-4xl mb-12">
+                        <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4 leading-snug">Danh Khôi tự
+                            hào là nhà kiến tạo không gian sống</h2>
+                        <p class="text-[14px] lg:text-[15px] text-textHide leading-relaxed text-justify">
+                            Với kinh nghiệm lâu năm, Danh Khôi triển khai các dự án vượt tiến độ và đạt chất lượng cao.
+                            Các dự án của chúng tôi không chỉ mang lại giá trị gia tăng vượt trội mà còn hình thành các
+                            cộng đồng dân cư thịnh vượng bền vững.
+                        </p>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 border-t border-gray-300 pt-8 lg:pt-10">
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">60</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">dự án</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium">Đã phát triển thành công</p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">100</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">%</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium">Cam kết chất lượng công
+                                trình</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT: Tiếp thị và phân phối -->
+                <div id="content-tiep-thi" class="domain-tab-content hidden">
+                    <div class="max-w-4xl mb-12">
+                        <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4 leading-snug">Hệ thống phân
+                            phối vững mạnh</h2>
+                        <p class="text-[14px] lg:text-[15px] text-textHide leading-relaxed text-justify">
+                            Nhờ có hơn 15 năm kinh nghiệm mảng dịch vụ tiếp thị, Danh Khôi có chiến lược Marketing xuất
+                            sắc và kênh phân phối rộng khắp toàn quốc, giúp sản phẩm tiếp cận nhanh chóng hàng triệu
+                            khách hàng mục tiêu với tỷ lệ hấp thụ trên 90% mỗi đợt mở bán.
+                        </p>
+                    </div>
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 lg:gap-8 border-t border-gray-300 pt-8 lg:pt-10">
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">30</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">chi nhánh</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium">Rải đều các thành phố lớn
+                            </p>
+                        </div>
+                        <div>
+                            <div class="flex items-baseline gap-2 mb-2">
+                                <span
+                                    class="text-[44px] lg:text-[56px] font-black font-roboto text-primary leading-none tracking-tighter">1555</span>
+                                <span class="text-[18px] lg:text-[22px] font-bold text-primary">nhân viên</span>
+                            </div>
+                            <p class="text-[13px] lg:text-[14px] text-textHide font-medium">Chuyên viên tư vấn được đào
+                                tạo bài bản</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENT: Quản lý vận hành -->
+                <div id="content-van-hanh" class="domain-tab-content hidden">
+                    <div class="max-w-4xl mb-12">
+                        <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4 leading-snug">Dịch vụ quản lý
+                            tiêu chuẩn quốc tế</h2>
+                        <p class="text-[14px] lg:text-[15px] text-textHide leading-relaxed text-justify">
+                            Áp dụng công nghệ tiên tiến trong giám sát và quản lý tòa nhà. Danh Khôi hướng tới tối ưu
+                            năng lượng trọn đời vận hành và trải nghiệm dịch vụ chu đáo nhất cho cư dân và nhà khởi
+                            nghiệp tại các dự án.
+                        </p>
                     </div>
                 </div>
             </div>
-
-            <!-- CONTENT: Tiếp thị và phân phối -->
-            <div id="content-tiep-thi" class="domain-tab-content hidden">
-                <div class="mb-14 lg:w-4/5">
-                    <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4">Hệ thống phân phối vững mạnh
-                    </h2>
-                    <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify">Nhờ có hơn 15 năm
-                        kinh nghiệm mảng dịch vụ tiếp thị, Danh Khôi có chiến lược Marketing xuất sắc và kênh phân phối
-                        rộng khắp toàn quốc, giúp sản phẩm tiếp cận nhanh chóng hàng triệu khách hàng mục tiêu với tỷ lệ
-                        hấp thụ trên 90% mỗi đợt mở bán.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8 border-t border-gray-200">
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">30</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">chi nhánh</span>
-                        </div>
-                        <p class="text-[14px] text-gray-500 font-medium">Rải đều các thành phố lớn</p>
-                    </div>
-                    <div>
-                        <div class="flex items-baseline gap-2 mb-2">
-                            <span class="text-[40px] lg:text-[48px] font-black text-[#E32128] leading-none">1555</span>
-                            <span class="text-[20px] lg:text-[24px] font-bold text-[#E32128]">nhân viên</span>
-                        </div>
-                        <p class="text-[14px] text-gray-500 font-medium">Chuyên viên tư vấn được đào tạo bài bản</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CONTENT: Quản lý vận hành -->
-            <div id="content-van-hanh" class="domain-tab-content hidden">
-                <div class="mb-14 lg:w-4/5">
-                    <h2 class="text-[20px] lg:text-[24px] font-bold text-darkText mb-4">Dịch vụ quản lý tiêu chuẩn quốc
-                        tế</h2>
-                    <p class="text-[14px] lg:text-[15px] text-gray-600 leading-relaxed text-justify">Áp dụng công nghệ
-                        tiên tiến trong giám sát và quản lý tòa nhà. Danh Khôi hướng tới tối ưu năng lượng trọn đời vận
-                        hành và trải nghiệm dịch vụ chu đáo nhất cho cư dân và nhà khởi nghiệp tại các dự án.</p>
-                </div>
-            </div>
-
-        </div>
+        </section>
     </main>
 
     <!-- Footer (đồng bộ với các trang khác) -->
