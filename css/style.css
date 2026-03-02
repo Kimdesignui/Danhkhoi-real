@@ -870,7 +870,7 @@ body {
   font-size: 14px;
   color: #4B5563;
   /* text-gray-600 */
-  border-radius: 8px;
+  border-radius: 0;
   transition: all 0.3s ease;
   border: 1px solid transparent;
 }
@@ -885,6 +885,7 @@ body {
   color: #FFFFFF;
   border-color: #1A315F;
   box-shadow: 0 4px 10px rgba(26, 49, 95, 0.2);
+  border-radius: 0;
 }
 
 .page-apartment .apt-tab-pane {
