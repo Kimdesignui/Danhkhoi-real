@@ -1061,6 +1061,7 @@ body {
   font-weight: 700;
   margin-bottom: 8px;
   line-height: 1.4;
+  color: #ffffff;
 }
 
 .page-apartment .sb-box-1 p {
@@ -1167,6 +1168,7 @@ body {
   gap: 14px;
   transition: background-color 0.3s;
   border-radius: 0;
+  margin-top: 16px;
 }
 
 .page-apartment .sb-box-3:hover {
